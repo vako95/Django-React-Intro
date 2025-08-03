@@ -1,0 +1,63 @@
+.hover__button {
+    font-family: 'Barlow', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background: #aa8453;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    padding: 18px 40px;
+}
+
+.hover__button:hover {
+    color: white;
+
+}
+
+.hover__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #222222;
+    color: #FFFFFF;
+    z-index: -1;
+    /* transform-origin: left; */
+    transition: width 300ms linear, right 300ms linear, left 300ms linear;
+
+}
+
+.hover__button:hover::before {
+    /* transform-origin: right; */
+    width: 100%;
+    left: 0;
+    right: unset;
+
+    /* transition: transform 0.3s ease-in; */
+    /* transform: scaleX(0); */
+}
+
+/* .sm{
+    width: 210px;
+    height: 46px;
+  
+
+}
+.font-sm{
+    font-family: 'Barlow', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+   
+} */

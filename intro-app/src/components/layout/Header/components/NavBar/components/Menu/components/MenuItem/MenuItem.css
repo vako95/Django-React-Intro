@@ -1,0 +1,129 @@
+.menu__item {
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 42px 32px;
+}
+
+.menu__item:not(:last-of-type) {
+    margin-right: 8px;
+}
+
+.submenu {
+    position: absolute;
+    min-width: 240px;
+    max-height: 0px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: max-height 350ms linear, opacity 150ms linear;
+    opacity: 0;
+    background-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(221, 221, 221);
+    box-shadow: rgba(0, 0, 0, 0.08) 1px 1px 35px 0px;
+    border: 1px solid #ddd;
+
+    /* transform: translateY(25%); */
+    /* transition: opacity 150ms linear, top 250ms linear, visibility 150ms linear; */
+    /* will-change: opacity, top, visibility; */
+    /* visibility: hidden; */
+
+    top: calc(100%);
+    left: 0;
+    list-style-type: none;
+}
+
+.submenu__item {
+    position: relative;
+    padding: 16px;
+    transition: background-color 150ms linear;
+}
+
+.submenu__item:hover {
+    background-color: silver;
+}
+
+.submenu__item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0%;
+    background-color: #aa8453;
+
+    transition: height 200ms linear;
+}
+
+.submenu__item:hover::before {
+    height: 100%;
+
+}
+
+.submenu__link-text {
+
+    transition: margin-left 300ms linear;
+}
+
+
+
+.submenu__link {
+    text-decoration: none;
+}
+
+.submenu__link-text {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #555;
+}
+
+.submenu__item:hover .submenu__link-text {
+    margin-left: 4px;
+}
+
+.menu__item:hover .submenu {
+    display: flex;
+    max-height: 500px;
+
+    /* top: 100%; */
+    opacity: 1;
+    /* transform: translateY(0%) translateZ(0%); */
+    /* visibility: visible; */
+
+}
+
+.menu__link {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.menu__link-icon {
+    margin-left: 8px;
+    color: rgb(85, 85, 85);
+}
+
+
+.menu__link-text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25.2px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}

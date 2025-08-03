@@ -1,0 +1,110 @@
+.slider {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    user-select: none;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+
+.swiper-slide::before {
+    content: "zayebal";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: #FFFFFF;
+    background: conic-gradient(from 0deg, transparent, #4D0408);
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    filter: brightness(0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swipeImg {
+    width: 100%;
+    height: 100%;
+
+}
+
+.swiper-button-next {
+
+    right: 20px;
+}
+
+.swiper-button-prev {
+
+    left: 20px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: calc(50% + .375vh);
+    transform: translateY(calc(50% + .375vh));
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+
+    font-size: 18px;
+    font-weight: 500;
+    color: #F8F8F8;
+}
+
+/* 
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.preview-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(0%) translateY(-50%) scale(0);
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 20;
+}
+
+.preview-circle.left {
+    transform: translateX(-100%) translateY(-50%) scale(0);
+}
+
+.preview-circle.show {
+    width: 60px;
+    height: 60px;
+    z-index: -1;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+
+}
+
+.preview-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(1px) grayscale(1);
+}
