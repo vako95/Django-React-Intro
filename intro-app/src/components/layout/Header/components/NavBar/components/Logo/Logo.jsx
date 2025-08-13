@@ -1,12 +1,15 @@
-import "./Logo.css";
-import LogoBrand from "./assets/img/logo/logo-wide-white.png";
 import { Link } from "react-router-dom";
+import LogoBrand from "./assets/images/logo/logo-wide-white.png";
+
+import "./Logo.css"
+
 
 const Logo = () => {
+
     return (
         <figure className="logo">
             <Link className="logo__link">
-                <img src={LogoBrand} className="logo__brand" alt="logo" />
+                <img className="logo__brand" src={LogoBrand} alt="Logo brand" />
             </Link>
         </figure>
     )

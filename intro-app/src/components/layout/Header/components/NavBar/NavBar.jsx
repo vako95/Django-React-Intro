@@ -1,28 +1,30 @@
-import Container from "../../../../ui/Container/Container";
+import { Container } from "../../../../ui";
+import HoverLink from "../../../../ui/HoverLink/HoverLink";
 import Logo from "./components/Logo/Logo";
 import Menu from "./components/Menu/Menu";
-import HoverButton from "../../../../ui/HoverButton/HoverButton";
+
 import "./Navbar.css";
 
-const NavBar = () => {
+
+const Navbar = () => {
 
     return (
-        <nav className="navbar">
+        <div className="navbar">
             <Container>
                 <div className="navbar__container">
-                    <div className="navbar__left">
+                    <div className="navbar__nav">
                         <Logo />
                         <Menu />
                     </div>
-                    <div className="navbar_right">
-                        <HoverButton>
+                    <div className="navbar__nav">
+                        <HoverLink>
                             Book Now
-                        </HoverButton>
+                        </HoverLink>
                     </div>
                 </div>
             </Container>
-        </nav>
+        </div>
     )
 }
 
-export default NavBar;
+export default Navbar;

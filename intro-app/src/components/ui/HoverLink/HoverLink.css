@@ -1,0 +1,62 @@
+.hover__link {
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    background-color: rgba(170, 132, 83, 1);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 16px 38px;
+    z-index: 9999;
+
+}
+
+.hover__link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: #111;
+    transition: width 300ms linear, right 300ms linear, left 300ms linear;
+    z-index: -1;
+}
+
+.hover__link:hover::before {
+    position: absolute;
+    width: 100%;
+    left: unset;
+    left: 0;
+}
+
+
+.hover__link--small {
+    padding: 8px 16px;
+}
+
+.hover__link--medium {
+    padding: 16px 38px;
+    border: none;
+}
+
+.hover__link--large {
+    padding: 24px 48px;
+}
+
+.hover__link--transparent {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    color: white;
+    z-index: 0;
+}
+
+.hover__link--transparent>span {
+    position: relative;
+    z-index: 1;
+
+}

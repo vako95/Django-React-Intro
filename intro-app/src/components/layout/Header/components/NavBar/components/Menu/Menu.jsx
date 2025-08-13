@@ -1,9 +1,9 @@
+import { menuItem } from "@/constants/menuitem";
+import MenuItem from "./components/MenuItem";
+
 import "./Menu.css";
-import { menuItem } from "../../../../../../../constants/menuItem.js";
-import MenuItem from "./components/MenuItem/MenuItem.jsx";
 
 const Menu = () => {
-
     return (
         <ul className="menu">
             {menuItem.map((item) => (

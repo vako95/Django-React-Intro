@@ -1,87 +1,101 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Parallax, Autoplay } from 'swiper/modules';
+import { useRef, useState } from "react";
 import 'swiper/css';
 import 'swiper/css/navigation';
-import './Slider.css';
-import { Navigation } from 'swiper/modules';
-import { useState, useRef } from 'react';
-import img1 from "./assets/img/bg1.jpg";
-import slide2 from "./assets/img/slide2.jpg";
+import "./Slider.css";
+import SliderPromo from './scomponents/SliderPromo/SliderPromo';
+import SliderBooking from './scomponents/SliderBooking/SliderBooking';
+
+const photos = [
+    { id: 1, src: 'https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg1.jpg' },
+    { id: 2, src: 'https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/slide2.jpg' },
+    { id: 3, src: 'https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg1.jpg' },
+    { id: 4, src: 'https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/slide2.jpg' },
+];
 
 const Slider = () => {
-    const images = [
-        { id: 1, src: img1, alt: "Фон 1" },
-        { id: 2, src: slide2, alt: "Слайд 2" },
-    ];
+    const [currentPreview, setCurrentPreview] = useState({ src: '', hovered: false });
+    const [prevPreview, setPrevPreview] = useState({ src: '', hovered: false });
+    const photoRef = useRef(null);
 
-    const [hoveredButton, setHoveredButton] = useState(null);
-    const [preview, setPreview] = useState({ direction: null, src: null });
-    const swiperRef = useRef(null);
+    const handleNextHover = () => {
+        const swiper = photoRef.current;
+        if (!swiper) return;
 
-    const getPreviewIndex = (direction) => {
-        const swiper = swiperRef.current;
-        if (!swiper) return null;
-
-        return direction === "next"
-            ? (swiper.realIndex + 1) % images.length
-            : (swiper.realIndex - 1 + images.length) % images.length;
+        const nextIndex = (swiper.realIndex + 1) % photos.length;
+        setCurrentPreview({ src: photos[nextIndex].src, hovered: true });
     };
 
-    const handleMouseEnter = (direction) => {
-        setHoveredButton(direction);
-        const index = getPreviewIndex(direction);
-        if (index !== null) setPreview({ direction, src: images[index].src });
+    const handlePrevHover = () => {
+        const swiper = photoRef.current;
+        if (!swiper) return;
+
+        const prevIndex = (swiper.realIndex - 1 + photos.length) % photos.length;
+        setPrevPreview({ src: photos[prevIndex].src, hovered: true });
     };
 
-    const handleMouseLeave = () => {
-        setHoveredButton(null);
+    const handleNextLeave = () => {
+        setCurrentPreview((prev) => ({ ...prev, hovered: false }));
     };
 
-    const handleSlideChange = () => {
-        if (hoveredButton) {
-            const index = getPreviewIndex(hoveredButton);
-            if (index !== null) setPreview({ direction: hoveredButton, src: images[index].src });
-        }
+    const handlePrevLeave = () => {
+        setPrevPreview((prev) => ({ ...prev, hovered: false }));
     };
-
-    const renderPreviewCircle = (direction) => (
-        <div className={`preview-circle ${direction} ${preview.direction === direction && hoveredButton === direction ? "show" : ""}`}>
-            {preview.direction === direction && preview.src && <img src={preview.src} alt="Preview" />}
-        </div>
-    );
 
     return (
         <div className="slider">
             <Swiper
-                modules={[Navigation]}
+                onSwiper={(swiper) => (photoRef.current = swiper)}
+                autoplay={false}
+                parallax={true}
+                speed={1000}
+                loop={true}
+                modules={[Navigation, Parallax, Autoplay]}
+                className="mySwiper"
                 navigation={{
                     nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
+                    prevEl: ".swiper-button-prev"
                 }}
-                slidesPerView={1}
-                loop={true}
-                onSwiper={(swiper) => (swiperRef.current = swiper)}
-                onSlideChange={handleSlideChange}
             >
-                {images.map((img, index) => (
-                    <SwiperSlide key={index}>
-                        <div className="swiper_backdrop">
-                            <img src={img.src} alt={img.alt} />
+                {photos.map((photo) => (
+                    <SwiperSlide key={photo.id} className="slider__frame">
+                        <div style={{ backgroundImage: `url(${photo.src})` }} className="slider__frame-backdrop">
+                            <SliderPromo />
                         </div>
                     </SwiperSlide>
                 ))}
+
                 <div
                     className="swiper-button-prev"
-                    onMouseEnter={() => handleMouseEnter("prev")}
-                    onMouseLeave={handleMouseLeave}
+                    onMouseEnter={handlePrevHover}
+                    onMouseLeave={handlePrevLeave}
+                    onClick={handlePrevHover}
                 >
-                    {renderPreviewCircle("prev")}
+                    {prevPreview.src && (
+                        <img
+                            className={`swiper__preview-img ${prevPreview.hovered ? "swiper__preview-img--active" : ""}`}
+                            src={prevPreview.src}
+                            alt="next preview"
+                        />
+
+                    )}
                 </div>
+
+
                 <div
                     className="swiper-button-next"
-                    onMouseEnter={() => handleMouseEnter("next")}
-                    onMouseLeave={handleMouseLeave}
+                    onMouseEnter={handleNextHover}
+                    onMouseLeave={handleNextLeave}
+                    onClick={handleNextHover}
                 >
-                    {renderPreviewCircle("next")}
+                    {currentPreview.src && (
+                        <img
+                            className={`swiper__preview-img ${currentPreview.hovered ? "swiper__preview-img--active" : ""}`}
+                            src={currentPreview.src}
+                            alt="next preview"
+                        />
+                    )}
                 </div>
             </Swiper>
         </div>

@@ -1,15 +1,15 @@
-import NavBar from "./components/NavBar/NavBar";
+import Navbar from "./components/Navbar/Navbar";
+import SliderBooking from "./components/Slider/scomponents/SliderBooking/SliderBooking";
 import Slider from "./components/Slider/Slider";
 import "./Header.css";
-
 
 const Header = () => {
 
     return (
         <header className="header">
-            <NavBar />
+            <Navbar />
             <Slider />
-
+            <SliderBooking />
         </header>
     )
 }
