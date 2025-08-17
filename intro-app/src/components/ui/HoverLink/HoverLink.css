@@ -1,6 +1,6 @@
 .hover__link {
     position: relative;
-    width: auto;
+    width: max-content;
     height: auto;
     display: flex;
     background-color: rgba(170, 132, 83, 1);
@@ -9,7 +9,8 @@
     font-weight: 600;
     padding: 16px 38px;
     z-index: 9999;
-
+    border: none;
+    text-decoration: none;
 }
 
 .hover__link::before {

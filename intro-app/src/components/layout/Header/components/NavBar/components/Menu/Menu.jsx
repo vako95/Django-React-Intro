@@ -1,5 +1,5 @@
 import { menuItem } from "@/constants/menuitem";
-import MenuItem from "./components/MenuItem";
+import MenuItem from "./components/MenuItem/MenuItem";
 
 import "./Menu.css";
 

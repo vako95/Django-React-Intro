@@ -4,8 +4,8 @@ import { useRef, useState } from "react";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import "./Slider.css";
-import SliderPromo from './scomponents/SliderPromo/SliderPromo';
-import SliderBooking from './scomponents/SliderBooking/SliderBooking';
+import SliderPromo from './components/SliderPromo/SliderPromo.jsx';
+import SliderBooking from './components/SliderBooking/SliderBooking.jsx';
 
 const photos = [
     { id: 1, src: 'https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg1.jpg' },

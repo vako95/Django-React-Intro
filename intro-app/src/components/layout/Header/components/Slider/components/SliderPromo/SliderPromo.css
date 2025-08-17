@@ -1,91 +1,39 @@
-.slide__promo {
+.slider__promo {
     width: 100%;
-    /* height: calc(100% - 135px); */
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: all 0.8s ease;
-    backdrop-filter: blur(1px) brightness(0.8);
-}
-
-.slide__promo-logo-container-padding {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-}
-
-.slide__promo-button {
-    width: auto;
-    height: auto;
-    display: flex;
-}
-
-/* 
-
-.slide__promo {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.slide__promo.animate {
-    opacity: ;
-    transform: translateY(0);
-} */
-
-
-.slide__promo-container {
-    width: auto;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    height: calc(100% - 118px);
+    /* height: calc(100% - 118px + 102px); */
 
 }
 
-.slide__promo-logo {
+.slider__promo-logo {
     width: auto;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    overflow: hidden;
-}
-
-.slider__promo-logo-container {
-    width: 50px;
     height: auto;
-
-    box-sizing: content-box;
-
-
-}
-
-.slide__promo-content {
-    /* padding-bottom: 100px; */
-    min-width: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    box-sizing: content-box;
-
 }
 
-.slide__promo-logo-img {
+.slider__promo-logo-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.slide__promo-content-title {
+.slider__promo-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.slider__promo-title {
     font-family: "Barlow";
     font-size: 18px;
     font-weight: 400;
@@ -93,7 +41,7 @@
     margin-top: 20px;
 }
 
-.slide-promo__text {
+.slider__promo-content {
     max-width: 600px;
     font-size: 54px;
     line-height: 67px;
@@ -105,68 +53,12 @@
     padding: 32px 0px;
 }
 
-
-
-
-
-
-/* 
-.slide__promo-logo {
+.slider__promo-link {
     width: auto;
     height: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    transition: transform 0.8s ease;
+    font-size: 18px;
 }
-
-.slide__promo-logo-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.slide__promo-content {
-    margin-top: 20px;
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.slide__promo-button {
-    width: auto;
-    height: auto;
-    display: flex;
-    transform: translateY(100%);
-    opacity: 0;
-    background-color: orange;
-    transition: transform 0.8s ease;
-}
-
-.slide__promo:not(.animate) .slide__promo-button {
-    transform: translateY(0);
-    opacity: 1;
-    transition-delay: 1s;
-
-}
-
-.slide__promo.animate .slide__promo-button {
-    transform: translateY(150%) scale(0.8);
-
-}
-
-.slide-promo__button.animate {
-    transform: translateY(-150%) scale(0.8);
-
-}
-
-
-.slide__promo.animate .slide__promo-logo {
-    transform: translateY(-150%) scale(0.8);
-    opacity: 0;
-
-}
-
-.slide__promo.animate .slide__promo-content {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: none;
-} */

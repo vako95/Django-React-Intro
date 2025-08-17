@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
-import SliderBooking from "./components/Slider/scomponents/SliderBooking/SliderBooking";
+import SliderBooking from "./components/Slider/components/SliderBooking/SliderBooking.jsx";
 import Slider from "./components/Slider/Slider";
 import "./Header.css";
 
@@ -9,8 +9,9 @@ const Header = () => {
         <header className="header">
             <Navbar />
             <Slider />
-            <SliderBooking />
+            {/* <SliderBooking /> */}
         </header>
+
     )
 }
 

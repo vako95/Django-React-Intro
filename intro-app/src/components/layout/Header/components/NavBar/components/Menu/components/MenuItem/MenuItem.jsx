@@ -1,33 +1,59 @@
-import "./MenuItem.css";
-import { NavLink } from "react-router-dom";
-const MenuItem = ({ item }) => {
-    const isDropdown = item.dropdown.length > 0;
 
+import { NavLink } from "react-router-dom";
+import "./MenuItem.css";
+
+const MenuItem = ({ item }) => {
+    const isDropdown = Array.isArray(item.dropdown) && item.dropdown.length > 0;
     return (
         <li className="menu__item">
             <NavLink to={item.link} className="menu__link">
-                <span className="menu__link-text">
+                <span className="menu__link-title">
                     {item.name}
                 </span>
                 {isDropdown && (
-                    <i className="ri-arrow-down-s-line menu__link-icon"></i>
+                    <i className="ri-arrow-drop-down-line"></i>
                 )}
             </NavLink>
             {isDropdown && (
-                <ul className="submenu">
-                    {item.dropdown.length && item.dropdown.map(dropdownItem => (
-                        <li className="submenu__item">
-                            <NavLink to={dropdownItem.link} className="submenu__link">
-                                <span className="submenu__link-text">
-                                    {dropdownItem.name}
-                                </span>
-                            </NavLink>
-                        </li>
-                    ))}
-                </ul>
-            )}
+                <ul className="menu__sublist">
+                    {item.dropdown.map((dropdownItem) => {
+                        const hasDropdown = Array.isArray(dropdownItem.dropdown) && dropdownItem.dropdown.length > 0;
+                        return (
+                            <li key={dropdownItem.id} className="menu__sublist-item">
+                                <NavLink to={dropdownItem.link} className="menu__sublist-link">
+                                    <span className="menu__sublist-text">
+                                        {dropdownItem.name}
+                                    </span>
+                                    {hasDropdown && (
+                                        <i className="ri-arrow-drop-down-line"></i>
+                                    )}
 
-        </li>
+                                </NavLink>
+                                {hasDropdown && (
+                                    <ul className="menu__sublist--submenu">
+                                        {dropdownItem.dropdown.map((item) => (
+                                            <li className="menu__sublist-item" id={item.id}>
+                                                <NavLink className="menu__sublist-link menu__sublist-item--link">
+                                                    <span className="menu__sublist-text">
+                                                        {item.name}
+                                                    </span>
+                                                </NavLink>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )
+                                }
+
+                            </li>
+                        );
+                    })}
+                </ul>
+
+            )
+            }
+
+
+        </li >
     )
 }
 
