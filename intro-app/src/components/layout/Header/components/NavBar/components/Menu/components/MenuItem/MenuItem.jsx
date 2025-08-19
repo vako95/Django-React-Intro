@@ -11,7 +11,7 @@ const MenuItem = ({ item }) => {
                     {item.name}
                 </span>
                 {isDropdown && (
-                    <i className="ri-arrow-drop-down-line"></i>
+                    <i class="ri-arrow-down-s-line"></i>
                 )}
             </NavLink>
             {isDropdown && (
@@ -25,14 +25,14 @@ const MenuItem = ({ item }) => {
                                         {dropdownItem.name}
                                     </span>
                                     {hasDropdown && (
-                                        <i className="ri-arrow-drop-down-line"></i>
+                                        <i className="ri-arrow-right-s-fill"></i>
                                     )}
 
                                 </NavLink>
                                 {hasDropdown && (
                                     <ul className="menu__sublist--submenu">
-                                        {dropdownItem.dropdown.map((item) => (
-                                            <li className="menu__sublist-item" id={item.id}>
+                                        {dropdownItem.dropdown.map((item, idx) => (
+                                            <li className="menu__sublist-item" key={item.id}>
                                                 <NavLink className="menu__sublist-link menu__sublist-item--link">
                                                     <span className="menu__sublist-text">
                                                         {item.name}
@@ -48,11 +48,8 @@ const MenuItem = ({ item }) => {
                         );
                     })}
                 </ul>
-
             )
             }
-
-
         </li >
     )
 }

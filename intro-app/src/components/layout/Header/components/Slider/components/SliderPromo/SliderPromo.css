@@ -31,6 +31,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding: 32px 0px;
 }
 
 .slider__promo-title {
@@ -38,10 +39,13 @@
     font-size: 18px;
     font-weight: 400;
     color: rgb(255, 255, 255);
-    margin-top: 20px;
+    margin-bottom: 32px;
+
+
 }
 
 .slider__promo-content {
+    font-family: "Gilda Display";
     max-width: 600px;
     font-size: 54px;
     line-height: 67px;
@@ -50,7 +54,7 @@
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     overflow: hidden;
-    padding: 32px 0px;
+
 }
 
 .slider__promo-link {

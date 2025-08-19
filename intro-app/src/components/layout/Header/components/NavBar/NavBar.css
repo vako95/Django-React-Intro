@@ -4,7 +4,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: black;
+    background-color: transparent;
     z-index: 9999;
     position: absolute;
     left: 0;
@@ -27,5 +27,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: transparent;
+    ;
 }

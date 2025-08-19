@@ -1,11 +1,13 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Parallax, Autoplay } from 'swiper/modules';
+import { Navigation, Parallax, Autoplay, EffectFade } from 'swiper/modules';
 import { useRef, useState } from "react";
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
 import "./Slider.css";
 import SliderPromo from './components/SliderPromo/SliderPromo.jsx';
-import SliderBooking from './components/SliderBooking/SliderBooking.jsx';
+
+// import SliderBooking from './components/SliderBooking/SliderBooking.jsx';
 
 const photos = [
     { id: 1, src: 'https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg1.jpg' },
@@ -18,6 +20,7 @@ const Slider = () => {
     const [currentPreview, setCurrentPreview] = useState({ src: '', hovered: false });
     const [prevPreview, setPrevPreview] = useState({ src: '', hovered: false });
     const photoRef = useRef(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     const handleNextHover = () => {
         const swiper = photoRef.current;
@@ -47,11 +50,14 @@ const Slider = () => {
         <div className="slider">
             <Swiper
                 onSwiper={(swiper) => (photoRef.current = swiper)}
+                onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
                 autoplay={false}
                 parallax={true}
-                speed={1000}
+                speed={3000}
                 loop={true}
-                modules={[Navigation, Parallax, Autoplay]}
+                effect="fade"
+                fadeEffect={{ crossFade: true }}
+                modules={[Navigation, Parallax, Autoplay, EffectFade]}
                 className="mySwiper"
                 navigation={{
                     nextEl: ".swiper-button-next",
@@ -61,7 +67,7 @@ const Slider = () => {
                 {photos.map((photo) => (
                     <SwiperSlide key={photo.id} className="slider__frame">
                         <div style={{ backgroundImage: `url(${photo.src})` }} className="slider__frame-backdrop">
-                            <SliderPromo />
+                            <SliderPromo currentSlide={currentSlide} />
                         </div>
                     </SwiperSlide>
                 ))}
@@ -78,7 +84,6 @@ const Slider = () => {
                             src={prevPreview.src}
                             alt="next preview"
                         />
-
                     )}
                 </div>
 
@@ -98,7 +103,7 @@ const Slider = () => {
                     )}
                 </div>
             </Swiper>
-        </div>
+        </div >
     );
 };
 
