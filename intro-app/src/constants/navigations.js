@@ -1,5 +1,4 @@
-// src/constants/menuItem.js
-export const menuItem = [
+const navbarNav = [
     {
         id: 1,
         name: "HOME",
@@ -32,7 +31,7 @@ export const menuItem = [
                 link: "/about"
             },
             {
-                id: 26, // ✅ был дубликат id: 24
+                id: 26,
                 name: "Team",
                 link: "/team",
                 dropdown: [
@@ -81,3 +80,66 @@ export const menuItem = [
         dropdown: []
     }
 ];
+
+
+const footerNav = [
+    {
+        id: 1,
+        name: "Home",
+        icon: "ri-drag-move-line",
+        link: "/",
+    },
+    {
+        id: 2,
+        icon: "ri-drag-move-line",
+        name: "Rooms & Suites",
+        link: "/rooms",
+    },
+    {
+        id: 3,
+        icon: "ri-drag-move-line",
+        name: "Spa & Wellness",
+        link: "/spa",
+    },
+    {
+        id: 4,
+        icon: "ri-drag-move-line",
+        name: "Contact",
+        link: "/contact",
+    },
+    {
+        id: 4,
+        icon: "ri-drag-move-line",
+        name: "About Hotel",
+        link: "/about",
+    },
+    {
+        id: 4,
+        icon: "ri-drag-move-line",
+        name: "Contact",
+        link: "/contact",
+    },
+];
+
+
+const contactNav = [
+    {
+        id: 1,
+        icon: "ri-phone-line",
+        name: "1800-121-3637",
+
+    },
+    {
+        id: 2,
+        icon: "ri-mail-send-fill",
+        name: "needhelp@company.com",
+    },
+    {
+        id: 3,
+        icon: "ri-map-pin-line",
+        name: "1247/Plot No. 39, 15th Phase, United States of America",
+    },
+];
+
+
+export { navbarNav, footerNav, contactNav }

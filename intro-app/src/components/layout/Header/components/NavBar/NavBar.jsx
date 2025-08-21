@@ -5,7 +5,6 @@ import Menu from "./components/Menu/Menu";
 
 import "./Navbar.css";
 
-
 const Navbar = () => {
 
     return (

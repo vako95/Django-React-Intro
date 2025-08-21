@@ -1,4 +1,4 @@
-import { menuItem } from "@/constants/menuitem";
+import { navbarNav } from "../../../../../../../constants/navigations";
 import MenuItem from "./components/MenuItem/MenuItem";
 
 import "./Menu.css";
@@ -6,7 +6,7 @@ import "./Menu.css";
 const Menu = () => {
     return (
         <ul className="menu">
-            {menuItem.map((item) => (
+            {navbarNav.map((item) => (
                 <MenuItem item={item} key={item.id} />
             ))}
         </ul>
