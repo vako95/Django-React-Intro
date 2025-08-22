@@ -1,8 +1,9 @@
-.footer__contacts-list {
-    width: auto;
+.footer__about-social {
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    background-color: brown;
 }

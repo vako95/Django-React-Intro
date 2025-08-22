@@ -1,9 +1,18 @@
-.footer__about {
+.footer__about-brand {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: red;
+
+}
+
+.footer__about-img {
+    width: 180px;
+    height: auto;
+}
+
+.footer__about-link {
+    display: flex;
 }

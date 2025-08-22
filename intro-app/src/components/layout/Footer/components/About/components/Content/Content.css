@@ -1,0 +1,15 @@
+.footer__about-content {
+    width: auto;
+    height: auto;
+    display: flex;
+    margin: 32px 0px;
+}
+
+.footer__about-content-title {
+    font-family: "Barlow", sans-serif;
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(173, 173, 173);
+    line-height: 20px;
+}

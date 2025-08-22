@@ -1,0 +1,35 @@
+.footer__navigation-item {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.footer__navigation-item:not(:last-of-type) {
+    margin-bottom: 12px;
+}
+
+.footer__navigation-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer__navigation-link i {
+    display: flex;
+    font-size: 14px;
+    color: rgb(173, 173, 173);
+    margin-right: 8px;
+
+}
+
+.footer__navigation-title {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(173, 173, 173);
+}

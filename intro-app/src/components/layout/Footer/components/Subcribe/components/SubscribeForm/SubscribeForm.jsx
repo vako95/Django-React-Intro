@@ -1,23 +1,24 @@
-import "./SubsciribeForm.css";
+import "./SubscribeForm.css";
+
 import { HoverButton } from "@components/ui";
 
 const SubsciribeForm = () => {
     return (
-        <form className="subscribe__form">
-            <div className="subscribe__form-group">
-                <div className="subscribe__form-email">
+        <form className="footer__subscribe-form">
+            <div className="footer__subscribe-form-group">
+                <div className="footer__subscribe-form-email">
                     <input
                         type="email"
                         placeholder="Enter your email"
-                        className="subscribe__form-email"
+                        className="footer__subscribe-form-email"
                     />
                     <HoverButton type="submit">
-                        <i class="ri-telegram-2-line"></i>
+                        <i className="ri-telegram-2-line"></i>
                     </HoverButton>
                 </div>
             </div>
-            <div className="subscribe__form-group">
-                <div className="subscribe__form-checkbox">
+            <div className="footer__subscribe-form-group">
+                <div className="footer__subscribe-form-checkbox">
                     <label htmlFor="">
                         <i></i>
                     </label>

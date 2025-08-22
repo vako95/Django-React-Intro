@@ -1,3 +1,5 @@
+
+
 const navbarNav = [
     {
         id: 1,
@@ -108,13 +110,13 @@ const footerNav = [
         link: "/contact",
     },
     {
-        id: 4,
+        id: 5,
         icon: "ri-drag-move-line",
         name: "About Hotel",
         link: "/about",
     },
     {
-        id: 4,
+        id: 6,
         icon: "ri-drag-move-line",
         name: "Contact",
         link: "/contact",
@@ -122,24 +124,4 @@ const footerNav = [
 ];
 
 
-const contactNav = [
-    {
-        id: 1,
-        icon: "ri-phone-line",
-        name: "1800-121-3637",
-
-    },
-    {
-        id: 2,
-        icon: "ri-mail-send-fill",
-        name: "needhelp@company.com",
-    },
-    {
-        id: 3,
-        icon: "ri-map-pin-line",
-        name: "1247/Plot No. 39, 15th Phase, United States of America",
-    },
-];
-
-
-export { navbarNav, footerNav, contactNav }
+export { navbarNav, footerNav }

@@ -31,7 +31,7 @@ const MenuItem = ({ item }) => {
                                 </NavLink>
                                 {hasDropdown && (
                                     <ul className="menu__sublist--submenu">
-                                        {dropdownItem.dropdown.map((item, idx) => (
+                                        {dropdownItem.dropdown.map((item) => (
                                             <li className="menu__sublist-item" key={item.id}>
                                                 <NavLink className="menu__sublist-link menu__sublist-item--link">
                                                     <span className="menu__sublist-text">

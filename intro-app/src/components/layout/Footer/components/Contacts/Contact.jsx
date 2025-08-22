@@ -4,11 +4,13 @@ import "./Contact.css";
 const Contact = () => {
 
     return (
-        <div className="contacts">
-            <div className="contacts__heading">
-                <h5>Contact</h5>
+        <div className="footer__contacts">
+            <div className="footer__contacts-heading">
+                <h5 className="footer__contacts-heading-title">
+                    Information
+                </h5>
             </div>
-            <div className="contacts__content">
+            <div className="footer__contacts-content">
                 <ContactList />
             </div>
         </div>

@@ -1,19 +1,19 @@
-import "./NavigationItem.css";
 import { Link } from "react-router-dom";
+import "./NavigationItem.css";
+
 const NavigationItem = ({ item }) => {
 
     return (
-        <li className="navigation__item">
-            <Link className="navigation__link" to="">
+        <li className="footer__navigation-item">
+            <Link className="footer__navigation-link" to="">
                 <i className={item.icon}></i>
-                <span className="navigation__link-title">
+                <span className="footer__navigation-title">
                     {item.name}
                 </span>
             </Link>
         </li>
     )
 }
-
 
 export default NavigationItem;
 

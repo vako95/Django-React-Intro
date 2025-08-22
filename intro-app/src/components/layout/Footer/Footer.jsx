@@ -17,6 +17,7 @@ const Footer = () => {
                     <Navigation />
                     <Contact />
                     <Subscribe />
+
                 </div>
             </Container>
         </footer>

@@ -1,12 +1,13 @@
-import NavigationItem from "./components/NavigationItem/NavigationItem";
+import NavigationItem from "./components/NavigationItem/NavigationItem.jsx";
+import { footerNav } from "../../../../../../../constants/navigations.js";
+import "./NavigationList.css";
 
-
-const NavigationList = ({ items }) => {
+const NavigationList = () => {
 
     return (
-        <ul className="navigation__links">
-            {items.map((item) => (
-                <NavigationItem item={item} key={item.id} />
+        <ul className="footer__navigation-links">
+            {footerNav.map((item, idx) => (
+                <NavigationItem item={item} key={idx} />
             ))}
         </ul>
     )

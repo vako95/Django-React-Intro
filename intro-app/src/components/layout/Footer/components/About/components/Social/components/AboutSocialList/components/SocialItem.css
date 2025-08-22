@@ -1,0 +1,23 @@
+.footer__about-social-item {
+    max-width: 32px;
+    max-height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    border-radius: 100%;
+    padding: 8px;
+    background-color: black;
+    margin-right: 12px;
+
+}
+
+.footer__about-social-link {
+    display: flex;
+    text-decoration: none;
+}
+
+.footer__about-social-item :not(:last-of-type) {
+    margin-right: 16px;
+}

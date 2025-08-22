@@ -1,0 +1,37 @@
+.footer__contact-item {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.footer__contact-item:not(:last-of-type) {
+    margin-bottom: 12px;
+}
+
+.footer__contact-link {
+    max-width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer__contact-link i {
+    display: flex;
+    font-size: 22px;
+    color: rgb(173, 173, 173);
+    margin-right: 8px;
+
+}
+
+.footer__contact-title {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(173, 173, 173);
+    line-height: 26px;
+}
