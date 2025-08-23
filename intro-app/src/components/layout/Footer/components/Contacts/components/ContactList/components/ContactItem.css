@@ -1,5 +1,5 @@
 .footer__contact-item {
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,8 @@
 }
 
 .footer__contact-link {
-    max-width: 200px;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -30,6 +31,7 @@
 
 .footer__contact-title {
     font-family: "Barlow", sans-serif;
+    max-width: 400px;
     font-size: 16px;
     font-weight: 400;
     color: rgb(173, 173, 173);

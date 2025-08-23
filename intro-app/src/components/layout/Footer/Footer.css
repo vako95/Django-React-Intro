@@ -15,6 +15,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-
+    gap: 40px;
     background-color: blueviolet;
 }

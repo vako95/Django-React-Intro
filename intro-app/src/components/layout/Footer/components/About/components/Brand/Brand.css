@@ -1,5 +1,5 @@
 .footer__about-brand {
-    width: 100%;
+    width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -13,6 +13,13 @@
     height: auto;
 }
 
+.footer__about-link-brand {
+    width: 100%;
+    height: 100%;
+}
+
 .footer__about-link {
+    width: 100%;
+    height: 100%;
     display: flex;
 }

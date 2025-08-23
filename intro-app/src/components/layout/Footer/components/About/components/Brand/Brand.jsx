@@ -7,7 +7,7 @@ const Brand = () => {
         <div className="footer__about-brand">
             <div className="footer__about-img">
                 <Link className="footer__about-link">
-                    <img src={LogoBrand} alt="logo__brand" className="footer__about-brand" />
+                    <img src={LogoBrand} alt="logo__brand" className="footer__about-link-brand" />
                 </Link>
             </div>
         </div>
