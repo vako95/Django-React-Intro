@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(2, 14, 22);
+    background-color: rgb(34, 34, 34);
 }
 
 .footer__container {
@@ -15,6 +15,5 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 40px;
-    background-color: blueviolet;
+    gap: 32px;
 }

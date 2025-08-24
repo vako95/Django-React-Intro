@@ -2,7 +2,7 @@
     width: auto;
     height: auto;
     display: flex;
-    margin: 32px 0px;
+    margin-bottom: 16px;
 }
 
 .footer__about-content-title {

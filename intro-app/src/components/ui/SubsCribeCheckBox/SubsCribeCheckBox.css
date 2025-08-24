@@ -1,0 +1,58 @@
+.footer__subscribe-form-input-checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer__subscribe-form-input-checkbox:hover .subscribe__checkbox-input {
+    transform: rotateY(180deg);
+    transition: transform 0.3s linear;
+}
+
+.subscribe__checkbox-input {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid rgba(173, 173, 173);
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    margin-right: 12px;
+    outline: none;
+    transition: border-color 0.4s linear, color 0.3s linear, transform 0.6s;
+}
+
+.subscribe__checkbox-input::after {
+    content: "✔";
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(0deg);
+    color: rgba(173, 173, 173);
+    transition: color 0.3ms linear, transform 0.6s linear;
+}
+
+.subscribe__checkbox-input:checked {
+    border-color: #4caf50;
+}
+
+.subscribe__checkbox-input:checked::after {
+    color: #4caf50;
+    transform: translate(-50%, -50%) rotateY(0deg);
+}
+
+.subscribe__checkbox-input:checked:hover::after {
+    color: #4caf50;
+}
+
+.subscribe__checkbox-title {
+    font-family: "Barlow", sans-serif;
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(173, 173, 173);
+    line-height: 26px;
+}

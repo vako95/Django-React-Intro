@@ -9,13 +9,13 @@
 }
 
 .footer__subscribe-heading {
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 .footer__subscribe-title {
@@ -23,7 +23,7 @@
     font-size: 24px;
     font-weight: 400;
     color: rgb(255, 255, 255);
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .footer__subscribe-desc {
@@ -42,5 +42,4 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: darkcyan;
 }

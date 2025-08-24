@@ -7,6 +7,8 @@
     align-items: flex-start;
 }
 
+
+
 .footer__contact-item:not(:last-of-type) {
     margin-bottom: 12px;
 }
@@ -36,4 +38,15 @@
     font-weight: 400;
     color: rgb(173, 173, 173);
     line-height: 26px;
+}
+
+.footer__contact-link i,
+.footer__contact-link .footer__contact-title {
+    transition: color 150ms linear;
+}
+
+
+.footer__contact-link:hover i,
+.footer__contact-link:hover .footer__contact-title {
+    color: #aa8453;
 }

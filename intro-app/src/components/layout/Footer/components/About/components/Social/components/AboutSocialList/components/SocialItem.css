@@ -1,23 +1,40 @@
 .footer__about-social-item {
-    max-width: 32px;
-    max-height: 32px;
+    width: 100%;
+    max-width: 64px;
+    max-height: 64px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    border: 1px solid rgb(111, 111, 111);
     border-radius: 100%;
     padding: 8px;
-    background-color: black;
+    background-color: rgb(16, 16, 16);
+    transition: background-color 250ms linear;
     margin-right: 12px;
 
-}
 
-.footer__about-social-link {
-    display: flex;
-    text-decoration: none;
 }
 
 .footer__about-social-item :not(:last-of-type) {
     margin-right: 16px;
+}
+
+.footer__about-social-item:hover {
+    background-color: #aa8453;
+}
+
+.footer__about-social-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+}
+
+.footer__about-social-link i {
+    font-family: "Font Awesome 5 Brands";
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
 }

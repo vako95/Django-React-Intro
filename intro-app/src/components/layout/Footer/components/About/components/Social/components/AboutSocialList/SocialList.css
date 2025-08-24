@@ -1,9 +1,8 @@
 .footer__about-social-links {
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-
 }
