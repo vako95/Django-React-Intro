@@ -1,7 +1,5 @@
 .hover__button {
     font-family: 'Barlow', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
     letter-spacing: 0.6px;
     text-transform: uppercase;
     display: flex;
@@ -15,9 +13,27 @@
     overflow: hidden;
     z-index: 1;
     border: none;
-    padding: 18px 40px;
+
     cursor: pointer;
     transition: background-color 250ms linear, color 250ms linear;
+}
+
+.hover__button--sm {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 18px 40px;
+}
+
+.hover__button--md {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 18px 40px;
+}
+
+.hover__button--lg {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 18px 100px;
 }
 
 .hover__button--gold:hover {
@@ -36,7 +52,6 @@
     background-color: #222222;
     color: #FFFFFF;
     z-index: -1;
-
     transition: width 300ms linear, right 300ms linear, left 300ms linear;
 
 }

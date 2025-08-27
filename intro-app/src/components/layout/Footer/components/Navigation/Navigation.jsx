@@ -6,7 +6,7 @@ const Navigation = () => {
     return (
         <nav className="footer__navigation">
             <div className="footer__navigation-heading">
-                <h5 className="footer__navigation-heading-title">
+                <h5 className="footer__navigation-title">
                     Services Links
                 </h5>
             </div>

@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
-import SliderBooking from "./components/Slider/components/SliderBooking/SliderBooking.jsx";
+// import SliderBooking from "./components/Slider/components/SliderBooking/SliderBooking.jsx";
 import Slider from "./components/Slider/Slider";
 import "./Header.css";
 

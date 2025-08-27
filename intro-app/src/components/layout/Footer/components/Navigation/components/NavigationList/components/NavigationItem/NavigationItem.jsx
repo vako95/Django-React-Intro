@@ -7,7 +7,7 @@ const NavigationItem = ({ item }) => {
         <li className="footer__navigation-item">
             <Link className="footer__navigation-link" to="">
                 <i className={item.icon}></i>
-                <span className="footer__navigation-title">
+                <span className="footer__navigation-link-title">
                     {item.name}
                 </span>
             </Link>

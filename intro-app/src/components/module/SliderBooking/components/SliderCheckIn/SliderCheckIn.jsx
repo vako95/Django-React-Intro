@@ -31,30 +31,33 @@ const SliderCheckIn = () => {
 
     return (
         <>
-            <div id='checkIn' className="slider__booking-calendar" onClick={toggleCheckInCalendar}>
-                <div className="slider__booking-check-in" >
-                    <div className="slider__booking-check-in-calendar">
-                        <i className="ri-calendar-line"></i>
+            <div className="slider__calendar-flex">
+                <div id='checkIn' className="slider__booking-calendar" onClick={toggleCheckInCalendar}>
+                    <div className="slider__booking-check-in">
+                        <div className="slider__booking-check-in-calendar">
+                            <i className="ri-calendar-line"></i>
+                        </div>
+                        <div className="slider__booking-check-in-heading">
+                            <h6 className="slider__booking-check-in-title">Check In</h6>
+                            <time className="slider__booking-check-in-time" dateTime={selectedInDate.format('YYYY-MM-DD')}>
+                                {selectedInDate.format('DD.MM.YYYY')}
+                            </time>
+                        </div>
                     </div>
-                    <div className="slider__booking-check-in-heading">
-                        <h6 className="slider__booking-check-in-title">Check In</h6>
-                        <time className="slider__booking-check-in-time" dateTime={selectedInDate.format('YYYY-MM-DD')}>
-                            {selectedInDate.format('DD.MM.YYYY')}
-                        </time>
+                    <div id='checkOut' className="slider__booking-check-out" onClick={toggleCheckInCalendar}>
+                        <div className="slider__booking-check-out-calendar">
+                            <i className="ri-calendar-line"></i>
+                        </div>
+                        <div className="slider__booking-check-out-heading">
+                            <h6 className="slider__booking-check-out-title">
+                                Check Out
+                            </h6>
+                            <time className="slider__booking-check-in-time" dateTime={selectedOutDate.format('YYYY-MM-DD')}>
+                                {selectedOutDate.format('DD.MM.YYYY')}
+                            </time>
+                        </div>
                     </div>
-                </div>
-                <div id='checkOut' className="slider__booking-check-out" onClick={toggleCheckInCalendar}>
-                    <div className="slider__booking-check-out-calendar">
-                        <i className="ri-calendar-line"></i>
-                    </div>
-                    <div className="slider__booking-check-out-heading">
-                        <h6 className="slider__booking-check-out-title">
-                            Check Out
-                        </h6>
-                        <time className="slider__booking-check-in-time" dateTime={selectedOutDate.format('YYYY-MM-DD')}>
-                            {selectedOutDate.format('DD.MM.YYYY')}
-                        </time>
-                    </div>
+
                 </div>
                 {checkInCollapse && checOutCollapse && (
                     <div className="collapsed" id="collapse">

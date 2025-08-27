@@ -1,0 +1,52 @@
+.luxury {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+}
+
+/* Модальное окно */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Кнопки */
+.btn-open,
+.btn-close {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1976d2;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-close {
+    background-color: #d32f2f;
+}
+
+.btn-open:hover,
+.btn-close:hover {
+    opacity: 0.9;
+}

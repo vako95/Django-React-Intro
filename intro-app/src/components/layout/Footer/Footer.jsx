@@ -1,6 +1,7 @@
 import { Container } from "../../ui";
 import About from "./components/About/About";
 import Contact from "./components/Contacts/Contact";
+import Copyright from "./components/Copyright/Copyright";
 import Navigation from "./components/Navigation/Navigation";
 import Subscribe from "./components/Subcribe/Subscribe";
 
@@ -17,8 +18,8 @@ const Footer = () => {
                     <Navigation />
                     <Contact />
                     <Subscribe />
-
                 </div>
+                <Copyright />
             </Container>
         </footer>
     )

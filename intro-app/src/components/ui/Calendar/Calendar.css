@@ -1,0 +1,13 @@
+.calendar-fullscreen {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgb(6, 94, 166);
+    overflow: hidden;
+}
+
+.MuiPickersLayout-root {
+    width: 100%;
+}

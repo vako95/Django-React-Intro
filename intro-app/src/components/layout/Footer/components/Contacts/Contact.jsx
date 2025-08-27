@@ -1,4 +1,4 @@
-import ContactList from "./components/ContactList/ContactList";
+import ContactList from "./components/ContactList/ContactList.jsx";
 import "./Contact.css";
 
 const Contact = () => {
@@ -6,7 +6,7 @@ const Contact = () => {
     return (
         <div className="footer__contacts">
             <div className="footer__contacts-heading">
-                <h5 className="footer__contacts-heading-title">
+                <h5 className="footer__contacts-title">
                     Information
                 </h5>
             </div>

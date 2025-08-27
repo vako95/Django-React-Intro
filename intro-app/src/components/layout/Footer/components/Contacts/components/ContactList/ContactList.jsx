@@ -1,6 +1,6 @@
 import "./ContactList.css";
 
-import ContactItem from "./components/ContactItem";
+import ContactItem from "./components/ContactItem.jsx";
 
 const ContactList = () => {
 

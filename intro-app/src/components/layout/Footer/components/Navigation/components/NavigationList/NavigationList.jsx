@@ -5,7 +5,7 @@ import "./NavigationList.css";
 const NavigationList = () => {
 
     return (
-        <ul className="footer__navigation-links">
+        <ul className="footer__navigation-list">
             {footerNav.map((item, idx) => (
                 <NavigationItem item={item} key={idx} />
             ))}

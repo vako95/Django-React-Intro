@@ -11,7 +11,7 @@ const MenuItem = ({ item }) => {
                     {item.name}
                 </span>
                 {isDropdown && (
-                    <i class="ri-arrow-down-s-line"></i>
+                    <i className="ri-arrow-down-s-line"></i>
                 )}
             </NavLink>
             {isDropdown && (
