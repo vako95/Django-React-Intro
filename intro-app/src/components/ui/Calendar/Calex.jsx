@@ -2,8 +2,32 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { Button } from "@mui/material";
-
+import dayjs from 'dayjs';
 export default function Calex({ checkIn, checkOut, onCheckInChange, onCheckOutChange, onClose }) {
+
+    // Обработчик выбора check-in
+    const handleCheckInChange = (date) => {
+        onCheckInChange(dayjs(date));
+    };
+
+    // Обработчик выбора check-out
+    const handleCheckOutChange = (date) => {
+        if (!date) return;
+
+        // запрещаем если checkout <= checkin
+        if (dayjs(date).isSame(checkIn, "day") || dayjs(date).isBefore(checkIn, "day")) {
+            return;
+        }
+
+        onCheckOutChange(dayjs(date), 1);
+        onClose();
+    };
+
+    const handleNoCheckOut = () => {
+        onCheckOutChange(null);
+        onClose(); // закрываем модалку
+    };
+
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <div style={{ display: 'flex', gap: '20px', flexDirection: 'column' }}>
@@ -11,28 +35,21 @@ export default function Calex({ checkIn, checkOut, onCheckInChange, onCheckOutCh
                     <h4>Check-in</h4>
                     <DateCalendar
                         value={checkIn}
-                        onChange={onCheckInChange}
+                        onChange={handleCheckInChange}
+                        minDate={dayjs()}
                     />
                 </div>
                 <div>
                     <h4>Check-out (optional)</h4>
                     <DateCalendar
                         value={checkOut}
-                        onChange={(date) => {
-                            onCheckOutChange(date); // сохраняем check-out
-                            if (date && date.isAfter(checkIn)) {
-                                onClose(); // закрываем модалку
-                            }
-                        }}
-                        minDate={checkIn} // нельзя выбрать раньше check-in
+                        onChange={handleCheckOutChange}
+                        minDate={checkIn}
                     />
                     <Button
                         variant="outlined"
                         color="secondary"
-                        onClick={() => {
-                            onCheckOutChange(null); // сбрасываем check-out
-                            onClose(); // закрываем модалку
-                        }}
+                        onClick={handleNoCheckOut}
                         style={{ marginTop: "10px" }}
                     >
                         No check-out
