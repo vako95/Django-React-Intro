@@ -27,8 +27,6 @@ const Luxury = () => {
                             onCheckInChange={setCheckIn}
                             onCheckOutChange={setCheckOut}
                             onClose={handleClose}
-
-
                         />
                         <div style={{ marginTop: "10px" }}>
                             <button className="btn-close" onClick={handleClose}>Close</button>

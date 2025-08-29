@@ -5,16 +5,15 @@ import { Button } from "@mui/material";
 import dayjs from 'dayjs';
 export default function Calex({ checkIn, checkOut, onCheckInChange, onCheckOutChange, onClose }) {
 
-    // Обработчик выбора check-in
     const handleCheckInChange = (date) => {
         onCheckInChange(dayjs(date));
     };
 
-    // Обработчик выбора check-out
+
     const handleCheckOutChange = (date) => {
         if (!date) return;
 
-        // запрещаем если checkout <= checkin
+
         if (dayjs(date).isSame(checkIn, "day") || dayjs(date).isBefore(checkIn, "day")) {
             return;
         }
@@ -25,7 +24,7 @@ export default function Calex({ checkIn, checkOut, onCheckInChange, onCheckOutCh
 
     const handleNoCheckOut = () => {
         onCheckOutChange(null);
-        onClose(); // закрываем модалку
+        onClose();
     };
 
     return (

@@ -6,6 +6,9 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 16px;
+    position: relative;
+    /* min-height: 100vh; */
+    padding: 20px;
 
 }
 
@@ -32,25 +35,156 @@
     min-width: 192px;
 }
 
-.cc {
-    position: fixed;
-    top: 0;
-    left: 0;
+
+
+
+
+
+
+
+.reservation__booking {
     width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    height: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    z-index: 9999;
+    background-color: #f8f5f0;
+    padding: 16px 24px;
 }
 
-.xuyezz {
+.reservation__booking-picker {
     width: 100%;
+    height: auto;
     display: flex;
-
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-body.no-scroll {
-    overflow: hidden;
+.reservation__booking-calendar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.reservation__booking-entry {
+    min-width: 150px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4px;
+}
+
+.reservation__booking-entry-wrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 12px;
+}
+
+.reservation__booking-entry-icon {
+    font-size: 24px;
+    font-weight: 400;
+    color: #aa8453;
+}
+
+.reservation__booking-entry-heading {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.reservation__booking-entry-title {
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(102, 102, 102);
+    margin-bottom: 8px;
+}
+
+.reservation__booking-entry-booking {
+    font-family: "Barlow", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(102, 102, 102);
+    margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.reservation__booking-leave {
+    min-width: 150px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2px;
+}
+
+.reservation__booking-leave-wrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.reservation__booking-leave-icon {
+    font-size: 24px;
+    font-weight: 400;
+    color: #aa8453;
+}
+
+.reservation__booking-leave-heading {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.reservation__booking-leave-title {
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(102, 102, 102);
+    margin-bottom: 8px;
+}
+
+.reservation__booking-leave-booking {
+    font-family: "Barlow", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(102, 102, 102);
+    margin-bottom: 8px;
 }

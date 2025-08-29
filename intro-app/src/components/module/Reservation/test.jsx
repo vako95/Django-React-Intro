@@ -1,64 +1,40 @@
 import { Container } from "@components/ui";
 import { useEffect, useRef, useState } from "react";
 import Modal from "../../ui/ModalContainer/ModalContainer.jsx";
+import HoverButton from "../../ui/HoverButton/HoverButton";
 import Calendar from "../../ui/Calendar/Calendar.jsx";
 import dayjs from "dayjs";
 import "./Reservation.css";
 import Booking from "./components/Date/Booking.jsx";
+import { max, set } from "date-fns";
 
 
 const Reservation = () => {
     const [checkIn, setCheckIn] = useState(dayjs());
     const [checkOut, setCheckOut] = useState(dayjs().add(1, "day"));
-
-    const [calendarModal, setcalendarModal] = useState(false);
-
-
-    const [bookingModal, setBookingModal] = useState(false);
-
-
-
-    const [reservationHeight, setReservationHeight] = useState(0);
+    const [openModal, setOpenModal] = useState(false);
     const reservationRef = useRef(null);
-
+    const [reservationHeight, setReservationHeight] = useState(0)
     const [rooms, setRooms] = useState(1);
     const [adults, setAdults] = useState(1);
     const [children, setChildren] = useState(0);
-
-    const counters = [
-        {
-            label: "Rooms",
-            count: rooms,
-            onIncrease: () => setRooms((prev) => prev + 1),
-            onDecrease: () => setRooms((prev) => Math.max(0, prev - 1)),
-        },
-        {
-            label: "Adults",
-            count: adults,
-            onIncrease: () => setAdults((prev) => prev + 1),
-            onDecrease: () => setAdults((prev) => Math.max(0, prev - 1)),
-        },
-        {
-            label: "Children",
-            count: children,
-            onIncrease: () => setChildren((prev) => prev + 1),
-            onDecrease: () => setChildren((prev) => Math.max(0, prev - 1)),
-        },
-    ]
-
-    // const handleDecrease = () => {
-    //     setCount((prev) => Math.max(0, prev - 1))
-    // }
-
-    // const handleIncrease = () => {
-    //     setCount((prev) => prev + 1);
-    // }
-
-
+    const [guestCollapse, setGuestCollapse] = useState(false)
+    const [bookingModal, setBookingModal] = useState(false);
 
     const handleToggleBooking = () => {
         setBookingModal(prev => !prev);
     };
+    const handleToggleBookin = () => {
+        setBookingModal(prev => !prev)
+    }
+
+    const increaseRooms = () => {
+        setRooms((prev) => prev + 1);
+    }
+
+    const decreaseRooms = () => {
+        setRooms(prev => Math.max(0, prev + 1))
+    }
 
     useEffect(() => {
         if (reservationRef.current) {
@@ -66,8 +42,12 @@ const Reservation = () => {
         }
     }, [])
 
-
-
+    // const updateGuests = (type, value) => {
+    //     setGuests((prev) => ({
+    //         ...prev,
+    //         [type]: Math.max(0, prev[type] + value)
+    //     }))
+    // }
     const handleChekIn = (date) => {
         setCheckIn(date);
         if (date.isSame(date.endOf("month"), "day")) {
@@ -79,11 +59,11 @@ const Reservation = () => {
 
     const handleSelectCheckOut = (date) => {
         setCheckOut(date);
-        if (checkIn) setcalendarModal(false);
+        if (checkIn) setOpenModal(false);
     };
 
-    const handleToggleCalendar = () => {
-        setcalendarModal((prev) => !prev);
+    const handleToggle = () => {
+        setOpenModal((prev) => !prev);
     };
 
     return (
@@ -94,23 +74,29 @@ const Reservation = () => {
                         <Booking
                             checkIn={checkIn}
                             checkOut={checkOut}
-                            handleToggleCalendar={handleToggleCalendar}
-                            reservationHeight={reservationHeight}
-                            calendarModal={calendarModal}
+                            handleToggle={handleToggle} // для календаря
+                            increaseRooms={increaseRooms}
+                            rooms={rooms}
+                            handleToggleBooking={handleToggleBookin} // для модалки гостей
+                            guestCollapse={guestCollapse}
+                            adults={adults}
+                            setAdults={setAdults}
+                            children={children}
+                            setChildren={setChildren}
+                            open={openModal}
                             bookingModal={bookingModal}
-                            handleToggleBooking={handleToggleBooking}
-                            counters={counters}
+                            reservationHeight={reservationHeight}
 
                         />
                     </div>
 
-                    <Modal position="left" height={reservationHeight} open={calendarModal} onClose={handleToggleCalendar}>
+                    <Modal position="left" height={reservationHeight} open={openModal} onClose={handleToggle}>
                         <Calendar
                             checkIn={checkIn}
                             onCheckInChange={handleChekIn}
                             checkOut={checkOut}
                             onCheckOutChange={handleSelectCheckOut}
-                            onClose={handleToggleCalendar}
+                            onClose={handleToggle}
                         />
                     </Modal>
                 </form>

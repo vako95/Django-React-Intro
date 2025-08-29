@@ -3,12 +3,13 @@
 *,
 *::after,
 *::before {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scrollbar-gutter: stable;
 }
 
 body {
-  font-family: 'Barlow', sans-serif;
-  /* overflow: hidden; */
+    font-family: 'Barlow', sans-serif;
+    scrollbar-gutter: stable;
 }

@@ -10,7 +10,6 @@
     background-color: #aa8453;
     color: #FFFFFF;
     position: relative;
-    overflow: hidden;
     z-index: 1;
     border: none;
 
@@ -53,7 +52,6 @@
     color: #FFFFFF;
     z-index: -1;
     transition: width 300ms linear, right 300ms linear, left 300ms linear;
-
 }
 
 .hover__button--gold:hover::before {
@@ -67,4 +65,10 @@
 .hover__button--white:hover {
     background-color: #fff;
     color: #aa8453;
+}
+
+.hover__button--green:hover {
+    background-color: #8ff90e;
+    color: #aa8453;
+    transition: background-color 100ms linear, color 100ms linear;
 }

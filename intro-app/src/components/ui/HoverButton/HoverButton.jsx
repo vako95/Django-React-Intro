@@ -9,11 +9,10 @@ const HoverButton = ({ className, children, variant, color, size, ...props }) =>
         size && `hover__button--${size}`,
         color && `hover__button--${color}`,
         className
-
     );
 
     return (
-        <button className={classes} type='submit' {...props}>
+        <button className={classes} type='submit'{...props}>
             {children}
         </button>
     )
