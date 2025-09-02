@@ -1,13 +1,14 @@
 .calendar {
-    width: 100%;
+    width: auto;
     height: auto;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;
-
-
+    top: 100%;
+    left: 0;
     /* background-color: rgba(227, 43, 10, 0.3); */
 }
 
@@ -19,6 +20,7 @@
     justify-content: flex-start;
     align-items: stretch;
     gap: 10px;
+
 }
 
 .calendar__entrance {

@@ -6,7 +6,7 @@ import "./Header.css";
 const Header = () => {
 
     return (
-        <header className="header">
+        <header tabIndex={1} className="header">
             <Navbar />
             <Slider />
             {/* <SliderBooking /> */}

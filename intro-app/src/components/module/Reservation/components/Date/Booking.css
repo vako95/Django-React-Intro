@@ -1,11 +1,15 @@
 .reservation__booking-guests {
     width: auto;
     height: auto;
+    min-width: 250px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     padding: 2px;
+    scrollbar-gutter: stable;
+
+
 }
 
 .reservation__booking-guests-wrapper {
@@ -59,6 +63,8 @@
 }
 
 .reservation__booking-guests-option {
+    width: 8ch;
+    text-transform: capitalize;
     font-family: "Barlow", sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -72,4 +78,12 @@
     position: absolute;
     top: 0;
     margin-right: 12px;
+}
+
+.reservation__booking-btn {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }

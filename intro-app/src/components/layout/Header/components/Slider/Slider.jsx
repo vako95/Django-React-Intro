@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Parallax, Autoplay, EffectFade } from 'swiper/modules';
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
@@ -21,6 +21,8 @@ const Slider = () => {
     const [prevPreview, setPrevPreview] = useState({ src: '', hovered: false });
     const photoRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0);
+    const sliderRef = useRef(null);
+
 
     const handleNextHover = () => {
         const swiper = photoRef.current;
@@ -47,7 +49,9 @@ const Slider = () => {
     };
 
     return (
-        <div className="slider">
+        <div ref={sliderRef} className="slider" tabIndex={0} onClick={() => {
+            sliderRef.current?.focus();
+        }}>
             <Swiper
                 onSwiper={(swiper) => (photoRef.current = swiper)}
                 onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}

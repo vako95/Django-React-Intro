@@ -28,7 +28,7 @@
 
 
 .footer__navigation-link:hover i,
-.footer__navigation-link:hover .footer__navigation-title {
+.footer__navigation-link:hover .footer__navigation-link-title {
     color: #aa8453;
 }
 

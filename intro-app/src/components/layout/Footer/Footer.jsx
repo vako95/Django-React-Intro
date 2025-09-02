@@ -11,7 +11,7 @@ import "./Footer.css";
 const Footer = () => {
 
     return (
-        <footer className="footer">
+        <footer tabIndex={0} className="footer">
             <Container>
                 <div className="footer__container">
                     <About />

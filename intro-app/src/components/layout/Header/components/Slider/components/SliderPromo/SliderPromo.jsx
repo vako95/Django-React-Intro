@@ -10,7 +10,7 @@ import SliderLogo from "./assets/images/logo/logo.png"
 const SliderPromo = ({ currentSlide }) => {
 
     return (
-        <div className="slider__promo">
+        <div className="slider__promo" tabIndex={4}>
             <BackInDown trigger={currentSlide}>
                 <div className="slider__promo-logo">
                     <img className="slider__promo-logo-img" src={SliderLogo} alt="slider__logo" />

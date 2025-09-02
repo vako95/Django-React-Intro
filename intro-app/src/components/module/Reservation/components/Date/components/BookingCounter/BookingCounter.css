@@ -1,5 +1,4 @@
 .reservation__booking-counter {
-    position: fixed;
     min-width: 300px;
     height: auto;
     display: flex;
@@ -10,6 +9,9 @@
     border: 2px solid #aa8453;
     backdrop-filter: blur(8px);
     padding: 32px;
+    position: absolute;
+    top: 100%;
+
 }
 
 .reservation__booking-counter-content {
@@ -19,6 +21,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
 }
 
 .reservation__booking-counter-content:not(:last-of-type) {

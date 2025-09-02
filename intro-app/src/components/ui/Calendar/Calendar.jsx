@@ -4,12 +4,12 @@ import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import dayjs from 'dayjs';
 import "./Calendar.css";
 
-const Calendar = ({ checkIn, checkOut, onCheckInChange, onCheckOutChange }) => {
+const Calendar = ({ checkIn, checkOut, onCheckInChange, onCheckOutChange, ...props }) => {
 
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <div className="calendar">
-                <div className="calendar__picker">
+            <div className="calendar"  {...props}>
+                <div className="calendar__picker" onClick={(e) => e.stopPropagation()}>
                     <div className="calendar__entrance">
                         <h6 className='calendar__title'>Check-in</h6>
                         <DateCalendar

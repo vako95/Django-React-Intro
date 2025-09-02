@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Calex from "../ui/Calendar/Calex";
+import Calex from "../../ui/Calendar/Calex";
 import dayjs from "dayjs";
 import "./Luxury.css";
 

@@ -9,8 +9,10 @@
     position: relative;
     /* min-height: 100vh; */
     padding: 20px;
+    /* scrollbar-gutter: stable; */
 
 }
+
 
 .reservation__container {
     width: 100%;
@@ -28,6 +30,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
+    position: relative;
 
 }
 
@@ -62,18 +65,19 @@
     align-items: center;
 }
 
-.reservation__booking-calendar {
-    width: 100%;
+.reservation__booking-wrapper {
+    width: auto;
     height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 36px;
+
 }
 
-
 .reservation__booking-entry {
-    min-width: 150px;
+    min-width: 250px;
     width: auto;
     height: auto;
     display: flex;
@@ -81,7 +85,11 @@
     justify-content: flex-start;
     align-items: center;
     padding: 4px;
+    /* border-right: 1px solid rgb(167, 155, 155); */
+    /* margin-right: 32px; */
 }
+
+
 
 .reservation__booking-entry-wrapper {
     width: auto;
@@ -124,7 +132,10 @@
     margin-bottom: 8px;
 }
 
-
+.reservation__booking-entry,
+.reservation__booking-leave {
+    border-right: 1px solid rgb(167, 155, 155);
+}
 
 
 
@@ -138,7 +149,7 @@
 
 
 .reservation__booking-leave {
-    min-width: 150px;
+    min-width: 250px;
     width: auto;
     height: auto;
     display: flex;
@@ -146,7 +157,9 @@
     justify-content: flex-start;
     align-items: center;
     padding: 2px;
+    /* border-right: 1px solid rgb(167, 155, 155); */
 }
+
 
 .reservation__booking-leave-wrapper {
     width: auto;
@@ -188,3 +201,20 @@
     color: rgba(102, 102, 102);
     margin-bottom: 8px;
 }
+
+
+.reservation__booking-calendar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .rr {
+    width: auto;
+    height: auto;
+    display: flex;
+    position: absolute;
+} */
