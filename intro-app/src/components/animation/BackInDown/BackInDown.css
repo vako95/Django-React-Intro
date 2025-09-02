@@ -1,6 +1,7 @@
 .back__in-down {
     width: auto;
     height: auto;
+
     display: flex;
     justify-content: flex-start;
     align-items: center;

@@ -29,6 +29,7 @@ const BackInUp = ({ children, trigger }) => {
             className="back__in-up"
             key={trigger}
             initial="hidden"
+            animate="visible"
             whileInView="visible"
             viewport={{ once: false }}
             variants={variants}

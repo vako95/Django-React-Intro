@@ -6,9 +6,6 @@ import Calendar from "../../../../ui/Calendar/Calendar";
 const Booking = ({
     checkIn,
     checkOut,
-    rooms,
-    adults,
-    children,
 
 
 
@@ -18,41 +15,39 @@ const Booking = ({
     isBookingOpen,
     toogleCalendar,
     handleSelectCheckOut,
-    calendarRef,
     handleCheckIn
 }) => {
 
 
 
     return (
-        <div className="reservation__booking">
-            <div className="reservation__booking-picker">
+        <div className="booking">
+            <div className="booking-picker">
                 <div
                     onBlur={(e) => {
-                        console.log(e);
                         if (!e.currentTarget.contains(e.relatedTarget)) {
                             handleCollapseCalendar(false);
                         }
-                    }} className="reservation__booking-wrapper" tabIndex={0} onClick={handleCollapseCalendar}>
-                    <div className="reservation__booking-entry">
-                        <div className="reservation__booking-entry-wrapper">
-                            <i className="reservation__booking-entry-icon ri-group-line"></i>
+                    }} className="booking-wrapper" tabIndex={0} onClick={handleCollapseCalendar}>
+                    <div className="booking-entry">
+                        <div className="booking-entry-wrapper">
+                            <i className="booking-entry-icon ri-group-line"></i>
                         </div>
-                        <div className="reservation__booking-entry-heading">
-                            <h6 className="reservation__booking-entry-title">Check In</h6>
-                            <time className="reservation__booking-entry-booking">
+                        <div className="booking-entry-heading">
+                            <h6 className="booking-entry-title">Check In</h6>
+                            <time className="booking-entry-booking">
                                 {checkIn?.format("DD.MM.YYYY") || "-"}
                             </time>
                         </div>
                     </div>
 
-                    <div className="reservation__booking-leave">
-                        <div className="reservation__booking-leave-wrapper">
-                            <i className="reservation__booking-leave-icon ri-calendar-line"></i>
+                    <div className="booking-leave">
+                        <div className="booking-leave-wrapper">
+                            <i className="booking-leave-icon ri-calendar-line"></i>
                         </div>
-                        <div className="reservation__booking-leave-heading">
-                            <h6 className="reservation__booking-leave-title">Check Out</h6>
-                            <time className="reservation__booking-leave-booking">
+                        <div className="booking-leave-heading">
+                            <h6 className="booking-leave-title">Check Out</h6>
+                            <time className="booking-leave-booking">
                                 {checkOut?.format("DD.MM.YYYY") || "-"}
                             </time>
                         </div>
@@ -68,37 +63,52 @@ const Booking = ({
                     )}
                 </div>
 
-
-                <div className="reservation__booking-guests" onClick={handleToggleBooking}>
-                    <div className="reservation__booking-guests-wrapper">
-                        <i className="reservation__booking-guests-icon ri-user-line"></i>
-                    </div>
-                    <div className="reservation__booking-guests-heading">
-                        <div className="reservation__booking-guests-content">
-                            <h6 className="reservation__booking-guests-title">Guests</h6>
+                <div
+                    className="booking-guests-container"
+                    tabIndex={0}
+                    onBlur={(e) => {
+                        if (!e.currentTarget.contains(e.relatedTarget)) {
+                            handleCollapseCalendar(false);
+                        }
+                    }}
+                >
+                    <div className="booking-guests" tabIndex={1}
+                        onBlur={(e) => {
+                            if (!e.currentTarget.contains(e.relatedTarget)) {
+                                handleCollapseCalendar(false);
+                            }
+                        }}
+                        onClick={handleToggleBooking}>
+                        <div className="booking-guests-wrapper">
+                            <i className="booking-guests-icon ri-user-line"></i>
                         </div>
-                        <div className="reservation__booking-guests-summary">
-                            <div className="reservation__booking-guests-summary">
-                                {counters.passengerList.map((item) => (
-                                    <span key={item.label} className="reservation__booking-guests-option">
-                                        {item.count} {item.label}
-                                    </span>
-                                ))}
+                        <div className="booking-guests-heading">
+                            <div className="booking-guests-content">
+                                <h6 className="booking-guests-title">Guests</h6>
+                            </div>
+                            <div className="booking-guests-summary">
+                                <div className="booking-guests-summary">
+                                    {counters.passengerList.map((item) => (
+                                        <span key={item.label} className="booking-guests-option">
+                                            {item.count} {item.label}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
                         </div>
+                        {isBookingOpen && (
+                            <BookingCounter
+                                counters={counters}
+                            />
+                        )}
                     </div>
-                    {isBookingOpen && (
-                        <BookingCounter
-                            counters={counters}
-                        />
-                    )}
                 </div>
 
 
 
 
-                <div className="reservation__booking-btn">
-                    <HoverButton size="lg" color="gold" className="reservation__form-button">
+                <div className="booking-btn">
+                    <HoverButton size="lg" color="gold" className="booking__form-button">
                         Check
                     </HoverButton>
                 </div>
@@ -109,13 +119,3 @@ const Booking = ({
 };
 
 export default Booking;
-
-
-// Murad Gazymagomedov
-// 03:24
-// tabIndex={0} // нужно, чтобы контейнер был фокусируемым
-//                 onBlur={(e) => {
-//                     if (!e.currentTarget.contains(e.relatedTarget)) {
-//                         setOpen(false); // закрыть только если клик вне контейнера
-//                     }
-//                 }}

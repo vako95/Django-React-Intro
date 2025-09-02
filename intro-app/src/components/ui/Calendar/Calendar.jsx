@@ -21,6 +21,9 @@ const Calendar = ({ checkIn, checkOut, onCheckInChange, onCheckOutChange, ...pro
                                     color: "#aa8453",
                                     borderRadius: "0px"
                                 },
+                                "& .MuiPickersCalendarHeader-label": {
+                                    color: "#aa8453",
+                                },
                                 "& .Mui-selected": {
                                     backgroundColor: "#aa8453",
                                     color: "#000",
@@ -62,6 +65,9 @@ const Calendar = ({ checkIn, checkOut, onCheckInChange, onCheckOutChange, ...pro
                                 "& .MuiPickersDay-root": {
                                     color: "#aa8453",
                                     borderRadius: "0px"
+                                },
+                                "& .MuiPickersCalendarHeader-label": {
+                                    color: "#aa8453",
                                 },
                                 "& .Mui-selected": {
                                     backgroundColor: "#aa8453",

@@ -9,7 +9,6 @@
     gap: 20px;
     top: 100%;
     left: 0;
-    /* background-color: rgba(227, 43, 10, 0.3); */
 }
 
 
@@ -31,17 +30,25 @@
     justify-content: flex-start;
     align-items: center;
     padding: 20px;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(14px);
     border: 2px solid rgb(170, 132, 83);
+    /* border-radius: 0px 0px 0px 106px; */
 
 }
 
 .calendar__title {
     font-family: "Font Awesome 5 Brands";
-    font-size: 16px;
+
+
+
+
+    font-size: 18px;
     font-weight: 400;
-    color: rgb(255, 255, 255);
+    color: rgba(231, 231, 231, 1);
+
+
 }
+
 
 .calendar__leave {
     width: auto;
@@ -50,9 +57,15 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    backdrop-filter: blur(10px) brightness(120%) saturate(150%);
+    backdrop-filter: blur(14px);
+
     padding: 20px;
-    border: 2px solid rgb(170, 132, 83);
+    color: white;
+    padding: 20px;
+    border: 2px solid rgba(170, 132, 83);
+
+    /* box-shadow: 2px 6px 24px 0px rgba(170, 132, 83, 1); */
+
 
 }
 

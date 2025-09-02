@@ -116,8 +116,6 @@ const Reservation = () => {
                             handleSelectCheckOut={handleSelectCheckOut}
                             handleCheckIn={handleCheckIn}
 
-
-
                         />
                     </div>
 
