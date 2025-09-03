@@ -1,0 +1,64 @@
+.services {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgba(20, 18, 18);
+    position: relative;
+    inset: 0;
+    padding: 80px 60px;
+}
+
+.services__linear {
+    width: 32px;
+    height: 280px;
+    background-color: rgba(170, 132, 83);
+    position: absolute;
+    transform: translateX(-100%);
+}
+
+
+
+.services__container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 12px;
+}
+
+.hero {
+    min-width: 450px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: red;
+}
+
+.hero__backdrop {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+
+.hero__card-cover {
+    width: 200px;
+    height: 200px;
+}
+
+
+.hero__video-player {
+    width: 200px;
+    height: 400px;
+}

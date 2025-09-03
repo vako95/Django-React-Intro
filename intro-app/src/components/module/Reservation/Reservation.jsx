@@ -3,7 +3,7 @@ import { useState, useMemo } from "react";
 
 import dayjs from "dayjs";
 import "./Reservation.css";
-import Booking from "./components/Date/Booking.jsx";
+import Booking from "./components/Booking/Booking.jsx";
 
 const Reservation = () => {
     const [checkIn, setCheckIn] = useState(dayjs());
@@ -101,7 +101,7 @@ const Reservation = () => {
     };
 
     return (
-        <div className="reservation">
+        <section className="reservation">
             <Container>
                 <form className="reservation__form">
                     <div className="reservation__container" >
@@ -115,14 +115,11 @@ const Reservation = () => {
                             toogleCalendar={toogleCalendar}
                             handleSelectCheckOut={handleSelectCheckOut}
                             handleCheckIn={handleCheckIn}
-
                         />
                     </div>
-
-
                 </form>
             </Container>
-        </div>
+        </section>
     );
 };
 
