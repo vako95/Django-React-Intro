@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
 import "./ZoomInUp.css"
-const ZoomInUp = ({ children, trigger }) => {
+import clsx from "clsx";
+
+
+const ZoomInUp = ({ children, trigger, className }) => {
+
+    const classes = clsx(
+        "zoom-in__up",
+        className,
+    )
+
     const variants = {
         hidden: {
             opacity: 0,
@@ -22,11 +31,12 @@ const ZoomInUp = ({ children, trigger }) => {
 
     return (
         <motion.div
-            className="zoom-in__up"
+            className={classes}
             key={trigger}
             initial="hidden"
             animate="visible"
             variants={variants}
+
         >
             {children}
         </motion.div>

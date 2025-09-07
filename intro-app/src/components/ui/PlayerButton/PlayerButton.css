@@ -1,47 +1,52 @@
-.hover__button {
-    position: relative;
+.player__button {
     font-family: 'Barlow', sans-serif;
+    width: auto;
+    height: auto;
     letter-spacing: 0.6px;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
-    height: auto;
     background-color: #aa8453;
     color: #FFFFFF;
     position: relative;
-    z-index: 1;
     border: none;
     cursor: pointer;
     transition: background-color 250ms linear, color 250ms linear;
+    z-index: 2;
 }
 
-.hover__button--sm {
-    font-size: 12px;
+.player__button--sm {
+    font-size: 44px;
     font-weight: 600;
     padding: 18px 40px;
 }
 
-.hover__button--md {
-    font-size: 14px;
+.player__button--md {
+    font-size: 28px;
     font-weight: 600;
-    padding: 18px 40px;
+    padding: 42px;
 }
 
-.hover__button--lg {
-    font-size: 14px;
+.player__button--lg {
+    width: 140px;
+    height: 140px;
     font-weight: 600;
-    padding: 18px 100px;
+    padding: 40px;
+    /* padding: 18px 100px; */
 }
 
-.hover__button--gold:hover {
+.player__button-icon {
+    display: flex;
+}
+
+.player__button-gold:hover {
     color: white;
 }
 
 
 
-.hover__button--gold::before {
+.player__button-gold::before {
     content: "";
     position: absolute;
     top: 0;
@@ -54,7 +59,7 @@
     transition: width 300ms linear, right 300ms linear, left 300ms linear;
 }
 
-.hover__button--gold:hover::before {
+.player__button-gold:hover::before {
     width: 100%;
     left: 0;
     right: unset;
@@ -62,12 +67,12 @@
 
 
 
-.hover__button--white:hover {
+.player__button-white:hover {
     background-color: #fff;
     color: #aa8453;
 }
 
-.hover__button--green:hover {
+.player__button-green:hover {
     background-color: #8ff90e;
     color: #aa8453;
     transition: background-color 100ms linear, color 100ms linear;

@@ -31,6 +31,7 @@
     align-items: center;
     padding: 20px;
     backdrop-filter: blur(14px);
+    /* background-color: rgba(0, 0, 0, 0.16); */
     border: 2px solid rgb(170, 132, 83);
     /* border-radius: 0px 0px 0px 106px; */
 
@@ -38,10 +39,6 @@
 
 .calendar__title {
     font-family: "Font Awesome 5 Brands";
-
-
-
-
     font-size: 18px;
     font-weight: 400;
     color: rgba(231, 231, 231, 1);

@@ -20,7 +20,7 @@
     height: 100%;
     right: 0;
     top: 0;
-    background-color: #111;
+    background-color: var(--hover-bg-color, #111);
     transition: width 300ms linear, right 300ms linear, left 300ms linear;
     z-index: -1;
 }
@@ -33,31 +33,28 @@
 }
 
 
-.hover__link--small {
+.hover__link--sm {
     padding: 8px 16px;
 }
 
-.hover__link--medium {
+.hover__link--md {
     padding: 16px 38px;
     border: none;
 }
 
-.hover__link--large {
+.hover__link--lg {
     padding: 24px 48px;
 }
 
-.hover__link--transparent {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid white;
-    overflow: hidden;
-    backdrop-filter: blur(4px);
-    color: white;
-    z-index: 0;
+.hover__link--lx {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 20px 52px;
 }
 
-.hover__link--transparent>span {
+
+
+/* .hover__link--transparent>span {
     position: relative;
     z-index: 1;
-
-}
+} */
