@@ -1,4 +1,4 @@
-import { Container } from "../../../../ui";
+import { Container } from "@components/ui";
 import HoverLink from "../../../../ui/HoverLink/HoverLink";
 import Logo from "./components/Logo/Logo";
 import Menu from "./components/Menu/Menu";

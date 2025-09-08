@@ -36,6 +36,7 @@ const ZoomInUp = ({ children, trigger, className }) => {
             initial="hidden"
             animate="visible"
             variants={variants}
+            viewport={{ once: false }}
 
         >
             {children}

@@ -1,36 +1,47 @@
 import { motion } from "framer-motion";
-import "./FadeInWordRight.css";
 
-const FadeInWordRight = ({ children, custom }) => {
+const FadeInWord = ({ children, custom, direction = "right" }) => {
+    const directionMap = {
+        right: { x: 30, y: 0 },
+        left: { x: -30, y: 0 },
+        up: { x: 0, y: -30 },
+        down: { x: 0, y: 30 },
+        none: { x: 0, y: 0 },
+    };
+
+    const { x, y } = directionMap[direction] || directionMap.right;
+
     const variants = {
         hidden: {
             opacity: 0,
-            x: 128, // можно уменьшить "вылет", было 128
+            x,
+            y,
         },
-        visible: (i) => ({
+        visible: {
             opacity: 1,
             x: 0,
+            y: 0,
             transition: {
-                duration: 0.9,
+                duration: 0.4,
                 ease: "easeOut",
-                delay: i * 0.1,
+                delay: custom * 0.05,
             },
-        }),
+        },
     };
 
-
     return (
-        <motion.div
-            className="fade__in-word-right"
+        <motion.span
+            className="fade-in-word"
             custom={custom}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: false, amount: 0.5 }}
             variants={variants}
+            style={{ display: "inline-block" }}
         >
             {children}
-        </motion.div>
+        </motion.span>
     );
 };
 
-export default FadeInWordRight;
+export default FadeInWord;

@@ -83,9 +83,9 @@ const Services = () => {
                             </div>
                             <div className="feature__info">
                                 <div className="feature__info-words">
-                                    {"Most Safe & Rated Hotel in London.".split(" ").map((letter, i) => (
-                                        <h4 className="feature__info-word" key={i}>
-                                            <FadeInWordRight custom={i}>
+                                    {"Most Safe & Rated Hotel in London.".split(" ").map((letter, idx) => (
+                                        <h4 className="feature__info-word" >
+                                            <FadeInWordRight key={idx} custom={idx}>
                                                 {letter}
                                             </FadeInWordRight>
 
