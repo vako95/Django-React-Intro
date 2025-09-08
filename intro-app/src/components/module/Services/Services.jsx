@@ -84,11 +84,10 @@ const Services = () => {
                             <div className="feature__info">
                                 <div className="feature__info-words">
                                     {"Most Safe & Rated Hotel in London.".split(" ").map((letter, idx) => (
-                                        <h4 className="feature__info-word" >
-                                            <FadeInWordRight key={idx} custom={idx}>
+                                        <h4 key={idx} className="feature__info-word" >
+                                            <FadeInWordRight custom={idx}>
                                                 {letter}
                                             </FadeInWordRight>
-
                                         </h4>
                                     ))}
                                 </div>
@@ -109,13 +108,13 @@ const Services = () => {
                                 </FadeInRight>
                             </div>
 
-                            <div className="future__points">
+                            <div className="feature__points">
                                 <IconMirror >
-                                    <div className="future__points-item">
-                                        <div className="future__points-wrapper">
-                                            <img src={lightIcon} className="anime-mirror future__points-img" alt="pool" />
+                                    <div className="feature__points-item">
+                                        <div className="feature__points-wrapper">
+                                            <img src={lightIcon} className="anime-mirror feature__points-img" alt="pool" />
                                         </div>
-                                        <h5 className="future__points-title">
+                                        <h5 className="feature__points-title">
                                             The Best
                                             Lighting
 
@@ -123,28 +122,28 @@ const Services = () => {
                                     </div>
                                 </IconMirror>
                                 <IconMirror >
-                                    <div className="future__points-item">
-                                        <div className="future__points-wrapper">
-                                            <img src={poolIcon} className="anime-mirror future__points-img" alt="pool" />
+                                    <div className="feature__points-item">
+                                        <div className="feature__points-wrapper">
+                                            <img src={poolIcon} className="anime-mirror feature__points-img" alt="pool" />
                                         </div>
-                                        <h5 className="future__points-title">
+                                        <h5 className="feature__points-title">
                                             The Best
                                             Lighting
 
                                         </h5>
                                     </div>
                                 </IconMirror>
-                                <div className="future__points-item">
+                                <div className="feature__points-item">
                                     <HoverLink bgColor="rgba(34, 34, 34)" size="lx">
                                         Discover More
                                     </HoverLink>
                                 </div>
                                 <IconMirror >
-                                    <div className="future__points-item">
-                                        <div className="future__points-wrapper">
-                                            <img src={phoneCallIcon} className="anime-mirror future__points-img" alt="pool" />
+                                    <div className="feature__points-item">
+                                        <div className="feature__points-wrapper">
+                                            <img src={phoneCallIcon} className="anime-mirror feature__points-img" alt="pool" />
                                         </div>
-                                        <h5 className="future__points-title">
+                                        <h5 className="feature__points-title">
                                             Booking Now
                                             123 456 7890
                                         </h5>
