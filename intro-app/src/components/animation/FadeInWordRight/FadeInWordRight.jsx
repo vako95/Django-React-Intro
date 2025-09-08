@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-
-const FadeInWord = ({ children, custom, direction = "right" }) => {
+import "./FadeInWordRight.css";
+const FadeInWordRight = ({ children, custom, direction = "right" }) => {
     const directionMap = {
         right: { x: 30, y: 0 },
         left: { x: -30, y: 0 },
@@ -44,4 +44,4 @@ const FadeInWord = ({ children, custom, direction = "right" }) => {
     );
 };
 
-export default FadeInWord;
+export default FadeInWordRight;

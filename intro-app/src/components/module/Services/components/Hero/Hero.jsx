@@ -1,34 +1,29 @@
 
+import { ModalContainer, PlayerButton, VideoPlayer } from "@components/ui";
 
+import { IconMirror } from "@components/animation";
+
+import expoCover from "./assets/icon/exp-icon.png";
 import "./Hero.css";
 
-import React, { useState } from "react";
-import PlayerButton from "../../ui/PlayerButton/PlayerButton";
-import ModalContainer from "../../ui/ModalContainer/ModalContainer";
-import VideoPlayer from "../../ui/HoverPlayer/VideoPlayer";
-import IconMirror from "../../animation/IconMirror.jsx/IconMirror";
-import expoCover from "./assets/icon/exp-icon.png";
 
-const Hero = ({ cover, thumbnail }) => {
-    const [openPlayer, setOpenPlayer] = useState(false);
-
-    const handlePlayer = () => {
-        setOpenPlayer((play) => !play);
-    };
+const Hero = ({ service, openPlayer, onTogglePlayer }) => {
 
     return (
         <div className="hero">
-            <div className="hero__backdrop" style={{ backgroundImage: `url(${cover})` }}>
-                <div className="hero__video" onClick={handlePlayer}>
+            <div className="hero__backdrop" style={{ backgroundImage: `url(${service.cover})` }} >
+                <div className="hero__video" onClick={onTogglePlayer}>
                     <PlayerButton size="md" />
+
                     {openPlayer && (
                         <ModalContainer>
-                            <VideoPlayer size="lg" videoId="tJSjwiJbOkY?si=GllFDI1M7k6LltcL" />
+                            <VideoPlayer size="lg" videoId="tJSjwiJbOkY?si=GllFDI1M7k6LltcL">
+                            </VideoPlayer>
                         </ModalContainer>
                     )}
                 </div>
 
-                <IconMirror>
+                <IconMirror >
                     <div className="hero__heading">
                         <div className="hero__heading-cover">
                             <img className="anime-mirror hero__heading-icon" src={expoCover} alt="" />
@@ -44,11 +39,11 @@ const Hero = ({ cover, thumbnail }) => {
                     </div>
                 </IconMirror>
                 <div className="hero__card">
-                    <img src={thumbnail} className="hero__card-cover" alt="" />
+                    <img src={service.thumbnail} className="hero__card-cover" alt="" />
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default Hero;

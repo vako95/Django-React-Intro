@@ -2,7 +2,7 @@ import clsx from "clsx";
 import beforeIcon from "./assets/icon/before.png";
 import "./DecoratedHeading.css";
 
-import FadeInWordRight from "../../FadeInWordRight/FadeInWordRight";
+import { FadeInWordRight } from "@components/animation";
 import FadeInLeft from "../../animation/FadeInLeft/FadeInLeft";
 import FadeInRight from "../../animation/FadeInRight/FadeInRight";
 

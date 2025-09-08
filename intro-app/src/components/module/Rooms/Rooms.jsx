@@ -19,7 +19,7 @@ const roomsCover = [
 const Rooms = () => {
 
     return (
-        <SectionWrapper>
+        <SectionWrapper bgColor="black">
             <Container>
                 <DecoratedHeading
                     title="Hoexr Luxury Rooms"

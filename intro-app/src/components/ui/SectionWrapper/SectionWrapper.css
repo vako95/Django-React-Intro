@@ -5,6 +5,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: rgba(0, 0, 0);
     padding: 64px 0px;
+}
+
+.section-wrapper--bg-black {
+    background-color: rgba(0, 0, 0);
 }
