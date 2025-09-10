@@ -1,6 +1,5 @@
 
 import { ModalContainer, PlayerButton, VideoPlayer } from "@components/ui";
-
 import { IconMirror } from "@components/animation";
 
 import expoCover from "./assets/icon/exp-icon.png";
@@ -14,7 +13,6 @@ const Hero = ({ service, openPlayer, onTogglePlayer }) => {
             <div className="hero__backdrop" style={{ backgroundImage: `url(${service.cover})` }} >
                 <div className="hero__video" onClick={onTogglePlayer}>
                     <PlayerButton size="md" />
-
                     {openPlayer && (
                         <ModalContainer>
                             <VideoPlayer size="lg" videoId="tJSjwiJbOkY?si=GllFDI1M7k6LltcL">
@@ -38,6 +36,7 @@ const Hero = ({ service, openPlayer, onTogglePlayer }) => {
                         </div>
                     </div>
                 </IconMirror>
+
                 <div className="hero__card">
                     <img src={service.thumbnail} className="hero__card-cover" alt="" />
                 </div>

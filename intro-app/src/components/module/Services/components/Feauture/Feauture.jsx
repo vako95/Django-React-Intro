@@ -1,11 +1,9 @@
-
 import { FadeInLeft, FadeInRight, FadeInWordRight, IconMirror, } from "@components/animation";
-import { HoverLink } from "@components/ui"
+import { HoverLink, DecoratedHeading } from "@components/ui"
 import beforeIcon from "./assets/icon/before.png";
 import lightIcon from "./assets/icon/chandelier.png";
 import poolIcon from "./assets/icon/pool.png";
 import phoneCallIcon from "./assets/icon/phone-call.png";
-
 import "./Feauture.css";
 
 
@@ -14,11 +12,13 @@ const Feauture = () => {
     return (
         <div className="feature">
             <div className="feature__heading">
-                <FadeInLeft>
-                    <h5 className="feature__heading-title">
-                        Hoexr Luxury Hotel
-                    </h5>
-                </FadeInLeft>
+                <DecoratedHeading
+                    position="start"
+                    showLeftIcon={false}
+                    showRightIcon={true}
+                    title="Hoexr Luxury Hotel"
+                    subtitle="Most Safe & Rated Hotel in London."
+                />
 
                 <FadeInRight>
                     <div className="feature__heading-badge">
@@ -27,15 +27,7 @@ const Feauture = () => {
                 </FadeInRight>
             </div>
             <div className="feature__info">
-                <div className="feature__info-words">
-                    {"Most Safe & Rated Hotel in London.".split(" ").map((letter, idx) => (
-                        <h4 key={idx} className="feature__info-word" >
-                            <FadeInWordRight custom={idx}>
-                                {letter}
-                            </FadeInWordRight>
-                        </h4>
-                    ))}
-                </div>
+
                 <FadeInLeft>
                     <span className="feature__info-summary">
                         Lorem ipsum dolor sit amet consectetur

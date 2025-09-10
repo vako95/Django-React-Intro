@@ -1,5 +1,6 @@
 import { Container, SectionWrapper, DecoratedHeading } from "@components/ui";
 
+import homeCover from "./assets/img/home.png";
 import bedIcon from "./assets/icon/bed.png";
 import travelIcon from "./assets/icon/international-tour.png";
 import wifiIcon from "./assets/icon/wifi.png";
@@ -8,7 +9,7 @@ import pollIcon from "./assets/icon/pool.png";
 import carIcon from "./assets/icon/car.png";
 import ExtrasList from "./components/ExtrasList/ExtrasList";
 import "./Extras.css";
-
+import BackdropContainer from "../../ui/BackdropContainer/BackdropContainer";
 
 const Extras = () => {
     const extrasList = [
@@ -51,22 +52,25 @@ const Extras = () => {
 
     ];
     return (
-        <Container>
-            <SectionWrapper>
-                <div className="extras">
-                    <div className="extras__heading">
-                        <DecoratedHeading
-                            title="Hoexr Luxury Rooms"
-                            subtitle="Luxury Rooms & Suites"
-                        />
-                    </div>
-                    <div className="extras__card">
-                        <ExtrasList extrasData={extrasList} />
+        <BackdropContainer backdrop={homeCover} alt="Luxury room background">
+            <Container>
+                <SectionWrapper>
+                    <div className="extras">
+
+                        <div className="extras__heading">
+                            <DecoratedHeading
+                                title="Hoexr Luxury Rooms"
+                                subtitle="Luxury Rooms & Suites"
+                            />
+                        </div>
+                        <div className="extras__card">
+                            <ExtrasList extrasData={extrasList} />
+                        </div>
                     </div>
 
-                </div>
-            </SectionWrapper>
-        </Container>
+                </SectionWrapper>
+            </Container>
+        </BackdropContainer>
     )
 }
 
