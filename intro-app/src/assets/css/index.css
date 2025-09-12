@@ -16,12 +16,13 @@ body {
     flex-direction: row;
     font-family: 'Barlow', sans-serif;
     background-color: rgba(20, 18, 18);
+    scrollbar-gutter: stable;
     /* overflow: hidden; */
 }
 
 #root {
     width: 100%;
-
+    scrollbar-gutter: stable;
 }
 
 /* #no-scrollbar {

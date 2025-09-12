@@ -1,0 +1,22 @@
+.swap__figure {
+    position: relative;
+    top: -50px;
+    width: auto;
+    height: auto;
+    display: flex;
+    display: flex;
+    z-index: 2;
+}
+
+.swap__figure-wrapper {
+    width: 508px;
+    height: 387px;
+    display: flex;
+}
+
+.swap__figure-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+}

@@ -1,30 +1,25 @@
 
-import { Container, BackdropContainer, HoverLink } from "@componnets/ui"
+import { Container } from "@components/ui";
+
+import Figure from "./components/Figure/Figure.jsx";
+import Content from "./components/Content/Content.jsx";
+
 import "./Swap.css";
 
 const Swap = () => {
 
+
     return (
-
-        <Container>
-            <section className="swap">
-                <div className="swap__container">
-                    <div className="swap__wrapper">
-                        <img src="" alt="" />
+        <section className="swap">
+            <Container>
+                <article className="swap__container">
+                    <div className="swap__switcher">
+                        <Figure />
+                        <Content />
                     </div>
-                    <BackdropContainer backdrop="">
-                        <div className="swap__content">
-                            <div className="swap__desc">
-
-                            </div>
-                            <HoverLink>
-                                Discover More
-                            </HoverLink>
-                        </div>
-                    </BackdropContainer>
-                </div>
-            </section>
-        </Container>
+                </article>
+            </Container>
+        </section>
     )
 }
 

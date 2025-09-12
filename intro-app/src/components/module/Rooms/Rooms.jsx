@@ -1,5 +1,4 @@
 import { Container } from "@components/ui";
-import { Link } from "react-router-dom"
 import { DecoratedHeading } from "@components/ui";
 
 import rooms1 from "./assets/img/room3.jpg";
@@ -21,14 +20,19 @@ const Rooms = () => {
     return (
         <SectionWrapper bgColor="black">
             <Container>
-                <DecoratedHeading
-                    title="Hoexr Luxury Rooms"
-                    subtitle="Luxury Rooms & Suites"
-                />
                 <div className="rooms">
-                    {roomsCover.map(({ id, cover, title, price }) => (
-                        <RoomCard key={id} cover={cover} title={title} price={price} />
-                    ))}
+                    <div className="rooms__heading">
+                        <DecoratedHeading
+                            title="Hoexr Luxury Rooms"
+                            subtitle="Luxury Rooms & Suites"
+                        />
+                    </div>
+
+                    <div className="rooms__items">
+                        {roomsCover.map(({ id, cover, title, price }) => (
+                            <RoomCard key={id} cover={cover} title={title} price={price} />
+                        ))}
+                    </div>
                 </div>
             </Container>
         </SectionWrapper>

@@ -2,15 +2,17 @@ import "./HoverLink.css";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 
-const HoverLink = ({ children, size = "medium", bgColor }) => {
+const HoverLink = ({ children, size = "medium", bgColor, variant }) => {
     const classes = clsx(
         "hover__link", {
-        "hover__link--sm": size === "small",
-        "hover__link--md": size === "medium",
-        "hover__link--lg": size === "large",
+        "hover__link--sm": size === "sm",
+        "hover__link--md": size === "md",
+        "hover__link--lg": size === "lg",
         "hover__link--lx": size === "lx",
+    },
+        variant && `hover__link-variant--${variant}`,
         // "hover__link--transparent": color === "transparent",
-    });
+    );
 
     const style = bgColor ? { "--hover-bg-color": bgColor } : undefined;
 

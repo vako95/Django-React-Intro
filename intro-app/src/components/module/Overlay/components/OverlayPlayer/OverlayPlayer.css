@@ -1,3 +1,14 @@
+/* .overlay__section:last-child {
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.overlay__section-right {
+    width: 100%;
+    height: 100%;
+    flex: 0;
+}
+
 .overlay__backdrop::before {
     content: "";
     position: absolute;
@@ -10,11 +21,12 @@
 
 
 .overlay__player {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
+    border-radius: 50%;
     margin-top: 150px;
 }

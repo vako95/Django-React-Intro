@@ -1,0 +1,40 @@
+.swap {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: inherit;
+    padding: 120px 0px;
+    position: relative;
+}
+
+.swap__container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.swap__switcher {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.swap:nth-of-type(odd) .swap__switcher {
+    flex-direction: row-reverse;
+}
+
+.swap:nth-of-type(odd) .swap__content::before {
+    left: 100%;
+}
+
+.swap:nth-of-type(odd) .swap__holder {
+    flex-direction: row-reverse;
+}

@@ -3,7 +3,7 @@ import { DecoratedHeading } from "@components/ui";
 const OverlayContent = () => {
 
     return (
-        <article className="overlay__section">
+        <article className="overlay__section overlay__section--left">
             <div className="overlay__content">
                 <div className="overlay__heading">
                     <DecoratedHeading

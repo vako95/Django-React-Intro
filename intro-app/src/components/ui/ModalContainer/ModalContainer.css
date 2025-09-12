@@ -5,6 +5,7 @@
     position: fixed;
     background-color: transparent;
     z-index: 10000;
+    /* scrollbar-gutter: stable; */
 }
 
 .modal__content {
@@ -13,7 +14,6 @@
     /* height: 100%; */
     height: max-content;
     display: flex;
-
     /* pointer-events: none; */
 
 }
