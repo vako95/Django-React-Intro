@@ -72,7 +72,7 @@ const slideData = [
         ridiculus mus nellen etesque habitant morbine.`,
         author: 'Jackson Smith',
         role: 'Guest Review',
-        rating: 4,
+        rating: 3.2,
     },
     {
         id: 2,
@@ -82,7 +82,7 @@ const slideData = [
         ridiculus mus nellen etesque habitant morbine.`,
         author: 'Emily Johnson',
         role: 'Client Review',
-        rating: 3.5,
+        rating: 4,
 
     },
 ];

@@ -15,12 +15,12 @@ const Home = () => {
     return (
         <div className="home">
 
-            <Reservation />
+            {/* <Reservation />
             <Services />
             <Rooms />
             <Extras />
             <Overlay />
-            <Swap />
+            <Swap /> */}
             <Testimonial />
         </div>
     )

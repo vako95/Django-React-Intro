@@ -1,4 +1,3 @@
-import React from 'react';
 import { Swiper } from 'swiper/react';
 import { EffectCreative, Pagination } from 'swiper/modules';
 
@@ -21,7 +20,7 @@ const SliderCube = ({ children }) => {
                     creativeEffect={{
                         prev: {
                             shadow: true,
-                            translate: [0, 0, -300],
+                            translate: [0, 0, -400],
                         },
                         next: {
                             translate: ['120%', 0, 0],

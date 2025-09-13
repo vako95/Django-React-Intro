@@ -1,6 +1,6 @@
-import React from 'react';
+import "./SlideRaiting.css";
 
-const StarRating = ({ rating = 0 }) => {
+const SliderRaiting = ({ rating }) => {
     return (
         <div className="slide-review-stars">
             {[...Array(5)].map((_, idx) => {
@@ -16,4 +16,4 @@ const StarRating = ({ rating = 0 }) => {
     );
 };
 
-export default StarRating;
+export default SliderRaiting;
