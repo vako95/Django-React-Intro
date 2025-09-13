@@ -26,7 +26,7 @@ const DecoratedHeading = ({
         "decorated-heading__container",
         position && `decorated-heading__container-position--${position}`
     );
-    const letters = title.split("");
+    const letters = title ? title.split("") : [];
     const style = fontFamily ? { fontFamily } : {};
 
 

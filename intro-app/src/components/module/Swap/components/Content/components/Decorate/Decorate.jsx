@@ -1,7 +1,7 @@
 import { HoverLink, DecoratedHeading } from "@components/ui";
 import "./Decorate.css";
 
-const Decorate = () => {
+const Decorate = ({ item }) => {
 
     return (
         <div className="swap__holder-decorate">
@@ -10,12 +10,9 @@ const Decorate = () => {
                 fontFamily="'Barlow Condensed', sans-serif"
                 showLeftIcon={false}
                 position="start"
-                title="Modern"
-                subtitle="Fitness Center"
-                desc="Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea
-                      seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen
-                      nivami acsestion augue artine.
-                " />
+                title={item.title}
+                subtitle={item.subtitle}
+                desc={item.desc} />
             <div className="swap__holder-btn">
                 <HoverLink size="lg" variant="transparent">
                     Discover More

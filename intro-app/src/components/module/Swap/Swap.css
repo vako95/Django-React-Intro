@@ -27,11 +27,15 @@
     align-items: flex-start;
 }
 
-.swap:nth-of-type(odd) .swap__switcher {
+.swap__switcher:not(:last-of-type) {
+    margin-bottom: 120px;
+}
+
+.swap__switcher:nth-of-type(odd) {
     flex-direction: row-reverse;
 }
 
-.swap:nth-of-type(odd) .swap__content::before {
+.swap__switcher:nth-of-type(odd) .swap__content::before {
     left: 100%;
 }
 

@@ -5,6 +5,7 @@ import Reservation from "../../components/module/Reservation/Reservation";
 import Rooms from "../../components/module/Rooms/Rooms";
 import Services from "../../components/module/Services/Services";
 import Swap from "../../components/module/Swap/Swap";
+import Testimonial from "../../components/module/Testimonial/Testimonial";
 
 import "./Home.css";
 
@@ -20,9 +21,7 @@ const Home = () => {
             <Extras />
             <Overlay />
             <Swap />
-            <Swap />
-            <Swap />
-
+            <Testimonial />
         </div>
     )
 }
