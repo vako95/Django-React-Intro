@@ -10,6 +10,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 64px;
 }
 
 .rooms__items {
@@ -21,7 +22,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 16px;
-    padding: 32px 0px;
+
 }
 
 

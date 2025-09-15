@@ -87,6 +87,183 @@ const slideData = [
     },
 ];
 
+const foodItems = [
+    {
+        id: 1,
+        img: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/03/pricing1-1.png",
+        title: "Lorem Ipsum is that it smt",
+        subtitle: "Pasta With Fish",
+        tag: "stalker",
+        price: 59,
+    },
+    {
+        id: 2,
+        img: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/03/pricing1-3-1.png",
+        title: "Another Dish Title",
+        subtitle: "Fresh Meat",
+        tag: "popular",
+        price: 42,
+    },
+    {
+        id: 3,
+        img: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/03/pricing1-2-1.png",
+        title: "Noodles",
+        subtitle: "Salad With Chicken",
+        tag: "popular",
+        price: 42,
+    },
+    {
+        id: 4,
+        img: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/03/pricing1-4.png",
+        title: "Chicken",
+        subtitle: "Salad With Chicken",
+        tag: "popular",
+        price: 42,
+    },
+    {
+        id: 5,
+        img: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/03/pricing1-6.png",
+        title: "Lorem Ipsum is that it smt",
+        subtitle: "Vegetarian Fried",
+        tag: "stalker",
+        price: 59,
+    },
+    {
+        id: 6,
+        img: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/03/pricing1-8.png",
+        title: "Lorem Ipsum is that it smt",
+        subtitle: "Salmon Pasta",
+        tag: "stalker",
+        price: 59,
+    },
+    {
+        id: 7,
+        img: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/03/pricing1-4.png",
+        title: "Noodles",
+        subtitle: "Salad With Chicken",
+        tag: "popular",
+        price: 42,
+    },
+    {
+        id: 8,
+        img: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/03/pricing1-4.png",
+        title: "Chicken",
+        subtitle: "Salad With Chicken",
+        tag: "popular",
+        price: 42,
+    },
+    {
+        id: 9,
+        img: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/03/pricing1-6.png",
+        title: "Lorem Ipsum is that it smt",
+        subtitle: "Vegetarian Fried",
+        tag: "stalker",
+        price: 59,
+    },
+    {
+        id: 10,
+        img: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/03/pricing1-8.png",
+        title: "Lorem Ipsum is that it smt",
+        subtitle: "Salmon Pasta",
+        tag: "stalker",
+        price: 59,
+    },
+];
 
 
-export { services, swap, slideData }
+const teamMembers = [
+    {
+        name: "Michael Dean",
+        role: "Event Planner",
+        image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team3-400x532.jpg",
+        socials: [
+            { href: "/facebook", iconClass: "ri-facebook-circle-fill" },
+            { href: "/twitter", iconClass: "ri-twitter-x-line" },
+            { href: "/instagram", iconClass: "ri-instagram-fill" },
+            { href: "/youtube", iconClass: "ri-youtube-fill" },
+        ],
+    },
+    {
+        name: "Sophia Carter",
+        role: "Hotel Manager",
+        image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team1-400x532.jpg",
+        socials: [
+            { href: "/facebook", iconClass: "ri-facebook-circle-fill" },
+            { href: "/twitter", iconClass: "ri-twitter-x-line" },
+            { href: "/instagram", iconClass: "ri-instagram-fill" },
+            { href: "/youtube", iconClass: "ri-youtube-fill" },
+        ],
+    },
+    {
+        name: "James Parker",
+        role: "Receptionist",
+        image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team2-400x532.jpg",
+        socials: [
+            { href: "/facebook", iconClass: "ri-facebook-circle-fill" },
+            { href: "/twitter", iconClass: "ri-twitter-x-line" },
+            { href: "/instagram", iconClass: "ri-instagram-fill" },
+            { href: "/youtube", iconClass: "ri-youtube-fill" },
+        ],
+    },
+    {
+        name: "Isabella Moore",
+        role: "Room Service",
+        image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team3-400x532.jpg",
+        socials: [
+            { href: "/facebook", iconClass: "ri-facebook-circle-fill" },
+            { href: "/twitter", iconClass: "ri-twitter-x-line" },
+            { href: "/instagram", iconClass: "ri-instagram-fill" },
+            { href: "/youtube", iconClass: "ri-youtube-fill" },
+        ],
+    },
+    {
+        name: "Ethan Brooks",
+        role: "Chef",
+        image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team1-400x532.jpg",
+        socials: [
+            { href: "/facebook", iconClass: "ri-facebook-circle-fill" },
+            { href: "/twitter", iconClass: "ri-twitter-x-line" },
+            { href: "/instagram", iconClass: "ri-instagram-fill" },
+            { href: "/youtube", iconClass: "ri-youtube-fill" },
+        ],
+    },
+    {
+        name: "Olivia Bennett",
+        role: "Event Assistant",
+        image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team2-400x532.jpg",
+        socials: [
+            { href: "/facebook", iconClass: "ri-facebook-circle-fill" },
+            { href: "/twitter", iconClass: "ri-twitter-x-line" },
+            { href: "/instagram", iconClass: "ri-instagram-fill" },
+            { href: "/youtube", iconClass: "ri-youtube-fill" },
+        ],
+    },
+    {
+        name: "William Foster",
+        role: "Security",
+        image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team3-400x532.jpg",
+        socials: [
+            { href: "/facebook", iconClass: "ri-facebook-circle-fill" },
+            { href: "/twitter", iconClass: "ri-twitter-x-line" },
+            { href: "/instagram", iconClass: "ri-instagram-fill" },
+            { href: "/youtube", iconClass: "ri-youtube-fill" },
+        ],
+    },
+    {
+        name: "Emily Ross",
+        role: "Housekeeper",
+        image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team1-400x532.jpg",
+        socials: [
+            { href: "/facebook", iconClass: "ri-facebook-circle-fill" },
+            { href: "/twitter", iconClass: "ri-twitter-x-line" },
+            { href: "/instagram", iconClass: "ri-instagram-fill" },
+            { href: "/youtube", iconClass: "ri-youtube-fill" },
+        ],
+    },
+];
+
+;
+
+
+
+export { services, swap, slideData, foodItems, teamMembers }

@@ -1,0 +1,25 @@
+.food-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 64px 0px;
+}
+
+.food-card-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.food-card-heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 64px;
+}
