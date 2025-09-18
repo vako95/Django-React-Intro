@@ -21,7 +21,7 @@ const FadeInLeft = ({ children, trigger }) => {
     return (
         <motion.div
             className="fade__in-left"
-            key={trigger} // чтобы перезапускалась анимация при смене слайда
+            key={trigger}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}

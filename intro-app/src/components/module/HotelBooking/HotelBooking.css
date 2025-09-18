@@ -5,6 +5,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    padding-top: 80px;
+    overflow: hidden;
 }
 
 .hotel-booking__container {
@@ -18,7 +20,12 @@
 }
 
 .hotel-booking__columns {
+    width: auto;
     height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 .hotel-booking__columns--left {
@@ -26,11 +33,11 @@
 }
 
 .hotel-booking__columns--right {
-    width: 40%;
+    width: 58%;
 }
 
-/* Переименовано: hotel-booking__calendar → hotel-booking__form */
 .hotel-booking__form {
+    position: relative;
     width: 100%;
     height: auto;
     display: flex;
@@ -39,7 +46,9 @@
     align-items: flex-start;
     border-top: 6px solid rgb(170, 132, 83);
     background-color: black;
-    padding: 40px;
+    padding: 80px 40px;
+    bottom: 80px;
+    z-index: 1;
 }
 
 .hotel-booking__form-heading {
@@ -57,8 +66,6 @@
     font-size: 14px;
     margin-right: -4px;
 }
-
-
 
 .hotel-booking__form-control {
     width: 100%;
@@ -87,12 +94,6 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
-
-
-
-
-
-
 
 .hotel-booking__form-selector-label {
     font-family: "Barlow", sans-serif;
@@ -174,6 +175,4 @@
 
 .hotel-booking__form-icon:hover {
     color: rgba(170, 132, 83);
-    /* border-color: rgba(170, 132, 83);
-    border-radius: 50%; */
 }

@@ -8,11 +8,9 @@ import Booking from "./components/Booking/Booking.jsx";
 const Reservation = () => {
     const [checkIn, setCheckIn] = useState(dayjs());
     const [checkOut, setCheckOut] = useState(dayjs().add(1, "day"));
-
     const [toogleCalendar, setToggleCalendar] = useState(false);
-
     const [isBookingOpen, setIsBookingOpen] = useState(false);
-
+    const [checkInClicked, setCheckInClicked] = useState(false);
 
     const [passenger, setPassenger] = useState([
         { label: "rooms", count: 1, min: 1, max: 10 },
@@ -64,12 +62,6 @@ const Reservation = () => {
         setIsBookingOpen((prev) => !prev);
         setToggleCalendar(false)
     };
-    // setIsBookingOpen((prev) => {
-    //     if (!prev) setToggleCalendar(false);
-    //     return !prev;
-    // });
-
-
     const handleCollapseCalendar = () => {
         setToggleCalendar((prev) => !prev)
         setIsBookingOpen(false);
@@ -77,8 +69,6 @@ const Reservation = () => {
     };
 
 
-
-    const [checkInClicked, setCheckInClicked] = useState(false);
     const handleCheckIn = (date) => {
         const isSameDate = date.isSame(checkIn, 'day');
 

@@ -1,12 +1,14 @@
-import { Container, BackdropContainer, DecoratedHeading, HoverButton } from "@components/ui"
-
-import "./HotelBooking.css";
+import { Container, BackdropContainer, DecoratedHeading } from "@components/ui";
+import { useMemo, useState } from "react";
 import bgBooking from "./assets/img/bg-booking.jpeg";
 import bgShape from "./assets/img/bk-shape.png";
+
 import dayjs from "dayjs";
-import { useMemo, useState } from "react";
 import BookingForm from "./components/BookingForm/BookingForm";
 import BookingCalendar from "./components/BookingCalendar/BookingCalendar";
+import "./HotelBooking.css";
+import BookingAside from "./components/BookingAside/BookingAside";
+
 
 const Availability = () => {
     const [checkIn, setChekIn] = useState(dayjs());
@@ -21,6 +23,8 @@ const Availability = () => {
         min: 1,
         max: 10,
     });
+
+
 
     const onIncreaseRooms = () => {
         setRooms((prev) => ({
@@ -47,8 +51,7 @@ const Availability = () => {
                 item.label === label
                     ? { ...item, count: Math.min(item.count + 1, item.max) }
                     : item
-            )
-        )
+            ))
     };
 
     const onDecrease = (label) => {
@@ -57,24 +60,23 @@ const Availability = () => {
                 item.label === label
                     ? { ...item, count: Math.max(item.count - 1, item.min) }
                     : item
-            )
-        )
+            ))
     };
 
     const toggleRoom = () => {
         setIsRoomsOpen((prev) => !prev)
         setIsGuestsOpen(false)
     }
+
     const toggleGuest = () => {
         setIsGuestsOpen((prev) => !prev);
         setIsRoomsOpen(false)
-
     }
+
     const toggleCalendar = () => {
         setIsCalendarOpen(true);
         setIsRoomsOpen(false);
         setIsGuestsOpen(false);
-
     };
 
     const handleChangeChekIn = (date) => {
@@ -100,18 +102,11 @@ const Availability = () => {
     }), [passengers]);
 
     return (
-        <BackdropContainer backdropHeight="100%" backdrop={bgBooking}>
-            <BackdropContainer backdropWidth="50%" backdropHeight="100%" backdrop={bgShape}>
-                <Container>
-                    <div
-                        className="hotel-booking"
-                        onBlur={(e) => {
-                            if (!e.currentTarget.contains(e.relatedTarget)) {
-                                setIsCalendarOpen(false);
-                            }
-                        }}
-                        tabIndex={0}
-                    >
+
+        <div className="hotel-booking">
+            <BackdropContainer backdropHeight="100%" backdrop={bgBooking}>
+                <BackdropContainer backdropWidth="50%" backdropHeight="100%" backdrop={bgShape}>
+                    <Container>
                         <div className="hotel-booking__container">
                             <article className="hotel-booking__columns hotel-booking__columns--left">
                                 <div className="hotel-booking__form">
@@ -141,25 +136,33 @@ const Availability = () => {
                                         isGuestsOpen={isGuestsOpen}
                                         onIncrease={onIncrease}
                                         onDecrease={onDecrease}
+                                        setIsCalendarOpen={setIsCalendarOpen}
                                     />
                                 </div>
                             </article>
+                            <article className="hotel-booking__columns hotel-booking__columns--right">
+                                <BookingAside />
+                            </article>
                         </div>
-                        <div className="hotel-booking__calendar-container">
-                            <BookingCalendar
-                                isCalendarOpen={isCalendarOpen}
-                                checkIn={checkIn}
-                                checkOut={checkOut}
-                                handleChangeChekIn={handleChangeChekIn}
-                                handleChangeChekOut={handleChangeChekOut}
-                                setIsCalendarOpen={setIsCalendarOpen}
-                            />
-                        </div>
-
-                    </div>
-                </Container>
-            </BackdropContainer>
-        </BackdropContainer>
+                    </Container >
+                    <article className="hotel-booking__calendar-container" tabIndex={-1}
+                        onBlur={(e) => {
+                            if (!e.currentTarget.contains(e.relatedTarget)) {
+                                setIsCalendarOpen(false);
+                            }
+                        }}>
+                        <BookingCalendar
+                            isCalendarOpen={isCalendarOpen}
+                            checkIn={checkIn}
+                            checkOut={checkOut}
+                            handleChangeChekIn={handleChangeChekIn}
+                            handleChangeChekOut={handleChangeChekOut}
+                            setIsCalendarOpen={setIsCalendarOpen}
+                        />
+                    </article>
+                </BackdropContainer >
+            </BackdropContainer >
+        </div >
 
     )
 };

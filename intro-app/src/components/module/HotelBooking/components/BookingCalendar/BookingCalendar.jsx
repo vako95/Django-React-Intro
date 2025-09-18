@@ -7,7 +7,7 @@ const BookingCalendar = ({
     checkIn,
     checkOut,
     handleChangeChekIn,
-    handleChangeChekOut
+    handleChangeChekOut,
 }) => {
     return (
         <div className="hotel-booking__calendar">

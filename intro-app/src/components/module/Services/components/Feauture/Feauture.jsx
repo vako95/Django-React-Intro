@@ -1,4 +1,4 @@
-import { FadeInLeft, FadeInRight, FadeInWordRight, IconMirror, } from "@components/animation";
+import { FadeInLeft, FadeInRight, IconMirror, } from "@components/animation";
 import { HoverLink, DecoratedHeading } from "@components/ui"
 import beforeIcon from "./assets/icon/before.png";
 import lightIcon from "./assets/icon/chandelier.png";
