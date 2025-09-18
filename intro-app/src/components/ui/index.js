@@ -7,3 +7,4 @@ export { default as HoverButton } from "@components/ui/HoverButton/HoverButton.j
 export { default as VideoPlayer } from "@components/ui/VideoPlayer/VideoPlayer.jsx";
 export { default as PlayerButton } from "@components/ui/PlayerButton/PlayerButton.jsx";
 export { default as HoverLink } from "@components/ui/HoverLink/HoverLink.jsx";
+export { default as Calendar } from "@components/ui/Calendar/Calendar.jsx";

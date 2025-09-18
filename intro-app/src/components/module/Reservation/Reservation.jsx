@@ -63,12 +63,12 @@ const Reservation = () => {
 
         setIsBookingOpen((prev) => !prev);
         setToggleCalendar(false)
-
-        // setIsBookingOpen((prev) => {
-        //     if (!prev) setToggleCalendar(false);
-        //     return !prev;
-        // });
     };
+    // setIsBookingOpen((prev) => {
+    //     if (!prev) setToggleCalendar(false);
+    //     return !prev;
+    // });
+
 
     const handleCollapseCalendar = () => {
         setToggleCalendar((prev) => !prev)

@@ -203,7 +203,7 @@
 .booking-guests-icon {
     font-size: 24px;
     font-weight: 400;
-    color: #aa8453;
+    color: rgba(170, 132, 83);
 }
 
 .booking-guests-heading {
@@ -268,6 +268,10 @@
     align-items: center;
 }
 
+.hotel-booking__rooms-icon {
+    font-size: 22px;
+    color: rgba(170, 132, 83);
+}
 
 .booking__form-button {
     width: auto;

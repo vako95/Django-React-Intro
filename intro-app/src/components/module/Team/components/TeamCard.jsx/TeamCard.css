@@ -14,6 +14,7 @@
     inset: 0;
     z-index: 1;
     overflow: hidden;
+
 }
 
 .team__card-frame::after {
@@ -24,7 +25,7 @@
     height: 100%;
     width: 100%;
     background: linear-gradient(0deg, #222222, rgba(16, 15, 15, 0));
-    transition: background 350ms linear;
+
 }
 
 .team__card-frame:hover::after {
@@ -33,12 +34,12 @@
     background: linear-gradient(0deg, #222222, rgba(16, 16, 15, 0.171));
     background-size: cover;
     background-position: 100% 100%;
-    transition: background 350ms linear;
+
 }
 
 .team__card-frame:hover .team__card-frame-cover {
     transform: scale(1.1);
-
+    transform-origin: center center;
 
 }
 

@@ -1,4 +1,5 @@
 
+import Availability from "../../components/module/HotelBooking/HotelBooking";
 import Extras from "../../components/module/Extras/Extras";
 import FoodCard from "../../components/module/FoodCard/FoodCard";
 import Overlay from "../../components/module/Overlay/Overlay";
@@ -16,16 +17,17 @@ const Home = () => {
 
     return (
         <div className="home">
-
             <Reservation />
-            {/* <Services />*/}
-            {/* <Rooms /> */}
-            {/* <Extras />*/}
-            {/* <Overlay /> */}
-            {/* <Swap /> */}
-            {/* <Testimonial /> */}
-            {/* <FoodCard /> */}
-            <Team />
+            {/* <Reservation />
+            <Services />
+            <Rooms />
+            <Extras />
+            <Overlay />
+            <Swap />
+            <Testimonial />
+            <FoodCard />
+            <Team /> */}
+            <Availability />
         </div>
     )
 }

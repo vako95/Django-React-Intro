@@ -7,8 +7,6 @@ const Booking = ({
     checkIn,
     checkOut,
 
-
-
     counters,
     handleCollapseCalendar,
     handleToggleBooking,
@@ -97,6 +95,7 @@ const Booking = ({
                             </div>
                         </div>
                         {isBookingOpen && (
+
                             <BookingCounter
                                 counters={counters}
                             />

@@ -1,0 +1,9 @@
+.hotel-booking__form-selector-date {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 4px;
+}

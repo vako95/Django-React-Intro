@@ -61,6 +61,17 @@ const swap = [
         cover: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/feature-1.jpeg",
 
     },
+    {
+        id: 5,
+        title: "Modern",
+        subtitle: "Fitness Center",
+        desc: 'Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea ' +
+            'seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen ' +
+            'nivami acsestion augue artine.',
+        icon: "",
+        cover: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/feature-1.jpeg",
+
+    },
 ]
 
 const slideData = [
