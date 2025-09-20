@@ -2,13 +2,11 @@ import { Container, BackdropContainer, DecoratedHeading } from "@components/ui";
 import { useMemo, useState } from "react";
 import bgBooking from "./assets/img/bg-booking.jpeg";
 import bgShape from "./assets/img/bk-shape.png";
-
 import dayjs from "dayjs";
 import BookingForm from "./components/BookingForm/BookingForm";
 import BookingCalendar from "./components/BookingCalendar/BookingCalendar";
-import "./HotelBooking.css";
 import BookingAside from "./components/BookingAside/BookingAside";
-
+import "./HotelBooking.css";
 
 const Availability = () => {
     const [checkIn, setChekIn] = useState(dayjs());
@@ -163,7 +161,6 @@ const Availability = () => {
                 </BackdropContainer >
             </BackdropContainer >
         </div >
-
     )
 };
 

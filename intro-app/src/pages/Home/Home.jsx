@@ -11,6 +11,7 @@ import Team from "../../components/module/Team/Team";
 import Testimonial from "../../components/module/Testimonial/Testimonial";
 
 import "./Home.css";
+import NewsFeed from "../../components/module/NewsFeed/NewsFeed";
 
 
 const Home = () => {
@@ -27,7 +28,8 @@ const Home = () => {
             {/* <Testimonial /> */}
             {/* <FoodCard />
             <Team /> */}
-            <Availability />
+            {/* <Availability /> */}
+            <NewsFeed />
         </div>
     )
 }
