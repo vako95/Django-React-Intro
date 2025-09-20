@@ -33,15 +33,15 @@
 }
 
 .hover__link-variant--transparent {
-    color: rgba(170, 132, 83, 1);
-    border: 1px solid rgba(170, 132, 83, 1);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
     background-color: transparent;
     transition: background-color 250ms linear, color 250ms linear, border-color 250ms linear;
 }
 
 .hover__link-variant--transparent:hover {
-    color: white;
-    border-color: #fff;
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
     background-color: rgba(170, 132, 83, 1);
 }
 

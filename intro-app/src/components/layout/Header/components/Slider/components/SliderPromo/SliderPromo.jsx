@@ -36,7 +36,7 @@ const SliderPromo = ({ currentSlide }) => {
                 <BackInUp trigger={currentSlide}>
                     <HoverLink
                         size="large"
-                        color="transparent"
+                        variant="transparent"
                     >
                         Rooms & Suites
                     </HoverLink>

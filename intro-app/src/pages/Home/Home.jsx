@@ -18,17 +18,16 @@ const Home = () => {
 
     return (
         <div className="home">
-            {/* <Reservation /> */}
-            {/* <Reservation /> */}
-            {/* <Services /> */}
-            {/* <Rooms /> */}
-            {/* <Extras /> */}
-            {/* <Overlay /> */}
-            {/* <Swap /> */}
-            {/* <Testimonial /> */}
-            {/* <FoodCard />
-            <Team /> */}
-            {/* <Availability /> */}
+            <Reservation />
+            <Services />
+            <Rooms />
+            <Extras />
+            <Overlay />
+            <Swap />
+            <Testimonial />
+            <FoodCard />
+            <Team />
+            <Availability />
             <NewsFeed />
         </div>
     )

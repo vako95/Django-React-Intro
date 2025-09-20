@@ -20,7 +20,7 @@ const roomsCover = [
 const Rooms = () => {
 
     return (
-        <SectionWrapper bgColor="black">
+        <SectionWrapper bgColor="midnightVelvet">
             <Container>
                 <div className="rooms">
                     <div className="rooms__heading">

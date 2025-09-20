@@ -8,12 +8,12 @@ import Header from "../../components/layout/Header/Header";
 const MainLayout = () => {
     return (
         <>
-            {/* <Header /> */}
+            <Header />
 
             <div className="main">
                 <Outlet />
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }
