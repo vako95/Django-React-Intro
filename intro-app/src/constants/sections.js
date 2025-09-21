@@ -273,8 +273,95 @@ const teamMembers = [
     },
 ];
 
-;
+const newsFeedItem = [
+    {
+        id: 1,
+        day: "31",
+        month: "Jan",
+        year: "2025",
+        author: "Shadhin",
+        category: "Hotel",
+        title: "Retore Lighting Design in The Hotel",
+        link: "#",
+        images: [
+            { src: "https://picsum.photos/id/1018/600/400", name: "hotel" },
+            { src: "https://picsum.photos/id/1015/600/400", name: "hotel" }
+        ],
+    },
+    {
+        id: 2,
+        day: "15",
+        month: "Feb",
+        year: "2025",
+        author: "Sophia",
+        category: "Events",
+        title: "Grand Opening of Luxury Spa",
+        link: "#",
+        images: [
+            { src: "https://picsum.photos/id/1020/600/400", name: "spa" },
+            { src: "https://picsum.photos/id/1016/600/400", name: "spa" }
+        ],
+    },
+    {
+        id: 3,
+        day: "20",
+        month: "Mar",
+        year: "2025",
+        author: "Michael",
+        category: "Restaurant",
+        title: "New Seasonal Menu Launched",
+        link: "#",
+        images: [
+            { src: "https://picsum.photos/id/1019/600/400", name: "menu" },
+            { src: "https://picsum.photos/id/1025/600/400", name: "menu" }
+        ],
+    },
+    {
+        id: 4,
+        day: "20",
+        month: "Mar",
+        year: "2025",
+        author: "Michael",
+        category: "Restaurant",
+        title: "New Seasonal Menu Launched",
+        link: "#",
+        images: [
+            { src: "https://picsum.photos/id/1019/600/400", name: "menu" },
+            { src: "https://picsum.photos/id/1025/600/400", name: "menu" }
+        ],
+    },
+    {
+        id: 5,
+        day: "20",
+        month: "Mar",
+        year: "2025",
+        author: "Michael",
+        category: "Restaurant",
+        title: "New Seasonal Menu Launched",
+        link: "#",
+        images: [
+            { src: "https://picsum.photos/id/1019/600/400", name: "menu" },
+            { src: "https://picsum.photos/id/1025/600/400", name: "menu" }
+        ],
+    },
+    {
+        id: 6,
+        day: "20",
+        month: "Mar",
+        year: "2025",
+        author: "Michael",
+        category: "Restaurant",
+        title: "New Seasonal Menu Launched",
+        link: "#",
+        images: [
+            { src: "https://picsum.photos/id/1019/600/400", name: "menu" },
+            { src: "https://picsum.photos/id/1025/600/400", name: "menu" }
+        ],
+    },
+];
 
 
 
-export { services, swap, slideData, foodItems, teamMembers }
+
+
+export { services, swap, slideData, foodItems, teamMembers, newsFeedItem }

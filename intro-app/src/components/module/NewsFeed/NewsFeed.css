@@ -26,6 +26,12 @@
     margin-bottom: 32px;
 }
 
+.news-feed__card-news {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
 .news-feed__cards {
     width: 100%;
     height: auto;
@@ -80,7 +86,7 @@
 .news-feed__img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     display: flex;
 }
 
@@ -161,6 +167,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
     background-color: rgb(255, 255, 255);
     z-index: 9999;
 }
@@ -180,18 +187,13 @@
     justify-content: center;
     align-items: center;
     color: rgb(53, 47, 39);
+    transition: color 150ms linear;
 }
 
-.news-feed__card-month-year-box {
-    width: 100%;
-    height: max-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-    padding: 40px;
+.news-feed__card-month-year:hover {
+    color: rgba(170, 132, 83);
 }
+
 
 .news-feed__time-month {
     font-family: "Barlow", sans-serif;
@@ -199,6 +201,11 @@
     font-size: 12px;
     font-weight: 400;
     color: inherit;
+}
+
+.news-feed__time-month::after {
+    content: ",";
+    margin-right: 2px;
 }
 
 .news-feed__time-year {

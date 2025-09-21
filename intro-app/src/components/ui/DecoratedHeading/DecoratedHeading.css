@@ -51,18 +51,19 @@
 .decorated-heading__letters {
     width: 100%;
     display: flex;
+    font-size: 18px;
     color: rgb(167, 155, 155);
 }
 
 .decorated-heading__letter {
     font-family: "Barlow", sans-serif;
-    font-size: 18px;
+    font-size: 18px !important;
     font-weight: 400;
     color: inherit;
     text-transform: uppercase;
     /* letter-spacing: 7.8px; */
-
 }
+
 
 .decorated-heading-wrapper {
     width: 100%;

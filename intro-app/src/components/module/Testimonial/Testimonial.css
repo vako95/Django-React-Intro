@@ -46,5 +46,6 @@
 }
 
 .testimonial__heading .decorated-heading__letter {
+    font-size: 18px;
     color: rgb(255, 255, 255);
 }

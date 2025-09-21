@@ -3,3 +3,4 @@ export { default as FadeInLeft } from "@components/animation/FadeInLeft/FadeInLe
 export { default as FadeInRight } from "@components/animation/FadeInRight/FadeInRight.jsx";
 export { default as FadeInWordRight } from "@components/animation/FadeInWordRight/FadeInWordRight.jsx";
 export { default as BackInDown } from "@components/animation/BackInDown/BackInDown.jsx";
+export { default as BackInUp } from "@components/animation/BackInUp/BackInUp.jsx";

@@ -16,6 +16,7 @@ const Testimonial = () => {
                         <div className="testimonial__content">
                             <div className="testimonial__heading">
                                 <DecoratedHeading
+                                    position="start"
                                     showLeftIcon={false}
                                     title="What says for customer"
                                     subtitle="WhatClient's Say?"

@@ -36,8 +36,13 @@
     background: rgba(170, 132, 83, 0.2);
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    animation: ripple 2s infinite linear;
+    animation: ripple 1.8s infinite linear;
+    box-shadow: 0 0 20px rgba(170, 132, 83, 0.5);
     z-index: 0;
+}
+
+.player__button--round:hover::after {
+    animation: ripple 1s infinite linear;
 }
 
 

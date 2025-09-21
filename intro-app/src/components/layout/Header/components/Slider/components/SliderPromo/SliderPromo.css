@@ -6,7 +6,8 @@
     align-items: center;
     height: calc(100% - 118px);
     /* height: calc(100% - 118px + 102px); */
-
+    position: relative;
+    z-index: 9999;
 }
 
 .slider__promo-logo {
@@ -46,7 +47,7 @@
 
 .slider__promo-content {
     font-family: "Gilda Display";
-    max-width: 616px;
+    max-width: 640px;
     font-size: 54px;
     line-height: 67px;
     font-weight: 400;

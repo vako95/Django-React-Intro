@@ -23,9 +23,10 @@
 .swap__holder-text .decorated-heading__letter {
     font-family: "Barlow Condensed", sans-serif;
     color: rgb(238, 238, 238);
-    font-size: 12px;
     font-weight: 400;
-    transform: scaleY(1.5);
+    line-height: 25.2px;
+    /* transform: scaleY(1.3); */
+
 
 }
 

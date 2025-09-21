@@ -1,12 +1,8 @@
-import BackInDown from "../../../../../../animation/BackInDown/BackInDown";
-import BackInUp from "../../../../../../animation/BackInUp/BackInUp";
-import FadeInLeft from "../../../../../../animation/FadeInLeft/FadeInLeft";
-import FadeInRight from "../../../../../../animation/FadeInRight/FadeInRight";
-import HoverLink from "../../../../../../ui/HoverLink/HoverLink";
-import "./SliderPromo.css";
-
+import { BackInUp, FadeInRight, FadeInLeft, BackInDown } from "@components/animation";
+import { DecoratedHeading, HoverLink } from "@components/ui";
 import SliderLogo from "./assets/images/logo/logo.png"
 
+import "./SliderPromo.css";
 const SliderPromo = ({ currentSlide }) => {
 
     return (
@@ -16,22 +12,21 @@ const SliderPromo = ({ currentSlide }) => {
                     <img className="slider__promo-logo-img" src={SliderLogo} alt="slider__logo" />
                 </div>
             </BackInDown>
-
             <div className="slider__promo-header">
                 <FadeInLeft trigger={currentSlide}>
-                    <h1 className="slider__promo-title">
-                        Unique Place and Luxury Hotel
-                    </h1>
+                    <DecoratedHeading
+                        className="slider__promo-title"
+                        showLeftIcon={false}
+                        showRightIcon={false}
+                        title="Unique Place and Luxury Hotel"
+                    />
                 </FadeInLeft>
-
-
                 <FadeInRight trigger={currentSlide}>
                     <span className="slider__promo-content">
                         Life Enjoy With The Great Moments
                     </span>
                 </FadeInRight>
             </div>
-
             <div className="slider__promo-link">
                 <BackInUp trigger={currentSlide}>
                     <HoverLink
@@ -41,9 +36,7 @@ const SliderPromo = ({ currentSlide }) => {
                         Rooms & Suites
                     </HoverLink>
                 </BackInUp>
-
             </div>
-
         </div>
     )
 }

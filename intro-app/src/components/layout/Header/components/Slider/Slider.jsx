@@ -12,8 +12,6 @@ import SliderPromo from './components/SliderPromo/SliderPromo.jsx';
 const photos = [
     { id: 1, src: 'https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg1.jpg' },
     { id: 2, src: 'https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/slide2.jpg' },
-    { id: 3, src: 'https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg1.jpg' },
-    { id: 4, src: 'https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/slide2.jpg' },
 ];
 
 const Slider = () => {
@@ -54,33 +52,45 @@ const Slider = () => {
         }}>
             <Swiper
                 onSwiper={(swiper) => (photoRef.current = swiper)}
-                onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
-                autoplay={false}
+                onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
+
                 parallax={true}
-                speed={3000}
+                speed={1000}
                 loop={true}
+                watchSlidesProgress={true}
+
                 effect="fade"
                 fadeEffect={{ crossFade: true }}
-                modules={[Navigation, Parallax, Autoplay, EffectFade]}
+
+
+                modules={[Navigation, Parallax, Autoplay, EffectFade,]}
                 className="mySwiper"
                 navigation={{
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev"
                 }}
             >
-                {photos.map((photo) => (
+                {photos.map((photo, index) => (
                     <SwiperSlide key={photo.id} className="slider__frame">
-                        <div style={{ backgroundImage: `url(${photo.src})` }} className="slider__frame-backdrop">
-                            <SliderPromo currentSlide={currentSlide} />
+                        <div
+                            style={{ backgroundImage: `url(${photo.src})` }}
+                            className="slider__frame-backdrop"
+                        >
+                            <SliderPromo
+                                key={`${index}-${currentSlide === index ? 'active' : 'inactive'}`}
+                                currentSlide={currentSlide === index}
+                            />
                         </div>
                     </SwiperSlide>
                 ))}
+
 
                 <div
                     className="swiper-button-prev"
                     onMouseEnter={handlePrevHover}
                     onMouseLeave={handlePrevLeave}
-                    onClick={handlePrevHover}
+                    onClick={() => photoRef.current?.slidePrev()}
+
                 >
                     {prevPreview.src && (
                         <img
@@ -96,7 +106,8 @@ const Slider = () => {
                     className="swiper-button-next"
                     onMouseEnter={handleNextHover}
                     onMouseLeave={handleNextLeave}
-                    onClick={handleNextHover}
+                    onClick={() => photoRef.current?.slideNext()}
+
                 >
                     {currentPreview.src && (
                         <img
