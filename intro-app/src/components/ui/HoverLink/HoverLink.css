@@ -11,6 +11,7 @@
     z-index: 9999;
     border: none;
     text-decoration: none;
+
 }
 
 .hover__link::before {
@@ -30,6 +31,7 @@
     width: 100%;
     left: unset;
     left: 0;
+
 }
 
 .hover__link-variant--transparent {
@@ -40,8 +42,8 @@
 }
 
 .hover__link-variant--transparent:hover {
-    color: rgb(255, 255, 255);
-    border-color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255);
+    border-color: rgba(255, 255, 255);
     background-color: rgba(170, 132, 83, 1);
 }
 
@@ -52,7 +54,7 @@
     height: 100%;
     right: 0;
     top: 0;
-    background-color: var(--hover-bg-color, rgb(24, 24, 24));
+    background-color: var(--hover-bg-color, rgba(24, 24, 24));
     transition: width 300ms linear, right 300ms linear, left 300ms linear;
     z-index: -1;
 
@@ -70,8 +72,9 @@
 }
 
 .hover__link--md {
-    padding: 16px 38px;
-    border: none;
+    padding: 12px 28px;
+    ;
+
 }
 
 .hover__link--lg {

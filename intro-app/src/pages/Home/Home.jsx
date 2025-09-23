@@ -18,7 +18,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            <Reservation />
+            {/* <Reservation />
             <Services />
             <Rooms />
             <Extras />
@@ -28,7 +28,7 @@ const Home = () => {
             <FoodCard />
             <Team />
             <Availability />
-            <NewsFeed />
+            <NewsFeed /> */}
         </div>
     )
 }

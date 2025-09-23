@@ -1,0 +1,149 @@
+.topbar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 14px;
+
+    position: relative;
+
+}
+
+.topbar__content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.topbar__content-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.topbar__content-group {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.topbar__content-wrapper-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.topbar__content-wrapper-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.topbar__supports {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.topbar__support {
+    font-family: "Barlow", sans-serif;
+    width: auto;
+    height: 100%;
+    display: flex;
+    font-size: 14px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgba(255, 255, 255);
+    font-weight: 400;
+}
+
+
+.topbar__support:not(:last-of-type) {
+    margin-right: 24px;
+}
+
+.topbar__support-link {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.topbar__support-link-icon {
+    display: flex;
+    font-size: inherit;
+    color: inherit;
+    margin-right: 4px;
+}
+
+.topbar__support-link-title {
+    max-width: 220px;
+    font-size: inherit;
+    color: inherit;
+}
+
+.topbar__socials {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.topbar__social {
+    max-width: 24px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: rgba(255, 255, 255);
+    font-size: 18px
+}
+
+.topbar__social-link {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: inherit;
+    text-decoration: none;
+
+}
+
+.topbar__social-link-icon {
+    display: flex;
+    font-size: inherit;
+    color: inherit;
+}
+
+.topbar__social:not(:last-of-type) {
+    margin-right: 12px;
+}

@@ -1,4 +1,4 @@
-import { navbarNav } from "../../../../../../../constants/navigations";
+import { navbarNav } from "../../../../../constants/navigations";
 import MenuItem from "./components/MenuItem/MenuItem";
 
 import "./Menu.css";
