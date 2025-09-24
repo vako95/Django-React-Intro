@@ -17,10 +17,9 @@ const photos = [
 const Slider = () => {
     const photoRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [hoveredButton, setHoveredButton] = useState("");
 
-    const getPrevIndex = () => (currentSlide - 1 + photos.length) % photos.length;
-    const getNextIndex = () => (currentSlide + 1) % photos.length;
+    const prevIndex = (currentSlide - 1 + photos.length) % photos.length;
+    const nextIndex = (currentSlide + 1) % photos.length;
 
     return (
         <div className="slider" tabIndex={0}>
@@ -28,7 +27,7 @@ const Slider = () => {
                 onSwiper={(swiper) => (photoRef.current = swiper)}
                 onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
                 parallax={true}
-                speed={300}
+                speed={600}
                 loop={true}
                 watchSlidesProgress={true}
                 effect="fade"
@@ -50,32 +49,22 @@ const Slider = () => {
 
                 <div
                     className="swiper-button-prev"
-                    onMouseEnter={() => setHoveredButton("prev")}
-                    onMouseLeave={() => setHoveredButton(null)}
-                    onClick={() => {
-                        photoRef.current?.slidePrev();
-                        setHoveredButton("prev"); // обновляем preview сразу при клике
-                    }}
+                    onClick={() => photoRef.current?.slidePrev()}
                 >
                     <img
-                        className={`swiper__preview-img ${hoveredButton === "prev" ? "swiper__preview-img--active" : ""}`}
-                        src={photos[getPrevIndex()]?.src}
+                        className="swiper__preview-img"
+                        src={photos[prevIndex].src}
                         alt="prev preview"
                     />
                 </div>
 
                 <div
                     className="swiper-button-next"
-                    onMouseEnter={() => setHoveredButton("next")}
-                    onMouseLeave={() => setHoveredButton(null)}
-                    onClick={() => {
-                        photoRef.current?.slideNext();
-                        setHoveredButton("next"); // обновляем preview сразу при клике
-                    }}
+                    onClick={() => photoRef.current?.slideNext()}
                 >
                     <img
-                        className={`swiper__preview-img ${hoveredButton === "next" ? "swiper__preview-img--active" : ""}`}
-                        src={photos[getNextIndex()]?.src}
+                        className="swiper__preview-img"
+                        src={photos[nextIndex].src}
                         alt="next preview"
                     />
                 </div>
