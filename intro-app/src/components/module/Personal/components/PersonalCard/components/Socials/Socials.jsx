@@ -4,10 +4,10 @@ import "./Socials.css";
 const Socials = ({ socials }) => {
 
     return (
-        <nav className="team__card-icons">
+        <nav className="personal__card-icons">
             {socials.map((social, idx) => (
-                <Link key={idx} to={social.href} className="team__card-icon-link">
-                    <i className={`team__card-icon ${social.iconClass}`}></i>
+                <Link key={idx} to={social.href} className="personal__card-icon-link">
+                    <i className={`personal__card-icon ${social.iconClass}`}></i>
                 </Link>
             ))}
         </nav>

@@ -12,12 +12,11 @@ const Header = ({ children }) => {
         <BackdropContainer
             backdropHeight="80%"
             position="top"
+            backdropFilter={true}
             backdrop={currentBackground}
         >
             <header tabIndex={1} className="header">
-                <div className="header__container">
-                    {children}
-                </div>
+                {children}
             </header>
         </BackdropContainer>
     );

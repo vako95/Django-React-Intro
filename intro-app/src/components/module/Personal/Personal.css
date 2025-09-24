@@ -1,4 +1,4 @@
-.team {
+.personal {
     width: 100%;
     height: auto;
     display: flex;
@@ -8,7 +8,7 @@
     padding: 100px 0px;
 }
 
-.team__container {
+.personal__container {
     width: 100%;
     height: auto;
     display: flex;
@@ -18,7 +18,7 @@
 
 }
 
-.team__heading {
+.personal__heading {
     width: 100%;
     height: auto;
     display: flex;
@@ -27,7 +27,7 @@
     margin-bottom: 48px;
 }
 
-.team__card {
+.personal__card {
     position: relative;
     width: 100%;
     height: auto;
@@ -39,7 +39,7 @@
 
 }
 
-.team__card-wrapper {
+.personal__card-wrapper {
     width: 100%;
     height: 100%;
     display: grid;

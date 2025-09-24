@@ -1,6 +1,6 @@
 import "./About.css";
 
-const About = () => {
+const Abouts = () => {
     return (
         <div className="about">
 
@@ -8,4 +8,4 @@ const About = () => {
     )
 }
 
-export default About;
+export default Abouts;

@@ -42,10 +42,6 @@
 
 
 
-.menu__item:hover .menu__sublist {
-    transform: scaleY(1);
-    opacity: 1;
-}
 
 
 
@@ -67,15 +63,13 @@
     /* точка раскрытия сверху */
     opacity: 0;
     /* прозрачность 0 */
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 250ms linear, opacity 0.3s ease;
     /* плавная анимация */
 }
 
 .menu__item:hover .menu__sublist {
     transform: scaleY(1);
-    /* раскрыть меню */
     opacity: 1;
-    /* видимое меню */
 }
 
 .menu__sublist-item {
@@ -107,7 +101,7 @@
 
 .menu__sublist-item:hover .menu__sublist-text {
     margin-left: 4px;
-    transition-delay: 0.1s;
+    /* transition-delay: 0.1s; */
 }
 
 .menu__sublist-item::before {
@@ -159,7 +153,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     color: #555;
-    transition: margin-left 300ms linear;
+    /* transition: margin-left 300ms linear; */
 }
 
 
@@ -170,18 +164,18 @@
     position: absolute;
     top: 0;
     left: 100%;
-    min-width: 240px;
+    width: 0;
     list-style-type: none;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.08) 1px 1px 35px 0px;
-    opacity: 0;
-    transition: opacity 250ms linear;
-    z-index: 100;
+    transition: min-width 250ms linear;
+    visibility: hidden;
+    z-index: -1;
 }
 
-
 .menu__sublist-item:hover>.menu__sublist--submenu {
-
+    min-width: 240px;
     flex-direction: column;
-    opacity: 1;
+    z-index: 100;
+    visibility: visible;
 }

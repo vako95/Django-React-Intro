@@ -33,7 +33,7 @@ const MenuItem = ({ item }) => {
                                     <ul className="menu__sublist--submenu">
                                         {dropdownItem.dropdown.map((item) => (
                                             <li className="menu__sublist-item" key={item.id}>
-                                                <NavLink className="menu__sublist-link menu__sublist-item--link">
+                                                <NavLink to={item.name} className="menu__sublist-link menu__sublist-item--link">
                                                     <span className="menu__sublist-text">
                                                         {item.name}
                                                     </span>

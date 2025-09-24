@@ -25,31 +25,33 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    backdrop-filter: blur(18px);
+    will-change: transform, opacity;
+    user-select: none;
 }
 
 .slider__frame-backdrop::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(100deg, #000000bc, rgba(34, 34, 34, 0.002));
-    ;
+    background: linear-gradient(100deg, rgba(0, 0, 0, 0.76), rgba(15, 15, 15, 0.249));
     z-index: 1;
-    backdrop-filter: blur(0.5px);
-    transform: scale(1);
     transition: transform 250ms linear, opacity 250ms linear;
+
 }
 
 .slider__frame-backdrop-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    user-select: none;
+
 }
 
 .swiper {
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.8);
+
 }
 
 .swiper-slide {
@@ -62,14 +64,13 @@
     align-items: center;
 }
 
-.swiper-slide {
-    transition: all 350ms ease;
-}
 
+/* 
 .swiper-slide:not(.swiper-slide-active) {
     filter: blur(8px) grayscale(1);
     opacity: 0;
-}
+
+} */
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -89,9 +90,8 @@
     position: absolute;
     font-size: 18px;
     font-weight: 500;
-    color: #F8F8F8;
+    color: rgba(248, 248, 248);
 }
-
 
 .swiper__preview-next {
     position: absolute;
@@ -104,12 +104,11 @@
     pointer-events: none;
     transform: translateY(-50%);
     opacity: 1;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 250ms linear, transform 250ms linear;
     z-index: 10;
+    will-change: transform, opacity;
 
 }
-
-
 
 .swiper__preview-prev {
     position: absolute;
@@ -122,13 +121,14 @@
     pointer-events: none;
     transform: translate(-100%, -50%);
     opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 250ms linear, transform 250ms linear;
     z-index: 10;
-    backdrop-filter: invert(80%);
+    will-change: transform, opacity;
+
+    /* backdrop-filter: invert(80%); */
 }
 
 .swiper-button-prev:hover+.swiper__preview-prev {
-    transform: translate(50%);
     transform: translate(-27px, 8.5px);
     opacity: 1;
 }
@@ -143,11 +143,15 @@
     opacity: 0;
     transform-origin: right;
     user-select: none;
-    filter: blur(1px) grayscale(1);
+    will-change: transform, opacity;
+    /* filter: blur(0.5px) grayscale(0.8); */
+    filter: grayscale(0.8);
+
 }
 
 .swiper__preview-img--active {
     transform: scale(1);
     opacity: 1;
-    box-shadow: 0 0 8px 2px rgba(128, 128, 128);
+    border: 3px solid rgba(128, 128, 128);
+    /* box-shadow: 0 0 8px 2px rgba(128, 128, 128); */
 }

@@ -1,4 +1,4 @@
-.team__card-icons {
+.personal__card-icons {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -13,7 +13,7 @@
     transition: transform 250ms linear, visibility 250ms linear, margin 250ms linear, opacity 250ms linear;
 }
 
-.team__card-frame:hover .team__card-icons {
+.personal__card-frame:hover .personal__card-icons {
     opacity: 1;
     transform: translateX(0);
     visibility: visible;
@@ -23,7 +23,7 @@
 }
 
 
-.team__card-icon-link {
+.personal__card-icon-link {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -31,13 +31,13 @@
     text-decoration: none;
 }
 
-.team__card-icon {
+.personal__card-icon {
     font-size: 18px;
     color: white;
     display: flex;
 }
 
-.team__card-icon:hover {
+.personal__card-icon:hover {
     transform: scale(1.4);
     color: rgba(171, 133, 85);
     transition: transform 100ms linear, color 100ms linear, visibility 250ms linear;

@@ -6,20 +6,15 @@ const BackInUp = ({ children, trigger }) => {
             opacity: 0,
             y: 100,
             scale: 0.7,
-            rotateX: 45,
         },
         visible: {
             opacity: 1,
             y: 0,
             scale: 1,
-            rotateX: 0,
             transition: {
                 type: "tween",
                 ease: "easeOut",
-                duration: 0.8,
-                stiffness: 100,
-                damping: 15,
-                mass: 0.8,
+                duration: 1,
             },
         },
     };
@@ -29,7 +24,6 @@ const BackInUp = ({ children, trigger }) => {
             className="back__in-up"
             key={trigger}
             initial="hidden"
-            animate="visible"
             whileInView="visible"
             viewport={{ once: false }}
             variants={variants}

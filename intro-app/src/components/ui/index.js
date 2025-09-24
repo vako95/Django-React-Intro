@@ -8,3 +8,4 @@ export { default as VideoPlayer } from "@components/ui/VideoPlayer/VideoPlayer.j
 export { default as PlayerButton } from "@components/ui/PlayerButton/PlayerButton.jsx";
 export { default as HoverLink } from "@components/ui/HoverLink/HoverLink.jsx";
 export { default as Calendar } from "@components/ui/Calendar/Calendar.jsx";
+export { default as FrostedGlass } from "@components/ui/FrostedGlass/FrostedGlass.jsx";

@@ -1,10 +1,10 @@
-.team__card-member {
+.personal__card-member {
     width: 100%;
     /* background-color: red; */
     padding: 22px 24px 20px;
 }
 
-.team__card-member-title {
+.personal__card-member-title {
     max-width: 278px;
     display: flex;
     font-family: "Barlow Condensed", sans-serif;
@@ -13,7 +13,7 @@
     font-weight: 400;
 }
 
-.team__card-member-link {
+.personal__card-member-link {
     max-width: 278px;
     font-family: "Gilda Display", sans-serif;
     font-size: 24px;
@@ -26,6 +26,6 @@
 
 }
 
-.team__card-member-link:hover {
+.personal__card-member-link:hover {
     color: rgba(199, 177, 149);
 }

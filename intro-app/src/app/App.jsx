@@ -6,6 +6,8 @@ import About from "../pages/About/About";
 import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
+import Team from "../pages/Team/Team";
+import BreadCrumbs from "../components/module/BreadCrumbs/BreadCrumbs";
 
 const App = () => {
     return (
@@ -14,9 +16,11 @@ const App = () => {
                 <Route index element={<Home />} />
             </Route>
             <Route path="/" element={<SecondaryLayout />}>
-                <Route path="/about" element={<About />} />
+                <Route path="about" element={<About />} />
+                <Route path="team" element={<Team />} />
             </Route>
         </Routes>
+
     )
 }
 

@@ -1,7 +1,7 @@
 .footer__about-social-item {
     width: 100%;
-    max-width: 64px;
-    max-height: 64px;
+    min-width: 42px;
+    min-height: 42px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +32,7 @@
     text-decoration: none;
 }
 
-.footer__about-social-link i {
+.footer__about-social-link {
     font-family: "Font Awesome 5 Brands";
     font-size: 16px;
     font-weight: 400;

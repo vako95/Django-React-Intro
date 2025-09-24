@@ -1,22 +1,22 @@
-import { Link } from "react-router-dom";
 import { Container, DecoratedHeading } from "@components/ui"
 import { teamMembers } from "../../../constants/sections";
-import "./Team.css";
-import TeamCard from "./components/TeamCard.jsx/TeamCard";
-const Team = () => {
+import "./Personal.css";
+import TeamCard from "./components/PersonalCard/PersonalCard.jsx";
+
+const Personal = () => {
 
     return (
         <Container>
-            <section className="team">
-                <div className="team__container">
-                    <div className="team__heading">
+            <section className="personal">
+                <div className="personal__container">
+                    <div className="personal__heading">
                         <DecoratedHeading
-                            title="Hoexr Hotel team"
-                            subtitle="Expert Team Persons"
+                            title="Hoexr Hotel personal"
+                            subtitle="Expert personal Persons"
                         />
                     </div>
-                    <div className="team__card">
-                        <div className="team__card-wrapper">
+                    <div className="personal__card">
+                        <div className="personal__card-wrapper">
                             {teamMembers.map((item, idx) => (
                                 <TeamCard {...item} key={idx} />
                             ))}
@@ -28,4 +28,4 @@ const Team = () => {
     )
 }
 
-export default Team;
+export default Personal;

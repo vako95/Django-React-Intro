@@ -3,8 +3,8 @@ import { Container } from "@components/ui"
 import { useLocation, Link } from "react-router-dom";
 
 const BreadCrumbs = ({ children }) => {
-    const location = useLocation();
-    console.log(location);
+    const locationpath = useLocation().pathname.split("/").filter((b) => b)
+
     return (
         <Container>
             <nav className="breadcrumbs" aria-label="breadcrumb">
@@ -16,9 +16,23 @@ const BreadCrumbs = ({ children }) => {
                     <li className="breadcrumbs__item">
                         <Link to="/" className="breadcrumbs__item-link">Home</Link>
                     </li>
-                    <li className="breadcrumbs__item">
-                        <span className="breadcrumbs__current">{children}</span>
-                    </li>
+                    {locationpath.map((name, index) => {
+                        const routeTo = "/" + locationpath.slice(0, index + 1).join("/");
+                        const isLast = index === locationpath.length - 1;
+                        return (
+
+                            <li key={index} className="breadcrumbs__item">
+                                {isLast ? (
+                                    <span className="breadcrumbs__current">{name}</span>
+                                ) : (
+                                    <Link to={routeTo} className="breadcrumbs__item-link">
+                                        {name}
+                                    </Link>
+                                )}
+                            </li>
+                        );
+                    })}
+
                 </ol>
             </nav>
         </Container>

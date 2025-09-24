@@ -77,5 +77,6 @@
     font-size: 16px;
     color: white;
     font-weight: bold;
+    text-transform: capitalize;
 
 }

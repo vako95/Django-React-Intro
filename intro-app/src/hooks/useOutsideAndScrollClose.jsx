@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 function useOutsideAndScrollClose(onClose) {
     const ref = useRef(null);
-    const modalRef = useRef(null); // Новый ref вместо selfRef
+    const modalRef = useRef(null);
 
     useEffect(() => {
         function handleClickOutside(e) {

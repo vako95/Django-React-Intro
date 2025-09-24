@@ -56,7 +56,6 @@ const Extras = () => {
             <Container>
                 <SectionWrapper>
                     <div className="extras">
-
                         <div className="extras__heading">
                             <DecoratedHeading
                                 title="Hoexr Luxury Rooms"
@@ -67,7 +66,6 @@ const Extras = () => {
                             <ExtrasList extrasData={extrasList} />
                         </div>
                     </div>
-
                 </SectionWrapper>
             </Container>
         </BackdropContainer>

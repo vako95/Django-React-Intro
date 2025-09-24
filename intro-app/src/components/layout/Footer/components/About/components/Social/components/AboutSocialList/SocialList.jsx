@@ -8,7 +8,7 @@ const SocialList = () => {
             <SocialItem icon="ri-twitter-x-fill" />
             <SocialItem icon="ri-facebook-fill" />
             <SocialItem icon="ri-youtube-fill" />
-            <SocialItem icon="ri-instagram-line" />
+            <SocialItem icon="ri-instagram-fill" />
         </ul>
     )
 }

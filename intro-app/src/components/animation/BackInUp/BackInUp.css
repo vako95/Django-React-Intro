@@ -5,6 +5,6 @@
     justify-content: flex-start;
     align-items: center;
     will-change: transform, opacity;
-    transform-style: preserve-3d;
     backface-visibility: hidden;
+
 }
