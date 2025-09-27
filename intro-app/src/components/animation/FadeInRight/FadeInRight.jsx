@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-
 import "./FadeInRight.css";
 
 const FadeInRight = ({ children, trigger }) => {

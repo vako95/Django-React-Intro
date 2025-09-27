@@ -1,7 +1,7 @@
 import { Container, DecoratedHeading } from "@components/ui"
 import { teamMembers } from "../../../constants/sections";
 import "./Personal.css";
-import TeamCard from "./components/PersonalCard/PersonalCard.jsx";
+import PersonalCard from "./components/PersonalCard/PersonalCard.jsx";
 
 const Personal = () => {
 
@@ -18,7 +18,7 @@ const Personal = () => {
                     <div className="personal__card">
                         <div className="personal__card-wrapper">
                             {teamMembers.map((item, idx) => (
-                                <TeamCard {...item} key={idx} />
+                                <PersonalCard {...item} key={idx} />
                             ))}
                         </div>
                     </div>

@@ -18,6 +18,9 @@ const Home = () => {
 
     return (
         <div className="home">
+            <title>
+                Xuy
+            </title>
             <Reservation />
             <Services />
             <Rooms />
