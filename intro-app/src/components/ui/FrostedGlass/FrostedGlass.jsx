@@ -9,11 +9,11 @@ const FrostedGlass = ({ className, children }) => {
         className,
     )
     return (
-        <Container>
-            <div className={classes}>
-                {children}
-            </div>
-        </Container>
+
+        <div className={classes}>
+            {children}
+        </div>
+
     )
 }
 

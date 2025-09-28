@@ -5,12 +5,11 @@ import { Link, useMatches } from "react-router-dom";
 const BreadCrumbs = () => {
     const matches = useMatches();
 
-    // Собираем все breadcrumbs из handle
+
     const crumbs = matches.flatMap(match => {
         if (!match.handle || !match.handle.breadcrumbs) return [];
         return match.handle.breadcrumbs(match.params);
     });
-    console.log(crumbs);
 
     return (
         <Container>
