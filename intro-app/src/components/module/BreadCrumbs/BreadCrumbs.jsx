@@ -1,35 +1,46 @@
 import "./BreadCrumbs.css";
-import { Container } from "@components/ui";
+
 import { Link, useMatches } from "react-router-dom";
+import { teamMembers } from "../../../app/routers/routers";
 
 const BreadCrumbs = () => {
     const matches = useMatches();
-
 
     const crumbs = matches.flatMap(match => {
         if (!match.handle || !match.handle.breadcrumbs) return [];
         return match.handle.breadcrumbs(match.params);
     });
 
-    return (
-        <Container>
-            <nav className="breadcrumbs" aria-label="breadcrumb">
-                <div className="breadcrumbs-heading">
-                    <h5 className="breadcrumbs__title">{crumbs[crumbs.length - 1].label}</h5>
-                </div>
+    const lastMatch = matches[matches.length - 1];
+    const userId = lastMatch?.params?.id;
+    const user = teamMembers.find(u => u.id === userId);
 
-                <ol className="breadcrumbs__list">
-                    {crumbs.map((crumb, index) => (
+    return (
+        <nav className="breadcrumbs" aria-label="breadcrumb">
+            <div className="breadcrumbs-heading">
+                <h5 className="breadcrumbs__title">
+                    {user ? user.name : crumbs[crumbs.length - 1]?.label}
+                </h5>
+            </div>
+
+            <ol className="breadcrumbs__list">
+                {crumbs.map((crumb, index) => {
+                    let label = crumb.label;
+                    if (crumb.path.includes(":id") && user) label = user.name;
+
+                    return (
                         <li key={index} className="breadcrumbs__item">
                             <Link to={crumb.path} className="breadcrumbs__item-link">
-                                {crumb.label}
+                                {label}
                             </Link>
-                            {index < crumbs.length - 1 && <span className="breadcrumbs__separator">/</span>}
+                            {index < crumbs.length - 1 && (
+                                <span className="breadcrumbs__separator">/</span>
+                            )}
                         </li>
-                    ))}
-                </ol>
-            </nav>
-        </Container>
+                    );
+                })}
+            </ol>
+        </nav>
     );
 };
 
