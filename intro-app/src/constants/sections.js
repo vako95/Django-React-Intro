@@ -181,12 +181,12 @@ const foodItems = [
     },
 ];
 
-
 const teamMembers = [
     {
+        id: "sug__11",
         name: "Michael Dean",
         role: "Event Planner",
-        image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team3-400x532.jpg",
+        image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team1.jpg",
         socials: [
             { href: "/facebook", iconClass: "ri-facebook-circle-fill" },
             { href: "/twitter", iconClass: "ri-twitter-x-line" },
@@ -195,9 +195,10 @@ const teamMembers = [
         ],
     },
     {
+        id: "slug_2",
         name: "Sophia Carter",
         role: "Hotel Manager",
-        image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team1-400x532.jpg",
+        image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team2.jpg",
         socials: [
             { href: "/facebook", iconClass: "ri-facebook-circle-fill" },
             { href: "/twitter", iconClass: "ri-twitter-x-line" },
@@ -206,6 +207,7 @@ const teamMembers = [
         ],
     },
     {
+        id: "slug_3",
         name: "James Parker",
         role: "Receptionist",
         image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team2-400x532.jpg",
@@ -217,6 +219,7 @@ const teamMembers = [
         ],
     },
     {
+        id: "slug_4",
         name: "Isabella Moore",
         role: "Room Service",
         image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team3-400x532.jpg",
@@ -228,6 +231,7 @@ const teamMembers = [
         ],
     },
     {
+        id: "slug_5",
         name: "Ethan Brooks",
         role: "Chef",
         image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team1-400x532.jpg",
@@ -239,6 +243,7 @@ const teamMembers = [
         ],
     },
     {
+        id: "slug_6",
         name: "Olivia Bennett",
         role: "Event Assistant",
         image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team2-400x532.jpg",
@@ -250,6 +255,7 @@ const teamMembers = [
         ],
     },
     {
+        id: "slug_7",
         name: "William Foster",
         role: "Security",
         image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team3-400x532.jpg",
@@ -261,6 +267,7 @@ const teamMembers = [
         ],
     },
     {
+        id: "slug_8",
         name: "Emily Ross",
         role: "Housekeeper",
         image: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team1-400x532.jpg",

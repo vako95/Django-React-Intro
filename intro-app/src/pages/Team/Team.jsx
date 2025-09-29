@@ -5,8 +5,8 @@ import PersonalDetail from "../../components/module/Personal/components/Personal
 const Team = () => {
     return (
         <div className="team">
-            {/* <Personal /> */}
-            <PersonalDetail />
+            <Personal />
+            {/* <PersonalDetail /> */}
         </div>
     )
 }

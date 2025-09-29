@@ -4,7 +4,7 @@ import Socials from "./components/Socials/Socials.jsx";
 import Content from "./components/Content/Content.jsx";
 
 
-const PersonalCard = ({ socials, image, role, name }) => {
+const PersonalCard = ({ socials, image, role, name, link, id }) => {
     return (
         <article className="personal__card-profile">
             <figure className="personal__card-frame">
@@ -15,6 +15,8 @@ const PersonalCard = ({ socials, image, role, name }) => {
                 <Content
                     role={role}
                     name={name}
+                    link={link}
+                    id={id}
                 />
             </div>
         </article>

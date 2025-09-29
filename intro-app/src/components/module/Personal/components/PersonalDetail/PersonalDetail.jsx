@@ -1,18 +1,20 @@
-import { Container } from "@components/ui"
-
-import "./PersonalDetail.css";
-import { Link } from "react-router-dom";
+import { Container } from "@components/ui";
 import { useRef, useEffect, useState } from "react";
-import PersonalContent from "./components/PersonalContent/PersonalContent";
-import SkillsSection from "./components/SkillsSection/SkillsSection";
+import PersonalContent from "./components/PersonalContent/PersonalContent.jsx";
+import SkillsSection from "./components/SkillsSection/SkillsSection.jsx";
+import SkillsDescription from "./components/SkillsDescription/SkillsDescription.jsx";
+import PerosnalWrapper from "./components/PerosnalWrapper/PerosnalWrapper.jsx";
+import "./PersonalDetail.css";
+
 const skills = [
     { name: "Executive Chef", value: 90 },
     { name: "Pastry Chef", value: 75 },
     { name: "Sous Chef", value: 60 },
 ];
+
 const PersonalDetail = () => {
     const ref = useRef();
-    const [isVisible, setIsVisible] = useState(false);
+    const [visible, setVisible] = useState(false);
     const [progresses, setProgresses] = useState(skills.map(() => 0));
 
     const duration = 1500;
@@ -20,10 +22,7 @@ const PersonalDetail = () => {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.disconnect();
-                }
+                if (entry.isIntersecting) setVisible(true);
             },
             { threshold: 0.5 }
         );
@@ -31,76 +30,34 @@ const PersonalDetail = () => {
         return () => observer.disconnect();
     }, []);
 
-
     useEffect(() => {
-        if (isVisible) {
-            let startTime = null;
-
-            const animate = (timestamp) => {
-                if (!startTime) startTime = timestamp;
-                const elapsed = timestamp - startTime;
-
-                setProgresses((prev) =>
-                    prev.map((p, i) =>
-                        Math.min(Math.floor((elapsed / duration) * skills[i].value), skills[i].value)
-                    )
-                );
-
-                if (progresses.some((p, i) => p < skills[i].value)) {
-                    requestAnimationFrame(animate);
-                }
-            };
-
-            requestAnimationFrame(animate);
-        }
-    }, [isVisible]);
-
+        if (!visible) return;
+        let start = null;
+        const animate = (timestamp) => {
+            if (!start) start = timestamp;
+            const elapsed = timestamp - start;
+            setProgresses(
+                skills.map((skill) =>
+                    Math.min(Math.floor((elapsed / duration) * skill.value), skill.value)
+                )
+            );
+            if (elapsed < duration) requestAnimationFrame(animate);
+        };
+        requestAnimationFrame(animate);
+    }, [visible]);
 
     return (
         <Container>
             <section className="personal__detail">
                 <div className="personal__detail-area">
-                    <figure className="personal__detail-wrapper">
-                        <img
-                            className="personal__detail-wrapper-img"
-                            src="https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/team1.jpg"
-                            alt="Portrait of Frank Bruton"
-                        />
-                    </figure>
-
+                    <PerosnalWrapper />
                     <PersonalContent />
-
-
-                    <article className="personal__detail-skills">
-                        <div className="personal__detail-skills-heading">
-                            <h4 className="personal__detail-skills-title">Expertise & Skills</h4>
-                        </div>
-
-                        <div className="personal__detail-skills-content">
-                            <span className="personal__detail-skills-desc">
-                                Bring to the table win-win at survival strategies win to ensure with proactiv other domination going with forward,
-                                a new normal that has evolved from generation
-                                X is on the streamled solution
-                            </span>
-                            <span className="personal__detail-skills-desc">
-                                Bring to the table win-win at survival strategies win to ensure with proactiv other domination going with forward,
-                                a new normal that has evolved from generation
-                                X is on the streamled solution
-                            </span>
-                        </div>
-
-
-                    </article>
-
-
-                    <SkillsSection ref={ref} skills={skills} progresses={progresses} />
-
-
+                    <SkillsDescription />
+                    <SkillsSection ref={ref} skills={skills} progresses={progresses} visible={visible} />
                 </div>
             </section>
-
         </Container>
-    )
-}
+    );
+};
 
 export default PersonalDetail;

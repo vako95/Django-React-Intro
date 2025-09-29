@@ -2,7 +2,7 @@ const Info = () => {
 
 
     return (
-        <ul className="personal__detail-info">
+        <ul className="personal__detail-info-list">
             <li className="personal__detail-info-item">
                 <strong className="personal__detail-info-item-label">
                     Email:
