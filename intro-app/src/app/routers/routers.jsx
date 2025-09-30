@@ -5,6 +5,7 @@ import Home from "../../pages/Home/Home.jsx";
 import About from "../../pages/About/About.jsx";
 import Team from "../../pages/Team/Team.jsx";
 import TeamDetail from "../../pages/TeamDetail/TeamDetail.jsx";
+import Gallery from "../../pages/Gallery/Gallery.jsx";
 
 export const teamMembers = [
     { id: "sug__11", name: "Michael Dean" },
@@ -15,22 +16,58 @@ export const teamMembers = [
 
 const router = createBrowserRouter([
     { path: "/", element: <MainLayout />, children: [{ index: true, element: <Home /> }] },
-    { path: "/about", element: <SecondaryLayout />, children: [{ index: true, element: <About /> }] },
+    {
+        path: "/about", element: <SecondaryLayout />,
+        handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "About" }] },
+        children: [
+            { index: true, element: <About /> },
+
+        ]
+    },
     {
         path: "/team",
         element: <SecondaryLayout />,
-        handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "/team", label: "Team" }, { path: "#", label: "Team-Detail" }] },
+        handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "/team", label: "Team" },] },
         children: [
             { index: true, element: <Team /> },
+
             {
                 path: ":id",
                 element: <TeamDetail />,
-                handle: ({ id }) => {
+                handle: (
+                    { id }) => {
                     const user = teamMembers.find(u => u.id === id);
                     return [{ path: `/team/${id}`, label: user?.name || "User" }];
                 },
             },
         ],
+    },
+    {
+        path: "/team/:id",
+        element: <SecondaryLayout />,
+        handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "/team", label: "Team" }, { path: "#", label: "Team-Detail" }] },
+        children: [
+            { index: true, element: <TeamDetail /> },
+
+            {
+                path: ":id",
+                element: <TeamDetail />,
+                handle: (
+
+                    { id }) => {
+                    const user = teamMembers.find(u => u.id === id);
+                    return [{ path: `/team/${id}`, label: user?.name || "User" }];
+                },
+            },
+        ],
+    },
+    {
+        path: "/gallery", element: <SecondaryLayout />,
+        handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "Gallery" }] },
+        children: [
+            { index: true, element: <Gallery /> },
+
+        ]
     },
 ]);
 

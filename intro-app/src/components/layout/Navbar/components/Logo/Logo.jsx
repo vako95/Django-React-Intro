@@ -8,7 +8,7 @@ const Logo = () => {
 
     return (
         <figure className="logo">
-            <Link className="logo__link">
+            <Link to="/" className="logo__link">
                 <img className="logo__brand" src={LogoBrand} alt="Logo brand" />
             </Link>
         </figure>
