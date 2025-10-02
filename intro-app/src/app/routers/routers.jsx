@@ -1,11 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import MainLayout from "../../layouts/MainLayout/MainLayout.jsx";
-import SecondaryLayout from "../../layouts/SecondaryLayout/SecondaryLayout.jsx";
-import Home from "../../pages/Home/Home.jsx";
-import About from "../../pages/About/About.jsx";
-import Team from "../../pages/Team/Team.jsx";
-import TeamDetail from "../../pages/TeamDetail/TeamDetail.jsx";
-import Gallery from "../../pages/Gallery/Gallery.jsx";
+import { MainLayout, SubLayout } from '@src/layouts';
+
+import { Home, About, GalleryPage, Team, TeamDetail, ContactPage } from "@src/pages";
 
 export const teamMembers = [
     { id: "sug__11", name: "Michael Dean" },
@@ -17,7 +13,7 @@ export const teamMembers = [
 const router = createBrowserRouter([
     { path: "/", element: <MainLayout />, children: [{ index: true, element: <Home /> }] },
     {
-        path: "/about", element: <SecondaryLayout />,
+        path: "/about", element: <SubLayout />,
         handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "About" }] },
         children: [
             { index: true, element: <About /> },
@@ -26,7 +22,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/team",
-        element: <SecondaryLayout />,
+        element: <SubLayout />,
         handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "/team", label: "Team" },] },
         children: [
             { index: true, element: <Team /> },
@@ -44,7 +40,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/team/:id",
-        element: <SecondaryLayout />,
+        element: <SubLayout />,
         handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "/team", label: "Team" }, { path: "#", label: "Team-Detail" }] },
         children: [
             { index: true, element: <TeamDetail /> },
@@ -55,18 +51,26 @@ const router = createBrowserRouter([
                 handle: (
 
                     { id }) => {
-                    const user = teamMembers.find(u => u.id === id);
-                    return [{ path: `/team/${id}`, label: user?.name || "User" }];
+                    // const user = teamMembers.find(u => u.id === id);
+                    // return [{ path: `/team/${id}`, label: user?.name || "User" }];
+                    const user = useSelector(state => state.user[id]);
+                    return { path: user?.id, label: user?.name || `#${id}` };
                 },
             },
         ],
     },
     {
-        path: "/gallery", element: <SecondaryLayout />,
+        path: "/gallery", element: <SubLayout />,
         handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "Gallery" }] },
         children: [
-            { index: true, element: <Gallery /> },
-
+            { index: true, element: <GalleryPage /> },
+        ]
+    },
+    {
+        path: "/contact", element: <SubLayout />,
+        handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "Contact" }] },
+        children: [
+            { index: true, element: <ContactPage /> }
         ]
     },
 ]);

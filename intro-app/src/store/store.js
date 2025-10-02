@@ -1,10 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import BreadCrumpReducer from "./BreadCrumpReducer/BreadCrumpReducer";
+import calendarReducer from "./CalendarReducer/CalendarReducer.js";
 
-const store = configureStore({
+export const store = configureStore({
     reducer: {
-        content: BreadCrumpReducer
-    }
-
-})
-export default store;
+        calendar: calendarReducer,
+    },
+});

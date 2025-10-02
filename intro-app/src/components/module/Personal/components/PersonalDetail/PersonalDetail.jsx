@@ -32,7 +32,7 @@ const PersonalDetail = () => {
 
     useEffect(() => {
         if (!visible) return;
-        let start = null;
+        let start = 0;
         const animate = (timestamp) => {
             if (!start) start = timestamp;
             const elapsed = timestamp - start;

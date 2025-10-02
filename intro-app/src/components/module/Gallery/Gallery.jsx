@@ -1,16 +1,15 @@
 import { Container } from '@components/ui';
 import HotelGallery from '../../ui/HotelGallery/HotelGallery';
-import "./Gallery.css"
-function Gallery() {
+import "./Gallery.css";
 
-
+const Gallery = () => {
     const images = [
         "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg4.jpg",
-        "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?fm=jpg&q=60&w=3000",
-        "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg4.jpg",
-        "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?fm=jpg&q=60&w=3000",
-        "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg4.jpg",
-        "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?fm=jpg&q=60&w=3000",
+        "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg2.jpg",
+        "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/05/room5.jpg",
+        "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/05/room1.jpg",
+        "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/01/blog3.jpg",
+        "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/05/room6.jpg",
     ];
 
     return (

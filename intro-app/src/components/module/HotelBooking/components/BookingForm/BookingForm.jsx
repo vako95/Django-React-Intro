@@ -22,7 +22,6 @@ const BookingForm = ({
     isGuestsOpen,
     onDecrease,
     onIncrease,
-    setIsCalendarOpen
 }) => {
 
     return (
@@ -32,8 +31,6 @@ const BookingForm = ({
                 toggleCalendar={toggleCalendar}
                 checkIn={checkIn}
                 checkOut={checkOut}
-
-
             />
             <SelectorRooms
                 toggleRoom={toggleRoom}

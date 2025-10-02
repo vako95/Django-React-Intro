@@ -18,19 +18,9 @@ const navbarNav = [
                 link: "/about"
             },
             {
-                id: 22,
-                name: "Team",
-                link: "/team"
-            },
-            {
                 id: 23,
                 name: "Gallery",
                 link: "/gallery"
-            },
-            {
-                id: 24,
-                name: "About",
-                link: "/about"
             },
             {
                 id: 26,
@@ -58,8 +48,8 @@ const navbarNav = [
             },
             {
                 id: 25,
-                name: "Gallery",
-                link: "/gallery"
+                name: "Contact",
+                link: "/contact"
             }
         ]
     },

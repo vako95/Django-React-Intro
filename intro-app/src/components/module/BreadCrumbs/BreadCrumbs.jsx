@@ -25,17 +25,11 @@ const BreadCrumbs = () => {
 
             <ol className="breadcrumbs__list">
                 {crumbs.map((crumb, index) => {
-                    let label = crumb.label;
-                    if (crumb.path.includes(":id") && user) label = user.name;
-
                     return (
                         <li key={index} className="breadcrumbs__item">
                             <Link to={crumb.path} className="breadcrumbs__item-link">
-                                {label}
+                                {crumb.label}
                             </Link>
-                            {index < crumbs.length - 1 && (
-                                <span className="breadcrumbs__separator">/</span>
-                            )}
                         </li>
                     );
                 })}

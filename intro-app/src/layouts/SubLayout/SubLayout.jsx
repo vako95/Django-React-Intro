@@ -5,10 +5,10 @@ import Footer from "../../components/layout/Footer/Footer.jsx"
 import BreadCrumbs from "../../components/module/BreadCrumbs/BreadCrumbs.jsx";
 import Topbar from "../../components/layout/Topbar/Topbar.jsx";
 import Navbar from "../../components/layout/Navbar/Navbar.jsx";
-import "./SecondaryLayout.css";
+import "./SubLayout.css";
 
 
-const SecondaryLayout = () => {
+const SubLayout = () => {
     return (
         <>
             <Header bgColor="black">
@@ -27,4 +27,4 @@ const SecondaryLayout = () => {
     )
 }
 
-export default SecondaryLayout;
+export default SubLayout;

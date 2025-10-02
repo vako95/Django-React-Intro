@@ -87,6 +87,12 @@
     padding: 20px 52px;
 }
 
+.hover__link-variant--stretch {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
 
 
 /* .hover__link--transparent>span {
