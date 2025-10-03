@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import { MainLayout, SubLayout } from '@src/layouts';
-
 import { Home, About, GalleryPage, Team, TeamDetail, ContactPage } from "@src/pages";
 
 export const teamMembers = [

@@ -1,5 +1,5 @@
 .calendar {
-    width: auto;
+    width: 100%;
     height: auto;
     position: absolute;
     display: flex;
@@ -19,8 +19,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
 }
 
 .calenar--fullScreen .calendar__entrance,
@@ -31,6 +32,7 @@
     display: flex;
     justify-content: center;
     z-index: 9999;
+    position: relative;
 }
 
 .calenar--fullScreen {
@@ -121,6 +123,7 @@
     background-color: transparent;
     color: rgba(170, 132, 83);
     margin: 16px;
+    z-index: 99999;
 }
 
 .calendar__close-icon {

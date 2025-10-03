@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import clsx from "clsx"
 import Logo from "./components/Logo/Logo";
 import Menu from "./components/Menu/Menu";
-
+import React from "react";
 import "./Navbar.css";
 
 
@@ -12,7 +12,6 @@ const Navbar = ({ className, bgColor, cart = false }) => {
         "navbar__container",
         bgColor && `navbar__container-bgColor--${bgColor}`,
         className
-
     )
     return (
         <div className="navbar">
@@ -43,7 +42,6 @@ const Navbar = ({ className, bgColor, cart = false }) => {
                                                     <div className="navbar__cart-item-details">
                                                         <div className="navbar__cart-item-details-content">
                                                             <div className="navbar__cart-item-details-main">
-
                                                                 <Link type="button" className="navbar__cart-item-details-remove">
                                                                     ×
                                                                 </Link>
@@ -116,7 +114,6 @@ const Navbar = ({ className, bgColor, cart = false }) => {
                                     </div>
                                 </div>
 
-
                             </div>
                         )
                         }
@@ -128,4 +125,4 @@ const Navbar = ({ className, bgColor, cart = false }) => {
     )
 }
 
-export default Navbar;
+export default React.memo(Navbar);

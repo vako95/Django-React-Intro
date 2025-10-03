@@ -16,8 +16,16 @@ const Calendar = ({ checkIn, checkOut, onCheckInChange, onCheckOutChange, varian
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <section className={classes}  {...props} onClick={(e) => e.stopPropagation()}>
-
                 <div className="calendar__picker" >
+                    {closeButton &&
+                        <button
+                            type="button"
+                            className="calendar__close-button"
+                            onClick={onClose}
+                        >
+                            <IoIosCloseCircleOutline className='calendar__close-icon' />
+                        </button>
+                    }
                     <div className="calendar__entrance">
                         <div className="calendar__leave-container">
                             <div className="calendar__leave-wrapper">
@@ -130,15 +138,7 @@ const Calendar = ({ checkIn, checkOut, onCheckInChange, onCheckOutChange, varian
 
                             </div>
                         </div>
-                        {closeButton &&
-                            <button
-                                type="button"
-                                className="calendar__close-button"
-                                onClick={onClose}
-                            >
-                                <IoIosCloseCircleOutline className='calendar__close-icon' />
-                            </button>
-                        }
+
                     </div>
                 </div>
 

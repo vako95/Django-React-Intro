@@ -15,7 +15,6 @@ export const calendarSlice = createSlice({
             if (state[key]) state[key].count = count;
         },
         setAll: (state, action) => {
-            // Можно обновлять сразу все значения с бэка
             return { ...state, ...action.payload };
         },
     },

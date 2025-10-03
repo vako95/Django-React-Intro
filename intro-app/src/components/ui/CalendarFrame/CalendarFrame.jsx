@@ -6,6 +6,9 @@ import CalendarDropdown from "./ui/CalendarDropdown/CalendarDropdown";
 
 
 import "./CalendarFrame.css";
+import FrameHeading from "./components/FrameHeading/FrameHeading";
+import FrameDates from "./components/FrameDates/FrameDates";
+import FrameLabel from "./components/FrameLabel/FrameLabel";
 
 const CalendarFrame = () => {
     const [openLabel, setOpenLabel] = useState(false);
@@ -44,95 +47,32 @@ const CalendarFrame = () => {
     return (
         <Container>
             <section className="calendar-frame" >
-                <div className="calendar-frame__wrapper"  >
-                    <div className="calendar-frame__heading">
-                        <h4 className="calendar-frame__heading-title">ROOMS & SUITES</h4>
-                        <span className="calendar-frame__heading-subtitle">Hotel Booking</span>
-                    </div>
-                    <div className="calendar-frame__content">
-                        <div className="calendar-frame__dates" onClick={() => toggleLabel("calendar")}>
-                            {["Check In", "Check Out"].map((label, idx) => (
-                                <div className="calendar-frame__label" key={label}>
-                                    <div className="calendar-frame__label-heading">
-                                        <span className="calendar-frame__label-title">{label}</span>
-                                    </div>
-                                    <div className="calendar-frame__label-wrapper">
-                                        <input
-                                            value={idx === 0 ? checkIn.format("DD.MM.YYYY") : checkOut.format("DD.MM.YYYY")}
-                                            className="calendar-frame__label-wrapper-input"
-                                            type="text"
-                                            readOnly
-                                        />
-                                        {renderArrowIcon("calendar")}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="calendar-frame__label">
-                            <div className="calendar-frame__label-heading">
-                                <span
-                                    className="calendar-frame__label-title"
-                                    onClick={() => toggleLabel("rooms")}
-                                >
-                                    Rooms
-                                </span>
-                            </div>
-                            <div className="calendar-frame__label-wrapper"
-                                onClick={() => toggleLabel("rooms")}>
-                                <input
-                                    value={`${passengers.rooms.count} ${passengers.rooms.label}`}
-                                    className="calendar-frame__label-wrapper-input"
-                                    type="text"
-                                    readOnly
-                                />
-                                {renderArrowIcon("rooms")}
-                            </div>
-                            <CalendarDropdown
-                                wantedLabels={["rooms"]}
-                                passengers={passengers}
-                                setPassengers={setPassengers}
-                                className={openLabel === "rooms" ? "open" : ""}
-                            />
-                        </div>
-                        <div className="calendar-frame__label"
-                            onClick={() => toggleLabel("guests")}>
-                            <div className="calendar-frame__label-heading">
-                                <span className="calendar-frame__label-title">
-                                    Guests
-                                </span>
-                            </div>
-                            <div className="calendar-frame__label-wrapper">
-                                <input
-                                    value="1 Adult, 0 Child"
-                                    className="calendar-frame__label-wrapper-input"
-                                    type="text"
-                                    readOnly
-                                />
-                                {renderArrowIcon("guests")}
-                            </div>
-                            <CalendarDropdown
-                                wantedLabels={["adults", "children"]}
-                                passengers={passengers}
-                                setPassengers={setPassengers}
-                                className={openLabel === "guests" ? "open" : ""}
-                            />
-                        </div>
-                    </div>
+                <div className="calendar-frame__wrapper">
+                    <FrameHeading />
+                    <FrameDates
+                        handleCheckIn={handleCheckIn}
+                        handleCheckOut={handleCheckOut}
+                        checkIn={checkIn}
+                        checkOut={checkOut}
+                        passengers={passengers}
+                        setPassengers={setPassengers}
+                        openLabel={openLabel}
+                        toggleLabel={toggleLabel}
+                        renderArrowIcon={renderArrowIcon}
+                        setOpenLabel={setOpenLabel}
+                    />
+                    <FrameLabel
+                        passengers={passengers}
+                        setPassengers={setPassengers}
+                        toggleLabel={toggleLabel}
+                        openLabel={openLabel}
+                        renderArrowIcon={renderArrowIcon}
+                    />
                     <HoverLink to="#" className="calendar-frame__submit">
                         Check Availability
                     </HoverLink>
                 </div>
-                {openLabel === "calendar" && (
-                    <Calendar
-                        variant="fullScreen"
-                        closeButton={true}
-                        checkIn={checkIn}
-                        checkOut={checkOut}
-                        onCheckInChange={handleCheckIn}
-                        onCheckOutChange={handleCheckOut}
-                        onClose={() => setOpenLabel(false)}
-                    />
-                )}
+
             </section>
         </Container>
     );

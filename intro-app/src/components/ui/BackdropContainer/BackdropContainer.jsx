@@ -26,7 +26,7 @@ const BackdropContainer = ({
     return (
         <div className={classes}>
             {backdropFilter && <div className="backdrop-overlay" />}
-            <img src={backdrop} style={styless} alt={alt} className={imageClasses} />
+            <img loading="lazy" src={backdrop} style={styless} alt={alt} className={imageClasses} />
             {children}
         </div>
     );

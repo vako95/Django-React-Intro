@@ -6,7 +6,6 @@
     align-items: flex-start;
     background-color: transparent;
     z-index: 9999;
-
 }
 
 
@@ -33,7 +32,6 @@
 }
 
 .navbar__container-bgColor--black {
-    /* backdrop-filter: blur(18px); */
     background-color: black;
     border-bottom: none;
     padding: 0px 24px;
@@ -135,41 +133,34 @@
 
 .navbar__cart-dropdown {
     min-width: 350px;
-    max-height: 0;
-    /* скрыто по высоте */
+    max-height: 250px;
     position: absolute;
     top: 100%;
     right: -16px;
     display: flex;
-    /* всегда flex, чтобы transitions работали */
+    transform: scaleY(0);
+    transform-origin: top;
+    overflow: hidden;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 0 20px;
-    /* маленький padding при скрытии */
     opacity: 0;
-    /* прозрачность */
-    backdrop-filter: blur(4px);
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.68);
     border: 1px solid rgba(0, 0, 0, 1);
-    transition: max-height 450ms ease, opacity 450ms ease, padding 450ms ease;
-    overflow-y: hidden;
-    /* скрываем прокрутку, пока закрыто */
+    transition: opacity 450ms ease, transform 450ms ease;
     z-index: 9999;
     scrollbar-width: none;
-    /* Firefox */
     -ms-overflow-style: none;
+
 }
 
 
 .navbar__cart-holder:hover .navbar__cart-dropdown {
-    min-width: 350px;
-    max-height: 264px;
-
+    transform: scaleY(1);
     opacity: 1;
     overflow-y: auto;
-    padding: 22px;
 }
 
 .navbar__cart-holder::-webkit-scrollbar {
@@ -178,14 +169,7 @@
 }
 
 
-.navbar__cart-dropdown:has(ul > li:nth-child(1)) {
-    overflow-y: auto;
-    border-right: none;
-    /* scroll-behavior: smooth; */
-    border: 1px solid rgba(0, 0, 0, 1);
-    scrollbar-color: rgba(170, 132, 83) rgba(255, 255, 255, 0.1);
 
-}
 
 /* .navbar__cart-dropdown::-webkit-scrollbar-track {
     background: rgba(255, 255, 255);

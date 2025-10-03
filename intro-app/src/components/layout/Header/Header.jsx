@@ -1,3 +1,4 @@
+import React, { useMemo } from "react";
 import { BackdropContainer } from "@components/ui";
 import { useLocation } from "react-router-dom";
 import { backgroundImages } from "../../../constants/backdroundPages";
@@ -6,7 +7,9 @@ import "./Header.css";
 
 const Header = ({ children }) => {
     const location = useLocation();
-    const currentBackground = backgroundImages[location.pathname] || pageBg;
+    const currentBackground = useMemo(() => {
+        return backgroundImages[location.pathname] || pageBg;
+    }, [location.pathname]);
 
     return (
         <BackdropContainer
