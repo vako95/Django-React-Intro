@@ -5,8 +5,6 @@ import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
 import clsx from "clsx";
 
 const CalendarDropdown = ({ wantedLabels = [], className, setPassengers, passengers }) => {
-    console.log("CalendarDropdown rendered");
-
     const classes = clsx("calendar__frame-dropdown", className);
 
     const filteredPassengers = wantedLabels

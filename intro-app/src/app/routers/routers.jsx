@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { MainLayout, SubLayout } from '@src/layouts';
 import { Home, About, GalleryPage, Team, TeamDetail, ContactPage } from "@src/pages";
+import ErrorPage from "../../pages/ErrorPage/ErrorPage";
+import AuthPage from "../../pages/auth/AuthPage/AuthPage";
 
 export const teamMembers = [
     { id: "sug__11", name: "Michael Dean" },
@@ -72,6 +74,27 @@ const router = createBrowserRouter([
             { index: true, element: <ContactPage /> }
         ]
     },
+    {
+        path: "/auth", element: <SubLayout />,
+        handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "Contact" }] },
+        children: [
+            { index: true, element: <AuthPage /> }
+        ]
+    },
+
+    {
+        path: "*",
+        element: <SubLayout />,
+        handle: {
+            breadcrumbs: () => [
+                { path: "/", label: "Home" },
+                { path: "#", label: "Page Not Found" }
+            ]
+        },
+        children: [
+            { index: true, element: <ErrorPage /> }
+        ]
+    }
 ]);
 
 export default router;

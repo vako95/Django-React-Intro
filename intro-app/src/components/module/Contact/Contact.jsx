@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import "./Contact.css";
-import { CalendarFrame, Container, DecoratedHeading } from "@components/ui";
+import { CalendarFrame, Container } from "@components/ui";
+
 import { PiPhoneCallThin } from 'react-icons/pi';
 import { PiEnvelopeThin } from 'react-icons/pi';
 import { PiMapPinThin } from 'react-icons/pi';
+import ContactMap from "./ContactMap/ContactMap";
 const Contact = () => {
     return (
 
@@ -81,7 +83,7 @@ const Contact = () => {
                 </div>
             </Container>
             <div className="content-map">
-
+                <ContactMap />
             </div>
         </section>
 
