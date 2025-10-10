@@ -1,75 +1,72 @@
 .hover__button {
     position: relative;
-    font-family: 'Barlow', sans-serif;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
-    width: auto;
-    height: auto;
-    background-color: #aa8453;
-    color: #FFFFFF;
-    position: relative;
-    z-index: 1;
-    border: none;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 250ms linear, color 250ms linear;
-
+    border: none;
+    overflow: hidden;
+    color: var(--btn-text-color, #fff);
+    background-color: var(--btn-bg-color, #333);
+    /* Фон по умолчанию */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1;
 }
 
-.hover__button--sm {
-    font-size: 14px;
-    font-weight: 600;
-    padding: 14px 40px;
-}
-
-.hover__button--md {
-    font-size: 14px;
-    font-weight: 600;
-    padding: 18px 40px;
-}
-
-.hover__button--lg {
-    font-size: 14px;
-    font-weight: 600;
-    padding: 18px 100px;
-}
-
-.hover__button--gold:hover {
-    color: white;
-}
-
-
-
-.hover__button--gold::before {
+.hover__button::before {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
     width: 0;
     height: 100%;
-    background-color: #222222;
-    color: #FFFFFF;
-    z-index: -1;
+    right: 0;
+    top: 0;
+    background-color: var(--hover-bg-color, #555);
+    /* цвет ховера */
     transition: width 300ms linear, right 300ms linear, left 300ms linear;
+    z-index: -1;
 }
 
-.hover__button--gold:hover::before {
+.hover__button:hover::before {
     width: 100%;
     left: 0;
     right: unset;
 }
 
-
-
-.hover__button--white:hover {
-    background-color: #fff;
-    color: #aa8453;
+.hover__button-variant--simple:hover {
+    background-color: var(--hover-bg-color);
+    color: var(--btn-text-color, #fff);
+    color: var(--btn-hover-text-color, #fff);
 }
 
-.hover__button--green:hover {
-    background-color: #8ff90e;
-    color: #aa8453;
-    transition: background-color 100ms linear, color 100ms linear;
+.hover__button-variant--simple {
+
+    background-color: var(--bg-color, #555);
+    color: var(--btn-text-color, #fff);
+}
+
+.hover__button-variant--simple::before {
+    content: none;
+}
+
+.hover__button--sm {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.hover__button--md {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.hover__button--lg {
+    padding: 14px 28px;
+    font-size: 16px;
+}
+
+.hover__button--xl {
+    padding: 18px 36px;
+    font-size: 18px;
 }

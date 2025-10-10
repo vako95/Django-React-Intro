@@ -2,7 +2,15 @@ import { createBrowserRouter } from "react-router-dom";
 import { MainLayout, SubLayout } from '@src/layouts';
 import { Home, About, GalleryPage, Team, TeamDetail, ContactPage } from "@src/pages";
 import ErrorPage from "../../pages/ErrorPage/ErrorPage";
-import AuthPage from "../../pages/auth/AuthPage/AuthPage";
+import AuthPage from "../../pages/auth/AuthNavPage/AuthNavPage";
+import LoginPage from "../../pages/LoginPage/LoginPage";
+import AuthNavPage from "../../pages/auth/AuthNavPage/AuthNavPage";
+import AuthLayout from "../../layouts/AuthLayout/AuthLayout";
+import Login from "../../components/module/Login/Login";
+import Register from "../../components/module/Register/Register";
+import DebugPages from "../../pages/DebugPages/DebugPages";
+import BlankLayout from "../../layouts/BlankLayout/BlankLayout";
+
 
 export const teamMembers = [
     { id: "sug__11", name: "Michael Dean" },
@@ -75,13 +83,37 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path: "/auth", element: <SubLayout />,
+        path: "/auth_nav", element: <SubLayout />,
         handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "Contact" }] },
         children: [
-            { index: true, element: <AuthPage /> }
+            { index: true, element: <AuthNavPage /> }
+        ]
+    },
+    {
+        path: "/auth",
+        element: <AuthLayout />,
+        children: [
+            { index: true, element: <Login /> },
+            { path: "login", element: <Login /> },
+            { path: "register", element: <Register /> },
+            // { path: "register", element: <RegisterPage /> },
+            // { path: "reset", element: <ResetPage /> },
         ]
     },
 
+    {
+        path: "/debug",
+        element: <BlankLayout />,
+        handle: {
+            breadcrumbs: () => [
+                { path: "/", label: "Home" },
+                { path: "#", label: "Page Not Found" }
+            ]
+        },
+        children: [
+            { index: true, element: <DebugPages /> }
+        ]
+    },
     {
         path: "*",
         element: <SubLayout />,

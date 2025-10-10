@@ -10,14 +10,14 @@ const AuthForm = () => {
         { key: "forgot", label: "Forgot Password" },
     ];
 
-    // 👇 Твоя логика сортировки
-    const allFormKeys = forms.map(f => f.key); // ["login", "register", "forgot"]
-    const otherForms = allFormKeys.filter(f => f !== activeForm); // без активной
-    const sortedForms = [activeForm, ...otherForms]; // активная сверху
+
+    const allFormKeys = forms.map(f => f.key);
+    const otherForms = allFormKeys.filter(f => f !== activeForm);
+    const sortedForms = [activeForm, ...otherForms];
 
     return (
         <div className="auth-container">
-            {/* Левая колонка: кнопки */}
+
             <div className="auth-sidebar">
                 {sortedForms.map(key => {
                     const form = forms.find(f => f.key === key); // получаем объект формы по ключу

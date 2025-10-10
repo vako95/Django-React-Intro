@@ -68,7 +68,10 @@ const CalendarFrame = () => {
                         openLabel={openLabel}
                         renderArrowIcon={renderArrowIcon}
                     />
-                    <HoverLink to="#" className="calendar-frame__submit">
+                    <HoverLink
+                        hoverBgColor="rgba(33, 33, 33)"
+                        bgColor="rgba(170, 132, 83)"
+                        to="#" className="calendar-frame__submit">
                         Check Availability
                     </HoverLink>
                 </div>

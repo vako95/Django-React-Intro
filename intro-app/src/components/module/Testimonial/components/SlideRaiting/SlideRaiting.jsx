@@ -12,6 +12,7 @@ const SliderRaiting = ({ rating }) => {
                             : 'ri-star-line';
                 return <i key={idx} className={`slide-review-star ${icon}`}></i>;
             })}
+
         </div>
     );
 };

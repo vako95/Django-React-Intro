@@ -2,7 +2,18 @@ import "./HoverLink.css";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 
-const HoverLink = ({ className, children, size = "medium", bgColor, variant }) => {
+const HoverLink = ({
+    className,
+    children,
+    size = "medium",
+    hover,
+    bgColor,
+    hoverBgColor,
+    hoverTextColor,
+    textColor,
+    variant,
+    ...props
+}) => {
     const classes = clsx(
         "hover__link", {
         "hover__link--sm": size === "sm",
@@ -12,13 +23,18 @@ const HoverLink = ({ className, children, size = "medium", bgColor, variant }) =
     },
         variant && `hover__link-variant--${variant}`,
         className
-        // "hover__link--transparent": color === "transparent",
     );
 
-    const style = bgColor ? { "--hover-bg-color": bgColor } : undefined;
+    const style = {
+        ...(bgColor && { "--link-bg-color": bgColor }),
+        ...(bgColor && { "--link-bg-color": bgColor }),
+        ...(hoverBgColor && { "--hover-bg-color": hoverBgColor }),
+        ...(hoverTextColor && { "--hover-bg-color": hoverTextColor }),
+        ...(textColor && { "--hover__link-text-color": textColor }),
+    };
 
     return (
-        <Link className={classes} style={style}>
+        <Link className={classes} style={style} {...props}>
             <span>{children}</span>
         </Link>
     );
