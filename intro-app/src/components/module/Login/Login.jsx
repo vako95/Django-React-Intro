@@ -1,9 +1,11 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form } from "formik";
 import { loginInitialValues } from "../../../helpers/forms/login.helper";
 import { HoverButton, HoverLink } from "@components/ui";
-import { IoMailOutline } from "react-icons/io5";
-import { IoKeyOutline } from "react-icons/io5";
+import { MdAlternateEmail } from "react-icons/md";
+import { SiAuthelia } from "react-icons/si";
+
 import "./Login.css";
+import Input from "../../ui/Input/Input";
 
 const Login = () => {
 
@@ -18,30 +20,22 @@ const Login = () => {
             <Formik
                 initialValues={loginInitialValues}
                 onSubmit={() => console.log("success")}
-
             >
-
                 <Form className="login__form" action="">
                     <div class="login__form-field">
-                        <IoMailOutline className="login__form-icon" />
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            className="login__form-input"
-                            placeholder="Enter your email"
-                            required
+                        <Input
+                            icon={<MdAlternateEmail />}
+                            type="password"
+                            showPassword={true}
+                            position="left"
+                            placeholder="Email"
                         />
                     </div>
                     <div class="login__form-field">
-                        <IoKeyOutline className="login__form-icon" />
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            className="login__form-input"
-                            placeholder="Password"
-                            required
+                        <Input
+                            icon={<SiAuthelia />}
+                            position="left"
+                            placeholder="Email"
                         />
                     </div>
 
