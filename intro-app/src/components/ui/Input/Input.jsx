@@ -25,8 +25,9 @@ const Input = (
 
     const classes = clsx(
         "input",
-        icon && 'input--icon',
-        showPassword && 'input--show-eyes',
+        icon && "input--icon",
+        showPassword && "input--show-eyes",
+        isPasswordVisible && "input__icon-eyes--hidden",
         className
     )
 
@@ -55,7 +56,7 @@ const Input = (
                 </span>
             )}
             {showPassword && (
-                <span onClick={handlePasswordToggle} className="input__icon-eyes">
+                <span onClick={handlePasswordToggle} className="input__icon-eyes ">
                     {isPasswordVisible ? (
                         <FaEyeLowVision />
                     ) : (

@@ -34,7 +34,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    color: white;
+    color: rgba(255, 255, 255);
     gap: 16px;
 }
 
@@ -52,7 +52,7 @@
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 16px;
@@ -61,7 +61,7 @@
 .input__field:-webkit-autofill {
     background-color: transparent !important;
     -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
-    -webkit-text-fill-color: white !important;
+    -webkit-text-fill-color: rgba(255, 255, 255) !important;
     transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -79,7 +79,7 @@
     font-size: 1rem;
     display: flex;
     border: none;
-    color: white;
+    color: rgba(255, 255, 255);
     outline: none;
     background-color: transparent;
 }
@@ -88,8 +88,8 @@
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
     gap: 4px;
 }
