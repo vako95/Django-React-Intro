@@ -10,7 +10,6 @@ import Input from "../../ui/Input/Input";
 const Login = () => {
 
     return (
-
         <article className="login">
             <div className="login__heading">
                 <h1 className="login__heading-title">

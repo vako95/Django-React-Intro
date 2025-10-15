@@ -11,7 +11,6 @@ const AuthNav = ({ children }) => {
         isActive
             ? "auth-nav__link auth-nav__link--active"
             : "auth-nav__link";
-
     return (
 
         <div className="auth-nav">
@@ -21,7 +20,6 @@ const AuthNav = ({ children }) => {
             <div className="auth-nav__container">
                 <div className="auth-nav__content">
                     <NavLink to="/auth/login" className={getLinkClass}>
-
                         <BsPersonCircle className="auth-nav__icon" />
                         <h1 className="auth-nav__title">Login</h1>
                     </NavLink>

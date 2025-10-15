@@ -1,29 +1,33 @@
 import { useState } from "react";
 import { HoverButton, HoverLink } from "@components/ui";
-
 import { IoKeyOutline } from "react-icons/io5";
 import "./Register.css";
 import Input from "../../ui/Input/Input";
-import { MdAlternateEmail } from "react-icons/md";
-import { TbUserHexagon } from "react-icons/tb";
+
 import { PiUserCirclePlusDuotone } from "react-icons/pi";
-import { SiAuthelia } from "react-icons/si";
 import Select from "../../ui/Select/Select";
+
 const Register = () => {
     const [step, setStep] = useState(1);
 
     const handleNext = () => {
-        setStep((prev) => prev + 1)
-    }
+        if (step < 3) {
+            setStep(prev => prev + 1);
+        }
+    };
+
     const handlePrev = () => {
-        setStep((prev) => prev - 1)
-    }
+        if (step > 1) {
+            setStep(prev => prev - 1);
+        }
+    };
 
     const genders = [
         { label: "M", value: "Male" },
         { label: "F", value: "Female" },
-        { label: "o", value: "Other" }
-    ]
+        { label: "O", value: "Other" }
+    ];
+
     return (
         <section className="login">
             <div className="login__heading">
@@ -31,111 +35,77 @@ const Register = () => {
                     Register Here
                 </h1>
             </div>
+
             <form className="login__form" action="">
+
                 {step === 1 && (
+
                     <div className="login__form-content">
-                        <div class="login__form-field">
+                        <div className="login__form-field">
                             <Input
                                 icon={<PiUserCirclePlusDuotone />}
                                 type="text"
-                                name="username"
-                                showPassword={true}
+                                name="firstName"
                                 position="left"
-                                placeholder="username"
+                                placeholder="First Name"
                             />
+                        </div>
+                        <div className="login__form-field">
                             <Input
                                 icon={<PiUserCirclePlusDuotone />}
                                 type="text"
-                                name="username"
+                                name="lastName"
                                 position="left"
                                 placeholder="Last Name"
                             />
                         </div>
-                        {step === 2 && (
-                            <div class="login__form-field">
-                                <Input
-                                    icon={<PiUserCirclePlusDuotone />}
-                                    type="text"
-                                    name="username"
-                                    position="left"
-                                    placeholder="Last Name"
-                                />
-                            </div>
-                        )}
-
-                        <div class="login__form-field">
-                            <Select
-                                title="Gender"
-                                items={genders}
-
-                            />
-                        </div>
-
                     </div>
                 )}
+
                 {step === 2 && (
-                    <div className="login__form-content">
-                        <div class="login__form-field">
-                            <Input
-                                icon={<MdAlternateEmail />}
-                                type="text"
-                                name="surname"
-                                showPassword={true}
-                                position="left"
-                                placeholder="surname"
-                            />
-                        </div>
-                        <div class="login__form-field">
-                            <Input
-                                icon={<TbUserHexagon />}
-                                type="text"
-                                name="username"
-                                showPassword={true}
-                                position="left"
-                                placeholder="username"
-                            />
-                        </div>
-                        <div class="login__form-field">
-                            <Input
-                                icon={<MdAlternateEmail />}
-                                type="text"
-                                name="username"
-                                showPassword={true}
-                                position="left"
-                                placeholder="username"
-                            />
+                    <>
+                        <div className="login__form-field">
+                            <Input type="number" name="birthDay" placeholder="Day" min="1" max="31" />
+                            <Input type="number" name="birthMonth" placeholder="Month" min="1" max="12" />
+                            <Input type="number" name="birthYear" placeholder="Year" min="1900" max={new Date().getFullYear()} />
                         </div>
 
-
-                    </div>
-
+                    </>
                 )}
 
-                <HoverButton type="button" onClick={handlePrev}>
-                    Prev
-                </HoverButton>
-                <HoverButton type="button" onClick={handleNext}>
-                    Next
-                </HoverButton>
+                {step === 3 && (
+                    <div className="login__form-field">
+                        <Select
+                            title="Gender"
+                            items={genders}
+                        />
+                    </div>
+                )}
+
+
                 <div className="login__form-control">
                     <HoverButton
-                        color="gold"
-                        size="lg"
+                        type="button"
+                        onClick={handlePrev}
+                        disabled={step === 1}
                     >
-                        Click
+                        Prev
                     </HoverButton>
-                    <HoverLink
-                        variant="invisible"
+
+                    <HoverButton
+                        type="button"
+                        onClick={handleNext}
+                        disabled={step === 3}
                     >
-                        Forggot Password?
-                    </HoverLink>
+                        Next
+                    </HoverButton>
                 </div>
 
 
-            </form>
-        </section >
 
-    )
-}
+            </form>
+        </section>
+    );
+};
 
 export default Register;

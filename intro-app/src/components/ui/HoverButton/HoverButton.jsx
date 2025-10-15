@@ -11,6 +11,7 @@ const HoverButton = ({
     textHoverColor,
     textColor,
     size,
+    disabled,
     type = 'submit',
     ...props
 }) => {
@@ -19,6 +20,7 @@ const HoverButton = ({
         variant && `hover__button-variant--${variant}`,
         size && `hover__button--${size}`,
         color && `hover__button--${color}`,
+        disabled && `hover__button--disabled`,
         className
     );
 
@@ -30,7 +32,7 @@ const HoverButton = ({
     };
 
     return (
-        <button className={classes} style={style} type={type} {...props}>
+        <button className={classes} style={style} type={type} {...props} disabled={disabled}>
             {children}
         </button>
     );

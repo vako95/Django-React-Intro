@@ -3,6 +3,7 @@ import Input from "../../components/ui/Input/Input";
 import "./DebugPages.css";
 import { IoMailOutline } from "react-icons/io5";
 import Select from "../../components/ui/Select/Select";
+import MonthField from "../../components/ui/MonthField/MonthField";
 const DebugPages = () => {
 
     return (
@@ -16,6 +17,12 @@ const DebugPages = () => {
 
                 <Select
                     title="Gender"
+                />
+                <MonthField
+                // selectProps={{
+                //     name: "Hello"
+                // }}
+
                 />
             </Container>
         </div>
