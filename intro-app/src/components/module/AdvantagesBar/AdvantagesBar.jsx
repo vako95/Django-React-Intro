@@ -7,12 +7,14 @@ import wifiIcon from "./assets/icon/wifi.png";
 import breakfastIcon from "./assets/icon/breakfast.png";
 import pollIcon from "./assets/icon/pool.png";
 import carIcon from "./assets/icon/car.png";
-import ExtrasList from "./components/ExtrasList/ExtrasList";
-import "./Extras.css";
-import BackdropContainer from "../../ui/BackdropContainer/BackdropContainer";
 
-const Extras = () => {
-    const extrasList = [
+import BackdropContainer from "../../ui/BackdropContainer/BackdropContainer.jsx";
+import AdvantagesBarList from "./components/AdvantagesBarList/AdvantagesBarList.jsx";
+
+import "./AdvantagesBar.css";
+
+const AdvantagesBar = () => {
+    const advantagesBarList = [
         {
             id: 1,
             icon: bedIcon,
@@ -55,15 +57,15 @@ const Extras = () => {
         <BackdropContainer backdrop={homeCover} alt="Luxury room background">
             <Container>
                 <SectionWrapper>
-                    <div className="extras">
-                        <div className="extras__heading">
+                    <div className="advantages-bar">
+                        <div className="advantages-bar__heading">
                             <DecoratedHeading
                                 title="Hoexr Luxury Rooms"
                                 subtitle="Luxury Rooms & Suites"
                             />
                         </div>
-                        <div className="extras__card">
-                            <ExtrasList extrasData={extrasList} />
+                        <div className="advantages-bar__card">
+                            <AdvantagesBarList advantagesBarData={advantagesBarList} />
                         </div>
                     </div>
                 </SectionWrapper>
@@ -72,4 +74,4 @@ const Extras = () => {
     )
 }
 
-export default Extras
+export default AdvantagesBar;

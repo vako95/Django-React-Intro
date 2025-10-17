@@ -1,13 +1,20 @@
 import { useState } from "react";
 import { HoverButton, HoverLink } from "@components/ui";
-import { IoKeyOutline } from "react-icons/io5";
+import { LuCalendarDays } from "react-icons/lu";
+import { IoTodayOutline } from "react-icons/io5";
+import { MdAlternateEmail } from "react-icons/md";
+import { SiAuthelia } from "react-icons/si";
+import { RiLockPasswordLine } from "react-icons/ri";
+
 import "./Register.css";
 
 import { Select, Input, MonthField } from "@components/ui"
 import { PiUserCirclePlusDuotone } from "react-icons/pi";
+import { Formik, useFormik } from "formik";
 
 const Register = () => {
     const [step, setStep] = useState(1);
+    // const { } = useFormik();
 
     const handleNext = () => {
         if (step < 3) {
@@ -38,7 +45,6 @@ const Register = () => {
             <form className="login__form" action="">
 
                 {step === 1 && (
-
                     <div className="login__form-content">
                         <div className="login__form-field">
                             <Input
@@ -62,27 +68,83 @@ const Register = () => {
                 )}
 
                 {step === 2 && (
-                    <>
-                        <div className="login__form-field">
-                            <MonthField
 
+                    <div className="login__form-field">
+                        <div className="login__form-field-action">
+                            <MonthField
                             />
+                            <Input
+                                icon={<IoTodayOutline />}
+                                position="left"
+                                placeholder="Day"
+                                type="text"
+                                inputProps={{
+                                    pattern: "^[0-9]+$",
+                                    maxLength: 2,
+                                    onInput: (e) => {
+                                        const cleaned = e.target.value = e.target.value.replace(/[^0-9]/g, "");
+                                        const num = Math.min(Math.max(Number(cleaned), 1), 31);
+                                        e.target.value = cleaned === "" ? "" : String(num);
+                                    }
+                                }}
+                            />
+                            <Input
+                                icon={<LuCalendarDays />}
+                                position="left"
+                                placeholder="Year"
+                                type="text"
+                                inputProps={{
+                                    pattern: "^[0-9]+$",
+                                    maxLength: 4,
+                                    onInput: (e) => {
+                                        e.target.value = e.target.value.replace(/[^0-9]/g, "");
+                                    }
+                                }}
+                            />
+                        </div>
+                        <div className="login__form-field-action">
                             <Select
                                 title="Gender"
-                                items={genders}
+                                item={genders}
                             />
-                            {/* <Input type="number" name="birthMonth" placeholder="Month" min="1" max="12" />
-                            <Input type="number" name="birthYear" placeholder="Year" min="1900" max={new Date().getFullYear()} /> */}
                         </div>
+                        {/* <Input type="number" name="birthMonth" placeholder="Month" min="1" max="12" />
+                            <Input type="number" name="birthYear" placeholder="Year" min="1900" max={new Date().getFullYear()} /> */}
+                    </div>
 
-                    </>
+
                 )}
 
                 {step === 3 && (
                     <div className="login__form-field">
-                        <Select
-                            title="Gender"
-                            items={genders}
+                        <Input
+                            icon={<MdAlternateEmail />}
+                            inputProps={{
+                                name: "register_email",
+                            }}
+                            type="text"
+                            position="left"
+                            placeholder="Email"
+                        />
+                        <Input
+                            icon={<SiAuthelia />}
+                            inputProps={{
+                                name: "login_email",
+                            }}
+                            type="password"
+                            showPassword={true}
+                            position="left"
+                            placeholder="Password "
+                        />
+                        <Input
+                            icon={<RiLockPasswordLine />}
+                            inputProps={{
+                                name: "password",
+                            }}
+                            type="password"
+                            showPassword={true}
+                            position="left"
+                            placeholder="Password Confirm"
                         />
                     </div>
                 )}
@@ -109,9 +171,6 @@ const Register = () => {
                         </HoverButton>
                     </div>
                 </div>
-
-
-
             </form>
         </section>
     );

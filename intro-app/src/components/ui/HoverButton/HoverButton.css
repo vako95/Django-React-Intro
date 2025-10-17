@@ -1,4 +1,6 @@
 .hover__button {
+    width: var(--btn-hover-width);
+    height: auto;
     position: relative;
     display: inline-flex;
     align-items: center;

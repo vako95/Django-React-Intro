@@ -1,6 +1,6 @@
 
 import Availability from "../../components/module/HotelBooking/HotelBooking.jsx";
-import Extras from "../../components/module/Extras/Extras.jsx";
+
 import FoodCard from "../../components/module/FoodCard/FoodCard.jsx";
 import Overlay from "../../components/module/Overlay/Overlay.jsx";
 import Reservation from "../../components/module/Reservation/Reservation.jsx";
@@ -11,6 +11,7 @@ import Personal from "../../components/module/Personal/Personal.jsx";
 import Testimonial from "../../components/module/Testimonial/Testimonial.jsx";
 import NewsFeed from "../../components/module/NewsFeed/NewsFeed.jsx";
 import "./Home.css";
+import AdvantagesBar from "../../components/module/AdvantagesBar/AdvantagesBar.jsx";
 
 
 
@@ -24,7 +25,7 @@ const Home = () => {
             <Reservation />
             <Services />
             <Rooms />
-            <Extras />
+            <AdvantagesBar />
             <Overlay />
             <Swap />
             <Testimonial />

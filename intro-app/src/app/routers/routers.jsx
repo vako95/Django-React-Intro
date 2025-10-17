@@ -2,14 +2,15 @@ import { createBrowserRouter } from "react-router-dom";
 import { MainLayout, SubLayout } from '@src/layouts';
 import { Home, About, GalleryPage, Team, TeamDetail, ContactPage } from "@src/pages";
 import ErrorPage from "../../pages/ErrorPage/ErrorPage";
-import AuthPage from "../../pages/auth/AuthNavPage/AuthNavPage";
-import LoginPage from "../../pages/LoginPage/LoginPage";
+
 import AuthNavPage from "../../pages/auth/AuthNavPage/AuthNavPage";
 import AuthLayout from "../../layouts/AuthLayout/AuthLayout";
 import Login from "../../components/module/Login/Login";
 import Register from "../../components/module/Register/Register";
 import DebugPages from "../../pages/DebugPages/DebugPages";
 import BlankLayout from "../../layouts/BlankLayout/BlankLayout";
+import Reset from "../../components/module/ResetPassword/ResetPassword";
+import ResetPasswordConfirm from "../../components/module/ResetPasswordConfirm/ResetPasswordConfirm";
 
 
 export const teamMembers = [
@@ -97,7 +98,8 @@ const router = createBrowserRouter([
             { path: "login", element: <Login /> },
             { path: "register", element: <Register /> },
             // { path: "register", element: <RegisterPage /> },
-            // { path: "reset", element: <ResetPage /> },
+            { path: "reset", element: <Reset /> },
+            { path: "reset/:token", element: <ResetPasswordConfirm /> },
         ]
     },
 

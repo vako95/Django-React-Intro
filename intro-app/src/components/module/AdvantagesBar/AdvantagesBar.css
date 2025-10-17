@@ -1,4 +1,4 @@
-.extras {
+.advantages-bar {
 
     width: 100%;
     height: auto;
@@ -8,7 +8,7 @@
     align-items: flex-start;
 }
 
-.extras__heading {
+.advantages-bar__heading {
     width: 100%;
     height: auto;
     display: flex;
@@ -17,7 +17,7 @@
     align-items: center;
 }
 
-.extras__card {
+.advantages-bar__card {
     width: auto;
     height: auto;
     display: flex;

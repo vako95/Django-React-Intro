@@ -1,5 +1,5 @@
 import { Formik, Form } from "formik";
-import { loginInitialValues } from "../../../helpers/forms/login.helper";
+import { isValidDate } from "../../../helpers/forms/date.helper";
 import { HoverButton, HoverLink } from "@components/ui";
 import { MdAlternateEmail } from "react-icons/md";
 import { SiAuthelia } from "react-icons/si";
@@ -17,29 +17,42 @@ const Login = () => {
                 </h1>
             </div>
             <Formik
-                initialValues={loginInitialValues}
+                initialValues={{
+                    login_email: "",
+                    login_password: "",
+                }}
                 onSubmit={() => console.log("success")}
             >
                 <Form className="login__form" action="">
-                    <div class="login__form-field">
-                        <Input
-                            icon={<MdAlternateEmail />}
-                            type="password"
-                            showPassword={true}
-                            position="left"
-                            placeholder="Email"
-                        />
-                    </div>
-                    <div class="login__form-field">
-                        <Input
-                            icon={<SiAuthelia />}
-                            position="left"
-                            placeholder="Email"
-                        />
-                    </div>
+                    <div className="login__form-content">
+                        <div class="login__form-field">
 
+                            <Input
+                                icon={<MdAlternateEmail />}
+                                inputProps={{
+                                    name: "login_email",
+                                }}
+
+                                type="password"
+                                showPassword={true}
+                                position="left"
+                                placeholder="Email"
+                            />
+                        </div>
+                        <div class="login__form-field">
+                            <Input
+                                inputProps={{
+                                    name: "login_password",
+                                }}
+                                icon={<SiAuthelia />}
+                                position="left"
+                                placeholder="Email"
+                            />
+                        </div>
+                    </div>
                     <div className="login__form-control">
                         <HoverButton
+                            width="100%"
                             variant="simple"
                             bgColor="rgba(0, 173, 69)"
                             hoverBgColor="rgba(31, 132, 71)"
@@ -48,6 +61,9 @@ const Login = () => {
                         >
                             Login
                         </HoverButton>
+
+                    </div>
+                    <div className="login__form-meta-action">
                         <HoverLink
                             hoverBgColor="transparent"
                             variant="invisible"
@@ -55,6 +71,7 @@ const Login = () => {
                             Forggot Password?
                         </HoverLink>
                     </div>
+
                 </Form>
 
             </Formik>

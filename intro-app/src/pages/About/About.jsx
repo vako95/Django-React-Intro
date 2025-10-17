@@ -1,9 +1,8 @@
-import { Outlet } from "react-router-dom";
 import "./About.css";
 import Serives from "../../components/module/Services/Services.jsx";
 import Rooms from "../../components/module/Rooms/Rooms.jsx";
 import Overlay from "../../components/module/Overlay/Overlay.jsx";
-import Exstras from "../../components/module/Extras/Extras.jsx";
+import AdvantagesBar from "../../components/module/AdvantagesBar/AdvantagesBar.jsx";
 const About = () => {
 
     return (
@@ -11,7 +10,7 @@ const About = () => {
             <Serives />
             <Rooms />
             <Overlay />
-            <Exstras />
+            <AdvantagesBar />
         </div>
     )
 }

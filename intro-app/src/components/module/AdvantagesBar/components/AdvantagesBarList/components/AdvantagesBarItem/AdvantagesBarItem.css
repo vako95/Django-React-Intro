@@ -1,4 +1,4 @@
-.extras__item {
+.advantages-bar__item {
     position: relative;
     width: auto;
     height: auto;
@@ -12,7 +12,7 @@
     transition: background-color 250ms linear;
 }
 
-.extras__item::before {
+.advantages-bar__item::before {
     content: "";
     position: absolute;
     top: 1px;
@@ -23,13 +23,13 @@
     background-color: rgba(29, 29, 29);
 }
 
-.extras__item:hover {
+.advantages-bar__item:hover {
     background-color: rgba(34, 34, 34);
     transition: background-color 250ms linear;
 }
 
 
-.extras__item-cover {
+.advantages-bar__item-cover {
     width: 100%;
     height: 100%;
     max-width: 58px;
@@ -39,7 +39,7 @@
     margin-bottom: 16px;
 }
 
-.extras__item-cover-icon {
+.advantages-bar__item-cover-icon {
     width: 100%;
     height: 100%;
 
@@ -47,7 +47,7 @@
     object-position: 100% 100%;
 }
 
-.extras__item-content {
+.advantages-bar__item-content {
     width: 100%;
     height: auto;
     display: flex;
@@ -57,7 +57,7 @@
     text-align: center;
 }
 
-.extras__item-content-title {
+.advantages-bar__item-content-title {
     max-width: 200px;
     font-family: "Gilda Display", sans-serif;
     font-size: 24px;
@@ -67,12 +67,12 @@
     transition: color 250ms linear;
 }
 
-.extras__item:hover .extras__item-content-title {
+.advantages-bar__item:hover .advantages-bar__item-content-title {
     color: rgb(238, 238, 238);
     transition: color 250ms linear;
 }
 
-.extras__item-content-desc {
+.advantages-bar__item-content-desc {
     font-family: "Barlow", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -81,7 +81,7 @@
     transition: color 250ms linear;
 }
 
-.extras__item:hover .extras__item-content-desc {
+.advantages-bar__item:hover .advantages-bar__item-content-desc {
     color: rgb(255, 255, 255);
     transition: color 250ms linear;
 }

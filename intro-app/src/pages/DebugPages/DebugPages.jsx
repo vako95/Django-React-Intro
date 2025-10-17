@@ -25,6 +25,20 @@ const DebugPages = () => {
                 // }}
 
                 />
+                <br />
+
+                <Input
+                    icon={<IoMailOutline />}
+                    position="left"
+                    placeholder="Email"
+                    type="text"
+                    inputProps={{
+                        pattern: "^[0-9]+$",
+                        onInput: (e) => {
+                            e.target.value = e.target.value.replace(/[^0-9]/g, "");
+                        }
+                    }}
+                />
             </Container>
         </div>
     )

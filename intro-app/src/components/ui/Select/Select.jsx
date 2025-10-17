@@ -6,7 +6,7 @@ import "./Select.css";
 const Select = (
     {
         title,
-        items,
+        item,
         icon = <IoChevronDownOutline />,
         onChange,
         fontSize,
@@ -49,10 +49,10 @@ const Select = (
                     </span>
                 )}
             </div>
-            {items && items.length > 0 && (
+            {item && item.length > 0 && (
                 <div className="select__content">
                     <ul className="select__list">
-                        {items.map((item, idx) => (
+                        {item.map((item, idx) => (
                             <li className="select__item" key={idx} onClick={() => handleSelect(item)}>
                                 {item.value}
                             </li>

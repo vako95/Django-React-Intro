@@ -13,6 +13,7 @@ const Input = (
         type,
         className,
         children,
+        inputProps,
         ...props
     }
 ) => {
@@ -47,7 +48,7 @@ const Input = (
                 placeholder={placeholder}
                 className="input__field"
                 type={isPasswordVisible ? "text" : type}
-                {...props}
+                {...inputProps}
 
             />
             {icon && (

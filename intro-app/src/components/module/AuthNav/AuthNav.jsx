@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { BsPersonCircle } from "react-icons/bs";
 import { PiPencilLineThin } from "react-icons/pi";
 import { FaLock } from "react-icons/fa";
@@ -6,7 +6,6 @@ import { FaLock } from "react-icons/fa";
 import "./AuthNav.css";
 
 const AuthNav = ({ children }) => {
-
     const getLinkClass = ({ isActive }) =>
         isActive
             ? "auth-nav__link auth-nav__link--active"
@@ -29,9 +28,11 @@ const AuthNav = ({ children }) => {
                         <h1 className="auth-nav__title">Register</h1>
                     </NavLink>
 
-                    <NavLink to="/auth/reset" className={getLinkClass}>
+                    <NavLink to="reset" end={false} className={getLinkClass}>
                         <FaLock className="auth-nav__icon" />
-                        <h1 className="auth-nav__title">Reset</h1>
+                        <h1 className="auth-nav__title">
+                            Reset
+                        </h1>
                     </NavLink>
                 </div>
                 {children}

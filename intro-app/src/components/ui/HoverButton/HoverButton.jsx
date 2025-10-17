@@ -11,6 +11,7 @@ const HoverButton = ({
     textHoverColor,
     textColor,
     size,
+    width,
     disabled,
     type = 'submit',
     ...props
@@ -29,6 +30,7 @@ const HoverButton = ({
         ...(hoverBgColor && { '--hover-bg-color': hoverBgColor }),
         ...(textColor && { '--btn-text-color': textColor }),
         ...(textHoverColor && { '--btn-hover-text-color': textHoverColor }),
+        ...(width && { '--btn-hover-width': width }),
     };
 
     return (

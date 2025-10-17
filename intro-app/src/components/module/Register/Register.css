@@ -77,3 +77,12 @@
     align-items: stretch;
     gap: 36px;
 } */
+
+.login__form-field-action {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
