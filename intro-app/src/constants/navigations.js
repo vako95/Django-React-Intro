@@ -50,6 +50,16 @@ const navbarNav = [
                 id: 25,
                 name: "Contact",
                 link: "/contact"
+            },
+            {
+                id: 26,
+                name: "Pricing PLan",
+                link: "/pricing"
+            },
+            {
+                id: 26,
+                name: "Quote",
+                link: "/quote"
             }
         ]
     },

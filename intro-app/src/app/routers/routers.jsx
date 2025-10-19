@@ -11,6 +11,8 @@ import DebugPages from "../../pages/DebugPages/DebugPages";
 import BlankLayout from "../../layouts/BlankLayout/BlankLayout";
 import Reset from "../../components/module/ResetPassword/ResetPassword";
 import ResetPasswordConfirm from "../../components/module/ResetPasswordConfirm/ResetPasswordConfirm";
+import PricingPage from "../../pages/PricingPage/PricingPage";
+import QuotePage from "../../pages/QuotePage/QuotePage";
 
 
 export const teamMembers = [
@@ -88,6 +90,20 @@ const router = createBrowserRouter([
         handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "Contact" }] },
         children: [
             { index: true, element: <AuthNavPage /> }
+        ]
+    },
+    {
+        path: "/pricing", element: <SubLayout />,
+        handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "Pricing PLan" }] },
+        children: [
+            { index: true, element: <PricingPage /> }
+        ]
+    },
+    {
+        path: "/quote", element: <SubLayout />,
+        handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "Quote" }] },
+        children: [
+            { index: true, element: <QuotePage /> }
         ]
     },
     {

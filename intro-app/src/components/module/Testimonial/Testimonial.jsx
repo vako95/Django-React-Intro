@@ -10,6 +10,7 @@ const Testimonial = () => {
 
     return (
         <section className="testimonial">
+
             <div className="testimonial__backdrop" style={{ backgroundImage: `url(${testiBg})` }}>
                 <Container>
                     <div className="testimonial__container">

@@ -4,12 +4,14 @@ import "./DebugPages.css";
 import { IoMailOutline } from "react-icons/io5";
 import Select from "../../components/ui/Select/Select";
 import MonthField from "../../components/ui/MonthField/MonthField";
+import Pricing from "../../components/module/Pricing/Pricing";
+import Quote from "../../components/module/Quote/Quote";
 const DebugPages = () => {
 
     return (
         <div className="debug-pages">
             <Container>
-                <Input
+                {/* <Input
                     icon={<IoMailOutline />}
                     position="left"
                     placeholder="Email"
@@ -38,7 +40,10 @@ const DebugPages = () => {
                             e.target.value = e.target.value.replace(/[^0-9]/g, "");
                         }
                     }}
-                />
+                /> */}
+
+                {/* <Pricing /> */}
+                <Quote />
             </Container>
         </div>
     )

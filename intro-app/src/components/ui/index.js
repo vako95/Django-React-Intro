@@ -13,3 +13,4 @@ export { default as FrostedGlass } from "@components/ui/FrostedGlass/FrostedGlas
 export { default as Input } from "@components/ui/Input/Input.jsx";
 export { default as Select } from "@components/ui/Select/Select.jsx";
 export { default as MonthField } from "@components/ui/MonthField/MonthField.jsx";
+export { default as StripedOverlay } from "@components/ui/StripedOverlay/StripedOverlay.jsx";

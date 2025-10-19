@@ -368,7 +368,38 @@ const newsFeedItem = [
 ];
 
 
+const testimonials = [
+    {
+        id: 1,
+        name: "Jina Nillson",
+        img: "https://www.gethucinema.com/wp-content/uploads/2024/06/Hannah-Cheramy-22-GWBs1e5360.jpg",
+        position: "Founder of Webflex",
+        personal: true,
+        quote: "Upon they're seasons green day beast without form man be firmament years shall the appear moveth signs had.",
+
+    },
+    {
+        id: 2,
+        name: "Alex Johnson",
+        position: "CTO of CodeCraft",
+        img: "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcTu-GSY_bXjggu92Go8I0Od4bEoIE-RnSuaCRmN5xcL4lfSDQI169Wyg5hK0VegSLUJjpqlG47veDZ33C0",
+        quote: "Upon they're seasons green day beast without form man be firmament years shall the appear moveth signs had.",
+
+    },
+    {
+        id: 2,
+        name: "Alex Johnson",
+        position: "CTO of CodeCraft",
+        personal: true,
+        img: "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1v0Nx6.img?w=768&h=384&m=6&x=342&y=137&s=280&d=280",
+        quote: "Upon they're seasons green day beast without form man be firmament years shall the appear moveth signs had.",
+
+    }
+];
 
 
 
-export { services, swap, slideData, foodItems, teamMembers, newsFeedItem }
+
+
+
+export { services, swap, slideData, foodItems, teamMembers, newsFeedItem, testimonials }

@@ -1,8 +1,9 @@
 import { Input, HoverButton } from "@components/ui"
 
-import "./ResetPasswordConfirm.css";
 import { MdAlternateEmail } from "react-icons/md";
 import { Form, Formik } from "formik";
+
+import "./ResetPasswordConfirm.css";
 
 const ResetPasswordConfirm = () => {
 
@@ -13,7 +14,6 @@ const ResetPasswordConfirm = () => {
                     Reset confirm
                 </h1>
             </div>
-
             <Formik
                 initialValues={{
                     reset_email: "",
@@ -29,7 +29,6 @@ const ResetPasswordConfirm = () => {
                                 inputProps={{
                                     name: "reset-password-confirm_email",
                                 }}
-
                                 type="password"
                                 showPassword={false}
                                 position="left"
@@ -48,7 +47,6 @@ const ResetPasswordConfirm = () => {
                         >
                             Submit
                         </HoverButton>
-
                     </div>
                 </Form>
             </Formik>

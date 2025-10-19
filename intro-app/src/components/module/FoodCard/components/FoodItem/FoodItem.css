@@ -83,22 +83,30 @@
 
 
 .food-card__title {
-    max-width: 200px;
+    width: auto;
+    max-width: 64ch;
     font-family: "Barlow", sans-serif;
     display: flex;
     font-size: 14px;
     font-weight: 400;
     color: rgb(167, 155, 155);
     margin-bottom: 4px;
+    background: rgb(0 0 0 / 64%);
+    padding: 0px 16px;
+    border-radius: 16px;
 }
 
 .food-card__subtitle {
-    max-width: 200px;
-    color: rgb(238, 238, 238);
+    width: auto;
+    max-width: 64ch;
     font-family: "Gilda Display", sans-serif;
     font-size: 20px;
     line-height: 32px;
     font-weight: 400;
+    color: rgb(238, 238, 238);
+    background: rgb(0 0 0 / 64%);
+    padding: 0px 16px;
+    border-radius: 16px;
 
 }
 
@@ -125,13 +133,19 @@
     border: 1px solid rgba(170, 132, 83);
     padding: 2px 4px;
     margin-bottom: 8px;
+    background: rgb(0 0 0 / 64%);
+
+
 }
 
 .food-card__price {
     font-family: "Barlow", sans-serif;
     font-size: 20px;
     font-weight: 400;
-    color: rgb(238, 238, 238);
+    color: rgba(238, 238, 238);
+    background: rgb(0 0 0 / 64%);
+    padding: 0px 16px;
+    border-radius: 16px;
 
 }
 

@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-import { FrostedGlass } from "@components/ui";
 import Header from "../../components/layout/Header/Header.jsx";
 import Footer from "../../components/layout/Footer/Footer.jsx"
 import BreadCrumbs from "../../components/module/BreadCrumbs/BreadCrumbs.jsx";
