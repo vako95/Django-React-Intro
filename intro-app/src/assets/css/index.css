@@ -3,6 +3,7 @@
 @import url('https://cdn.linearicons.com/free/1.0.0/icon-font.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 @import url('https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css');
+@import "@flaticon/flaticon-uicons/css/all/all";
 
 *,
 *::after,
@@ -19,13 +20,13 @@ body {
     flex-direction: row;
     font-family: 'Barlow', sans-serif;
     background-color: rgba(20, 18, 18);
-    scrollbar-gutter: stable;
+    /* scrollbar-gutter: stable; */
     /* overflow: hidden; */
 }
 
 #root {
     width: 100%;
-    scrollbar-gutter: stable;
+    /* scrollbar-gutter: stable; */
 }
 
 /* #no-scrollbar {

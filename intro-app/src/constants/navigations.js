@@ -1,5 +1,3 @@
-
-
 const navbarNav = [
     {
         id: 1,
@@ -88,36 +86,36 @@ const footerNav = [
     {
         id: 1,
         name: "Home",
-        icon: "ri-drag-move-line",
+        icon: "aim",
         link: "/",
     },
     {
         id: 2,
-        icon: "ri-drag-move-line",
+        icon: "aim",
         name: "Rooms & Suites",
         link: "/rooms",
     },
     {
         id: 3,
-        icon: "ri-drag-move-line",
+        icon: "aim",
         name: "Spa & Wellness",
         link: "/spa",
     },
     {
         id: 4,
-        icon: "ri-drag-move-line",
+        icon: "aim",
         name: "Contact",
         link: "/contact",
     },
     {
         id: 5,
-        icon: "ri-drag-move-line",
+        icon: "aim",
         name: "About Hotel",
         link: "/about",
     },
     {
         id: 6,
-        icon: "ri-drag-move-line",
+        icon: "aim",
         name: "Contact",
         link: "/contact",
     },

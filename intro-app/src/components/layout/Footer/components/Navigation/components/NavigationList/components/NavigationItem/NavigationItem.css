@@ -29,11 +29,11 @@
 
 .footer__navigation-link:hover i,
 .footer__navigation-link:hover .footer__navigation-link-title {
-    color: #aa8453;
+    color: rgba(170, 132, 83);
 }
 
 
-.footer__navigation-link i {
+.footer__navigation-link-icon {
     display: flex;
     font-size: 14px;
     color: rgb(173, 173, 173);

@@ -8,7 +8,7 @@ import RoomCard from "./components/RoomsCard/RoomCard";
 import "./Rooms.css";
 
 const roomsCover = [
-    { id: 1, cover: rooms1, title: "Luxury Suite Room", price: 90 },
+    { id: 1, cover: rooms1, title: "Luxury Suite Room", price: 90, icons: [] },
     { id: 2, cover: rooms2, title: "Luxury Suite Room", price: 90 },
     { id: 3, cover: rooms2, title: "Luxury Suite Room", price: 90 },
     { id: 4, cover: rooms1, title: "Luxury Suite Room", price: 90 },
@@ -29,7 +29,6 @@ const Rooms = () => {
                             subtitle="Luxury Rooms & Suites"
                         />
                     </div>
-
                     <div className="rooms__items">
                         {roomsCover.map(({ id, cover, title, price }) => (
                             <RoomCard key={id} cover={cover} title={title} price={price} />

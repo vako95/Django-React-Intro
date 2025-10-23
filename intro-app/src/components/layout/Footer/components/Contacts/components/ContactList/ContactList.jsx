@@ -1,14 +1,18 @@
 import "./ContactList.css";
 
 import ContactItem from "./components/ContactItem.jsx";
-
+const items = [
+    { id: 1, label: "1800-121-3637", to: "#", target: "_self", icon: "phone" },
+    { id: 1, label: "needhelp@company.com", to: "#", target: "_self", icon: "email" },
+    { id: 1, label: "1247/Plot No. 39, 15th Phase, United States of America", to: "#", target: "_blank", icon: "location" },
+]
 const ContactList = () => {
 
     return (
         <ul className="footer__contacts-list">
-            <ContactItem icon="ri-phone-line" name="1800-121-3637" />
-            <ContactItem icon="ri-mail-send-fill" name="needhelp@company.com" />
-            <ContactItem icon="ri-map-pin-line" name="1247/Plot No. 39, 15th Phase, United States of America" />
+            {items.map((item) => (
+                <ContactItem key={item.id} item={item} />
+            ))}
         </ul>
     )
 }

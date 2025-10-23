@@ -1,3 +1,4 @@
+import Heading from "./components/Heading/Heading";
 import "./QuoteItem.css";
 import { FaCheck } from "react-icons/fa";
 
@@ -5,14 +6,7 @@ const QuoteItem = ({ item }) => {
 
     return (
         <li className="quote__item" style={{ backgroundImage: `url("http://localhost:5173/src/components/module/NewsFeed/assets/img/backdrop/bg-shape-1.png")` }}>
-            <div className="quote__item-heading">
-                <h1 className="quote__item-heading-name">
-                    {item.name}
-                </h1>
-                <span className="quote__item-heading-role">
-                    {item.position}
-                </span>
-            </div>
+            <Heading item={item} />
             <div className="quote__item-wrapper">
                 <img className="quote__item-wrapper-img" src={item.img} alt="" />
                 {item.personal && (

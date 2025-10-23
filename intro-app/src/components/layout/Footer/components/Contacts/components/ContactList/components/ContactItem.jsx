@@ -1,14 +1,20 @@
 import { Link } from "react-router-dom";
+import { ICON_MAP } from "../../../../../../../../constants/map.js";
+
 import "./ContactItem.css";
 
-const ContactItem = ({ icon, name }) => {
+const ContactItem = ({ item }) => {
+    const Icon = ICON_MAP[item.icon] ?? ICON_MAP["default"];
+
 
     return (
         <li className="footer__contact-item">
             <Link className="footer__contact-link">
-                <i className={icon}></i>
+                <span className="footer__contact-link-icon">
+                    <Icon />
+                </span>
                 <span className="footer__contact-title">
-                    {name}
+                    {item.label}
                 </span>
             </Link>
         </li>

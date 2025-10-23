@@ -1,18 +1,23 @@
 import { createBrowserRouter } from "react-router-dom";
-import { MainLayout, SubLayout } from '@src/layouts';
-import { Home, About, GalleryPage, Team, TeamDetail, ContactPage } from "@src/pages";
-import ErrorPage from "../../pages/ErrorPage/ErrorPage";
+import { MainLayout, SubLayout, AuthLayout, BlankLayout } from '@src/layouts';
+import {
+    HomePage,
+    AboutPage,
+    GalleryPage,
+    ContactPage,
+    FaqPage,
+    QuotePage,
+    PricingPage,
+    TeamPage,
+    TeamDetailPage,
+    LoginPage,
+    RegisterPage,
+    ResetPasswordPage,
+    ChangePasswordPage,
+    DebugPages,
+    NotFoundPage,
+} from "@src/pages";
 
-import AuthNavPage from "../../pages/auth/AuthNavPage/AuthNavPage";
-import AuthLayout from "../../layouts/AuthLayout/AuthLayout";
-import Login from "../../components/module/Login/Login";
-import Register from "../../components/module/Register/Register";
-import DebugPages from "../../pages/DebugPages/DebugPages";
-import BlankLayout from "../../layouts/BlankLayout/BlankLayout";
-import Reset from "../../components/module/ResetPassword/ResetPassword";
-import ResetPasswordConfirm from "../../components/module/ResetPasswordConfirm/ResetPasswordConfirm";
-import PricingPage from "../../pages/PricingPage/PricingPage";
-import QuotePage from "../../pages/QuotePage/QuotePage";
 
 
 export const teamMembers = [
@@ -23,54 +28,61 @@ export const teamMembers = [
 ];
 
 const router = createBrowserRouter([
-    { path: "/", element: <MainLayout />, children: [{ index: true, element: <Home /> }] },
+    { path: "/", element: <MainLayout />, children: [{ index: true, element: <HomePage /> }] },
     {
-        path: "/about", element: <SubLayout />,
-        handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "About" }] },
+        element: <SubLayout />, handle: { breadcrumbs: () => [{ path: "/", label: "Home" }] },
         children: [
-            { index: true, element: <About /> },
-
-        ]
-    },
-    {
-        path: "/team",
-        element: <SubLayout />,
-        handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "/team", label: "Team" },] },
-        children: [
-            { index: true, element: <Team /> },
+            { index: true, element: <HomePage /> },
+            {
+                path: "/about",
+                element: <AboutPage />,
+                handle: { breadcrumbs: () => [{ path: "#", label: "About" }] },
+            },
+            {
+                path: "/gallery",
+                element: <GalleryPage />,
+                handle: { breadcrumbs: () => [{ path: "#", label: "About" }] },
+            },
 
             {
-                path: ":id",
-                element: <TeamDetail />,
-                handle: (
-                    { id }) => {
-                    const user = teamMembers.find(u => u.id === id);
-                    return [{ path: `/team/${id}`, label: user?.name || "User" }];
-                },
-            },
-        ],
-    },
-    {
-        path: "/team/:id",
-        element: <SubLayout />,
-        handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "/team", label: "Team" }, { path: "#", label: "Team-Detail" }] },
-        children: [
-            { index: true, element: <TeamDetail /> },
+                path: "/team",
+                handle: { breadcrumbs: () => [{ path: "/team", label: "Team" },] },
+                children: [
+                    { index: true, element: <TeamPage /> },
 
+                    {
+                        path: ":id",
+                        element: <TeamDetailPage />,
+                        handle: {
+                            breadcrumbs: (id) => {
+                                const user = teamMembers.find(u => u.id === id);
+                                return [{ path: `/team/${id}`, label: user?.name || "User" }];
+                            }
+                        }
+                    },
+                ],
+            },
             {
-                path: ":id",
-                element: <TeamDetail />,
-                handle: (
-
-                    { id }) => {
-                    // const user = teamMembers.find(u => u.id === id);
-                    // return [{ path: `/team/${id}`, label: user?.name || "User" }];
-                    const user = useSelector(state => state.user[id]);
-                    return { path: user?.id, label: user?.name || `#${id}` };
-                },
+                path: "faq",
+                element: <FaqPage />,
+                handle: { breadcrumbs: () => [{ path: "#", label: "Faq" }] },
             },
+            {
+                path: "/auth",
+                element: <AuthLayout />,
+                children: [
+                    { index: true, element: <LoginPage /> },
+                    { path: "login", element: <LoginPage /> },
+                    { path: "register", element: <RegisterPage /> },
+
+                    { path: "reset", element: <ResetPasswordPage /> },
+                    { path: "reset/:token", element: <ChangePasswordPage /> },
+                ]
+            },
+
         ],
     },
+
     {
         path: "/gallery", element: <SubLayout />,
         handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "Gallery" }] },
@@ -85,13 +97,13 @@ const router = createBrowserRouter([
             { index: true, element: <ContactPage /> }
         ]
     },
-    {
-        path: "/auth_nav", element: <SubLayout />,
-        handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "Contact" }] },
-        children: [
-            { index: true, element: <AuthNavPage /> }
-        ]
-    },
+    // {
+    //     path: "/auth_nav", element: <SubLayout />,
+    //     handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "Contact" }] },
+    //     children: [
+    //         { index: true, element: <AuthNavPage /> }
+    //     ]
+    // },
     {
         path: "/pricing", element: <SubLayout />,
         handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "Pricing PLan" }] },
@@ -106,18 +118,8 @@ const router = createBrowserRouter([
             { index: true, element: <QuotePage /> }
         ]
     },
-    {
-        path: "/auth",
-        element: <AuthLayout />,
-        children: [
-            { index: true, element: <Login /> },
-            { path: "login", element: <Login /> },
-            { path: "register", element: <Register /> },
-            // { path: "register", element: <RegisterPage /> },
-            { path: "reset", element: <Reset /> },
-            { path: "reset/:token", element: <ResetPasswordConfirm /> },
-        ]
-    },
+
+
 
     {
         path: "/debug",
@@ -137,12 +139,11 @@ const router = createBrowserRouter([
         element: <SubLayout />,
         handle: {
             breadcrumbs: () => [
-                { path: "/", label: "Home" },
                 { path: "#", label: "Page Not Found" }
             ]
         },
         children: [
-            { index: true, element: <ErrorPage /> }
+            { index: true, element: <NotFoundPage /> }
         ]
     }
 ]);

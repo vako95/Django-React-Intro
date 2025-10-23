@@ -10,7 +10,7 @@ const BreadCrumbs = () => {
         if (!match.handle || !match.handle.breadcrumbs) return [];
         return match.handle.breadcrumbs(match.params);
     });
-
+    console.log(crumbs);
     const lastMatch = matches[matches.length - 1];
     const userId = lastMatch?.params?.id;
     const user = teamMembers.find(u => u.id === userId);

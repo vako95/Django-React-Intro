@@ -14,9 +14,7 @@ const SubLayout = () => {
                 {/* <FrostedGlass> </FrostedGlass> */}
                 <Topbar />
                 <Navbar bgColor="" cart={true} />
-
                 <BreadCrumbs />
-
             </Header>
             <div className="main">
                 <Outlet />

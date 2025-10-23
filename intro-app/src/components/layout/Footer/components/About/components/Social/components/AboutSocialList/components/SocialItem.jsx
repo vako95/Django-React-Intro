@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
+import { ICON_MAP } from "../../../../../../../../../../constants/map.js";
+
 import "./SocialItem.css";
 
-const SocialItem = ({ icon }) => {
+const SocialItem = ({ item }) => {
+    const Icon = ICON_MAP[item.icon] ?? ICON_MAP["default"];
 
     return (
         <li className="footer__about-social-item">
             <Link className="footer__about-social-link">
-                <i className={`footer__about-social-link ${icon}`}></i>
+                {/* <i className={`footer__about-social-link ${icon}`}></i> */}
+                <span className="footer__about-social-link-icon">
+                    <Icon />
+                </span>
             </Link>
         </li>
     )

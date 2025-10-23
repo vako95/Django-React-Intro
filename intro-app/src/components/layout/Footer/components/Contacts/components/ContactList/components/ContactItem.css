@@ -23,7 +23,7 @@
     text-decoration: none;
 }
 
-.footer__contact-link i {
+.footer__contact-link-icon {
     display: flex;
     font-size: 22px;
     color: rgb(173, 173, 173);
@@ -46,7 +46,7 @@
 }
 
 
-.footer__contact-link:hover i,
+.footer__contact-link:hover .footer__contact-link-icon,
 .footer__contact-link:hover .footer__contact-title {
-    color: #aa8453;
+    color: rgba(170, 132, 83);
 }

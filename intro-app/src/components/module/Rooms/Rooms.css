@@ -32,9 +32,9 @@
 
 
 .rooms__card {
+    width: 100%;
+    height: 300px;
     position: relative;
-    width: auto;
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -42,6 +42,7 @@
     overflow: hidden;
     transition: transform 250ms linear, opacity 250ms linear;
     z-index: 0;
+    padding: 16px 32px;
 }
 
 .rooms__card::after {
@@ -51,47 +52,52 @@
     background: linear-gradient(0deg, #222222, rgba(34, 34, 34, 0));
     opacity: 0.4;
     transform: scale(1);
+
     transition: transform 250ms linear, opacity 250ms linear;
 }
 
 .rooms__card:hover::after {
     opacity: 0.8;
-    transform: scale(1.1);
+    /* transform: translateY(50%); */
     backdrop-filter: blur(2px);
 }
 
 
 
-.rooms__card-backdrop {
-    width: 100%;
-    height: 100%;
-    max-height: 300px;
-    object-position: 100% 100%;
-    object-fit: cover;
-    transition: transform 200ms linear;
-}
 
-.rooms__card:hover .rooms__card-backdrop {
-    transform: scale(1.1);
-}
 
 .rooms__content {
-    position: absolute;
-    width: auto;
-    height: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     padding: 20px;
     z-index: 100;
-    transition: margin-bottom 250ms linear;
+    transition: transform 250ms linear;
+    margin-bottom: 16px;
 
 }
 
-.rooms__card:hover .rooms__content {
-    margin-bottom: 84px;
-    transition: margin-bottom 250ms linear;
+.rooms__service {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    transition: height 250ms linear, opacity 250ms linear;
+    z-index: 100;
+    opacity: 0;
+}
+
+.rooms__card:hover .rooms__service {
+    height: 100px;
+    opacity: 1;
+}
+
+.rooms__wrapper {
+    height: 100%;
 }
 
 .rooms__content-link {
