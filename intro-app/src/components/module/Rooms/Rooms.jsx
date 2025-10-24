@@ -5,15 +5,40 @@ import rooms1 from "./assets/img/room3.jpg";
 import rooms2 from "./assets/img/room2.jpg";
 import SectionWrapper from "../../ui/SectionWrapper/SectionWrapper";
 import RoomCard from "./components/RoomsCard/RoomCard";
+
 import "./Rooms.css";
 
 const roomsCover = [
-    { id: 1, cover: rooms1, title: "Luxury Suite Room", price: 90, icons: [] },
-    { id: 2, cover: rooms2, title: "Luxury Suite Room", price: 90 },
-    { id: 3, cover: rooms2, title: "Luxury Suite Room", price: 90 },
-    { id: 4, cover: rooms1, title: "Luxury Suite Room", price: 90 },
-    { id: 5, cover: rooms1, title: "Luxury Suite Room", price: 90 },
-    { id: 6, cover: rooms1, title: "Luxury Suite Room", price: 90 },
+    {
+        id: 1, cover: rooms1, title: "Luxury Suite Room", price: 90, icons: [
+            "people", "sofa", "parking", "shower", "wifi", "conditioner"
+        ]
+    },
+    {
+        id: 2, cover: rooms2, title: "Luxury Suite Room", price: 90, icons: [
+            "people", "sofa", "parking"
+        ]
+    },
+    {
+        id: 3, cover: rooms2, title: "Luxury Suite Room", price: 90, icons: [
+            "people", "sofa", "parking"
+        ]
+    },
+    {
+        id: 4, cover: rooms1, title: "Luxury Suite Room", price: 90, icons: [
+            "people", "sofa", "parking"
+        ]
+    },
+    {
+        id: 5, cover: rooms1, title: "Luxury Suite Room", price: 90, icons: [
+            "people", "sofa", "parking"
+        ]
+    },
+    {
+        id: 6, cover: rooms1, title: "Luxury Suite Room", price: 90, icons: [
+            "people", "sofa", "parking"
+        ]
+    },
 ];
 
 
@@ -30,8 +55,8 @@ const Rooms = () => {
                         />
                     </div>
                     <div className="rooms__items">
-                        {roomsCover.map(({ id, cover, title, price }) => (
-                            <RoomCard key={id} cover={cover} title={title} price={price} />
+                        {roomsCover.map(({ id, cover, title, price, icons }) => (
+                            <RoomCard key={id} cover={cover} title={title} price={price} icons={icons} />
                         ))}
                     </div>
                 </div>

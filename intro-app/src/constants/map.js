@@ -39,6 +39,6 @@ export const ICON_MAP = {
     sofa: LuSofa,
     shower: GiShower,
     wifi: GiWifiRouter,
-    condic: TbAirConditioning,
+    conditioner: TbAirConditioning,
 
 };
