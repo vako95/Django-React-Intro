@@ -55,9 +55,19 @@ const navbarNav = [
                 link: "/pricing"
             },
             {
-                id: 26,
+                id: 27,
                 name: "Quote",
                 link: "/quote"
+            },
+            {
+                id: 28,
+                name: "Rooms",
+                link: "/room"
+            },
+            {
+                id: 29,
+                name: "Faq",
+                link: "/faq"
             }
         ]
     },

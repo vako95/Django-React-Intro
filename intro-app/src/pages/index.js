@@ -5,6 +5,7 @@ export { default as GalleryPage } from "@src/pages/main/GalleryPage/GalleryPage.
 export { default as ContactPage } from "@src/pages/main/ContactPage/ContactPage.jsx";
 export { default as FaqPage } from "@src/pages/main/FaqPage/FaqPage.jsx";
 export { default as QuotePage } from "@src/pages/main/QuotePage/QuotePage.jsx";
+export { default as RoomPage } from "@src/pages/main/RoomPage/RoomPage.jsx";
 
 export { default as PricingPage } from "@src/pages/shop/PricingPage/PricingPage.jsx";
 

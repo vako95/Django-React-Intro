@@ -54,7 +54,7 @@ const Slider = () => {
                     onMouseLeave={() => setHoveredButton(null)}
                     onClick={() => {
                         photoRef.current?.slidePrev();
-                        setHoveredButton("prev"); // обновляем preview сразу при клике
+                        setHoveredButton("prev");
                     }}
                 >
                     <img
@@ -70,7 +70,7 @@ const Slider = () => {
                     onMouseLeave={() => setHoveredButton(null)}
                     onClick={() => {
                         photoRef.current?.slideNext();
-                        setHoveredButton("next"); // обновляем preview сразу при клике
+                        setHoveredButton("next");
                     }}
                 >
                     <img

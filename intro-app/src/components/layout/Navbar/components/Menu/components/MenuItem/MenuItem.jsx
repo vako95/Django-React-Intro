@@ -27,7 +27,6 @@ const MenuItem = ({ item }) => {
                                     {hasDropdown && (
                                         <i className="ri-arrow-right-s-fill"></i>
                                     )}
-
                                 </NavLink>
                                 {hasDropdown && (
                                     <ul className="menu__sublist--submenu">

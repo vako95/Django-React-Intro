@@ -7,6 +7,7 @@ import {
     ContactPage,
     FaqPage,
     QuotePage,
+    RoomPage,
     PricingPage,
     TeamPage,
     TeamDetailPage,
@@ -66,6 +67,11 @@ const router = createBrowserRouter([
                 path: "faq",
                 element: <FaqPage />,
                 handle: { breadcrumbs: () => [{ path: "#", label: "Faq" }] },
+            },
+            {
+                path: "room",
+                element: <RoomPage />,
+                handle: { breadcrumbs: () => [{ path: "#", label: "Rooms" }] },
             },
             {
                 path: "/auth",

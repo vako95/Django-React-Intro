@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { HoverButton } from "@components/ui";
 import { ICON_MAP } from "../../../../../constants/map.js";
-const RoomCard = ({ cover, title, price, icons }) => (
+import "./RoomCard.css"
 
+const RoomCard = ({ cover, title, price, icons }) => (
     <div className="rooms__card" style={{ backgroundImage: `url(${cover})` }}>
         <div className="rooms__card-wrapper">
             <div className="rooms__content">

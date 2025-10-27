@@ -16,7 +16,6 @@ const HotelGallery = ({ children }) => {
     return (
         <LightGallery
             className="gallery__card-box"
-
             speed={500}
             plugins={[lgThumbnail, lgZoom, lgAutoplay, lgShare]}
             autoplay={true}

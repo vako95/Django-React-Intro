@@ -18,6 +18,15 @@ import { LuSofa } from "react-icons/lu";
 import { GiShower } from "react-icons/gi";
 import { GiWifiRouter } from "react-icons/gi";
 import { TbAirConditioning } from "react-icons/tb";
+import { IoBedOutline } from "react-icons/io5";
+
+
+import { MdOutlineLight } from "react-icons/md";
+import { LiaSwimmingPoolSolid } from "react-icons/lia";
+import { CgGym } from "react-icons/cg";
+import { RiParkingLine } from "react-icons/ri";
+import { PiSecurityCamera } from "react-icons/pi";
+import { GiPoolDive } from "react-icons/gi";
 
 export const ICON_MAP = {
     default: SlSocialGoogle,
@@ -37,8 +46,17 @@ export const ICON_MAP = {
 
     people: FaPeopleRoof,
     sofa: LuSofa,
+    bed: IoBedOutline,
     shower: GiShower,
     wifi: GiWifiRouter,
     conditioner: TbAirConditioning,
 
+
+    light: MdOutlineLight,
+    pool: LiaSwimmingPoolSolid,
+    gym: CgGym,
+    parking: RiParkingLine,
+    security: PiSecurityCamera,
+    swiming: GiPoolDive
 };
+// import { SiGnuprivacyguard } from "react-icons/si";

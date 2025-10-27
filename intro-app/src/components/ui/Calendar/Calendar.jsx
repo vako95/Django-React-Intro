@@ -16,7 +16,7 @@ const Calendar = ({ checkIn, checkOut, onCheckInChange, onCheckOutChange, varian
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <section className={classes}  {...props} onClick={(e) => e.stopPropagation()}>
-                <div className="calendar__picker" >
+                <div className="calendar__picker">
                     {closeButton &&
                         <button
                             type="button"

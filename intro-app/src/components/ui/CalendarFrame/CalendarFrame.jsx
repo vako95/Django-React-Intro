@@ -10,7 +10,12 @@ import FrameHeading from "./components/FrameHeading/FrameHeading";
 import FrameDates from "./components/FrameDates/FrameDates";
 import FrameLabel from "./components/FrameLabel/FrameLabel";
 
-const CalendarFrame = () => {
+const CalendarFrame = (
+    {
+        title = "",
+        subtitle = ""
+    }
+) => {
     const [openLabel, setOpenLabel] = useState(false);
     const [checkIn, setCheckIn] = useState(dayjs());
     const [checkOut, setCheckOut] = useState(dayjs().add(1, "day"));
@@ -48,7 +53,10 @@ const CalendarFrame = () => {
         <Container>
             <section className="calendar-frame" >
                 <div className="calendar-frame__wrapper">
-                    <FrameHeading />
+                    <FrameHeading
+                        title={title}
+                        subtitle={subtitle}
+                    />
                     <FrameDates
                         handleCheckIn={handleCheckIn}
                         handleCheckOut={handleCheckOut}

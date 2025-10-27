@@ -46,7 +46,7 @@ const Feauture = () => {
             </div>
 
             <div className="feature__points">
-                <IconMirror >
+                <IconMirror>
                     <div className="feature__points-item">
                         <div className="feature__points-wrapper">
                             <img src={lightIcon} className="anime-mirror feature__points-img" alt="pool" />
@@ -66,7 +66,6 @@ const Feauture = () => {
                         <h5 className="feature__points-title">
                             The Best
                             Lighting
-
                         </h5>
                     </div>
                 </IconMirror>
