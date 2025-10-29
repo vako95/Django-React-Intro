@@ -1,0 +1,104 @@
+.calendar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.calendar__content {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.68);
+    backdrop-filter: blur(2px);
+    color: rgba(255, 255, 255);
+}
+
+.calender_rdp--open .rdp-dropdown {
+    transform: rotate(180deg);
+}
+
+.rdp-dropdown:focus-visible~.rdp-caption_label {
+    outline: none !important;
+    outline: none !important;
+    color: rgba(170, 132, 83);
+    border: none !important;
+}
+
+
+
+.rdp-dropdowns {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255) !important;
+    /* margin-bottom: 8px; */
+}
+
+.rdp-dropdowns option {
+    background-color: black;
+    color: white;
+}
+
+.rdp-dropdowns option:disabled {
+    background-color: black;
+    color: rgba(170, 132, 83);
+    outline: none;
+    border-color: red !important;
+    outline-color: red !important;
+    border: 1px solid red !important;
+}
+
+.rdp-dropdown_root[data-disabled="true"] .rdp-chevron {
+    opacity: var(--rdp-disabled-opacity);
+    transform: rotate(180deg);
+}
+
+.rdp-dropdown:focus-visible~.rdp-caption_label {
+    outline: 5px auto chartreuse;
+    border: 1px solid red;
+    outline: 5px auto chartreuse;
+}
+
+.rdp-dropdown option:hover,
+.rdp-dropdown option:checked,
+.rdp-dropdown option:active,
+.rdp-dropdown option:focus {
+    background: linear-gradient(#ecec0f, #045df7);
+}
+
+/* Variables declaration */
+.rdp-root {
+    --rdp-accent-color: #aa8453 !important;
+    --rdp-accent-background-color: rgba(0, 0, 0, 0.68) !important;
+    --rdp-accent-background-color: rgba(0, 0, 0, 0.68);
+    --rdp-range_middle-color: rgba(255, 255, 255) !important;
+    --rdp-selected-border: 1px solid var(--rdp-accent-color);
+
+}
+
+.rdp-months {
+    position: relative;
+    width: auto;
+    display: none;
+}
+
+.rdp-day_button {
+    /* font-family: "Barlow", sans-serif !important; */
+    font-size: 12px !important;
+    border-radius: 0px !important;
+    color: aliceblue !important;
+}
+
+/* .rdp-range_middle {
+    font-size: 8px !important;
+} */
+
+.rdp-day {
+    width: auto !important;
+    height: auto !important;
+}
+
+/* .rdp-day_button {
+    color: aqua !important;
+    background-color: black !important;
+} */

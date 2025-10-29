@@ -1,0 +1,33 @@
+.custom-months-dropdown__select {}
+
+.custom-months-dropdown__select .custom-months-dropdown-heading {
+    color: red;
+}
+
+.custom-months-dropdown__header-title {
+    color: aqua;
+}
+
+.custom-months-dropdown__menu {
+    position: relative;
+}
+
+.custom-months-dropdown__item {
+    cursor: pointer;
+
+}
+
+.custom-months-dropdown__item:hover {
+    color: blue;
+    background-color: orange;
+}
+
+.xuy2__dropdown-mot {
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: red;
+    color: black;
+    z-index: 9999;
+}
