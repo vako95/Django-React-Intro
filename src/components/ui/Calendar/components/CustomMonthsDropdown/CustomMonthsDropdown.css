@@ -1,0 +1,94 @@
+.custom-months-dropdown {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-months-dropdown__toggle {
+    width: 100%;
+    height: auto;
+    display: flex;
+    font-family: 16px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgba(20, 18, 18);
+    border-radius: 4px;
+    color: white;
+    padding: 4px 8px;
+}
+
+
+.custom-months-dropdown__toggle-value {
+    font-family: inherit;
+    font-size: 16px;
+    color: inherit;
+    font-weight: 500;
+    margin-right: 4px;
+}
+
+
+.custom-months-dropdown__toggle-icon {
+    font-size: 16px;
+    font-weight: 500;
+    color: inherit;
+    display: inline-flex;
+    display: flex;
+    color: rgba(170, 132, 83);
+    transform-origin: top center;
+}
+
+.custom-months-dropdown__toggle-icon--open {
+    color: rgba(170, 132, 83, 0.489);
+}
+
+
+.custom-months-dropdown__content {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.68);
+    border-radius: 4px;
+    padding: 4px 8px;
+    z-index: 9999;
+
+}
+
+.custom-months-dropdown__content-item {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgba(170, 132, 83);
+    color: inherit;
+    /* padding: 4px 8px; */
+    cursor: pointer;
+}
+
+.custom-months-dropdown__content-item:not(:last-of-type) {
+    margin-bottom: 4px;
+}
+
+.custom-months-dropdown__content-item:hover {
+    background-color: rgba(170, 132, 83);
+    color: black;
+}
+
+.custom-months-dropdown__content-item:disabled {
+    background-color: rgba(255, 255, 255, 0.247);
+    color: rgba(254, 254, 254, 0.598);
+    cursor: not-allowed;
+}

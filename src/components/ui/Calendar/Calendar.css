@@ -1,16 +1,18 @@
 .calendar {
     width: 100%;
+    height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
 }
 
 .calendar__content {
-    width: 100%;
+    width: auto;
     background-color: rgba(0, 0, 0, 0.68);
     backdrop-filter: blur(2px);
     color: rgba(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .calender_rdp--open .rdp-dropdown {
@@ -18,7 +20,6 @@
 }
 
 .rdp-dropdown:focus-visible~.rdp-caption_label {
-    outline: none !important;
     outline: none !important;
     color: rgba(170, 132, 83);
     border: none !important;
@@ -40,23 +41,21 @@
 }
 
 .rdp-dropdowns option:disabled {
-    background-color: black;
+    background-color: rgba(0, 0, 0);
     color: rgba(170, 132, 83);
     outline: none;
-    border-color: red !important;
-    outline-color: red !important;
-    border: 1px solid red !important;
 }
+
 
 .rdp-dropdown_root[data-disabled="true"] .rdp-chevron {
     opacity: var(--rdp-disabled-opacity);
     transform: rotate(180deg);
 }
 
-.rdp-dropdown:focus-visible~.rdp-caption_label {
-    outline: 5px auto chartreuse;
-    border: 1px solid red;
-    outline: 5px auto chartreuse;
+
+
+.rdp-day .rdp-disabled {
+    color: #aa8453 !important;
 }
 
 .rdp-dropdown option:hover,
@@ -74,6 +73,16 @@
     --rdp-range_middle-color: rgba(255, 255, 255) !important;
     --rdp-selected-border: 1px solid var(--rdp-accent-color);
 
+}
+
+.my-disabled_style .rdp-day_button {
+    color: rgba(170, 132, 83, 0.489) !important;
+}
+
+
+
+.rdp-weekdays {
+    color: rgb(204, 159, 100);
 }
 
 .rdp-months {
@@ -97,6 +106,18 @@
     width: auto !important;
     height: auto !important;
 }
+
+.calendar__footer {
+    margin-top: 36px;
+    color: inherit;
+    /* background-color: rgba(170, 132, 83, 0.258); */
+    padding: 16px;
+}
+
+.calendar__footer-date {
+    color: #aa8453;
+}
+
 
 /* .rdp-day_button {
     color: aqua !important;

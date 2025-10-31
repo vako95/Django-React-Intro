@@ -1,7 +1,7 @@
 import { Container } from "@components/ui";
-import dayjs from "dayjs";
+
 import "./Reservation.css";
-import Booking from "./components/Booking/Booking.jsx";
+import BookingFields from "./components/BookingFields/BookingFields.jsx";
 
 const Reservation = () => {
 
@@ -9,9 +9,7 @@ const Reservation = () => {
         <section className="reservation">
             <Container>
                 <form className="reservation__form">
-                    <div className="reservation__container">
-                        <Booking />
-                    </div>
+                    <BookingFields />
                 </form>
             </Container>
         </section>

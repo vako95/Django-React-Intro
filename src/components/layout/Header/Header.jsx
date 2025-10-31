@@ -18,7 +18,7 @@ const Header = ({ children }) => {
             backdropFilter={true}
             backdrop={currentBackground}
         >
-            <header tabIndex={1} className="header">
+            <header className="header">
                 {children}
             </header>
         </BackdropContainer>

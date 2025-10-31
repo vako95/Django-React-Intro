@@ -14,7 +14,7 @@ const Calendar = ({ value, onChange, variant, closeButton = false, onClose, ...p
     )
     return (
 
-        <LocalizationProvider dateAdapter={AdapterDayjs} >
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
             <section className={classes}  {...props} onClick={(e) => e.stopPropagation()}>
                 <div className="calendar__picker">
                     {closeButton &&

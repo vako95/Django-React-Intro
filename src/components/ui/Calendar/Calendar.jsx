@@ -3,25 +3,39 @@ import dayjs from "dayjs";
 import { useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
-import MonthField from "../MonthField/MonthField";
-import CustomMonthsDropdown from "./components/CustomMonthsDropdown";
+
+import CustomMonthsDropdown from "./components/CustomMonthsDropdown/CustomMonthsDropdown.jsx";
+import CustomYearsDropdown from "./components/CustomYearsDropdown/CustomYearsDropdown.jsx";
+
+const Calendar = ({ range, setRange }) => {
 
 
-const Calendar = () => {
-    const [range, setRange] = useState({ from: undefined, to: undefined });
+    const footer = range?.from ? (
+        range.to ? (
+            <p className="calendar__footer">
+                Entery: <span className="calendar__footer-date">{range.from.toLocaleDateString()}</span> &nbsp;
+                Leave: <span className="calendar__footer-date">{range.to.toLocaleDateString()}</span>
+            </p>
+        ) : (
+            <p className="calendar__footer">
+                You chose start date:{" "}
+                <span className="calendar__footer-date">{range.from.toLocaleDateString()}</span>
+            </p>
+        )
+    ) : (
+        <p className="calendar__footer calendar__footer--empty">
+            Please choose full date.
+        </p>
+    );
 
-    const footer = range?.from
-        ? range.to
-            ? `Entery ${range.from.toLocaleDateString()} Leave ${range.to.toLocaleDateString()}.`
-            : `You chose date start: ${range.from.toLocaleDateString()}.`
-        : "Please choose full date.";
 
     return (
-        <div className="calendar">
+        <div className="calendar" onClick={(e) => e.stopPropagation()}>
             <div className="calendar__content">
-
-
                 <DayPicker
+                    onPrevClick={true}
+
+                    classNames={{ disabled: "my-disabled_style" }}
                     animate
                     navLayout="around"
                     mode="range"
@@ -33,16 +47,15 @@ const Calendar = () => {
                     captionLayout="dropdown"
                     startMonth={dayjs().toDate()}
                     endMonth={dayjs().add(2, "year").toDate()}
-                    defaultMonth={new Date()}     // 👈 текущий месяц
-                    today={new Date()}             // 👈 подсвечивает сегодняшний день
+                    defaultMonth={new Date()}
+                    today={new Date()}
+                    disabled={{ before: new Date() }}
                     footer={footer}
                     components={{
-                        // Замена стандартного dropdown для месяца
                         MonthsDropdown: CustomMonthsDropdown,
-                    }}                // 👈 наш текст внизу
+                        YearsDropdown: CustomYearsDropdown,
+                    }}
                 />
-
-                <pre>{JSON.stringify(range, null, 2)}</pre>
             </div>
         </div>
     );

@@ -77,7 +77,7 @@ const swap = [
 const slideData = [
     {
         id: 1,
-        img: 'https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/testi-1-1.jpg',
+        img: 'https://hottestchocolate.com/wp-content/uploads/2022/04/korea_main.jpg',
         desc: `The utanislen quam nestibulum ac quame odion elementum sceisu nthe aucan.
         Orci varius natoque penatibuet magnis disney parturient monte nascete
         ridiculus mus nellen etesque habitant morbine.`,
@@ -87,7 +87,7 @@ const slideData = [
     },
     {
         id: 2,
-        img: 'https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/testi-1-1.jpg',
+        img: 'https://hottestchocolate.com/wp-content/uploads/2022/04/korea_main.jpg',
         desc: `The utanislen quam nestibulum ac quame odion elementum sceisu nthe aucan.
         Orci varius natoque penatibuet magnis disney parturient monte nascete
         ridiculus mus nellen etesque habitant morbine.`,

@@ -23,7 +23,7 @@ const Slider = () => {
     const getNextIndex = () => (currentSlide + 1) % photos.length;
 
     return (
-        <div className="slider" tabIndex={0}>
+        <div className="slider">
             <Swiper
                 onSwiper={(swiper) => (photoRef.current = swiper)}
                 onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
@@ -49,6 +49,8 @@ const Slider = () => {
                 ))}
 
                 <div
+                    touchStartPreventDefault={false}
+                    touchMoveStopPropagation={false}
                     className="swiper-button-prev"
                     onMouseEnter={() => setHoveredButton("prev")}
                     onMouseLeave={() => setHoveredButton(null)}

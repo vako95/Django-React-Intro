@@ -1,0 +1,47 @@
+.quantity {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgba(170, 132, 83);
+}
+
+.quantity__minus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border-radius: 50%;
+    border-color: rgba(170, 132, 83);
+    color: inherit;
+}
+
+.quantity__icon {
+    display: flex;
+    font-size: 16px;
+}
+
+.quantity__input {
+    width: 64px;
+    font-size: 18px;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+    border: none;
+    color: inherit;
+}
+
+.quantity__plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border-radius: 50%;
+    border-color: rgba(170, 132, 83);
+    color: inherit;
+}

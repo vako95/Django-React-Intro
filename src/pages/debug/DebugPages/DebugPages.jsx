@@ -11,6 +11,7 @@ import Rooms from "../../../components/module/Rooms/Rooms";
 import Slider from "../../../components/ui/GallerySlider/GallerySlider";
 import RoomDetails from "../../../components/module/RoomDetails/RoomDetails";
 import SliderCreative from "../../../components/ui/GallerySlider/GallerySlider";
+import Quantity from "../../../components/ui/Quantity/Quantity";
 
 const items = [
     { id: 1, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
@@ -26,6 +27,11 @@ const DebugPages = () => {
 
     return (
         <div className="debug-pages">
+            <Quantity
+                initial={3}
+                variant="midnightVelvet"
+
+            />
             {/* <Calendar /> */}
             {/* <Input
                     icon={<IoMailOutline />}

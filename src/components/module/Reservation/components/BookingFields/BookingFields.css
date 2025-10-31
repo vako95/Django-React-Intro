@@ -1,4 +1,160 @@
-.booking {
+.reservation__booking-fields {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    padding: 32px 32px;
+}
+
+
+
+.reservation__booking-fields-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+    color: rgba(102, 102, 102, 1);
+}
+
+.reservation__booking-fields-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.reservation__booking-fields-item {
+    min-width: 200px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: inherit;
+    padding: 0px 32px;
+}
+
+.reservation__booking-fields-item:first-of-type {
+    padding-left: 0px;
+}
+
+.reservation__booking-fields-item:not(:last-of-type) {
+    border-right: 1px solid rgba(167, 155, 155, 0.255);
+}
+
+.reservation__booking-fields-item-wrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.reservation__booking-fields-item-wrapper-icon {
+    display: flex;
+    font-size: inherit;
+    color: rgba(170, 132, 83, 1);
+}
+
+.reservation__booking-fields-item-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.reservation__booking-fields-item-title {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 400;
+    color: inherit;
+    margin-bottom: 8px;
+}
+
+.reservation__booking-fields-item-value {
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    pointer-events: none;
+}
+
+.reservation__booking-fields-calendar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.reservation__booking-fields-actions {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    background-color: red;
+}
+
+
+
+.booking__btn {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .booking {
+    position: relative;
     width: 100%;
     height: auto;
     display: flex;
@@ -9,8 +165,90 @@
     padding: 16px 24px;
 }
 
-.zz {
+.booking__picker {
     width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking__content {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 36px;
+
+}
+
+.booking__entry {
+    min-width: 250px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: red;
+}
+
+
+
+.booking__entry-wrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 12px;
+}
+
+.booking__entry-icon {
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(170, 132, 83);
+}
+
+.booking__entry-heading {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.booking__entry-title {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(102, 102, 102);
+    margin-bottom: 8px;
+}
+
+.booking__entry-booking {
+    font-family: "Barlow", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(102, 102, 102);
+    margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+.zz {
+    width: auto;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -27,96 +265,7 @@
 
 }
 
-.booking-picker {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.booking-wrapper {
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 36px;
-
-}
-
-.booking-entry {
-    min-width: 250px;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 4px;
-    /* border-right: 1px solid rgb(167, 155, 155); */
-    /* margin-right: 32px; */
-}
-
-
-
-.booking-entry-wrapper {
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-right: 12px;
-}
-
-.booking-entry-icon {
-    font-size: 24px;
-    font-weight: 400;
-    color: rgba(170, 132, 83);
-}
-
-.booking-entry-heading {
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.booking-entry-title {
-    font-family: "Barlow", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: rgb(102, 102, 102);
-    margin-bottom: 8px;
-}
-
-.booking-entry-booking {
-    font-family: "Barlow", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: rgb(102, 102, 102);
-    margin-bottom: 8px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.booking-leave {
+.booking__leave {
     min-width: 250px;
     width: auto;
     height: auto;
@@ -125,14 +274,13 @@
     justify-content: flex-start;
     align-items: center;
     padding: 2px;
-    /* border-right: 1px solid rgb(167, 155, 155); */
 }
 
-.booking-leave .booking-entry {
+.booking__leave .booking__entry {
     border-right: 1px solid rgb(167, 155, 155);
 }
 
-.booking-leave-wrapper {
+.booking__guests-container {
     width: auto;
     height: auto;
     display: flex;
@@ -142,13 +290,13 @@
     margin-right: 12px;
 }
 
-.booking-leave-icon {
+.booking__leave-icon {
     font-size: 24px;
     font-weight: 400;
     color: #aa8453;
 }
 
-.booking-leave-heading {
+.booking__leave-heading {
     width: auto;
     height: auto;
     display: flex;
@@ -157,7 +305,7 @@
     align-items: flex-start;
 }
 
-.booking-leave-title {
+.booking__leave-title {
     font-family: "Barlow", sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -165,7 +313,7 @@
     margin-bottom: 8px;
 }
 
-.booking-leave-booking {
+.booking__leave-booking {
     font-family: "Barlow", sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -174,7 +322,7 @@
 }
 
 
-.booking-calendar {
+.booking__calendar {
     width: 100%;
     height: auto;
     display: flex;
@@ -183,7 +331,7 @@
     align-items: center;
 }
 
-.booking-guests-container {
+.booking__guests-container {
     width: auto;
     height: auto;
     display: flex;
@@ -194,7 +342,7 @@
 
 }
 
-.booking-guests {
+.booking__guests {
     width: auto;
     height: auto;
     min-width: 250px;
@@ -204,11 +352,9 @@
     align-items: center;
     padding: 2px;
     scrollbar-gutter: stable;
-
-
 }
 
-.booking-guests-wrapper {
+.booking__guests-wrapper {
     width: auto;
     height: auto;
     display: flex;
@@ -218,13 +364,13 @@
     margin-right: 12px;
 }
 
-.booking-guests-icon {
+.booking__guests-icon {
     font-size: 24px;
     font-weight: 400;
     color: rgba(170, 132, 83);
 }
 
-.booking-guests-heading {
+.booking__guests-heading {
     width: auto;
     height: auto;
     display: flex;
@@ -233,7 +379,7 @@
     align-items: flex-start;
 }
 
-.booking-guests-content {
+.booking__guests-content {
     width: auto;
     height: auto;
     display: flex;
@@ -242,7 +388,7 @@
     align-items: flex-start;
 }
 
-.booking-guests-title {
+.booking__guests-title {
     font-family: "Barlow", sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -250,15 +396,14 @@
     margin-bottom: 8px;
 }
 
-.booking-guests-summary {
-    position: relative;
+.booking__guests-summary {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
 
-.booking-guests-option {
+.booking__guests-option {
     width: auto;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -271,14 +416,14 @@
     margin-right: 4px;
 }
 
-.booking-guests-option:not(:last-of-type):after {
+.booking__guests-option:not(:last-of-type):after {
     content: ",";
     position: absolute;
     top: 0;
     margin-right: 12px;
 }
 
-.booking-btn {
+.booking__btn {
     width: auto;
     height: auto;
     display: flex;
@@ -293,4 +438,4 @@
 
 .booking__form-button {
     width: auto;
-}
+} */

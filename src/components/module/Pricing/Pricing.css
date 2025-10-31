@@ -36,7 +36,6 @@
 
 
 .pricing__item-content {
-
     height: 100%;
     position: absolute;
     left: -18px;
@@ -45,7 +44,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: rgba(0, 0, 0);
     padding: 36px;
     z-index: 9999;
     max-height: 440px;
