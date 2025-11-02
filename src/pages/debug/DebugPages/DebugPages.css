@@ -1,4 +1,11 @@
-.debug-pages {
+/* .debug-pages {
     padding: 40px;
+    background-color: silver;
+} */
+.debug-pages {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
     background-color: silver;
 }

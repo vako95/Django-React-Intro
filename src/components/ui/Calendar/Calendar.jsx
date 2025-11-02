@@ -49,8 +49,10 @@ const Calendar = ({ range, setRange }) => {
                     endMonth={dayjs().add(2, "year").toDate()}
                     defaultMonth={new Date()}
                     today={new Date()}
+                    // footer={footer}
+
                     disabled={{ before: new Date() }}
-                    footer={footer}
+
                     components={{
                         MonthsDropdown: CustomMonthsDropdown,
                         YearsDropdown: CustomYearsDropdown,

@@ -25,6 +25,7 @@ const Slider = () => {
     return (
         <div className="slider">
             <Swiper
+                simulateTouch={false}
                 onSwiper={(swiper) => (photoRef.current = swiper)}
                 onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
                 parallax={true}

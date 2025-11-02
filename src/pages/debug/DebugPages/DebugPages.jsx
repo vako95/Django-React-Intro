@@ -12,6 +12,7 @@ import Slider from "../../../components/ui/GallerySlider/GallerySlider";
 import RoomDetails from "../../../components/module/RoomDetails/RoomDetails";
 import SliderCreative from "../../../components/ui/GallerySlider/GallerySlider";
 import Quantity from "../../../components/ui/Quantity/Quantity";
+import CartModal from "../../../components/module/CartModal/CartModal";
 
 const items = [
     { id: 1, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
@@ -27,11 +28,11 @@ const DebugPages = () => {
 
     return (
         <div className="debug-pages">
-            <Quantity
+            {/* <Quantity
                 initial={3}
                 variant="midnightVelvet"
 
-            />
+            /> */}
             {/* <Calendar /> */}
             {/* <Input
                     icon={<IoMailOutline />}
@@ -73,7 +74,7 @@ const DebugPages = () => {
                     items={items}
                 /> */}
 
-
+            <CartModal />
 
         </div>
     )

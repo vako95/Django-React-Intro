@@ -10,30 +10,28 @@ import Quantity from "../../../../ui/Quantity/Quantity";
 const BookingFields = () => {
     const [range, setRange] = useState({ from: undefined, to: undefined });
     const [isOpenCalendar, setIsOpenCalendar] = useState(false);
-    // const [isBookingOpen, setIsBookingOpen] = useState(false);
-    // const [roomCount, setRoomCount] = useState(0);
-    // const [adultCount, setAdultCount] = useState(0);
-    // const [childCount, setChildCount] = useState(0);
+    const [isBookingOpen, setIsBookingOpen] = useState(false);
+    const [roomCount, setRoomCount] = useState(1);
+    const [adultCount, setAdultCount] = useState(1);
+    const [childCount, setChildCount] = useState(0);
 
-
-    // useEffect(() => {
-    //     const swiperEl = document.querySelector('.swiper');
-    //     if (!swiperEl) return;
-
-    //     const handleSwiperClick = () => setIsOpenCalendar(false);
-    //     swiperEl.addEventListener('pointerdown', handleSwiperClick);
-
-    //     return () => swiperEl.removeEventListener('pointerdown', handleSwiperClick);
-    // }, []);
     const modalRef = useRef(null);
-
-    useClickAway(
+    useClickOutside(
         modalRef,
         () => setIsOpenCalendar(false),
         ['pointerdown']
     );
 
-    const toggleCalendar = () => setIsOpenCalendar((prev) => !prev);
+    const toggleCalendar = (e) => {
+        setIsOpenCalendar((prev) => !prev);
+        setIsBookingOpen(false)
+
+    };
+    const toggleBooking = (e) => {
+        setIsBookingOpen((prev) => !prev);
+        setIsOpenCalendar(false)
+    };
+
     const handleSelectRange = (newValue) => {
         setRange(newValue);
         if (newValue.from && newValue.to !== newValue.from && newValue.to) {
@@ -44,84 +42,154 @@ const BookingFields = () => {
 
     return (
         <div className="reservation__booking-fields">
-            <ul className="reservation__booking-fields-list"
-
-
-            >
-                <div className="reservation__booking-fields-content" onClick={toggleCalendar}>
-                    <li className="reservation__booking-fields-item">
-                        <div className="reservation__booking-fields-item-wrapper">
-                            <span className="reservation__booking-fields-item-wrapper-icon">
-                                <BsCalendar4Event />
-                            </span>
-                        </div>
-                        <div className="reservation__booking-fields-item-content">
-                            <h1 className="reservation__booking-fields-item-title">
-                                Check In
-                            </h1>
-                            <input
-                                value="11-11-11"
-                                className="reservation__booking-fields-item-value"
-                                type="text"
-                                readOnly
-                                disabled
-                            />
-                        </div>
-                    </li>
-                    <li className="reservation__booking-fields-item">
-                        <div className="reservation__booking-fields-item-wrapper">
-                            <span className="reservation__booking-fields-item-wrapper-icon">
-                                <BsCalendar4Event />
-                            </span>
-                        </div>
-                        <div className="reservation__booking-fields-item-content">
-                            <h1 className="reservation__booking-fields-item-title">
-                                Check Out
-                            </h1>
-                            <input
-                                value="11-11-11"
-                                className="reservation__booking-fields-item-value"
-                                type="text"
-                                readOnly
-                                disabled
-                            />
-                        </div>
-                    </li>
+            <ul className="reservation__booking-fields-list" ref={modalRef}>
+                <li className="reservation__booking-fields-item" onClick={toggleCalendar}>
+                    <div className="reservation__booking-fields-item-wrapper">
+                        <span className="reservation__booking-fields-item-wrapper-icon">
+                            <BsCalendar4Event />
+                        </span>
+                    </div>
+                    <div className="reservation__booking-fields-item-content">
+                        <h1 className="reservation__booking-fields-item-title">
+                            Check In
+                        </h1>
+                        <span className="reservation__booking-fields-item-count">
+                            11-11-11
+                        </span>
+                        <input
+                            value="11-11-11"
+                            className="reservation__booking-fields-item-value"
+                            type="text"
+                            readOnly
+                            disabled
+                        />
+                    </div>
                     {isOpenCalendar && (
-
-                        <div className="reservation__booking-fields-calendar" ref={modalRef}>
-
+                        <div className="reservation__booking-fields-calendar">
                             <Calendar
                                 range={range}
                                 setRange={handleSelectRange}
                             />
                         </div>
-
                     )}
 
-                </div>
-                <div className="reservation__booking-fields-content">
-                    <li className="reservation__booking-fields-item">
-                        <div className="reservation__booking-fields-item-wrapper">
-                            <span className="reservation__booking-fields-item-wrapper-icon">
-                                <GoPeople />
-                            </span>
-                        </div>
-                        <div className="reservation__booking-fields-item-content">
-                            <h1 className="reservation__booking-fields-item-title">
-                                Guests
-                            </h1>
-                            <span className="reservation__booking-fields-item-value">
-                                12-12-12
-                            </span>
-                        </div>
-                    </li>
-
-                    <div className="reservation__booking-fields-booking">
-                        <Quantity />
+                </li>
+                <li className="reservation__booking-fields-item" onClick={toggleCalendar}>
+                    <div className="reservation__booking-fields-item-wrapper">
+                        <span className="reservation__booking-fields-item-wrapper-icon">
+                            <BsCalendar4Event />
+                        </span>
                     </div>
+                    <div className="reservation__booking-fields-item-content">
+                        <h1 className="reservation__booking-fields-item-title">
+                            Check In
+                        </h1>
+                        <span className="reservation__booking-fields-item-count">
+                            11-11-11
+                        </span>
+                        <input
+                            value="11-11-11"
+                            className="reservation__booking-fields-item-value"
+                            type="text"
+                            readOnly
+                            disabled
+                        />
+                    </div>
+                </li>
 
-                </div>
+
+
+                <li className="reservation__booking-fields-item" onClick={toggleBooking}>
+                    <div className="reservation__booking-fields-item-wrapper">
+                        <span className="reservation__booking-fields-item-wrapper-icon">
+                            <BsCalendar4Event />
+                        </span>
+                    </div>
+                    <div className="reservation__booking-fields-item-content">
+                        <h1 className="reservation__booking-fields-item-title">
+                            Guests
+                        </h1>
+                        <div className="reservation__booking-fields-item-control">
+                            <span className="reservation__booking-fields-item-control-title">
+                                <span className="reservation__booking-fields-item-control-value">
+                                    {roomCount}
+                                </span>
+                                Room
+                            </span>
+                            <span className="reservation__booking-fields-item-control-title">
+                                <span className="reservation__booking-fields-item-control-value">
+                                    {adultCount}
+                                </span>
+                                Adult
+                            </span>
+                            <span className="reservation__booking-fields-item-control-title">
+                                <span className="reservation__booking-fields-item-control-value">
+                                    {childCount}
+                                </span>
+                                Adult
+                            </span>
+
+                            <input
+                                className="reservation__booking-fields-item-value"
+                                value={roomCount}
+                                type="hidden"
+                                readOnly
+                                disabled
+                            />
+                            <input
+                                className="reservation__booking-fields-item-value"
+                                value={`${adultCount} Adult`}
+                                type="hidden"
+                                readOnly
+                                disabled
+                            />
+                            <input
+                                className="reservation__booking-fields-item-value"
+                                value={`${childCount} Child`}
+                                type="hidden"
+                                readOnly
+                                disabled
+                            />
+                        </div>
+
+                    </div>
+                    {isBookingOpen && (
+                        <div className="reservation__booking-fields-quantity">
+                            <div className="reservation__booking-fields-quantity-item">
+                                <span className="reservation__booking-fields-quantity-label">Room</span>
+                                <Quantity
+                                    min={1}
+                                    max={10}
+                                    initial={roomCount}
+                                    onChange={(e) => setRoomCount(e)}
+                                />
+                            </div>
+                            <div className="reservation__booking-fields-quantity-item">
+                                <span className="reservation__booking-fields-quantity-label">
+                                    Adult
+                                </span>
+                                <Quantity
+                                    min={1}
+                                    max={10}
+                                    initial={adultCount}
+                                    onChange={(e) => setAdultCount(e)}
+                                />
+                            </div>
+                            <div className="reservation__booking-fields-quantity-item">
+                                <span className="reservation__booking-fields-quantity-label">
+                                    Child
+                                </span>
+                                <Quantity
+                                    min={0}
+                                    max={10}
+                                    initial={childCount}
+                                    onChange={(e) => setChildCount(e)}
+                                />
+                            </div>
+                        </div>
+                    )}
+
+                </li>
             </ul>
             <div className="reservation__booking-fields-actions">
                 <HoverButton

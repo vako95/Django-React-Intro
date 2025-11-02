@@ -8,11 +8,11 @@
 }
 
 .calendar__content {
-    width: auto;
+    width: max-content;
     background-color: rgba(0, 0, 0, 0.68);
     backdrop-filter: blur(2px);
     color: rgba(255, 255, 255);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    /* border: 1px solid rgba(255, 255, 255, 0.25); */
 }
 
 .calender_rdp--open .rdp-dropdown {
@@ -72,6 +72,7 @@
     --rdp-accent-background-color: rgba(0, 0, 0, 0.68);
     --rdp-range_middle-color: rgba(255, 255, 255) !important;
     --rdp-selected-border: 1px solid var(--rdp-accent-color);
+    border: 1px solid rgba(204, 159, 100, 1);
 
 }
 
@@ -82,13 +83,19 @@
 
 
 .rdp-weekdays {
-    color: rgb(204, 159, 100);
+    color: rgba(204, 159, 100);
 }
 
 .rdp-months {
     position: relative;
     width: auto;
     display: none;
+    gap: 0px !important;
+    padding: 0px 4px;
+}
+
+.rdp-month:not(:last-of-type) {
+    border-right: 1px solid rgba(204, 159, 100);
 }
 
 .rdp-day_button {
@@ -108,10 +115,10 @@
 }
 
 .calendar__footer {
-    margin-top: 36px;
     color: inherit;
     /* background-color: rgba(170, 132, 83, 0.258); */
     padding: 16px;
+    border-top: 1px solid rgba(204, 159, 100, 1);
 }
 
 .calendar__footer-date {
