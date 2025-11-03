@@ -24,39 +24,44 @@ const Quantity = ({ onChange, initial = 0, max = 10, min = 1, className, variant
     };
     const classes = clsx(
         "quantity",
-        variant && `quantity-variant--${variant}`,
+        variant && `quantity--${variant}`,
         className
     )
 
     return (
         <div className={classes} onClick={(e) => e.stopPropagation()}>
-            <button
-                className="quantity__minus"
-                type="button"
-                onClick={handleOnDecrease}
-                disabled={count <= min}>
-                <span className="quantity__icon">
-                    <AiOutlineMinusCircle />
+            <div className="quantity__content">
+                <button
+                    className="quantity__minus"
+                    type="button"
+                    onClick={handleOnDecrease}
+                    disabled={count <= min}>
+                    <span className="quantity__icon">
+                        <AiOutlineMinusCircle />
+                    </span>
+                </button>
+                <span className="quantity__value">
+                    {count}
                 </span>
-            </button>
-
-            <input
-                className="quantity__input"
-                value={count}
-                type="text"
-                disabled
-            />
-            <button
-                className="quantity__plus"
-                type="button"
-                onClick={handleOnIncrease}
-                disabled={count >= max}
-            >
-                <span className="quantity__icon">
-                    <HiOutlinePlusCircle />
-                </span>
-            </button>
+                <input
+                    className="quantity__input"
+                    value={count}
+                    type="text"
+                    disabled
+                />
+                <button
+                    className="quantity__plus"
+                    type="button"
+                    onClick={handleOnIncrease}
+                    disabled={count >= max}
+                >
+                    <span className="quantity__icon">
+                        <HiOutlinePlusCircle />
+                    </span>
+                </button>
+            </div>
         </div>
+
     )
 }
 

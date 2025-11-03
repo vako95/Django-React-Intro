@@ -156,7 +156,11 @@ const BookingFields = () => {
                     {isBookingOpen && (
                         <div className="reservation__booking-fields-quantity">
                             <div className="reservation__booking-fields-quantity-item">
-                                <span className="reservation__booking-fields-quantity-label">Room</span>
+                                <div className="reservation__booking-fields-quantity-inner">
+                                    <span className="reservation__booking-fields-quantity-label">
+                                        Room
+                                    </span>
+                                </div>
                                 <Quantity
                                     min={1}
                                     max={10}
@@ -165,9 +169,12 @@ const BookingFields = () => {
                                 />
                             </div>
                             <div className="reservation__booking-fields-quantity-item">
-                                <span className="reservation__booking-fields-quantity-label">
-                                    Adult
-                                </span>
+                                <div className="reservation__booking-fields-quantity-inner">
+                                    <span className="reservation__booking-fields-quantity-label">
+                                        Adult
+                                    </span>
+                                </div>
+
                                 <Quantity
                                     min={1}
                                     max={10}
@@ -176,9 +183,11 @@ const BookingFields = () => {
                                 />
                             </div>
                             <div className="reservation__booking-fields-quantity-item">
-                                <span className="reservation__booking-fields-quantity-label">
-                                    Child
-                                </span>
+                                <div className="reservation__booking-fields-quantity-inner">
+                                    <span className="reservation__booking-fields-quantity-label">
+                                        child
+                                    </span>
+                                </div>
                                 <Quantity
                                     min={0}
                                     max={10}

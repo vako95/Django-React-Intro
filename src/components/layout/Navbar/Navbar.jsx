@@ -5,6 +5,9 @@ import Logo from "./components/Logo/Logo";
 import Menu from "./components/Menu/Menu";
 import React from "react";
 import "./Navbar.css";
+import ModalContainer from "../../ui/ModalContainer/ModalContainer";
+import CartModal from "../../module/CartModal/CartModal";
+import Cart from "./components/Cart/Cart";
 
 
 const Navbar = ({ className, bgColor, cart = false }) => {
@@ -20,11 +23,24 @@ const Navbar = ({ className, bgColor, cart = false }) => {
                     <div className="navbar__nav">
                         <Logo />
                         <Menu />
+
                     </div>
-                    <div className="navbar-controller">
+                    <div className="header__controls">
+                        <HoverLink className="header__controls-link">Book Now</HoverLink>
+                        <Cart />
+                    </div>
+
+
+
+                    {/* <div className="navbar-controller">
                         <HoverLink className={`navbar-controller__link ${cart ? "navbar-controller__link--spaced" : ""}`}>
                             {cart ? 'Book a Consultation' : 'Book Now'}
                         </HoverLink>
+                         {cart && (
+                            <ModalContainer>
+                                <CartModal />
+                            </ModalContainer>
+                         )}
                         {cart && (
                             <div className="navbar__cart">
                                 <div className="navbar__cart-holder">
@@ -118,7 +134,7 @@ const Navbar = ({ className, bgColor, cart = false }) => {
                         )
                         }
 
-                    </div>
+                    </div> */}
                 </div>
             </Container>
         </div>

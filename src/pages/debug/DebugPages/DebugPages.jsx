@@ -14,6 +14,10 @@ import SliderCreative from "../../../components/ui/GallerySlider/GallerySlider";
 import Quantity from "../../../components/ui/Quantity/Quantity";
 import CartModal from "../../../components/module/CartModal/CartModal";
 
+import { useScrollBar } from "../../../hooks/useScrollBar";
+import ScrollBar from "../../../components/ui/UseScrollBar/ScrollBar";
+import ModalContainer from "../../../components/ui/ModalContainer/ModalContainer";
+
 const items = [
     { id: 1, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
     { id: 2, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
@@ -25,6 +29,7 @@ const items = [
 
 
 const DebugPages = () => {
+    // const { containerRef, scrollTop, scrollHeight, clientHeight } = useScrollBar();
 
     return (
         <div className="debug-pages">
@@ -74,7 +79,12 @@ const DebugPages = () => {
                     items={items}
                 /> */}
 
-            <CartModal />
+            <div className="xuy">
+                <ModalContainer>
+                    <CartModal />
+                </ModalContainer>
+            </div>
+
 
         </div>
     )

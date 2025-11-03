@@ -11,7 +11,7 @@
     background-repeat: no-repeat;
     overflow-anchor: none;
     overflow: hidden;
-    color: rgba(255, 255, 255);
+    color: rgba(255, 255, 255, 1);
     transition: background-size 250ms linear, background-position 250ms linear;
 }
 

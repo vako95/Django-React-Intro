@@ -11,12 +11,13 @@
 
 
 .navbar__nav {
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    padding: 32px 0px;
 
 }
 
@@ -61,8 +62,20 @@
     margin-right: 26px;
 }
 
+.header__controls {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
 
-
+.header__controls-link {
+    width: auto;
+    display: flex;
+    background-color: red;
+    margin-right: 16px;
+}
 
 
 

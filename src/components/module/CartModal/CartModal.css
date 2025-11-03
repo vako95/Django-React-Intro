@@ -1,12 +1,17 @@
 .cart__modal {
-    width: 800px;
-    height: auto;
+    width: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: blueviolet;
-    padding: 12px;
+    background-color: inherit;
+    padding: 0px 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.021);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
 }
 
 .cart__modal-heading {
@@ -16,41 +21,108 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    background-color: slategray;
+    padding: 8px 0px;
+    margin-bottom: 16px;
 }
 
 .cart__modal-heading-title {
-    font-family: "Barlow", sans-serif;
+    font-family: inherit;
     font-size: 18px;
     font-weight: 600;
-    color: rgba(34, 34, 34, 1);
+    color: rgba(170, 132, 83, 1);
+    background-color: rgba(255, 255, 255, 0.021);
+    backdrop-filter: blur(2px);
+    border-radius: 16px;
+    padding: 16px;
 }
 
 
 
 .cart__modal-list {
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    overflow-y: auto;
+}
+
+.cart__modal-list:not(:last-of-type) {
+    margin-bottom: 8px;
+}
+
+.cart__modal-item {
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+}
+
+.cart__modal-item-tt {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.021);
+    backdrop-filter: blur(2px);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.cart__modal-item-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 16px 16px;
+    gap: 16px;
+}
+
+.cart__modal-item-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px 16px;
+    gap: 32px;
+}
+
+
+
+.cart__modal-item-content {
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: royalblue;
-}
-
-.cart__modal-item {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: royalblue;
 }
 
 .cart__modal-item-media {
-    width: 128px;
-    height: 128px;
+    max-width: 135px;
+    width: auto;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 4px;
+    padding: 2px;
+    margin-right: 16px;
 
 }
 
@@ -59,4 +131,262 @@
     height: 100%;
     object-fit: cover;
     object-position: center center;
+    border-radius: 4px;
 }
+
+.cart__modal-item-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.cart__modal-item-heading-title {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(170, 132, 83, 1);
+    white-space: nowrap;
+}
+
+.cart__modal-item-meta {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cart__modal-item-meta-price {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+}
+
+.cart__modal-item-meta-price-current {
+    font-size: inherit;
+    color: inherit;
+    font-weight: 600;
+}
+
+.cart__modal-item-meta-price-old {
+    font-size: inherit;
+    color: rgba(167, 155, 155, 1);
+    font-weight: 400;
+}
+
+.cart__modal-item-meta-date {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cart__modal-item-meta-date-day {
+    font-family: "Gilda Display";
+    font-size: inherit;
+    font-weight: 600;
+    color: rgba(170, 132, 83, 1);
+}
+
+.cart__modal-item-meta-date-day::before {
+    content: "/";
+    display: inline-flex;
+}
+
+.cart__modal-item-control {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+
+}
+
+.cart__modal-item-control-panel {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 4px;
+}
+
+.cart__modal-item-control-inner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cart__modal-item-control-inner-title {
+    font-family: "Gilda Display";
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    margin-right: 16px;
+}
+
+.cart__modal-actions {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cart__modal-action {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cart__modal-action-icon {
+    font-size: 18px;
+    transition: color 250ms linear;
+}
+
+.cart__modal-action:hover .cart__modal-action-icon {
+    color: rgba(170, 132, 83, 1);
+}
+
+.cart__modal-control {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 32px 0px;
+}
+
+.cart__modal-control-action {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* 
+.cart__modal-action {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+}
+
+.cart__modal-action-icon {
+    background-color: transparent;
+    font-size: 18px;
+    color: rgba(170, 132, 83, 1);
+} */
+
+/* 
+.cart__modal-item-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: antiquewhite;
+}
+
+.cart__modal-item-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart__modal-item-heading-title {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(170, 132, 83, 1);
+}
+
+.cart__modal-item-heading-inner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+
+.cart__modal-item-heading-inner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cart__modal-item-heading-meta {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cart__modal-item-heading-meta-price {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+}
+
+.cart__modal-item-heading-meta-price-current {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+}
+
+.cart__modal-item-heading-meta-price-old {
+    font-size: 16px;
+    color: rgba(167, 155, 155, 1);
+    font-weight: 400;
+}
+
+.cart__modal-item-heading-meta-date {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cart__modal-item-heading-meta-date-day {
+    font-size: 16px;
+    color: rgba(170, 132, 83, 1);
+} */

@@ -1,23 +1,42 @@
 import "./ModalContainer.css";
 import { createPortal } from "react-dom";
-import { useEffect } from "react";
+import { useMemo, memo } from "react";
 
-const ModalContainer = ({ children }) => {
+import { motion, AnimatePresence } from "framer-motion";
+const ModalContainer = ({
+    containerId = "#root",
+    onClose,
+    isOpen,
+    children,
+    ...props
+}) => {
 
-    useEffect(() => {
+    const portalRoot = useMemo(() => (
+        document.querySelector(containerId)
+    ), [containerId]);
 
-        document.body.style.overflow = "hidden";
-        return () => {
-            document.body.style.overflow = "";
-        };
-    }, []);
+    if (!portalRoot) return null;
+
 
     return createPortal(
-        <div className="modal">
-            {children}
-        </div>,
-        document.body
+        <AnimatePresence>
+            {isOpen && (
+                <motion.section
+                    className="motion__container"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    onClick={onClose}
+                    {...props}
+
+                >
+                    {children}
+                </motion.section>
+            )}
+        </AnimatePresence>,
+        portalRoot
     )
 }
 
-export default ModalContainer;
+export default memo(ModalContainer);

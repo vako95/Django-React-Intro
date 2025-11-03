@@ -92,7 +92,7 @@
     border: 0.5px solid rgba(255, 255, 255, 0.242);
     border-top: none;
     background-color: black;
-    color: rgba(255, 255, 255);
+    color: rgba(255, 255, 255, 1);
     outline: none;
     appearance: none;
     gap: 4px;

@@ -198,6 +198,14 @@
     padding: 16px 32px;
 }
 
+.reservation__booking-fields-quantity-inner {
+    width: 100%;
+    display: flex;
+}
+
+.reservation__booking-fields-quantity-label {
+    min-width: 100px;
+}
 
 .reservation__booking-fields-actions {
     width: auto;

@@ -20,14 +20,18 @@ const MenuItem = ({ item }) => {
                         const hasDropdown = Array.isArray(dropdownItem.dropdown) && dropdownItem.dropdown.length > 0;
                         return (
                             <li key={dropdownItem.id} className="menu__sublist-item">
-                                <NavLink to={dropdownItem.link} className="menu__sublist-link">
-                                    <span className="menu__sublist-text">
-                                        {dropdownItem.name}
-                                    </span>
-                                    {hasDropdown && (
-                                        <i className="ri-arrow-right-s-fill"></i>
-                                    )}
-                                </NavLink>
+                                <div className="tut">
+
+
+                                    <NavLink to={dropdownItem.link} className="menu__sublist-link">
+                                        <span className="menu__sublist-text">
+                                            {dropdownItem.name}
+                                        </span>
+                                        {hasDropdown && (
+                                            <i className="ri-arrow-right-s-fill"></i>
+                                        )}
+                                    </NavLink>
+                                </div>
                                 {hasDropdown && (
                                     <ul className="menu__sublist--submenu">
                                         {dropdownItem.dropdown.map((item) => (
