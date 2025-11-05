@@ -1,8 +1,14 @@
 import { Container, CalendarFrame, Calendar, GallerySlider } from "@components/ui";
 import { IconMirror } from "@components/animation";
 import "./RoomDetails.css";
-
+import { useCalendarControl } from "../../../hooks/useCalendarControl";
 import { ICON_MAP } from "../../../constants/map";
+import { useEffect, useState } from "react";
+import BookingFrame from "../../ui/BookingFrame/BookingFrame";
+import BookingFrameInput from "../../ui/BookingFrameInput/BookingFrameInput";
+// import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import Quantity from "../../ui/Quantity/Quantity";
+import { TfiLineDashed } from "react-icons/tfi";
 
 const items = [
     { id: 1, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
@@ -78,7 +84,27 @@ const featuresItem = [
 
 
 const RoomDetails = () => {
+    const [range, setRange] = useState({ from: undefined, to: undefined });
+    const [rooms, setRooms] = useState(1);
+    const [adults, setAdults] = useState(1);
+    const [childs, setChilds] = useState(0);
 
+    const [collapse, setCollapse] = useState("");
+
+    const { ref,
+        isOpen,
+        setIsOpen,
+        handleToggle,
+        handleClose } = useCalendarControl();
+
+    const handleSelectRange = (newRange) => {
+        if (!newRange) return;
+        setRange(newRange);
+    };
+
+    const toggleDropdown = (type) => {
+        setCollapse((prev) => (prev === type ? "" : type))
+    };
     return (
         <Container>
             <section className="room-details">
@@ -197,24 +223,106 @@ const RoomDetails = () => {
 
                     <article className="rooms-details__column rooms-details__columns--right">
                         <div className="rooms-details__booking">
-                            <div className="rooms-details__booking-heading">
-                                <h1 className="rooms-details__booking-heading-title">
-                                    Reserve:
-                                </h1>
+                            <BookingFrame>
+                                <div className="rooms-details__booking-content" onClick={handleToggle}>
 
-                                <span className="rooms-details__booking-subtitle">
-                                    From <span className="rooms-details__booking-subtitle-price">$150</span>/night
-                                </span>
-                            </div>
-                            <div className="rooms-details__booking-content">
-                                <CalendarFrame
-                                    padding={false}
-                                >
-                                    {/* <Calendar
-                                        variant="medium"
-                                    /> */}
-                                </CalendarFrame>
-                            </div>
+                                    <div className="rooms-details__booking-field">
+                                        <BookingFrameInput
+
+                                            title="Check In"
+                                            time={range.from ? range.from.toISOString().slice(0, 10) :
+                                                <span className="rooms-details__booking-icon">
+                                                    <TfiLineDashed />
+                                                </span>
+                                            }
+                                            isOpen={isOpen}
+                                        />
+                                    </div>
+
+                                    <div className="rooms-details__booking-field">
+                                        <BookingFrameInput
+                                            title="Check Out"
+                                            time={range.to ? range.to.toISOString().slice(0, 10) :
+                                                <span className="rooms-details__booking-icon">
+                                                    <TfiLineDashed />
+                                                </span>
+                                            }
+                                            isOpen={isOpen}
+                                        />
+                                    </div>
+                                    {isOpen && (
+                                        <div className="rooms-details__booking-calendar">
+                                            <Calendar range={range} setRange={handleSelectRange} />
+                                        </div>
+                                    )}
+                                </div>
+
+                                <div className="rooms-details__booking-field">
+
+                                    <BookingFrameInput
+                                        onClick={() => toggleDropdown("rooms")}
+                                        title="Rooms"
+
+                                        value={rooms}
+                                    />
+                                    {collapse === "rooms" && (
+                                        <div className="rooms-details__booking-dropdown">
+                                            <Quantity
+                                                title="rooms"
+                                                initial={rooms}
+                                                min={1}
+                                                max={10}
+                                                onChange={setRooms}
+                                            />
+                                        </div>
+
+                                    )}
+                                </div>
+                                <div className="rooms-details__booking-field-group">
+                                    <div className="rooms-details__booking-field">
+                                        <BookingFrameInput
+                                            onClick={() => toggleDropdown("adults")}
+                                            title="Adults"
+                                            value={adults}
+                                        />
+
+                                        {collapse === "adults" && (
+                                            <div className="rooms-details__booking-dropdown">
+                                                <Quantity
+                                                    variant="small"
+                                                    initial={adults}
+                                                    min={1}
+                                                    max={10}
+                                                    onChange={setAdults}
+                                                />
+                                            </div>
+
+                                        )}
+                                    </div>
+                                    <div className="rooms-details__booking-field">
+                                        <BookingFrameInput
+                                            onClick={() => toggleDropdown("childs")}
+                                            title="Childs"
+                                            value={childs}
+                                        />
+
+                                        {collapse === "childs" && (
+                                            <div className="rooms-details__booking-dropdown">
+                                                <Quantity
+                                                    variant="small"
+                                                    initial={childs}
+                                                    min={1}
+                                                    max={10}
+                                                    onChange={setChilds}
+                                                />
+                                            </div>
+
+                                        )}
+                                    </div>
+
+                                </div>
+
+                            </BookingFrame >
                         </div>
 
                     </article>

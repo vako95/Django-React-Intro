@@ -6,6 +6,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     background-color: black;
+
     position: relative;
 }
 
@@ -153,7 +154,7 @@
 .rooms-details__column-room-overview-item-icon {
     display: flex;
     font-size: 24px;
-    color: rgb(170, 132, 83);
+    color: rgba(170, 132, 83, 1);
     margin-right: 8px;
 }
 
@@ -352,8 +353,84 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    border: 1px solid rgba(170, 132, 84);
-    padding: 36px;
+    border: 1px solid rgba(170, 132, 83, 1);
+    /* padding: 36px; */
+
+}
+
+.rooms-details__booking-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.rooms-details__booking-label {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    margin-bottom: 8px;
+}
+
+.rooms-details__booking-field {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px 8px;
+    border: 1px solid rgba(170, 132, 83, 1);
+    margin-bottom: 16px;
+}
+
+/* .rooms-details__booking-field:not(:last-of-type) {
+    margin-bottom: 16px;
+} */
+.rooms-details__booking-calendar {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    right: calc(100% - 4px);
+    z-index: 2;
+}
+
+.rooms-details__booking-dropdown {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 16px;
+    padding: 32px;
+    background-color: wheat;
+    z-index: 1
+}
+
+
+
+.rooms-details__booking-field-group {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+/* .rooms-details__booking-field .rooms-details__booking-field-group {
+    border-right: 1px solid white;
+    color: red;
+} */
+
+.rooms-details__booking-icon {
+    display: flex;
+    margin-right: 16px;
 }
 
 .rooms-details__booking-heading {

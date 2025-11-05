@@ -1,6 +1,6 @@
 import "./Calendar.css";
 import dayjs from "dayjs";
-import { useState } from "react";
+
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 
@@ -34,12 +34,13 @@ const Calendar = ({ range, setRange }) => {
             <div className="calendar__content">
                 <DayPicker
                     onPrevClick={true}
-
                     classNames={{ disabled: "my-disabled_style" }}
                     animate
                     navLayout="around"
                     mode="range"
                     selected={range}
+                    min={1}
+                    max={range.to}
                     onSelect={setRange}
                     numberOfMonths={2}
                     showOutsideDays={false}
@@ -49,10 +50,9 @@ const Calendar = ({ range, setRange }) => {
                     endMonth={dayjs().add(2, "year").toDate()}
                     defaultMonth={new Date()}
                     today={new Date()}
-                    // footer={footer}
+                    footer={footer}
 
                     disabled={{ before: new Date() }}
-
                     components={{
                         MonthsDropdown: CustomMonthsDropdown,
                         YearsDropdown: CustomYearsDropdown,

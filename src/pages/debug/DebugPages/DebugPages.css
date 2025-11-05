@@ -6,10 +6,10 @@
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: flex-end;
-    position: relative;
+    padding: 80px;
 }
 
+/* 
 .xuy {
     width: 100%;
     height: 100dvh;
@@ -33,4 +33,4 @@
 
 .scroll__content::-webkit-scrollbar {
     display: none;
-}
+} */

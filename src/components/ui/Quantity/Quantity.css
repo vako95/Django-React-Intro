@@ -1,5 +1,5 @@
 .quantity {
-    width: 100%;
+    width: auto;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -18,6 +18,20 @@
     gap: 32px;
 }
 
+.quantity__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.quantity__heading-title {
+    font-family: inherit;
+    text-transform: capitalize;
+    font-weight: inherit;
+    font-size: inherit;
+}
 
 
 .quantity__minus {
@@ -58,15 +72,19 @@
     color: inherit;
 }
 
+/* .quantity--small .quantity {
+    width: auto;
+} */
 
 .quantity--small .quantity__content {
     gap: 16px;
 }
 
+/* 
 .quantity--small .quantity__icon {
     font-size: 14px;
 }
 
 .quantity--small .quantity__value {
     font-size: 16px;
-}
+} */

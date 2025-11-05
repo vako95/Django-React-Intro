@@ -17,6 +17,13 @@ import CartModal from "../../../components/module/CartModal/CartModal";
 import { useScrollBar } from "../../../hooks/useScrollBar";
 import ScrollBar from "../../../components/ui/UseScrollBar/ScrollBar";
 import ModalContainer from "../../../components/ui/ModalContainer/ModalContainer";
+import AdvantagesBar from "../../../components/module/AdvantagesBar/AdvantagesBar";
+import Services from "../../../components/module/Services/Services";
+import NewsFeed from "../../../components/module/NewsFeed/NewsFeed";
+import Swap from "../../../components/module/Swap/Swap";
+import Testimonial from "../../../components/module/Testimonial/Testimonial";
+import Reservation from "../../../components/module/Reservation/Reservation";
+
 
 const items = [
     { id: 1, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
@@ -33,6 +40,35 @@ const DebugPages = () => {
 
     return (
         <div className="debug-pages">
+            {/* <AdvantagesBar /> */}
+            {/* <Services /> */}
+            {/* <Swap /> */}
+            {/* <NewsFeed /> */}
+            {/* <Pricing /> */}
+            {/* <Testimonial /> */}
+            {/* <Reservation /> */}
+
+
+
+
+
+            {/* <BookingFrameInput time="11-11-11" /> */}
+            <RoomDetails />
+            {/* <BookingFrame
+                variant="compact">
+                <BookingFrameInput time="11-11-11" />
+            </BookingFrame> */}
+
+
+
+
+
+
+
+
+
+
+
             {/* <Quantity
                 initial={3}
                 variant="midnightVelvet"
@@ -79,11 +115,11 @@ const DebugPages = () => {
                     items={items}
                 /> */}
 
-            <div className="xuy">
+            {/* <div className="">
                 <ModalContainer>
                     <CartModal />
                 </ModalContainer>
-            </div>
+            </div> */}
 
 
         </div>

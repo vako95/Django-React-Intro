@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const ModalContainer = ({
     containerId = "#root",
     onClose,
-    isOpen,
+    isOpen = false,
     children,
     ...props
 }) => {

@@ -140,7 +140,7 @@
 .reservation__booking-fields-item-count {
     display: inline-flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 8ch;
     color: rgba(167, 155, 155, 1);

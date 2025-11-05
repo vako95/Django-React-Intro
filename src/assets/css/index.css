@@ -23,8 +23,13 @@ body {
     font-weight: 400;
     background-color: rgba(20, 18, 18, 1);
     color: rgba(255, 255, 255, 1);
+
     /* scrollbar-gutter: stable; */
     /* overflow: hidden; */
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 #root {

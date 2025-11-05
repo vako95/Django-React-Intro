@@ -8,7 +8,7 @@ const CartModal = () => {
 
     return (
 
-        <div className="cart__modal">
+        <div className="cart__modal" onClick={(e) => e.stopPropagation()}>
             <div className="cart__modal-heading">
                 <h2 className="cart__modal-heading-title">
                     Booking Cart

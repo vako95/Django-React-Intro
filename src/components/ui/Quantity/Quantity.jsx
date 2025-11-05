@@ -4,7 +4,7 @@ import { AiOutlineMinusCircle } from "react-icons/ai";
 import clsx from "clsx";
 import "./Quantity.css";
 
-const Quantity = ({ onChange, initial = 0, max = 10, min = 1, className, variant }) => {
+const Quantity = ({ onChange, initial = 0, max = 10, min = 1, className, variant, title, ...props }) => {
 
     const [count, setCount] = useState(initial);
 
@@ -29,8 +29,16 @@ const Quantity = ({ onChange, initial = 0, max = 10, min = 1, className, variant
     )
 
     return (
-        <div className={classes} onClick={(e) => e.stopPropagation()}>
+        <div className={classes} onClick={(e) => e.stopPropagation()} {...props}>
             <div className="quantity__content">
+                {title && (
+                    <div className="quantity__heading">
+                        <div className="quantity__heading-title">
+                            {title}
+                        </div>
+                    </div>
+                )}
+
                 <button
                     className="quantity__minus"
                     type="button"

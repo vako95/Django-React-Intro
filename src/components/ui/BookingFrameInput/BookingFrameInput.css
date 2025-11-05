@@ -1,0 +1,95 @@
+.frame-input {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frame-input__content {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frame-input__time {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frame-input__field {
+    display: none;
+}
+
+.frame-input__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.frame-input__heading-title {
+    font-size: inherit;
+    font-weight: inherit;
+    color: rgba(171, 171, 171, 1);
+}
+
+.frame-input__date {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 2px;
+}
+
+.frame-input__date-subtitle {
+    font-size: inherit;
+    color: rgba(171, 171, 171, 1);
+    margin-right: 4px;
+}
+
+.frame-input__date-subtitle::after {
+    content: ":";
+}
+
+.frame-input__time-value {
+    font-size: inherit;
+    color: rgba(171, 171, 171, 1);
+}
+
+
+.frame-input__date-value {
+    width: 2ch;
+    font-size: 14px;
+    color: rgba(171, 171, 171, 1);
+}
+
+.frame-input__badge {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.frame-input__badge-icon {
+    display: flex;
+    color: white;
+}
+
+.frame-input__badge-icon--open {
+    color: orange;
+}
