@@ -16,3 +16,4 @@ export { default as MonthField } from "@components/ui/MonthField/MonthField.jsx"
 export { default as StripedOverlay } from "@components/ui/StripedOverlay/StripedOverlay.jsx";
 export { default as GallerySlider } from "@components/ui/GallerySlider/GallerySlider.jsx";
 export { default as Title } from "@components/ui/Title/Title.jsx";
+export { default as BookingFrameInput } from "@components/ui/BookingFrameInput/BookingFrameInput.jsx";

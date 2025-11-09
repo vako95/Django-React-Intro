@@ -3,7 +3,8 @@ import { Container, BackdropContainer } from "@components/ui";
 import AuthNav from "../../components/module/AuthNav/AuthNav";
 import "./AuthLayout.css";
 import bgLogin from "./assets/img/page_bg.jpg"
-import "./AuthLayout.css"
+import "./AuthLayout.css";
+
 const AuthLayout = () => {
     return (
 

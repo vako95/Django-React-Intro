@@ -27,7 +27,7 @@ const SliderCube = ({ children }) => {
                         },
                     }}
                     modules={[EffectCreative, Pagination]}
-                    className="mySwiper"
+                    className="slider-cube__swiper"
                 >
                     {children}
                 </Swiper>

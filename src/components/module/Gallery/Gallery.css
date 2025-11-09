@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    padding: 32px 0px;
 }
 
 .gallery__card {
@@ -15,7 +15,6 @@
     flex-direction: row;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 80px 0px;
 }
 
 .gallery__card-wrapper {
@@ -23,18 +22,6 @@
     max-width: 400px;
     max-height: 262px;
     overflow: hidden;
-}
-
-.lg-react-element {
-    display: contents;
-}
-
-.Warning___zqCFY {
-    display: none;
-}
-
-.Message___Ky3Dl {
-    display: none;
 }
 
 .gallery__card-img {

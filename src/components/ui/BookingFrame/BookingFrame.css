@@ -1,12 +1,12 @@
 .booking-frame {
-    width: 400px;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     /* background-color: silver; */
-    padding: 42px;
+    padding: 54px 42px;
 }
 
 .booking-frame__heading {
@@ -58,6 +58,7 @@
 
 
 .booking-frame__form-field {
+    position: relative;
     width: 100%;
     height: auto;
     display: flex;

@@ -3,10 +3,11 @@ import { useCallback, useRef, useState } from "react";
 
 
 export const useCalendarControl = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState("");
     const ref = useRef(null);
-    const handleToggle = useCallback(() => {
-        setIsOpen((prev) => !prev);
+
+    const toggleDropdown = useCallback((type) => {
+        setIsOpen((prev) => (prev === type ? "" : type));
     }, []);
 
     const handleClose = useCallback(() => {
@@ -19,7 +20,7 @@ export const useCalendarControl = () => {
         ref,
         isOpen,
         setIsOpen,
-        handleToggle,
+        toggleDropdown,
         handleClose,
     }
 }

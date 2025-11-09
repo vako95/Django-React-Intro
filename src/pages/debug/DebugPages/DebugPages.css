@@ -4,9 +4,14 @@
 } */
 .debug-pages {
     width: 100%;
-    height: auto;
+    /* height: auto;
     display: flex;
-    padding: 80px;
+    padding: 80px; */
+}
+
+.suka {
+    width: 100%;
+    overflow: hidden;
 }
 
 /* 

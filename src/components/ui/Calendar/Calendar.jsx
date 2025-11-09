@@ -50,7 +50,7 @@ const Calendar = ({ range, setRange }) => {
                     endMonth={dayjs().add(2, "year").toDate()}
                     defaultMonth={new Date()}
                     today={new Date()}
-                    footer={footer}
+                    // footer={footer}
 
                     disabled={{ before: new Date() }}
                     components={{

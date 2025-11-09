@@ -23,6 +23,9 @@ import NewsFeed from "../../../components/module/NewsFeed/NewsFeed";
 import Swap from "../../../components/module/Swap/Swap";
 import Testimonial from "../../../components/module/Testimonial/Testimonial";
 import Reservation from "../../../components/module/Reservation/Reservation";
+import Gallery from "../../../components/module/Gallery/Gallery.jsx";
+import Test from "../../../components/module/Test/Test.jsx";
+import GallerySlider from "../../../components/ui/GallerySlider/GallerySlider";
 
 
 const items = [
@@ -54,6 +57,10 @@ const DebugPages = () => {
 
             {/* <BookingFrameInput time="11-11-11" /> */}
             <RoomDetails />
+
+            {/* <Gallery /> */}
+            {/* <Test /> */}
+
             {/* <BookingFrame
                 variant="compact">
                 <BookingFrameInput time="11-11-11" />
