@@ -1,0 +1,120 @@
+.booking-order {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking-order-table {
+    width: 90%;
+    height: 2px;
+    background-color: red;
+
+}
+
+.booking-order-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px 42px;
+}
+
+.booking-order-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 36px 0px;
+}
+
+.booking-order-heading-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 28px;
+    color: rgba(170, 132, 83, 1);
+}
+
+.booking-order-heading-price {
+    font-family: inherit;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.booking-order-base {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px dashed red;
+    border-bottom: 1px dashed red;
+    padding: 16px 0px;
+    margin-bottom: 32px;
+}
+
+.booking-order-base-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.booking-order-base-heading-title {
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: inherit;
+    color: rgb(102, 102, 102);
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+.booking-order-base-heading-icon {
+    display: flex;
+    font-family: inherit;
+}
+
+.booking-order-base-price {
+    font-size: 16px;
+    color: rgba(102, 102, 102);
+}
+
+.booking-order-coupon {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.booking-order-total {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking-order-total-title {
+    font-family: inherit;
+    font-size: 18px;
+    color: rgba(102, 102, 102);
+}
+
+.booking-order-total-price {
+    font-family: inherit;
+    font-size: 18px;
+    color: rgba(102, 102, 102);
+}

@@ -37,7 +37,7 @@ const Input = (
 
 
     return (
-        <div className={classes}>
+        <div className={classes} {...props}>
             {label && (
                 <label className="input__label" htmlFor={`input-${id}`}>
                     {label}

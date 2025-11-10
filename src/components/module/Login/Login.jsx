@@ -1,5 +1,4 @@
 import { Formik, Form } from "formik";
-import { isValidDate } from "../../../helpers/forms/date.helper";
 import { HoverButton, HoverLink } from "@components/ui";
 import { MdAlternateEmail } from "react-icons/md";
 import { SiAuthelia } from "react-icons/si";
@@ -26,7 +25,6 @@ const Login = () => {
                 <Form className="login__form" action="">
                     <div className="login__form-content">
                         <div class="login__form-field">
-
                             <Input
                                 icon={<MdAlternateEmail />}
                                 inputProps={{

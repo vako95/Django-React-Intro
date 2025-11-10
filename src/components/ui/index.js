@@ -16,4 +16,8 @@ export { default as MonthField } from "@components/ui/MonthField/MonthField.jsx"
 export { default as StripedOverlay } from "@components/ui/StripedOverlay/StripedOverlay.jsx";
 export { default as GallerySlider } from "@components/ui/GallerySlider/GallerySlider.jsx";
 export { default as Title } from "@components/ui/Title/Title.jsx";
+export { default as Quantity } from "@components/ui/Quantity/Quantity.jsx";
+export { default as HotelCarousel } from "@components/ui/HotelCarousel/HotelCarousel.jsx";
+export { default as BookingFrame } from "@components/ui/BookingFrame/BookingFrame.jsx";
 export { default as BookingFrameInput } from "@components/ui/BookingFrameInput/BookingFrameInput.jsx";
+export { default as BookingOrder } from "@components/ui/BookingOrder/BookingOrder.jsx";

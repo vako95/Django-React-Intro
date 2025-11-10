@@ -11,6 +11,9 @@ export default defineConfig({
             '@src': path.resolve(__dirname, 'src'),
             '@components': path.resolve(__dirname, 'src/components'),
             '@pages': path.resolve(__dirname, 'src/pages'),
+            '@utils': path.resolve(__dirname, 'src/utils'),
+            '@hooks': path.resolve(__dirname, 'src/hooks'),
+            '@constants': path.resolve(__dirname, 'src/constants'),
         },
         extensions: ['.js', '.jsx', '.ts', '.tsx',]
     },

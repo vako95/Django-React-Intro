@@ -6,6 +6,7 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
+
 }
 
 .hotel-carousel-wrapper {
@@ -14,7 +15,9 @@
     position: relative;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 8px;
+    overflow: hidden;
+    /* border-top-left-radius: 12px;
+    border-top-right-radius: 12px; */
 }
 
 .hotel-carousel__wrapper-img {
@@ -47,6 +50,7 @@
     background-color: rgba(0, 0, 0, 0.68);
     color: rgba(255, 255, 255, 1);
     backdrop-filter: blur(2px);
+    cursor: text;
     padding: 8px;
 }
 
@@ -57,7 +61,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
+    /* background-color: rgba(0, 0, 0, 0.68); */
+    border-bottom: 1px dotted rgba(170, 132, 83, 1);
 }
 
 .hotel-carousel__caption-list {
@@ -76,6 +81,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    padding: 16px 0px;
 }
 
 .hotel-carousel__caption-item-link {
@@ -84,16 +90,23 @@
     font-size: inherit;
     font-weight: inherit;
     text-decoration: none;
+    transition: color 150ms linear;
     margin-bottom: 8px;
+
+}
+
+.hotel-carousel__caption-item-link:hover {
+    color: rgba(170, 132, 83, 1);
 }
 
 
-
 .hotel-carousel__caption-item-desc {
+    color: rgba(170, 132, 83, 1);
     max-width: 250px;
     font-family: inherit;
-    font-size: 12px;
-    font-weight: inherit;
+    font-size: 16px;
+    font-weight: 200;
     text-align: start;
     line-height: 1.4;
+    cursor: text;
 }

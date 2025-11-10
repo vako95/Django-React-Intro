@@ -16,7 +16,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 16px;
-    /* gap: 36px; */
+    margin-bottom: 32px;
 }
 
 .rooms-details__column {
@@ -51,7 +51,7 @@
     align-items: flex-start;
 }
 
-.rooms-details__column-room {
+.rooms-details__column-showcase {
     width: 100%;
     height: auto;
     display: flex;
@@ -60,7 +60,7 @@
     align-items: flex-start;
 }
 
-.rooms-details__column-room-heading {
+.rooms-details__column-showcase-heading {
     width: 100%;
     height: auto;
     display: flex;
@@ -70,14 +70,14 @@
     margin-bottom: 16px;
 }
 
-.rooms-details__column-room-heading-title {
+.rooms-details__column-showcase-heading-title {
     font-family: "Gilda Display", sans-serif;
     font-size: 48px;
     font-weight: inherit;
     color: inherit;
 }
 
-.rooms-details__column-room-subtitle {
+.rooms-details__column-showcase-subtitle {
     width: 100%;
     height: auto;
     display: flex;
@@ -87,7 +87,7 @@
     margin-bottom: 16px;
 }
 
-.rooms-details__column-room-subtitle-list {
+.rooms-details__column-showcase-subtitle-list {
     width: 100%;
     height: auto;
     display: flex;
@@ -98,7 +98,7 @@
 
 }
 
-.rooms-details__column-room-subtitle-item {
+.rooms-details__column-showcase-subtitle-item {
     font-family: inherit;
     font-size: 16px;
     font-weight: inherit;
@@ -112,7 +112,7 @@
 }
 
 
-.rooms-details__column-room-overview {
+.rooms-details__column-showcase-overview {
     width: 100%;
     height: auto;
     display: flex;
@@ -122,7 +122,7 @@
     margin-bottom: 48px;
 }
 
-.rooms-details__column-room-overview-list {
+.rooms-details__column-showcase-overview-list {
     width: 100%;
     height: auto;
     display: flex;
@@ -132,7 +132,7 @@
     row-gap: 0px;
 }
 
-.rooms-details__column-room-overview-item {
+.rooms-details__column-showcase-overview-item {
     font-family: inherit;
     color: inherit;
     width: auto;
@@ -145,25 +145,25 @@
     align-items: center;
 }
 
-.rooms-details__column-room-overview-item:nth-child(n + 6) {
+.rooms-details__column-showcase-overview-item:nth-child(n + 6) {
     margin-top: 16px;
 }
 
-.rooms-details__column-room-overview-item-icon {
+.rooms-details__column-showcase-overview-item-icon {
     display: flex;
     font-size: 24px;
     color: rgba(170, 132, 83, 1);
     margin-right: 8px;
 }
 
-.rooms-details__column-room-overview-item-title {
+.rooms-details__column-showcase-overview-item-title {
     font-family: inherit;
     font-size: 14px;
     font-weight: inherit;
     color: inherit;
 }
 
-.rooms-details__column-room-overview-item-count {
+.rooms-details__column-showcase-overview-item-count {
     font-family: inherit;
     color: inherit;
     font-size: inherit;
@@ -171,19 +171,19 @@
     margin-right: 4px;
 }
 
-.rooms-details__column-room-slider {
+.rooms-details__column-showcase-slider {
     width: 100%;
     display: flex;
     overflow: hidden;
     margin-bottom: 48px;
 }
 
-.rooms-details__column-room-slider-swiper {
+.rooms-details__column-showcase-slider-swiper {
     width: 100%;
     height: 100%;
 }
 
-.rooms-details__column-room-slider-frame {
+.rooms-details__column-showcase-slider-frame {
     width: 100%;
     height: 384px;
 
@@ -508,7 +508,7 @@
 
 
 /* Booking Order */
-.rooms-details__booking-order {
+/* .rooms-details__booking-order {
     width: 100%;
     height: auto;
     display: flex;
@@ -617,7 +617,7 @@
     font-family: inherit;
     font-size: 18px;
     color: rgba(102, 102, 102);
-}
+} */
 
 .rooms-details__booking-action {
     width: 100%;
@@ -635,8 +635,28 @@
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    padding: 16px 0px;
+    margin-bottom: 16px;
+}
+
+.room-details__gallery-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 32px 0px;
+}
+
+.room-details__gallery-heading-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 32px;
+    font-weight: inherit;
+    color: rgba(170, 132, 83, 1);
 }
 
 .room-details__gallery-card {
@@ -685,6 +705,8 @@
     justify-content: flex-start;
     align-items: center;
     padding: 16px 0px;
+    border-bottom: 1px dotted rgba(170, 132, 83, 1);
+    border-top: none;
 
 }
 
@@ -699,15 +721,47 @@
     width: 100%;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 36px 0px;
+    padding: 32px 0px;
+}
+
+.room-details__slider-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 32px 0px;
+}
+
+.room-details__slider-heading-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 32px;
+    font-weight: inherit;
+    color: rgba(170, 132, 83, 1);
 }
 
 .room-details__slider-content {
     width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.room-details__slider .swiper {
+    background-color: transparent;
+}
+
+.room-details__slider-container {
+    width: 100%;
     height: 100%;
 }
+
 
 .room-details__slider-slide-wrapper {
     width: 100%;

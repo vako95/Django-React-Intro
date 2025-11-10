@@ -10,17 +10,7 @@ export const useCalendarControl = () => {
         setIsOpen((prev) => (prev === type ? "" : type));
     }, []);
 
-    const handleClose = useCallback(() => {
-        setIsOpen(false);
-    }, []);
+    useClickOutside(ref, () => setIsOpen(""), ["pointerdown"]);
 
-    useClickOutside(ref, handleClose, ["pointerdown"]);
-
-    return {
-        ref,
-        isOpen,
-        setIsOpen,
-        toggleDropdown,
-        handleClose,
-    }
+    return { ref, isOpen, toggleDropdown };
 }

@@ -21,7 +21,7 @@
 
 .rdp-dropdown:focus-visible~.rdp-caption_label {
     outline: none !important;
-    color: rgba(170, 132, 83);
+    color: rgba(170, 132, 83, 1);
     border: none !important;
 }
 
@@ -42,7 +42,7 @@
 
 .rdp-dropdowns option:disabled {
     background-color: rgba(0, 0, 0);
-    color: rgba(170, 132, 83);
+    color: rgba(170, 132, 83, 1);
     outline: none;
 }
 
