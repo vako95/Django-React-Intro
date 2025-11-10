@@ -1,8 +1,5 @@
-
-
-
-
 import "./RoomDetails.css";
+
 import { Container } from "@components/ui";
 import RoomDetailsColumns from "./components/RoomDetailsColumns/RoomDetailsColumns.jsx";
 import RoomDetailsGallery from "./components/RoomDetailsGallery/RoomDetailsGallery.jsx";

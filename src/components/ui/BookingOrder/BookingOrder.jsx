@@ -8,36 +8,34 @@ const BookingOrder = ({ value }) => {
 
     return (
         <div className="booking-order">
-            <div className="booking-order-table"></div>
-            <div className="booking-order-container">
-                <div className="booking-order-heading">
-                    <h2 className="booking-order-heading-title">
+            <div className="booking-order__table"></div>
+            <div className="booking-order__container">
+                <div className="booking-order__heading">
+                    <h2 className="booking-order__heading-title">
                         Total Cost
                     </h2>
-                    <span className="booking-order-heading-price">
+                    <span className="booking-order__heading-price">
                         ${value}
                     </span>
                 </div>
-                <div className="booking-order-base">
-                    <div className="booking-order-base-heading">
-                        <h2 className="booking-order-base-heading-title">
+                <div className="booking-order__base">
+                    <div className="booking-order__base-heading">
+                        <h2 className="booking-order__base-heading-title">
                             Total Base Price
                         </h2>
-                        <span className="booking-order-base-heading-icon">
+                        <span className="booking-order__base-heading-icon">
                             <IoInformationCircleOutline />
                         </span>
                     </div>
-                    <span className="booking-order-base-price">
+                    <span className="booking-order__base-price">
                         ${value}
                     </span>
                 </div>
-
-                <div className="booking-order-coupon">
-                    <label htmlFor="coupon" className="booking-order-coupon-label">
-                        Have  Promo Code ? hərflər
-                    </label>
-                    <div className="booking-order-coupon-input-wrapper">
+                <div className="booking-order__coupon">
+                    <div className="booking-order__coupon-input-wrapper">
                         <Input
+                            label="Coupon"
+                            id="coupon"
                             inputProps={{
                                 name: "promo_code",
                             }}
@@ -47,11 +45,11 @@ const BookingOrder = ({ value }) => {
                         />
                     </div>
                 </div>
-                <div className="booking-order-total">
-                    <div className="booking-order-total-title">
+                <div className="booking-order__total">
+                    <div className="booking-order__total-title">
                         Total Cost
                     </div>
-                    <span className="booking-order-total-price">
+                    <span className="booking-order__total-price">
                         ${value}
                     </span>
                 </div>

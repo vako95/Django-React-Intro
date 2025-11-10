@@ -46,7 +46,6 @@ const RoomDetailsGallery = () => {
                                 className="room-details__gallery-card-preview-title"
                                 data-tooltip-id="my-tooltip"
                                 data-tooltip-content={item.title}
-
                             >
                                 {slicetext(item.title, 24)}
                             </h2>

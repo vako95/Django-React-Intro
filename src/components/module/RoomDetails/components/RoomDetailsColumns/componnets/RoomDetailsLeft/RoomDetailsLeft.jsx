@@ -2,12 +2,81 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "./RoomDetailsLeft.css";
 import { IconMirror } from "@components/animation";
-
+// import { Autoplay } from 'swiper/modules';
 import { ICON_MAP } from "@constants";
+const roomDetailsItem = [
+    {
+        id: 1,
+        count: 3,
+        title: "Guests",
+        icons: ["people"]
+    },
+    {
+        id: 2,
+        count: 2,
+        title: "Bathroom",
+        icons: ["sofa"]
+    },
+    {
+        id: 3,
+        count: 2,
+        title: "Wifi Available",
+        icons: ["wifi"]
+    },
+    {
+        id: 4,
 
+        title: "Air Conditioning",
+        icons: ["conditioner"]
+    },
+    {
+        id: 5,
+        count: null,
+        title: "600 m2",
+        icons: ["bed"]
+    },
+];
 
+const featuresItem = [
+    {
+        id: 1,
+        title: "Parking",
+        icon: ["parking"]
+    },
+    {
+        id: 2,
+        title: "Pool",
+        icon: ["pool"]
+    },
+    {
+        id: 3,
+        title: "Gymnasium",
+        icon: ["gym"]
+    },
+    {
+        id: 4,
+        title: "Security",
+        icon: ["security"]
+    },
+    {
+        id: 5,
+        title: "Swiming",
+        icon: ["swiming"]
+    },
+    {
+        id: 6,
+        title: "Lighting",
+        icon: ["light"]
+    },
+];
 
-const RoomDetailsLeft = ({ details, showcaseItems, features }) => {
+const items = [
+    { id: 1, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
+    { id: 2, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
+    { id: 3, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
+    { id: 4, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
+];
+const RoomDetailsLeft = () => {
 
     return (
         <article className="rooms-details__column rooms-details__columns--left">
@@ -27,7 +96,7 @@ const RoomDetailsLeft = ({ details, showcaseItems, features }) => {
                 </div>
                 <div className="rooms-details__column-showcase-overview">
                     <ul className="rooms-details__column-showcase-overview-list">
-                        {details.map((item) => {
+                        {roomDetailsItem.map((item) => {
                             const Icon = ICON_MAP[item.icons] ?? ICON_MAP["default"];
                             return (
                                 <li key={item.id} className="rooms-details__column-showcase-overview-item">
@@ -56,10 +125,8 @@ const RoomDetailsLeft = ({ details, showcaseItems, features }) => {
                                 translate: ["100%", 0, 0],
                             },
                         }}
-
-                        className="rooms-details__column-showcase-slider-swiper"
-                    >
-                        {showcaseItems.map((item) => (
+                        className="rooms-details__column-showcase-slider-swiper">
+                        {items.map((item) => (
                             <SwiperSlide key={item.id} className="rooms-details__column-showcase-slider-frame" >
                                 <img className="slider-creative__swiper-frame-img"
                                     src={item.src}
@@ -124,7 +191,7 @@ const RoomDetailsLeft = ({ details, showcaseItems, features }) => {
                     </h1>
                 </div>
                 <ul className="rooms-details__column-features-list">
-                    {features.map((item) => {
+                    {featuresItem.map((item) => {
                         const Icon = ICON_MAP[item.icon] ?? ICON_MAP["default"]
                         return (
                             <IconMirror>

@@ -1,33 +1,32 @@
-
+import { useState } from "react";
 import { TfiLineDashed } from "react-icons/tfi";
 
 import "./RoomDetailsRight.css";
 import { HoverButton, BookingFrame, BookingFrameInput, BookingOrder, Calendar, Quantity } from "@components/ui";
-import { useCalendarControl } from "@hooks";
 
-const RoomDetailsRight = ({
-    range,
-    rooms,
-    adults,
-    setAdults,
-    childs,
-    setChilds,
-    handleSelectRange
-}) => {
-    // const [range, setRange] = useState({ from: undefined, to: undefined });
-    // const [rooms, setRooms] = useState(1);
-    // const [adults, setAdults] = useState(1);
-    // const [childs, setChilds] = useState(0);
+import { useCalendarControl } from "@hooks";
+// import { bookingMock } from "../../../../../../../mocks/bookingMock.js";
+
+const RoomDetailsRight = () => {
+    const [range, setRange] = useState({ from: undefined, to: undefined });
+    const [rooms, setRooms] = useState(1);
+    const [adults, setAdults] = useState(1);
+    const [childs, setChilds] = useState(0);
 
     const { ref,
         isOpen,
         toggleDropdown,
     } = useCalendarControl();
 
+    const handleSelectRange = (newRange) => {
+        if (!newRange) return;
+        setRange(newRange);
+    };
+
     return (
         <article className="rooms-details__column rooms-details__columns--right" >
             <div className="rooms-details__booking">
-                <BookingFrame >
+                <BookingFrame>
                     <div className="rooms-details__booking-container" ref={ref}>
                         <div className="rooms-details__booking-content" onClick={() => toggleDropdown("calendar")}>
                             <div className="rooms-details__booking-wrapper">

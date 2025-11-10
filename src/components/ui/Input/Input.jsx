@@ -38,33 +38,39 @@ const Input = (
 
     return (
         <div className={classes} {...props}>
-            {label && (
-                <label className="input__label" htmlFor={`input-${id}`}>
-                    {label}
-                </label>
-            )}
-            <input
-                id={`input-${id}`}
-                placeholder={placeholder}
-                className="input__field"
-                type={isPasswordVisible ? "text" : type}
-                {...inputProps}
+            <div className="input__heading">
+                {label && (
+                    <label className="input__label" htmlFor={`input-${id}`}>
+                        {label}
+                    </label>
+                )}
+            </div>
 
-            />
-            {icon && (
-                <span className={clsx("input__icon", position && `input__icon-postion--${position}`)}>
-                    {icon}
-                </span>
-            )}
-            {showPassword && (
-                <span onClick={handlePasswordToggle} className="input__icon-eyes ">
-                    {isPasswordVisible ? (
-                        <FaEyeLowVision />
-                    ) : (
-                        <FaRegEye />
-                    )}
-                </span>
-            )}
+            <div className="input__content">
+                <input
+                    id={`input-${id}`}
+                    placeholder={placeholder}
+                    className="input__field"
+                    type={isPasswordVisible ? "text" : type}
+                    {...inputProps}
+
+                />
+
+                {icon && (
+                    <span className={clsx("input__icon", position && `input__icon-postion--${position}`)}>
+                        {icon}
+                    </span>
+                )}
+                {showPassword && (
+                    <span onClick={handlePasswordToggle} className="input__icon-eyes ">
+                        {isPasswordVisible ? (
+                            <FaEyeLowVision />
+                        ) : (
+                            <FaRegEye />
+                        )}
+                    </span>
+                )}
+            </div>
         </div>
     )
 }

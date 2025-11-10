@@ -24,7 +24,6 @@ const BookingFrameInput = ({
                 {title && <h4 className="frame-input__title">{title}</h4>}
 
                 <div className="frame-input__info">
-
                     {value && <span className="frame-input__value">{value}</span>}
                     {subtitle && <span className="frame-input__subtitle">{subtitle}</span>}
 

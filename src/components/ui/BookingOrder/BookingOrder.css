@@ -7,14 +7,14 @@
     align-items: center;
 }
 
-.booking-order-table {
+.booking-order__table {
     width: 90%;
     height: 2px;
     background-color: red;
 
 }
 
-.booking-order-container {
+.booking-order__container {
     width: 100%;
     height: auto;
     display: flex;
@@ -24,7 +24,7 @@
     padding: 16px 42px;
 }
 
-.booking-order-heading {
+.booking-order__heading {
     width: 100%;
     height: auto;
     display: flex;
@@ -34,19 +34,19 @@
     padding: 36px 0px;
 }
 
-.booking-order-heading-title {
+.booking-order__heading-title {
     font-family: "Gilda Display", sans-serif;
     font-size: 28px;
     color: rgba(170, 132, 83, 1);
 }
 
-.booking-order-heading-price {
+.booking-order__heading-price {
     font-family: inherit;
     font-size: 24px;
     color: rgba(255, 255, 255, 1);
 }
 
-.booking-order-base {
+.booking-order__base {
     width: 100%;
     height: auto;
     display: flex;
@@ -59,7 +59,7 @@
     margin-bottom: 32px;
 }
 
-.booking-order-base-heading {
+.booking-order__base-heading {
     width: 100%;
     height: auto;
     display: flex;
@@ -68,7 +68,7 @@
     align-items: center;
 }
 
-.booking-order-base-heading-title {
+.booking-order__base-heading-title {
 
     font-family: inherit;
     font-size: 14px;
@@ -78,17 +78,17 @@
     margin-right: 4px;
 }
 
-.booking-order-base-heading-icon {
+.booking-order__base-heading-icon {
     display: flex;
     font-family: inherit;
 }
 
-.booking-order-base-price {
+.booking-order__base-price {
     font-size: 16px;
     color: rgba(102, 102, 102);
 }
 
-.booking-order-coupon {
+.booking-order__coupon {
     width: 100%;
     height: auto;
     display: flex;
@@ -98,7 +98,7 @@
 }
 
 
-.booking-order-total {
+.booking-order__total {
     width: 100%;
     height: auto;
     display: flex;
@@ -107,13 +107,22 @@
     align-items: center;
 }
 
-.booking-order-total-title {
+.booking-order__coupon-input-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.booking-order__total-title {
     font-family: inherit;
     font-size: 18px;
     color: rgba(102, 102, 102);
 }
 
-.booking-order-total-price {
+.booking-order__total-price {
     font-family: inherit;
     font-size: 18px;
     color: rgba(102, 102, 102);
