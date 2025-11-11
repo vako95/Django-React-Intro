@@ -7,9 +7,9 @@ import "./Logo.css"
 const Logo = () => {
 
     return (
-        <figure className="logo">
-            <Link to="/" className="logo__link">
-                <img className="logo__brand" src={LogoBrand} alt="Logo brand" />
+        <figure className="navbar-sticky__logo">
+            <Link to="/" className="navbar-sticky__logo-link">
+                <img className="navbar-sticky__logo-img" src={LogoBrand} alt="Logo brand" />
             </Link>
         </figure>
     )

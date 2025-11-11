@@ -24,20 +24,20 @@ const Cart = () => {
     }, [isOpen]);
 
     return (
-        <div className="cart">
-            <div className="cart__content" onClick={handleToggleCart}>
-                <div className="cart__badge">
-                    <span className="cart__badge-icon">
+        <div className="navbar-sticky__cart">
+            <div className="navbar-sticky__cart-content" onClick={handleToggleCart}>
+                <div className="navbar-sticky__cart-badge">
+                    <span className="navbar-sticky__cart-badge-icon">
                         <CiShoppingCart />
                     </span>
-                    <span className="cart__badge-count">(0)</span>
+                    <span className="navbar-sticky__cart-badge-count">(0)</span>
                 </div>
             </div>
 
 
             <ModalContainer isOpen={isOpen} onClose={handleCloseCart}>
                 <motion.div
-                    className="cart__panel"
+                    className="navbar-sticky__cart-panel"
                     initial={{ x: "100%" }}
                     animate={{ x: 0 }}
                     exit={{ x: "100%" }}

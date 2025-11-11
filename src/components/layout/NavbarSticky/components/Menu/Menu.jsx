@@ -5,7 +5,7 @@ import "./Menu.css";
 
 const Menu = () => {
     return (
-        <ul className="menu">
+        <ul className="navbar-sticky__list">
             {navbarNav.map((item) => (
                 <MenuItem item={item} key={item.id} />
             ))}

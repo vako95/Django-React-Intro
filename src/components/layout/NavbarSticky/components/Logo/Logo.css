@@ -1,14 +1,14 @@
-.logo {
+.navbar-sticky__logo {
     width: 150px;
     height: auto;
     margin-right: 40px;
 }
 
-.logo__link {
+.navbar-sticky__logo-link {
     display: flex;
 }
 
-.logo__brand {
+.navbar-sticky__logo-img {
     width: 100%;
     height: auto;
     object-fit: cover;
