@@ -1,0 +1,169 @@
+.menu__item {
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0px 32px;
+}
+
+.menu__item:not(:last-of-type) {
+    margin-right: 4px;
+}
+
+.menu__link {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+
+}
+
+.menu__link i {
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    color: #aa8453;
+    margin-left: 4px;
+}
+
+.menu__link-title {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    white-space: nowrap;
+}
+
+
+
+
+
+
+.menu__sublist {
+    min-width: 240px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.08) 1px 1px 35px 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    transition: transform 250ms linear, opacity 0.3s ease;
+
+}
+
+.menu__item:hover .menu__sublist {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.menu__sublist-item {
+    width: 100%;
+    position: relative;
+    display: flex;
+    transition: background-color 150ms linear, border-left 300ms linear;
+}
+
+
+
+.menu__sublist-item:not(:last-of-type) {
+    border-bottom: 1px solid rgb(51, 51, 51);
+}
+
+.menu__sublist-item:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.menu__sublist-item:hover .menu__sublist-text {
+    margin-left: 4px;
+}
+
+.menu__sublist-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 0%;
+    background-color: #aa8453;
+    transition: height 150ms linear;
+}
+
+
+
+.menu__sublist-item:hover::before {
+    height: 100%;
+}
+
+.menu__sublist-item i {
+    display: flex;
+    font-size: 24px;
+    font-weight: 500;
+    color: #aa8453;
+    margin-left: 4px;
+
+}
+
+.menu__sublist-link {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.menu__sublist-text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.2px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #555;
+}
+
+.menu__sublist,
+.menu__sublist--submenu {
+    will-change: transform, opacity;
+}
+
+.menu__sublist--submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 240px;
+    opacity: 0;
+    transform-origin: left center;
+    transform: scaleX(0);
+    list-style-type: none;
+    background-color: rgba(255, 255, 255);
+    transition: transform 250ms ease, opacity 250ms ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.menu__sublist-item:hover>.menu__sublist--submenu {
+    flex-direction: column;
+    opacity: 1;
+    transform: scaleX(1);
+    pointer-events: auto;
+    z-index: 100;
+}

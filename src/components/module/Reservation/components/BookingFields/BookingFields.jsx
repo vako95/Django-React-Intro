@@ -124,10 +124,16 @@ const BookingFields = () => {
                         </div>
                     </div>
                     {isBookingOpen && (
-                        <div className="reservation__booking-fields-quantity">
-                            <Quantity min={1} max={10} initial={roomCount} onChange={setRoomCount} />
-                            <Quantity min={1} max={10} initial={adultCount} onChange={setAdultCount} />
-                            <Quantity min={0} max={10} initial={childCount} onChange={setChildCount} />
+                        <div className="reservation__booking-fields-quantity" onClick={(e) => e.stopPropagation()}>
+                            <div className="reservation__booking-fields-quantity-item">
+                                <Quantity title="Room" min={1} max={10} initial={roomCount} onChange={setRoomCount} />
+                            </div>
+                            <div className="reservation__booking-fields-quantity-item">
+                                <Quantity title="Adult" min={1} max={10} initial={adultCount} onChange={setAdultCount} />
+                            </div>
+                            <div className="reservation__booking-fields-quantity-item">
+                                <Quantity title="Child" min={0} max={10} initial={childCount} onChange={setChildCount} />
+                            </div>
                         </div>
                     )}
                 </li>

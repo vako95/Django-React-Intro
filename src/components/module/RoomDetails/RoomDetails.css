@@ -74,7 +74,7 @@
     font-family: "Gilda Display", sans-serif;
     font-size: 48px;
     font-weight: inherit;
-    color: inherit;
+    color: rgba(170, 132, 83, 1);
 }
 
 .rooms-details__column-showcase-subtitle {
@@ -219,7 +219,7 @@
     font-family: inherit;
     font-size: 32px;
     font-weight: inherit;
-    color: inherit;
+    color: rgba(170, 132, 83, 1);
 }
 
 
@@ -302,7 +302,7 @@
     font-family: inherit;
     font-size: 32px;
     font-weight: inherit;
-    color: inherit;
+    color: rgba(170, 132, 83, 1);
 }
 
 .rooms-details__column-features-list {
@@ -445,6 +445,14 @@
     border: 1px solid rgba(170, 132, 83, 1);
     backdrop-filter: blur(2px);
     z-index: 1;
+}
+
+.rooms-details__booking-dropdown-action {
+    width: 100%;
+}
+
+.rooms-details__booking-dropdown-action .quantity__content {
+    justify-content: space-between;
 }
 
 .room__details-form {

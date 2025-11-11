@@ -11,6 +11,7 @@ const Input = (
         label,
         placeholder,
         type,
+        brColor,
         className,
         children,
         inputProps,
@@ -28,9 +29,14 @@ const Input = (
         "input",
         icon && "input--icon",
         showPassword && "input--show-eyes",
+        brColor && "input__field--brGold ",
         isPasswordVisible && "input__icon-eyes--hidden",
         className
     )
+    const inputFieldClasses = clsx(
+        "input__field",
+        brColor === "brGold" && "input__field--brGold" // ✅ добавляем сюда
+    );
 
     const id = useId();
 
@@ -50,7 +56,7 @@ const Input = (
                 <input
                     id={`input-${id}`}
                     placeholder={placeholder}
-                    className="input__field"
+                    className={inputFieldClasses}
                     type={isPasswordVisible ? "text" : type}
                     {...inputProps}
 

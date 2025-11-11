@@ -1,5 +1,6 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 import "./RoomDetailsLeft.css";
 import { IconMirror } from "@components/animation";
 // import { Autoplay } from 'swiper/modules';
@@ -115,6 +116,10 @@ const RoomDetailsLeft = () => {
                 <div className="rooms-details__column-showcase-slider">
                     <Swiper
                         grabCursor={true}
+                        loop={true}
+                        autoplay={{
+                            delay: 2500,
+                        }}
                         effect={"creative"}
                         creativeEffect={{
                             prev: {
@@ -125,6 +130,7 @@ const RoomDetailsLeft = () => {
                                 translate: ["100%", 0, 0],
                             },
                         }}
+                        modules={[Autoplay]}
                         className="rooms-details__column-showcase-slider-swiper">
                         {items.map((item) => (
                             <SwiperSlide key={item.id} className="rooms-details__column-showcase-slider-frame" >
@@ -186,7 +192,7 @@ const RoomDetailsLeft = () => {
             </div>
             <div className="rooms-details__column-features">
                 <div className="rooms-details__column-features-heading">
-                    <h1 className="ooms-details__column-features-heading-title">
+                    <h1 className="rooms-details__column-features-heading-title">
                         Facility of the Room
                     </h1>
                 </div>

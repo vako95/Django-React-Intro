@@ -36,7 +36,7 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    color: rgba(171, 171, 171, 1);
+    color: rgba(255, 255, 255, 1);
     margin-right: 4px;
 }
 
@@ -50,7 +50,7 @@
 
 .frame-input__value {
     font-size: inherit;
-    color: rgba(171, 171, 171, 1);
+    color: rgba(255, 255, 255, 1);
     /* margin-right: 4px; */
 }
 
@@ -66,13 +66,14 @@
 
 .frame-input__badge-icon {
     display: flex;
-    color: white;
+    color: rgba(170, 132, 83, 1);
     transform-origin: center center;
 }
 
 .frame-input__badge-icon--open {
     transform: rotate(180deg);
-    color: rgba(170, 132, 83, 1);
+    color: rgba(255, 255, 255, 1);
+
 }
 
 

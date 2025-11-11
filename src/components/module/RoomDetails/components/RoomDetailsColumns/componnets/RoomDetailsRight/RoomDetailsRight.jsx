@@ -74,6 +74,7 @@ const RoomDetailsRight = () => {
                                 {isOpen === "rooms" && (
                                     <div className="rooms-details__booking-dropdown">
                                         <Quantity
+                                            className="rooms-details__booking-dropdown-action"
                                             title="rooms"
                                             initial={rooms}
                                             min={1}

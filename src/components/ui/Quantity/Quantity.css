@@ -33,6 +33,14 @@
     font-size: inherit;
 }
 
+.quantity__content-control {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
 
 .quantity__minus {
     display: flex;

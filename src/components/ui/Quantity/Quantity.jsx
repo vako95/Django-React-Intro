@@ -33,40 +33,43 @@ const Quantity = ({ onChange, initial = 0, max = 10, min = 1, className, variant
             <div className="quantity__content">
                 {title && (
                     <div className="quantity__heading">
-                        <div className="quantity__heading-title">
+                        <h2 className="quantity__heading-title">
                             {title}
-                        </div>
+                        </h2>
                     </div>
                 )}
+                <div className="quantity__content-control">
 
-                <button
-                    className="quantity__minus"
-                    type="button"
-                    onClick={handleOnDecrease}
-                    disabled={count <= min}>
-                    <span className="quantity__icon">
-                        <AiOutlineMinusCircle />
+
+                    <button
+                        className="quantity__minus"
+                        type="button"
+                        onClick={handleOnDecrease}
+                        disabled={count <= min}>
+                        <span className="quantity__icon">
+                            <AiOutlineMinusCircle />
+                        </span>
+                    </button>
+                    <span className="quantity__value">
+                        {count}
                     </span>
-                </button>
-                <span className="quantity__value">
-                    {count}
-                </span>
-                <input
-                    className="quantity__input"
-                    value={count}
-                    type="text"
-                    disabled
-                />
-                <button
-                    className="quantity__plus"
-                    type="button"
-                    onClick={handleOnIncrease}
-                    disabled={count >= max}
-                >
-                    <span className="quantity__icon">
-                        <HiOutlinePlusCircle />
-                    </span>
-                </button>
+                    <input
+                        className="quantity__input"
+                        value={count}
+                        type="text"
+                        disabled
+                    />
+                    <button
+                        className="quantity__plus"
+                        type="button"
+                        onClick={handleOnIncrease}
+                        disabled={count >= max}
+                    >
+                        <span className="quantity__icon">
+                            <HiOutlinePlusCircle />
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
 

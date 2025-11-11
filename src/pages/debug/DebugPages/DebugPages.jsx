@@ -26,6 +26,7 @@ import Reservation from "../../../components/module/Reservation/Reservation";
 import Gallery from "../../../components/module/Gallery/Gallery.jsx";
 import Test from "../../../components/module/Test/Test.jsx";
 import GallerySlider from "../../../components/ui/GallerySlider/GallerySlider";
+import NavbarSticky from "../../../components/layout/NavbarSticky/NavbarSticky.jsx";
 
 
 const items = [
@@ -56,8 +57,8 @@ const DebugPages = () => {
 
 
             {/* <BookingFrameInput time="11-11-11" /> */}
-            <RoomDetails />
-
+            {/* <RoomDetails /> */}
+            <NavbarSticky />
             {/* <Gallery /> */}
             {/* <Test /> */}
 
