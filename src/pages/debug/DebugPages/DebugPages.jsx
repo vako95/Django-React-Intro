@@ -58,9 +58,9 @@ const DebugPages = () => {
 
             {/* <BookingFrameInput time="11-11-11" /> */}
 
-            {/* <RoomDetails /> */}
+            <RoomDetails />
 
-            <NavbarSticky />
+            {/* <NavbarSticky /> */}
 
             {/* <Gallery /> */}
             {/* <Test /> */}

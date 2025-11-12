@@ -48,7 +48,6 @@ const RoomDetailsSlider = () => {
                             </div>
                         </SwiperSlide>
                     ))}
-
                 </Swiper>
             </div>
         </div>

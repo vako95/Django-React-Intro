@@ -1,13 +1,20 @@
-.navbar-sticky {
+.navbar-sticky__motion {
     width: 100%;
     height: auto;
     position: fixed;
+    z-index: 10000;
+}
+
+.navbar-sticky {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     background-color: black;
-    z-index: 10000;
+    /* background-color: rgba(0, 0, 0, 0.68); */
+    /* backdrop-filter: blur(2px); */
 }
 
 
@@ -38,18 +45,18 @@
 }
 
 
-.navbar__container {
+.navbar-sticky__container {
     width: auto;
     height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    border-bottom: 1px solid rgba(234, 234, 234, 0.19);
+    /* border-bottom: 1px solid rgba(234, 234, 234, 0.19); */
 
 }
 
-.navbar__container-bgColor--black {
+.navbar-sticky__container-bgColor--black {
     background-color: black;
     border-bottom: none;
     padding: 0px 24px;
@@ -167,8 +174,6 @@
     transition: opacity 450ms ease, transform 450ms ease;
     z-index: 9999;
     scrollbar-width: none;
-    -ms-overflow-style: none;
-
 }
 
 

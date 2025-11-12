@@ -141,8 +141,6 @@ const RoomDetailsLeft = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-
-
                 </div>
             </div>
             <div className="rooms-details__column-about">

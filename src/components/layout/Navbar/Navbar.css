@@ -60,7 +60,7 @@
     margin-right: 26px;
 }
 
-.header__controls {
+.navbar__controls {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -68,7 +68,7 @@
     flex-direction: row;
 }
 
-.header__controls-link {
+.navbar__controls-link {
     width: auto;
     display: flex;
     background-color: red;

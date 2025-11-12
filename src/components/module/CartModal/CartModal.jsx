@@ -1,4 +1,4 @@
-import { BackdropContainer, HoverButton } from "@components/ui";
+import { HoverButton } from "@components/ui";
 import { useState } from "react";
 import Quantity from "../../ui/Quantity/Quantity";
 import "./CartModal.css";
@@ -20,7 +20,7 @@ const CartModal = () => {
             </div>
             <ul className="cart__modal-list">
                 <li className="cart__modal-item">
-                    <div className="cart__modal-item-tt">
+                    <div className="cart__modal-item-wrapper">
                         <div className="cart__modal-item-container">
                             <div className="cart__modal-item-media">
                                 <img className="cart__modal-item-media-img" src="https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/05/room3-1100x550.jpg" alt="" />
@@ -49,22 +49,16 @@ const CartModal = () => {
                                     </div>
                                 </div>
                                 <div className="cart__modal-item-control">
-                                    <div className="cart__modal-item-control-panel">
-                                        <div className="cart__modal-item-control-inner">
-                                            <h4 className="cart__modal-item-control-inner-title">
-                                                Room
-                                            </h4>
-                                        </div>
-                                        <div className="cart__modal-item-control-action">
-                                            <Quantity
-                                                variant="small"
-                                                title="rooms"
-                                                initial={rooms}
-                                                min={0}
-                                                max={10}
-                                                onChange={setRooms}
-                                            />
-                                        </div>
+
+                                    <div className="cart__modal-item-control-action">
+                                        <Quantity
+                                            variant="small"
+                                            title="rooms"
+                                            initial={rooms}
+                                            min={0}
+                                            max={10}
+                                            onChange={setRooms}
+                                        />
                                     </div>
 
                                     <div className="cart__modal-item-control-action">
@@ -110,7 +104,7 @@ const CartModal = () => {
                     </div>
                 </li>
                 <li className="cart__modal-item">
-                    <div className="cart__modal-item-tt">
+                    <div className="cart__modal-item-wrapper">
                         <div className="cart__modal-item-container">
                             <div className="cart__modal-item-media">
                                 <img className="cart__modal-item-media-img" src="https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/05/room3-1100x550.jpg" alt="" />
@@ -139,38 +133,39 @@ const CartModal = () => {
                                     </div>
                                 </div>
                                 <div className="cart__modal-item-control">
-                                    <div className="cart__modal-item-control-panel">
-                                        <div className="cart__modal-item-control-inner">
-                                            <h4 className="cart__modal-item-control-inner-title">
-                                                Room
-                                            </h4>
-                                        </div>
-                                        <div className="cart__modal-item-control-action">
-                                            <Quantity variant="small" />
-                                        </div>
+
+                                    <div className="cart__modal-item-control-action">
+                                        <Quantity
+                                            variant="small"
+                                            title="rooms"
+                                            initial={rooms}
+                                            min={0}
+                                            max={10}
+                                            onChange={setRooms}
+                                        />
                                     </div>
-                                    <div className="cart__modal-item-control-panel">
-                                        <div className="cart__modal-item-control-inner">
-                                            <h4 className="cart__modal-item-control-inner-title">
-                                                Room
-                                            </h4>
-                                        </div>
-                                        <div className="cart__modal-item-control-action">
-                                            <Quantity variant="small" />
-                                        </div>
+
+                                    <div className="cart__modal-item-control-action">
+                                        <Quantity
+                                            variant="small"
+                                            title="Adult"
+                                            initial={adults}
+                                            min={0}
+                                            max={10}
+                                            onChange={setAdults}
+                                        />
                                     </div>
-                                    <div className="cart__modal-item-control-panel">
-                                        <div className="cart__modal-item-control-inner">
-                                            <h4 className="cart__modal-item-control-inner-title">
-                                                Room
-                                            </h4>
-                                        </div>
-                                        <div className="cart__modal-item-control-action">
-                                            <Quantity variant="small" />
-                                        </div>
+                                    <div className="cart__modal-item-control-action">
+                                        <Quantity
+                                            variant="small"
+                                            title="child"
+                                            initial={childs}
+                                            min={1}
+                                            max={10}
+                                            onChange={setChilds}
+                                        />
                                     </div>
                                 </div>
-
                             </div>
                         </div>
 
@@ -193,7 +188,7 @@ const CartModal = () => {
                     </div>
                 </li>
                 <li className="cart__modal-item">
-                    <div className="cart__modal-item-tt">
+                    <div className="cart__modal-item-wrapper">
                         <div className="cart__modal-item-container">
                             <div className="cart__modal-item-media">
                                 <img className="cart__modal-item-media-img" src="https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/05/room3-1100x550.jpg" alt="" />
@@ -222,38 +217,39 @@ const CartModal = () => {
                                     </div>
                                 </div>
                                 <div className="cart__modal-item-control">
-                                    <div className="cart__modal-item-control-panel">
-                                        <div className="cart__modal-item-control-inner">
-                                            <h4 className="cart__modal-item-control-inner-title">
-                                                Room
-                                            </h4>
-                                        </div>
-                                        <div className="cart__modal-item-control-action">
-                                            <Quantity variant="small" />
-                                        </div>
+
+                                    <div className="cart__modal-item-control-action">
+                                        <Quantity
+                                            variant="small"
+                                            title="rooms"
+                                            initial={rooms}
+                                            min={0}
+                                            max={10}
+                                            onChange={setRooms}
+                                        />
                                     </div>
-                                    <div className="cart__modal-item-control-panel">
-                                        <div className="cart__modal-item-control-inner">
-                                            <h4 className="cart__modal-item-control-inner-title">
-                                                Room
-                                            </h4>
-                                        </div>
-                                        <div className="cart__modal-item-control-action">
-                                            <Quantity variant="small" />
-                                        </div>
+
+                                    <div className="cart__modal-item-control-action">
+                                        <Quantity
+                                            variant="small"
+                                            title="Adult"
+                                            initial={adults}
+                                            min={0}
+                                            max={10}
+                                            onChange={setAdults}
+                                        />
                                     </div>
-                                    <div className="cart__modal-item-control-panel">
-                                        <div className="cart__modal-item-control-inner">
-                                            <h4 className="cart__modal-item-control-inner-title">
-                                                Room
-                                            </h4>
-                                        </div>
-                                        <div className="cart__modal-item-control-action">
-                                            <Quantity variant="small" />
-                                        </div>
+                                    <div className="cart__modal-item-control-action">
+                                        <Quantity
+                                            variant="small"
+                                            title="child"
+                                            initial={childs}
+                                            min={1}
+                                            max={10}
+                                            onChange={setChilds}
+                                        />
                                     </div>
                                 </div>
-
                             </div>
                         </div>
 
@@ -276,7 +272,7 @@ const CartModal = () => {
                     </div>
                 </li>
                 <li className="cart__modal-item">
-                    <div className="cart__modal-item-tt">
+                    <div className="cart__modal-item-wrapper">
                         <div className="cart__modal-item-container">
                             <div className="cart__modal-item-media">
                                 <img className="cart__modal-item-media-img" src="https://dev24.kodesolution.com/hoexr/wp-content/uploads/2024/05/room3-1100x550.jpg" alt="" />
@@ -305,38 +301,39 @@ const CartModal = () => {
                                     </div>
                                 </div>
                                 <div className="cart__modal-item-control">
-                                    <div className="cart__modal-item-control-panel">
-                                        <div className="cart__modal-item-control-inner">
-                                            <h4 className="cart__modal-item-control-inner-title">
-                                                Room
-                                            </h4>
-                                        </div>
-                                        <div className="cart__modal-item-control-action">
-                                            <Quantity variant="small" />
-                                        </div>
+
+                                    <div className="cart__modal-item-control-action">
+                                        <Quantity
+                                            variant="small"
+                                            title="rooms"
+                                            initial={rooms}
+                                            min={0}
+                                            max={10}
+                                            onChange={setRooms}
+                                        />
                                     </div>
-                                    <div className="cart__modal-item-control-panel">
-                                        <div className="cart__modal-item-control-inner">
-                                            <h4 className="cart__modal-item-control-inner-title">
-                                                Room
-                                            </h4>
-                                        </div>
-                                        <div className="cart__modal-item-control-action">
-                                            <Quantity variant="small" />
-                                        </div>
+
+                                    <div className="cart__modal-item-control-action">
+                                        <Quantity
+                                            variant="small"
+                                            title="Adult"
+                                            initial={adults}
+                                            min={0}
+                                            max={10}
+                                            onChange={setAdults}
+                                        />
                                     </div>
-                                    <div className="cart__modal-item-control-panel">
-                                        <div className="cart__modal-item-control-inner">
-                                            <h4 className="cart__modal-item-control-inner-title">
-                                                Room
-                                            </h4>
-                                        </div>
-                                        <div className="cart__modal-item-control-action">
-                                            <Quantity variant="small" />
-                                        </div>
+                                    <div className="cart__modal-item-control-action">
+                                        <Quantity
+                                            variant="small"
+                                            title="child"
+                                            initial={childs}
+                                            min={1}
+                                            max={10}
+                                            onChange={setChilds}
+                                        />
                                     </div>
                                 </div>
-
                             </div>
                         </div>
 
@@ -358,6 +355,7 @@ const CartModal = () => {
                         </div>
                     </div>
                 </li>
+
 
 
 

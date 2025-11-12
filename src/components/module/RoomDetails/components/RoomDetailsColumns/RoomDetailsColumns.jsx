@@ -9,11 +9,8 @@ const RoomDetailsColumns = () => {
 
     return (
         <div className="rooms-details__columns">
-            <RoomDetailsLeft
-            />
-            <RoomDetailsRight
-
-            />
+            <RoomDetailsLeft />
+            <RoomDetailsRight />
         </div>
     )
 }
