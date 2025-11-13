@@ -62,16 +62,26 @@
 
 .navbar__controls {
     width: 100%;
+    height: auto;
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    flex-direction: row;
+}
+
+.navbar__controls-item {
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+.navbar__controls-item:not(:last-of-type) {
+    margin-right: 32px;
 }
 
 .navbar__controls-link {
     width: auto;
     display: flex;
-    background-color: red;
     margin-right: 16px;
 }
 

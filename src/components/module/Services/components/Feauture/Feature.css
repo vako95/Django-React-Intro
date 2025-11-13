@@ -1,4 +1,4 @@
-.feature {
+.section__feature {
     width: auto;
     height: auto;
     display: flex;
@@ -9,7 +9,7 @@
     padding: 32px 0px;
 }
 
-.feature__heading {
+.section__feature-heading {
     width: 100%;
     height: auto;
     display: flex;
@@ -20,7 +20,7 @@
 
 }
 
-.feature__heading-title {
+.section__feature-heading-title {
     font-family: "Barlow Condensed", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -29,7 +29,7 @@
     letter-spacing: 7.8px;
 }
 
-.feature__heading-badge {
+.section__feature-heading-badge {
     width: 40px;
     height: 40px;
     display: flex;
@@ -37,13 +37,13 @@
     align-items: center;
 }
 
-.feature__badge-icon {
+.section__feature-badge-icon {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.feature__info {
+.section__feature-info {
     width: 100%;
     height: auto;
     display: flex;
@@ -53,14 +53,14 @@
     margin-bottom: 32px;
 }
 
-.feature__info-words {
+.section__feature-info-words {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     margin-bottom: 32px;
 }
 
-.feature__info-word {
+.section__feature-info-word {
     font-family: "Gilda Display", sans-serif;
     font-size: 48px;
     font-weight: 200;
@@ -69,7 +69,7 @@
     line-height: 48px;
 }
 
-.feature__info-summary {
+.section__feature-info-summary {
     font-family: "Gilda Display", sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -80,7 +80,7 @@
 }
 
 
-.feature__info-desc {
+.section__feature-info-desc {
     font-family: "Barlow", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -89,7 +89,7 @@
 }
 
 
-.feature__points {
+.section__feature-points {
     width: 100%;
     height: auto;
     display: grid;
@@ -100,7 +100,7 @@
     gap: 40px;
 }
 
-.feature__points-item {
+.section__feature-points-item {
     width: auto;
     height: auto;
     display: flex;
@@ -111,20 +111,20 @@
 
 
 
-.feature__points-wrapper {
+.section__feature-points-wrapper {
     width: 64px;
     height: 64px;
     display: flex;
     margin-right: 22px;
 }
 
-.feature__points-img {
+.section__feature-points-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.feature__points-title {
+.section__feature-points-title {
     max-width: 120px;
     font-family: "Gilda Display", sans-serif;
     font-size: 20px;

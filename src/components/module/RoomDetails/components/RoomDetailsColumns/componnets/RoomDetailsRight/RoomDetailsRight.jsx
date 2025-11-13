@@ -26,7 +26,7 @@ const RoomDetailsRight = () => {
     return (
         <article className="rooms-details__column rooms-details__columns--right" >
             <div className="rooms-details__booking">
-                <BookingFrame>
+                <BookingFrame heading={true}>
                     <div className="rooms-details__booking-container" ref={ref}>
                         <div className="rooms-details__booking-content" onClick={() => toggleDropdown("calendar")}>
                             <div className="rooms-details__booking-wrapper">

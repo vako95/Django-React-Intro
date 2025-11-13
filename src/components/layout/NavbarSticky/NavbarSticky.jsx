@@ -1,12 +1,16 @@
-import { Container, HoverLink } from "@components/ui";
+import { Container } from "@components/ui";
 import clsx from "clsx"
 import Logo from "./components/Logo/Logo";
 import Menu from "./components/Menu/Menu";
 import { memo } from "react";
 import "./NavbarSticky.css";
-import Cart from "./components/Cart/Cart";
+
+import { FaPhoneAlt } from "react-icons/fa";
+
+
 import { useScroll } from "../../../hooks/useScroll";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const NavbarSticky = ({ className, bgColor }) => {
     const { visible } = useScroll(200)
 
@@ -34,12 +38,28 @@ const NavbarSticky = ({ className, bgColor }) => {
                                     <Menu />
                                 </div>
                                 <div className="navbar-sticky__controls">
-                                    <HoverLink className="navbar-sticky__controls-link">
-                                        Book Now
-                                    </HoverLink>
-                                    <Cart />
+
+                                    <Link className="navbar-sticky__controls-link" to="tel:+994506732059">
+                                        <span className="navbar-sticky__controls-link-icon">
+                                            <FaPhoneAlt />
+                                        </span>
+                                    </Link>
+                                    <div className="navbar-sticky__controls-phone">
+                                        <h2 className="navbar-sticky__controls-phone-title">
+                                            Call Anytime
+                                        </h2>
+                                        <Link
+                                            className="navbar-sticky__controls-phone-link" to="tel:+994506732059">
+                                            <span className="navbar-sticky__controls-phone-link-number">
+                                                + 994 ( 050 ) 6732059
+                                            </span>
+                                        </Link>
+                                    </div>
                                 </div>
+
+
                             </div>
+
                         </Container>
                     </div>
                 </motion.div>

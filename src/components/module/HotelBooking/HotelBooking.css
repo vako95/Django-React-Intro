@@ -46,7 +46,7 @@
     align-items: flex-start;
     border-top: 6px solid rgb(170, 132, 83);
     background-color: black;
-    padding: 80px 40px;
+    padding: 48px;
     bottom: 80px;
     z-index: 1;
 }
@@ -175,4 +175,101 @@
 
 .hotel-booking__form-icon:hover {
     color: rgba(170, 132, 83);
+}
+
+
+
+
+
+
+
+
+
+
+
+.hotel-booking__form-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.hotel-booking__form-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.hotel-booking__form-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.hotel-booking__form-item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* margin-bottom: 16px; */
+}
+
+.hotel-booking__form-item:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+
+
+.hotel-booking__form-item-field {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid rgba(170, 132, 83, 1);
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+/* .hotel-booking__form-item-field:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 16px;
+} */
+
+.hotel-booking__form-dropdown-calendar {
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: calc(100% + 42px);
+    z-index: 2;
+}
+
+.hotel-booking__form-field-dropdown-quantity {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.68);
+    border: 1px solid rgba(170, 132, 83, 1);
+    backdrop-filter: blur(2px);
+    z-index: 1;
 }

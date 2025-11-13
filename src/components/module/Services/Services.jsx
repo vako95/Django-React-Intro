@@ -3,29 +3,23 @@ import { useState } from "react";
 import { services } from "../../../constants/sections";
 import { Container } from "@components/ui";
 import Hero from "./components/Hero/Hero.jsx";
-import Feauture from "./components/Feauture/Feauture.jsx";
+import Feature from "./components/Feauture/Feature.jsx";
+
 
 const Services = () => {
-    const [openPlayer, setOpenPlayer] = useState(false);
-
-    const handlePlayer = () => {
-        setOpenPlayer((prev) => !prev);
-    };
 
     const mainService = services[0];
     return (
         <section className="services">
             <Container>
                 <div className="services__container">
-                    <div className="services__section">
+                    <div className="services__section services__section--hero">
                         <Hero
                             service={mainService}
-                            openPlayer={openPlayer}
-                            onTogglePlayer={handlePlayer}
                         />
                     </div>
-                    <div className="services__section">
-                        <Feauture />
+                    <div className="services__section services__section--future">
+                        <Feature />
                     </div>
                 </div>
 

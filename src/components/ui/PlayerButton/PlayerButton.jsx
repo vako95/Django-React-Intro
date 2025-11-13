@@ -13,7 +13,8 @@ const PlayerButton = ({ onClick, className, children, variant, color, size, ...p
 
     return (
         <button className={classes} type='button'{...props}>
-            <i className="player__button-icon  ri-play-fill"></i>
+            {children}
+            {/* <i className="player__button-icon  ri-play-fill"></i> */}
         </button>
     )
 }

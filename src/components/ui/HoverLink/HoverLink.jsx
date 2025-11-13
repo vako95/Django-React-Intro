@@ -5,37 +5,49 @@ import { Link } from "react-router-dom";
 const HoverLink = ({
     className,
     children,
-    size = "medium",
-    hover,
-    bgColor,
+    size,
+    fontSize,
+    color,
+    hoverColor,
     hoverBgColor,
     hoverTextColor,
     textColor,
     variant,
+    border,
+    borderColor,
+    animeColor,
+    bgColor,
     ...props
 }) => {
     const classes = clsx(
-        "hover__link", {
-        "hover__link--sm": size === "sm",
-        "hover__link--md": size === "md",
-        "hover__link--lg": size === "lg",
-        "hover__link--lx": size === "lx",
-    },
+        "hover__link",
+        size && `hover__link-size--${size}`,
+        border && "hover__link--border",
         variant && `hover__link-variant--${variant}`,
         className
     );
 
-    const style = {
-        ...(bgColor && { "--link-bg-color": bgColor }),
-        ...(bgColor && { "--link-bg-color": bgColor }),
-        ...(hoverBgColor && { "--hover-bg-color": hoverBgColor }),
-        ...(hoverTextColor && { "--hover-bg-color": hoverTextColor }),
-        ...(textColor && { "--hover__link-text-color": textColor }),
-    };
+    const styless = {
+        ...(color && { "--link-color": color }),
+        ...(hoverColor && { "--hover__link-color": hoverColor }),
+        ...(fontSize && { "--hover__link-fontSize": fontSize }),
+        ...(borderColor && { "--hover__link-border-color": borderColor }),
+        ...(bgColor && { "--hover-bg-color": bgColor }),
+
+        ...(animeColor && { "--hover__link-anime": animeColor }),
+    }
+
+    // const style = {
+    //     ...(bgColor && { "--link-bg-color": bgColor }),
+    //     ...(bgColor && { "--link-bg-color": bgColor }),
+    //     ...(hoverBgColor && { "--hover-bg-color": hoverBgColor }),
+    //     ...(hoverTextColor && { "--hover-bg-color": hoverTextColor }),
+    //     ...(textColor && { "--hover__link-text-color": textColor }),
+    // };
 
     return (
-        <Link className={classes} style={style} {...props}>
-            <span>{children}</span>
+        <Link className={classes} style={styless} {...props}>
+            {children}
         </Link>
     );
 };

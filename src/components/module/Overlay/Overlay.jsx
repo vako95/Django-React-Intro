@@ -8,11 +8,7 @@ import OverlayPlayer from "./components/OverlayPlayer/OverlayPlayer";
 
 const Overlay = () => {
 
-    const [openPlayer, setOpenPlayer] = useState(false);
 
-    const handlePlayer = () => {
-        setOpenPlayer((prev) => !prev);
-    };
 
     return (
 
@@ -22,8 +18,7 @@ const Overlay = () => {
                     <div className="overlay__container">
                         <OverlayContent />
                         <OverlayPlayer
-                            handlePlayer={handlePlayer}
-                            openPlayer={openPlayer}
+
                         />
                     </div>
                 </Container>

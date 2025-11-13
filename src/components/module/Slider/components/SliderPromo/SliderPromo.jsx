@@ -30,8 +30,11 @@ const SliderPromo = ({ currentSlide }) => {
             <div className="slider__promo-link">
                 <BackInUp trigger={currentSlide}>
                     <HoverLink
-                        size="large"
-                        variant="transparent"
+                        size="md"
+                        variant="gold"
+                        border={true}
+                        color="white"
+
                     >
                         Rooms & Suites
                     </HoverLink>

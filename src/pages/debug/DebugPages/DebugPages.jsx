@@ -28,6 +28,7 @@ import Test from "../../../components/module/Test/Test.jsx";
 import GallerySlider from "../../../components/ui/GallerySlider/GallerySlider";
 import NavbarSticky from "../../../components/layout/NavbarSticky/NavbarSticky.jsx";
 
+import { HoverLink } from "@components/ui"
 
 const items = [
     { id: 1, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
@@ -61,6 +62,7 @@ const DebugPages = () => {
             <RoomDetails />
 
             {/* <NavbarSticky /> */}
+
 
             {/* <Gallery /> */}
             {/* <Test /> */}

@@ -14,7 +14,13 @@ const Decorate = ({ item }) => {
                 subtitle={item.subtitle}
                 desc={item.desc} />
             <div className="swap__holder-btn">
-                <HoverLink size="lg" variant="transparent">
+                <HoverLink
+                    border={false}
+                    borderColor="rgba(170, 132, 83, 1)"
+                    fontSize="14px"
+                    size="md"
+                    variant="black"
+                >
                     Discover More
                 </HoverLink>
             </div>
