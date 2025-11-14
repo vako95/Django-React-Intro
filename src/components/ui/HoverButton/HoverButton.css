@@ -10,7 +10,7 @@
     outline: none;
     background-color: transparent;
     border: none;
-    color: var(--btn-text-color, rgba(255, 255, 255, 1));
+    color: var(--btn-text-color, rgba(255, 255, 255));
     transition: background-color 250ms linear;
     z-index: 99999;
 }
