@@ -27,10 +27,12 @@ const Navbar = ({ className, bgColor, cart = false }) => {
                     <div className="navbar__controls">
                         <div className="navbar__controls-item">
                             <HoverLink
+                                className="navbar__controls-item-action"
                                 size="sm"
                                 variant="silver"
+                                bgColor="rgba(170, 132, 83, 1)"
                             >
-                                Discover Moree
+                                Book Now
                             </HoverLink>
                         </div>
                         <div className="navbar__controls-item">

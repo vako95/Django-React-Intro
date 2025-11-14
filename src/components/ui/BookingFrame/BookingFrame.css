@@ -6,7 +6,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     /* background-color: silver; */
-    padding: 54px 42px;
+    /* padding: 54px 42px; */
 }
 
 .booking-frame__heading {
@@ -84,15 +84,15 @@
     margin-bottom: 16px;
 }
 
-.xuyesos {
+/* .xuyesos {
     width: 100%;
     display: flex;
     flex-direction: column;
-}
+} */
 
-.booking-frame__form .xuyesos {
+/* .booking-frame__form .xuyesos {
     flex-direction: row;
-}
+} */
 
 .booking-frame__form-field-value {
     font-size: 14px;

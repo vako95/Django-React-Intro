@@ -13,9 +13,15 @@ const RoomCard = ({ cover, title, price, icons }) => (
                 <span className="rooms__content-price">${price} / Night</span>
             </div>
             <div className="rooms__service">
-                <div className="rooms__service-button">
-                    <HoverButton>
-                        Book Now
+                <div className="rooms__service-action">
+                    <HoverButton
+                        btnSize="sm"
+                        variant="default"
+                        border={true}
+                    >
+                        <span className="rooms__service-action-title">
+                            Book Now
+                        </span>
                     </HoverButton>
                 </div>
                 <ul className="rooms__service-list">

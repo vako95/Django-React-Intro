@@ -31,7 +31,7 @@ const SliderPromo = ({ currentSlide }) => {
                 <BackInUp trigger={currentSlide}>
                     <HoverLink
                         size="md"
-                        variant="gold"
+                        variant="silver"
                         border={true}
                         color="white"
 

@@ -23,7 +23,7 @@
 }
 
 .frame-input__title {
-    font-size: inherit;
+    font-size: 14px;
     font-weight: inherit;
     color: rgba(171, 171, 171, 1);
     white-space: nowrap;
@@ -40,8 +40,12 @@
     margin-right: 4px;
 }
 
+.frame-input__info-position--start {
+    justify-content: flex-start;
+}
+
 .frame-input__subtitle {
-    font-size: inherit;
+    font-size: 14px;
     color: rgba(171, 171, 171, 1);
     margin: 0px 4px;
 }
@@ -49,8 +53,8 @@
 
 
 .frame-input__value {
-    font-size: inherit;
-    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    color: rgba(171, 171, 171, 1);
     /* margin-right: 4px; */
 }
 

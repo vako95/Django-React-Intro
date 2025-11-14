@@ -7,12 +7,6 @@
     align-items: center;
 }
 
-.booking-order__table {
-    width: 90%;
-    /* height: 2px; */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.242);
-
-}
 
 .booking-order__container {
     width: 100%;
@@ -21,7 +15,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 16px 42px;
+
 }
 
 .booking-order__heading {

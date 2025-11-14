@@ -33,7 +33,6 @@ const HoverLink = ({
         ...(fontSize && { "--hover__link-fontSize": fontSize }),
         ...(borderColor && { "--hover__link-border-color": borderColor }),
         ...(bgColor && { "--hover-bg-color": bgColor }),
-
         ...(animeColor && { "--hover__link-anime": animeColor }),
     }
 

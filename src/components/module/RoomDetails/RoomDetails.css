@@ -20,9 +20,9 @@
 }
 
 .rooms-details__column {
-    font-family: "Barlow", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
     width: 100%;
     height: auto;
     display: flex;
@@ -41,6 +41,7 @@
 .rooms-details__columns--right {
     width: 35%;
 }
+
 
 .rooms-details__column-wrapper {
     width: 100%;
@@ -360,7 +361,17 @@
     justify-content: flex-start;
     align-items: flex-start;
     border: 1px solid rgba(170, 132, 83, 1);
+}
 
+.rooms-details__booking-frame {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px 42px;
+    margin-bottom: 32px;
 }
 
 .rooms-details__booking-container {
@@ -381,6 +392,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 16px;
+
 }
 
 .rooms-details__booking-label {
@@ -462,6 +474,17 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    padding: 16px 42px;
+}
+
+.room__details-form-order {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 32px;
 }
 
 
@@ -521,7 +544,21 @@
     align-items: flex-start;
 }
 
+.room__details-form-action {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(170, 132, 83, 1);
+}
 
+/* .rooms-details__booking-order-table {
+    width: 90%;
+    height: 2px;
+    background-color: red;
+
+} */
 
 /* Booking Order */
 /* .rooms-details__booking-order {
@@ -533,12 +570,7 @@
     align-items: center;
 }
 
-.rooms-details__booking-order-table {
-    width: 90%;
-    height: 2px;
-    background-color: red;
 
-}
 
 .rooms-details__booking-order-container {
     width: 100%;
@@ -635,15 +667,7 @@
     color: rgba(102, 102, 102);
 } */
 
-.rooms-details__booking-action {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 32px 0px;
-}
+
 
 
 /* Gallery LightBox */

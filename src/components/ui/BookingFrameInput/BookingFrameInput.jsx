@@ -8,8 +8,10 @@ const BookingFrameInput = ({
     value,
     time,
     isOpen,
+    position,
     ...props
 }) => {
+
     return (
         <div className="frame-input" {...props}>
             <input
@@ -23,8 +25,8 @@ const BookingFrameInput = ({
             <div className="frame-input__content">
                 {title && <h4 className="frame-input__title">{title}</h4>}
 
-                <div className="frame-input__info">
-                    {value && <span className="frame-input__value">{value}</span>}
+                <div className={clsx("frame-input__info" && `frame-input__info-position--${position}`)}>
+                    <span className="frame-input__value">{value}</span>
                     {subtitle && <span className="frame-input__subtitle">{subtitle}</span>}
 
                     {/* {time && (

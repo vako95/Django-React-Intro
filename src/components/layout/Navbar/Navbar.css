@@ -16,7 +16,6 @@
     justify-content: flex-start;
     align-items: center;
     padding: 32px 0px;
-
 }
 
 .navbar__container {
@@ -73,6 +72,10 @@
     width: auto;
     height: auto;
     display: flex;
+}
+
+.navbar__controls-item-action {
+    font-weight: 400;
 }
 
 .navbar__controls-item:not(:last-of-type) {

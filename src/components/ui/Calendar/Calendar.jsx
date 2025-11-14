@@ -7,7 +7,7 @@ import "react-day-picker/dist/style.css";
 import CustomMonthsDropdown from "./components/CustomMonthsDropdown/CustomMonthsDropdown.jsx";
 import CustomYearsDropdown from "./components/CustomYearsDropdown/CustomYearsDropdown.jsx";
 
-const Calendar = ({ range, setRange }) => {
+const Calendar = ({ range, setRange, months = 2 }) => {
 
 
     const footer = range?.from ? (
@@ -42,7 +42,7 @@ const Calendar = ({ range, setRange }) => {
                     min={1}
                     max={range.to}
                     onSelect={setRange}
-                    numberOfMonths={2}
+                    numberOfMonths={months}
                     showOutsideDays={false}
                     fixedWeeks
                     captionLayout="dropdown"
@@ -50,8 +50,6 @@ const Calendar = ({ range, setRange }) => {
                     endMonth={dayjs().add(2, "year").toDate()}
                     defaultMonth={new Date()}
                     today={new Date()}
-                    // footer={footer}
-
                     disabled={{ before: new Date() }}
                     components={{
                         MonthsDropdown: CustomMonthsDropdown,

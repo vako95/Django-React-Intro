@@ -23,7 +23,6 @@ const BookingOrder = ({ value, className }) => {
 
     return (
         <div className={classes}>
-            <div className="booking-order__table"></div>
             <div className="booking-order__container">
                 <div className="booking-order__heading">
                     <h2 className="booking-order__heading-title">

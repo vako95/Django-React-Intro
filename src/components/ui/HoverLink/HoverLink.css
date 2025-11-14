@@ -22,12 +22,12 @@
 
 .hover__link::before {
     content: "";
-    position: absolute;
     display: flex;
     width: 0;
     height: 100%;
-    right: 0;
+    position: absolute;
     top: 0;
+    right: 0;
     background-color: var(--hover__link-anime, rgba(34, 34, 34));
     transition: width 300ms ease-in, right 600ms ease-in, left 600ms ease-in;
     z-index: -1;
@@ -49,7 +49,6 @@
 }
 
 .hover__link-variant--silver {
-    background-color: rgba(170, 132, 83, 1);
     --hover__link-anime: rgba(34, 34, 34);
 }
 
@@ -61,7 +60,6 @@
     color: rgba(170, 132, 83, 1);
     border: 1px solid rgba(170, 132, 83, 1);
     --hover__link-anime: rgba(0, 0, 0, 1);
-
 }
 
 

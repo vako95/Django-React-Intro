@@ -74,12 +74,17 @@
     opacity: 1;
 }
 
-.rooms__service-button {
+.rooms__service-action {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.rooms__service-action-title {
+    font-size: 14px;
+    font-weight: 100;
 }
 
 .rooms__service-list {

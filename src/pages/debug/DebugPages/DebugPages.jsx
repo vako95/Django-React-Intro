@@ -28,7 +28,7 @@ import Test from "../../../components/module/Test/Test.jsx";
 import GallerySlider from "../../../components/ui/GallerySlider/GallerySlider";
 import NavbarSticky from "../../../components/layout/NavbarSticky/NavbarSticky.jsx";
 
-import { HoverLink } from "@components/ui"
+import { HoverLink, HoverButton } from "@components/ui"
 
 const items = [
     { id: 1, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
@@ -60,7 +60,15 @@ const DebugPages = () => {
             {/* <BookingFrameInput time="11-11-11" /> */}
 
             <RoomDetails />
-
+            {/* <HoverButton
+                btnSize="sm"
+                variant="default"
+                border={true}
+            >
+                <span className="fd">
+                    Book Now
+                </span>
+            </HoverButton> */}
             {/* <NavbarSticky /> */}
 
 

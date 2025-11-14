@@ -18,6 +18,7 @@ import {
     DebugPages,
     NotFoundPage,
 } from "@src/pages";
+import RoomDetailsPage from "../../pages/main/RoomDetailPage/RoomDetailPage";
 
 
 
@@ -74,13 +75,17 @@ const router = createBrowserRouter([
                 handle: { breadcrumbs: () => [{ path: "#", label: "Rooms" }] },
             },
             {
+                path: "room_detail",
+                element: <RoomDetailsPage />,
+                handle: { breadcrumbs: () => [{ path: "#", label: "Room Details" }] },
+            },
+            {
                 path: "/auth",
                 element: <AuthLayout />,
                 children: [
                     { index: true, element: <LoginPage /> },
                     { path: "login", element: <LoginPage /> },
                     { path: "register", element: <RegisterPage /> },
-
                     { path: "reset", element: <ResetPasswordPage /> },
                     { path: "reset/:token", element: <ChangePasswordPage /> },
                 ]
