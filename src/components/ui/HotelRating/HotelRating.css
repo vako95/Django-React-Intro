@@ -1,0 +1,32 @@
+.hotel-rating {
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 99999;
+    position: relative;
+    cursor: pointer;
+}
+
+.hotel-rating__icon {
+    display: flex;
+    font-size: 18px;
+}
+
+.hotel-rating__icon:hover {
+    transform: scale(1.2);
+}
+
+.hotel-rating__icon--full {
+    color: rgba(255, 255, 255, 1);
+}
+
+.hotel-rating__icon--half {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hotel-rating__icon--empty {
+    color: rgba(255, 255, 255, 0.5);
+}

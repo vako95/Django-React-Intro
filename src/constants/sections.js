@@ -96,6 +96,39 @@ const slideData = [
         rating: 4,
 
     },
+    {
+        id: 3,
+        img: 'https://hottestchocolate.com/wp-content/uploads/2022/04/korea_main.jpg',
+        desc: `The utanislen quam nestibulum ac quame odion elementum sceisu nthe aucan.
+        Orci varius natoque penatibuet magnis disney parturient monte nascete
+        ridiculus mus nellen etesque habitant morbine.`,
+        author: 'Emily Johnson',
+        role: 'Client Review',
+        rating: 4,
+
+    },
+    {
+        id: 4,
+        img: 'https://hottestchocolate.com/wp-content/uploads/2022/04/korea_main.jpg',
+        desc: `The utanislen quam nestibulum ac quame odion elementum sceisu nthe aucan.
+        Orci varius natoque penatibuet magnis disney parturient monte nascete
+        ridiculus mus nellen etesque habitant morbine.`,
+        author: 'Emily Johnson',
+        role: 'Client Review',
+        rating: 5,
+
+    },
+    {
+        id: 5,
+        img: 'https://hottestchocolate.com/wp-content/uploads/2022/04/korea_main.jpg',
+        desc: `The utanislen quam nestibulum ac quame odion elementum sceisu nthe aucan.
+        Orci varius natoque penatibuet magnis disney parturient monte nascete
+        ridiculus mus nellen etesque habitant morbine.`,
+        author: 'Emily Johnson',
+        role: 'Client Review',
+        rating: 4,
+
+    },
 ];
 
 const foodItems = [
@@ -398,8 +431,23 @@ const testimonials = [
 ];
 
 
+const maintainceItem = [
+    {
+        id: 1,
+        img: "https://media.cntraveler.com/photos/5a68c6949e34830eca77d87b/16:9/w_1920,c_limit/Beekman_2018_Beekman_BarRoom.jpg"
+    },
+    {
+        id: 2,
+        img: "https://img.freepik.com/free-photo/view-luxurious-hotel-hallway_23-2150683487.jpg?t=st=1763331371~exp=1763334971~hmac=d2cb4e9989cf5e2a9ebe978bc6b95628f8d09cb839d6931f55fcbb16e9f2cf98&w=1480"
+    },
+    {
+        id: 3,
+        img: "https://img.freepik.com/free-photo/view-luxurious-hotel-hallway_23-2150683497.jpg?t=st=1763331651~exp=1763335251~hmac=13476f36bba049b2b567df2503a7653a94fbcb164288bc1b386748d3f6162679&w=1480"
+    }
+]
 
 
 
 
-export { services, swap, slideData, foodItems, teamMembers, newsFeedItem, testimonials }
+
+export { services, swap, slideData, foodItems, teamMembers, newsFeedItem, testimonials, maintainceItem }

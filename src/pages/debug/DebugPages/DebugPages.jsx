@@ -29,6 +29,7 @@ import GallerySlider from "../../../components/ui/GallerySlider/GallerySlider";
 import NavbarSticky from "../../../components/layout/NavbarSticky/NavbarSticky.jsx";
 
 import { HoverLink, HoverButton } from "@components/ui"
+import HotelRaiting from "../../../components/ui/HotelRating/HotelRating.jsx";
 
 const items = [
     { id: 1, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
@@ -36,13 +37,14 @@ const items = [
     { id: 3, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
     { id: 4, src: "https://dev24.kodesolution.com/hoexr/wp-content/uploads/2023/11/bg5.jpg" },
 ];
+import { useState } from "react";
 
-
-
+import HotelRating from "../../../components/ui/HotelRating/HotelRating.jsx";
+import Maintenance from "../../status/Maintenance/Maintenance.jsx";
 
 const DebugPages = () => {
-    // const { containerRef, scrollTop, scrollHeight, clientHeight } = useScrollBar();
-
+    const time = new Date();
+    time.setSeconds(time.getSeconds() + 600);
     return (
         <div className="debug-pages">
             {/* <AdvantagesBar /> */}
@@ -55,11 +57,13 @@ const DebugPages = () => {
 
 
 
-
+            <Maintenance />
 
             {/* <BookingFrameInput time="11-11-11" /> */}
-
-            <RoomDetails />
+            {/* <HotelRaiting
+                rating={rating} onChange={setRating}
+            /> */}
+            {/* <RoomDetails /> */}
             {/* <HoverButton
                 btnSize="sm"
                 variant="default"

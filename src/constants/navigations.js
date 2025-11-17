@@ -80,7 +80,7 @@ const navbarNav = [
     {
         id: 4,
         name: "ROOMS SUITES",
-        link: "/rooms",
+        link: "/rooms_detail",
         dropdown: []
     },
     {

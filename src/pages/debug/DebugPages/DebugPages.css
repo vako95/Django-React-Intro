@@ -1,44 +1,6 @@
-/* .debug-pages {
-    padding: 40px;
-    background-color: silver;
-} */
 .debug-pages {
     width: 100%;
     height: auto;
     display: flex;
-    padding: 80px;
-}
-
-.debug-title {
-    font-size: 32px;
-}
-
-.fd {
-    font-size: 16px;
-}
-
-/* 
-.xuy {
-    width: 100%;
-    height: 100dvh;
     position: relative;
 }
-
-.scroll__wrapper {
-    display: flex;
-    width: 400px;
-    height: 300px;
-
-    background: #fffdf9;
-    overflow: hidden;
-}
-
-.scroll__content {
-    flex: 1;
-    overflow-y: scroll;
-    scrollbar-width: none;
-}
-
-.scroll__content::-webkit-scrollbar {
-    display: none;
-} */

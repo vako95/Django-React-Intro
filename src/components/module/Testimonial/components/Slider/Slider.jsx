@@ -14,8 +14,7 @@ const Slider = ({ slide }) => {
                 />
             </div>
 
-
-            <div className="slide-review">
+            {/* <div className="slide-review">
                 <div className="slide-review-stars">
                     <SliderRaiting rating={slide.rating} />
                 </div>
@@ -26,7 +25,7 @@ const Slider = ({ slide }) => {
                     <cite className="slide-review-comment-author">{slide.author}</cite>
                     <strong className="slide-review-comment-role">{slide.role}</strong>
                 </div>
-            </div>
+            </div> */}
 
         </div>
     )

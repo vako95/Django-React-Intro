@@ -23,7 +23,7 @@
     font-family: "Gilda Display", sans-serif;
     font-size: 32px;
     font-weight: inherit;
-    color: rgba(171, 133, 85);
+    color: rgba(171, 133, 85, 1);
 }
 
 .booking-frame__heading-subtitle {

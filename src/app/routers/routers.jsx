@@ -75,7 +75,7 @@ const router = createBrowserRouter([
                 handle: { breadcrumbs: () => [{ path: "#", label: "Rooms" }] },
             },
             {
-                path: "room_detail",
+                path: "rooms_detail",
                 element: <RoomDetailsPage />,
                 handle: { breadcrumbs: () => [{ path: "#", label: "Room Details" }] },
             },

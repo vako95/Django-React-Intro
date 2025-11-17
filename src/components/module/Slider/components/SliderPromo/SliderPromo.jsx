@@ -3,8 +3,8 @@ import { DecoratedHeading, HoverLink } from "@components/ui";
 import SliderLogo from "./assets/images/logo/logo.png"
 
 import "./SliderPromo.css";
-const SliderPromo = ({ currentSlide }) => {
 
+const SliderPromo = ({ currentSlide }) => {
     return (
         <div className="slider__promo" tabIndex={4}>
             <BackInDown trigger={currentSlide}>
@@ -34,7 +34,6 @@ const SliderPromo = ({ currentSlide }) => {
                         variant="silver"
                         border={true}
                         color="white"
-
                     >
                         Rooms & Suites
                     </HoverLink>
