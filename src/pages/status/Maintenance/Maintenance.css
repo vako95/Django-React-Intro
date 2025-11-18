@@ -1,5 +1,5 @@
 .maintenance {
-    position: fixed;
+    position: relative;
     width: 100%;
     height: 100%;
     min-height: 100dvh;
@@ -29,70 +29,69 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.68);
-
 }
 
 
 .maintenance__slider {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+
+.maintenance__slider-backdrop {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+
+
+}
+
+.maintenance__slider-backdrop::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.68);
     z-index: -1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.maintenance__slider-panel {
-    width: 100%;
-    height: auto;
-}
-
-.maintance__backdrop {
-    width: 100%;
-    height: 100%;
-}
-
-.maintance__backdrop-img {
+.maintenance__slider-backdrop-img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    overflow: hidden;
 }
+
+
+
+
+
+
 
 
 .maintenance__timer {
     width: 100%;
-    height: 100%;
-    position: relative;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
 }
 
 .maintenance__content {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -117,17 +116,8 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
-
 }
 
-.maintenance__about::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 2px;
-    border-right: 1px solid white;
-}
 
 .maintenance__about-wrapper {
     width: 64px;
@@ -141,6 +131,14 @@
     object-fit: cover;
     object-position: center center;
 }
+
+
+.maintenance__about-wrapper {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 32px;
+}
+
 
 .maintenance__about-item {
     width: 100%;
@@ -180,6 +178,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 32px;
+
 }
 
 .maintenance__about-social-heading-title {
@@ -198,6 +197,9 @@
     align-items: flex-start;
     list-style-type: none;
     gap: 16px;
+    background-color: rgba(0, 0, 0, 0.68);
+    border-radius: 16px;
+    padding: 8px 16px;
 }
 
 .maintenance__about-social-item {
@@ -206,24 +208,29 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+
 
 }
 
+.maintenance__about-social-item:not(:last-of-type) {
+    margin-right: 8px;
+}
 
 
 .maintenance__about-social-item-icon {
     display: flex;
     font-size: 20px;
     color: white;
-    border-bottom: 1px solid white;
+    ;
+    /* border-bottom: 1px solid white; */
     padding: 16px;
-    margin-right: 8px;
-    transition: border-color 150ms linear, color 150ms linear;
+    transition: border-color 150ms linear, color 150ms linear, transform 150ms linear;
 }
 
 .maintenance__about-social-item-icon:hover {
     color: rgba(170, 132, 83);
+    transform: scale(1.3);
     border-color: rgba(170, 132, 83);
 }
 
@@ -257,8 +264,9 @@
 
 .maintenance__timer-heading-title {
     font-size: 32px;
-    font-weight: bold;
+    font-weight: inherit;
     margin-bottom: 32px;
+    color: rgba(170, 132, 83, 1);
 }
 
 .maintenance__timer-heading-title::after {
@@ -299,16 +307,6 @@
     border-bottom: 1px solid white;
 }
 
-/* .maintenance__timer-unit-table {
-    width: 50%;
-    height: 2px;
-    background-color: aliceblue;
-} */
-
-/* .maintenance__timer-unit:not(:last-of-type) {
-    margin-right: 8px;
-} */
-
 
 .maintenance__timer-unit-value {
     font-size: 48px;
@@ -317,33 +315,10 @@
     margin-bottom: 18px;
     border-radius: 48px;
     color: rgba(170, 132, 83, 1);
-    /* border-bottom: 1px solid white; */
 }
-
-
-
-/* 
-.maintenance__timer-unit-value::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    border-bottom: 1px solid red;
-
-} */
 
 .maintenance__timer-unit-title {
     font-size: 16px;
     font-weight: 400;
     color: rgba(170, 132, 83, 1);
 }
-
-/* .maintenance__table {
-    position: absolute;
-    width: 2px;
-    height: 80%;
-    background-color: white;
-    z-index: 0;
-} */
