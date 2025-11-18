@@ -35,7 +35,6 @@ const Feature = () => {
                     </span>
                 </FadeInLeft>
 
-
                 <FadeInRight>
                     <p className="section__feature-info-desc">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua.
@@ -53,7 +52,6 @@ const Feature = () => {
                         <h5 className="section__feature-points-title">
                             The Best
                             Lighting
-
                         </h5>
                     </div>
                 </IconMirror>

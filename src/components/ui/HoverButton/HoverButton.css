@@ -8,7 +8,7 @@
     cursor: pointer;
     overflow: hidden;
     outline: none;
-    background-color: transparent;
+    background-color: var(--bg-color, transparent);
     border: none;
     color: var(--btn-text-color, rgba(255, 255, 255));
     transition: background-color 250ms linear;

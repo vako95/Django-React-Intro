@@ -22,7 +22,6 @@ const Maintenance = ({ expiryTimestamp }) => {
     const finalTimestamp = expiryTimestamp ? new Date(expiryTimestamp) : defaultTime;
 
     const {
-        totalSeconds,
         seconds,
         minutes,
         hours,

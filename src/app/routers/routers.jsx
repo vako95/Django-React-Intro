@@ -79,21 +79,21 @@ const router = createBrowserRouter([
                 element: <RoomDetailsPage />,
                 handle: { breadcrumbs: () => [{ path: "#", label: "Room Details" }] },
             },
-            {
-                path: "/auth",
-                element: <AuthLayout />,
-                children: [
-                    { index: true, element: <LoginPage /> },
-                    { path: "login", element: <LoginPage /> },
-                    { path: "register", element: <RegisterPage /> },
-                    { path: "reset", element: <ResetPasswordPage /> },
-                    { path: "reset/:token", element: <ChangePasswordPage /> },
-                ]
-            },
+
 
         ],
     },
-
+    {
+        path: "/auth",
+        element: <AuthLayout />,
+        children: [
+            { index: true, element: <LoginPage /> },
+            { path: "login", element: <LoginPage /> },
+            { path: "register", element: <RegisterPage /> },
+            { path: "reset", element: <ResetPasswordPage /> },
+            { path: "reset/:token", element: <ChangePasswordPage /> },
+        ]
+    },
     {
         path: "/gallery", element: <SubLayout />,
         handle: { breadcrumbs: () => [{ path: "/", label: "Home" }, { path: "#", label: "Gallery" }] },

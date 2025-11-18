@@ -56,8 +56,8 @@ const DebugPages = () => {
             {/* <Reservation /> */}
 
 
-
-            <Maintenance />
+            <Input />
+            {/* <Maintenance /> */}
 
             {/* <BookingFrameInput time="11-11-11" /> */}
             {/* <HotelRaiting

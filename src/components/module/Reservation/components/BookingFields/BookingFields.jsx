@@ -140,8 +140,14 @@ const BookingFields = () => {
             </ul>
 
             <div className="reservation__booking-fields-actions">
-                <HoverButton size="md" width="100%">
-                    Check Now
+                <HoverButton
+                    btnSize="full"
+                    bgColor="rgba(170, 132, 83, 1)"
+                    border={false}
+                >
+                    <span className="reservation__booking-fields-action-title">
+                        Check now
+                    </span>
                 </HoverButton>
             </div>
         </div>

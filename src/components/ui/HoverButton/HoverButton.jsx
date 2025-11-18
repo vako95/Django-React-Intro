@@ -16,8 +16,6 @@ const HoverButton = ({
     borderColor,
     border = false,
     btnSize,
-
-
     hoverBgStart,
     hoverBgOver,
     type = 'submit',
