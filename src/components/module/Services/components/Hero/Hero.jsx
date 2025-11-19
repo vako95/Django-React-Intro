@@ -4,7 +4,7 @@ import { IconMirror } from "@components/animation";
 import { useState, useEffect } from "react";
 import expoCover from "./assets/icon/exp-icon.png";
 import { FaPlay } from "react-icons/fa";
-
+import { AnimationShine } from "@components/animation"
 import "./Hero.css";
 
 
@@ -53,8 +53,11 @@ const Hero = ({ service }) => {
                 </IconMirror>
 
                 <div className="section__hero-card">
-                    <img src={service.thumbnail} className="section__hero-card-cover" alt="" />
+                    <AnimationShine>
+                        <img src={service.thumbnail} className="section__hero-card-cover" alt="" />
+                    </AnimationShine>
                 </div>
+
             </div>
         </div >
     )

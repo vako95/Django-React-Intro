@@ -41,12 +41,16 @@ import { useState } from "react";
 
 import HotelRating from "../../../components/ui/HotelRating/HotelRating.jsx";
 import Maintenance from "../../status/Maintenance/Maintenance.jsx";
+import AnimationShine from "../../../components/animation/AnimationShine/AnimationShine.jsx";
+import News from "../../../components/module/News/News.jsx";
 
 const DebugPages = () => {
     const time = new Date();
     time.setSeconds(time.getSeconds() + 600);
     return (
         <div className="debug-pages">
+            <News />
+
             {/* <AdvantagesBar /> */}
             {/* <Services /> */}
             {/* <Swap /> */}
@@ -56,7 +60,7 @@ const DebugPages = () => {
             {/* <Reservation /> */}
 
 
-            <Input />
+            {/* <Input /> */}
             {/* <Maintenance /> */}
 
             {/* <BookingFrameInput time="11-11-11" /> */}
