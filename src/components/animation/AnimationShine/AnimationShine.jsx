@@ -4,6 +4,7 @@ import clsx from "clsx";
 
 const AnimationShine = ({
     children,
+    variant,
     className
 }) => {
 
@@ -13,7 +14,7 @@ const AnimationShine = ({
     )
     return (
         <div className={classes}>
-            <div className="animation-shine-panel">
+            <div className={clsx("animation-shine__panel", variant && `animation-shine__panel-variant--${variant}`)}>
                 {children}
             </div>
         </div>

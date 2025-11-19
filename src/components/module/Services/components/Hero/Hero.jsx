@@ -53,11 +53,12 @@ const Hero = ({ service }) => {
                 </IconMirror>
 
                 <div className="section__hero-card">
-                    <AnimationShine>
+                    <AnimationShine
+                        variant="incline"
+                    >
                         <img src={service.thumbnail} className="section__hero-card-cover" alt="" />
                     </AnimationShine>
                 </div>
-
             </div>
         </div >
     )

@@ -5,6 +5,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+
 }
 
 .section__hero::before {
@@ -12,8 +13,9 @@
     position: relative;
     width: 32px;
     height: 50%;
-    background-color: rgba(170, 132, 83);
+    background-color: rgba(170, 132, 83, 1);
     margin-right: 16px;
+
 }
 
 .section__hero-backdrop {
@@ -39,6 +41,7 @@
 .section__hero-video-icon {
     display: flex;
 }
+
 
 .section__hero-heading {
     width: auto;
@@ -105,9 +108,9 @@
     position: absolute;
     left: 50%;
     bottom: -16px;
+    /* transform: translateX(50%); */
     transform-origin: right;
     border: 16px solid black;
-    overflow: hidden;
 }
 
 .section__hero-card-cover {
