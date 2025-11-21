@@ -18,89 +18,85 @@ const images = [
 const News = () => {
 
     return (
-        <Container>
 
-
-            <div className="news">
-                <div className="news__container">
+        <div className="news">
+            <Container>
+                <div className="news__list">
                     {images.map(image => (
-                        <>
-                            <div className="news__content">
-                                <div className="news__meta-detailss">
-                                    <div className="news__meta">
-                                        <time className="news__meta-calendar" dateTime="2025-01-31">
-                                            <span className="news__meta-calendar-month">
-                                                Jan
-                                            </span>
-                                            <span className="news__meta-calendar-date">
-                                                31
-                                            </span>
-                                        </time>
-                                        <div className="news__meta-content">
-                                            <div className="news__meta-content-container">
-                                                <ul className="news__meta-list">
-                                                    <li className="news__meta-item">
-                                                        <div className="news__meta-item-person">
-                                                            <span className="news__meta-item-person-icon">
-                                                                <CgProfile />
-                                                            </span>
-                                                            <span className="news__meta-item-person-prefix">
-                                                                By
-                                                            </span>
-                                                            <Link className="news__meta-item-person-link">
-                                                                Vako
-                                                            </Link>
-
-                                                        </div>
-                                                        <div className="news__meta-item-categories">
-                                                            <span className="news__meta-item-categories-icon">
-                                                                <CiFolderOn />
-                                                            </span>
-                                                            <Link className="news__meta-item-categories-link">
-                                                                Digital Nomad
-                                                            </Link>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <div className="news__meta-details">
-                                                    <div className="news__meta-details-heading">
-                                                        <Link className="news__meta-details-heading-link">
-                                                            Retore Lighting Design in The Hotel
+                        <div className="news__item">
+                            <div className="news__item-container">
+                                <div className="news__item-meta">
+                                    <time className="news__item-meta-calendar" dateTime="2025-01-31">
+                                        <span className="news__item-meta-calendar-month">
+                                            Jan
+                                        </span>
+                                        <span className="news__item-meta-calendar-date">
+                                            31
+                                        </span>
+                                    </time>
+                                    <div className="news__item-meta-container">
+                                        <div className="news__item-meta-content">
+                                            <ul className="news__item-meta-list">
+                                                <li className="news__item-meta-item">
+                                                    <div className="news__item-meta-item-person">
+                                                        <span className="news__item-meta-item-person-icon">
+                                                            <CgProfile />
+                                                        </span>
+                                                        <span className="news__item-meta-item-person-prefix">
+                                                            By
+                                                        </span>
+                                                        <Link className="news__item-meta-item-person-link">
+                                                            Vako
                                                         </Link>
                                                     </div>
-                                                    <div className="news__meta-details-link">
-                                                        <HoverLink
-                                                            className="news__meta-details-link-action"
-                                                            // size="sm"
-                                                            variant="gold"
-
-                                                        >
-                                                            <h4 className="news__meta-details-link-title">
-                                                                Read More
-                                                            </h4>
-                                                            <span className="news__meta-details-link-icon">
-                                                                <FaArrowAltCircleRight />
-                                                            </span>
-                                                        </HoverLink>
+                                                    <div className="news__item-meta-item-categories">
+                                                        <span className="news__item-meta-item-categories-icon">
+                                                            <CiFolderOn />
+                                                        </span>
+                                                        <Link className="news__item-meta-item-categories-link">
+                                                            Digital Nomad
+                                                        </Link>
                                                     </div>
+                                                </li>
+                                            </ul>
+                                            <div className="news__item-meta-details">
+                                                <div className="news__item-meta-details-heading">
+                                                    <Link className="news__item-meta-details-heading-link">
+                                                        Retore Lighting Design in The Hotel
+                                                    </Link>
                                                 </div>
+
                                             </div>
+
+                                        </div>
+                                        <div className="news__item-meta-details-link">
+                                            <HoverLink
+                                                className="news__item-meta-details-link-action"
+                                                variant="gold"
+                                            >
+                                                <h4 className="news__item-meta-details-link-title">
+                                                    Read More
+                                                </h4>
+                                                <span className="news__item-meta-details-link-icon">
+                                                    <FaArrowAltCircleRight />
+                                                </span>
+                                            </HoverLink>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="news__content-backdrop">
-                                    <img className="news__content-backdrop-img" src={image.src} alt="" />
+                            </div>
+                            <div class="news__item-backdrop-wrapper">
+
+                                <div className="news__item-backdrop">
+                                    <img className="news__item-backdrop-img" src={image.src} alt="" />
                                 </div>
                             </div>
-
-
-                        </>
-
+                        </div>
                     ))}
 
                 </div>
-            </div>
-        </Container >
+            </Container>
+        </div>
     )
 }
 

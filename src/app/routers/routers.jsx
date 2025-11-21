@@ -19,6 +19,7 @@ import {
     NotFoundPage,
 } from "@src/pages";
 import RoomDetailsPage from "../../pages/main/RoomDetailPage/RoomDetailPage";
+import NewsPage from "../../pages/main/NewsPage/NewsPage";
 
 
 
@@ -78,6 +79,11 @@ const router = createBrowserRouter([
                 path: "rooms_detail",
                 element: <RoomDetailsPage />,
                 handle: { breadcrumbs: () => [{ path: "#", label: "Room Details" }] },
+            },
+            {
+                path: "news",
+                element: <NewsPage />,
+                handle: { breadcrumbs: () => [{ path: "#", label: "News" }] },
             },
 
 

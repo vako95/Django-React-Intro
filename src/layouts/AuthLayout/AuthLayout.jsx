@@ -14,7 +14,6 @@ const AuthLayout = () => {
         >
             <Container>
                 <div className="auth__layout">
-                    {/* <AuthNav /> */}
                     <AuthNav>
                         <Outlet />
                     </AuthNav>

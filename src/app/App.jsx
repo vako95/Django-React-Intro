@@ -8,10 +8,8 @@ const App = () => {
     return (
         <>
             <RouterProvider router={router} />
-
             <Tooltip id="my-tooltip" float={true} />
         </>
-
     );
 }
 
