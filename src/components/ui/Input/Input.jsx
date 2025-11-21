@@ -59,7 +59,6 @@ const Input = (
                     className={inputFieldClasses}
                     type={isPasswordVisible ? "text" : type}
                     {...inputProps}
-
                 />
 
                 {icon && (
