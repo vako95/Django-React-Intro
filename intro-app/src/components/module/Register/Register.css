@@ -1,0 +1,88 @@
+/* .login {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1rem;
+    background-color: rgba(222, 160, 135, 0.902);
+    padding: 40px;
+}
+
+.login__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.login__heading-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 3rem;
+    color: rgba(238, 238, 238);
+    font-weight: 400;
+}
+
+.login__form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: red;
+    gap: 1.8rem;
+}
+
+.login__form-field {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: silver;
+    padding: 0.6rem;
+}
+
+
+
+.login__form-icon {
+    display: flex;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+
+
+.login__form-input {
+    width: 100%;
+    font-size: 1.2rem;
+    display: flex;
+    border: none;
+    outline: none;
+    background-color: silver;
+}
+
+.login__form-control {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 36px;
+} */
+
+.login__form-field-action {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

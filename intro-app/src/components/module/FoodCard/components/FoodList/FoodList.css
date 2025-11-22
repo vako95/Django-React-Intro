@@ -1,0 +1,11 @@
+.food-card__list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style-type: none;
+    gap: 40px;
+}

@@ -1,0 +1,15 @@
+.navbar-sticky__logo {
+    width: 150px;
+    height: auto;
+    margin-right: 40px;
+}
+
+.navbar-sticky__logo-link {
+    display: flex;
+}
+
+.navbar-sticky__logo-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

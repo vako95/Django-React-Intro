@@ -1,0 +1,5 @@
+#my-tooltip {
+    max-width: 256px;
+    line-height: 1.4;
+    z-index: 9999;
+}

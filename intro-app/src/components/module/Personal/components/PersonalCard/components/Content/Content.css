@@ -1,0 +1,32 @@
+.personal__card-member {
+    width: 100%;
+    /* background-color: red; */
+    padding: 22px 24px 20px;
+}
+
+.personal__card-member-title {
+    max-width: 278px;
+    display: flex;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 16px;
+    color: rgb(167, 155, 155);
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.personal__card-member-link {
+    max-width: 278px;
+    font-family: "Gilda Display", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    word-break: break-word;
+    color: rgba(238, 238, 238);
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 100ms linear;
+
+}
+
+.personal__card-member-link:hover {
+    color: rgba(199, 177, 149);
+}

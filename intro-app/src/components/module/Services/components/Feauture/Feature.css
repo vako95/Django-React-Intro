@@ -1,0 +1,135 @@
+.section__feature {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: 32px 0px;
+}
+
+.section__feature-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 12px;
+
+}
+
+.section__feature-heading-title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(167, 155, 155);
+    text-transform: uppercase;
+    letter-spacing: 7.8px;
+}
+
+.section__feature-heading-badge {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__feature-badge-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section__feature-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.section__feature-info-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.section__feature-info-word {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 48px;
+    font-weight: 200;
+    color: rgba(238, 238, 238);
+    text-transform: capitalize;
+    line-height: 48px;
+}
+
+.section__feature-info-summary {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    line-height: 28px;
+    color: rgb(170, 132, 83);
+    margin-bottom: 32px;
+}
+
+
+.section__feature-info-desc {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    color: rgb(167, 155, 155);
+}
+
+
+.section__feature-points {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+.section__feature-points-item {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+.section__feature-points-wrapper {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    margin-right: 22px;
+}
+
+.section__feature-points-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section__feature-points-title {
+    max-width: 120px;
+    font-family: "Gilda Display", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(238, 238, 238);
+    letter-spacing: -0.5px;
+    line-height: 28px
+}

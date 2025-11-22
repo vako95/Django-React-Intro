@@ -1,0 +1,28 @@
+.overlay__section--left {
+    width: 100%;
+    height: 100%;
+    flex: 0 0 58%;
+    min-width: 300px;
+}
+
+
+
+
+.overlay__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.overlay__heading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 150px;
+}

@@ -1,0 +1,13 @@
+.rooms-details__table {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rooms-details__table-item {
+    width: 90%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.242);
+}

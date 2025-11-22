@@ -1,0 +1,155 @@
+.hover__button {
+    position: relative;
+    width: max-content;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    background-color: var(--bg-color, transparent);
+    border: none;
+    color: var(--btn-text-color, rgba(255, 255, 255));
+    transition: background-color 250ms linear;
+    z-index: 99999;
+}
+
+.hover__button-border {
+    border-color: var(--borderColor, rgba(0, 0, 0, 0));
+    border: 1px solid;
+    transition: border-color 250ms linear, background-color 250ms linear;
+}
+
+.hover__button::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: var(--hover-bgover-color, rgba(34, 34, 34));
+    transition: width 300ms ease-in, right 600ms ease, left 600ms ease-in;
+    z-index: -1;
+}
+
+.hover__button:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: unset;
+    width: 100%;
+    background-color: var(--hover-bgstart-color, rgba(34, 34, 34));
+    z-index: -1;
+}
+
+.hover__button-variant--default:hover {
+    background-color: rgba(170, 132, 83, 1);
+}
+
+.hover__button-variant--default.hover__button-border:hover {
+    border-color: transparent;
+}
+
+.hover__button-variant--silver {
+
+    --hover-bgstart-color: rgba(34, 34, 34);
+}
+
+.hover__button-variant--gold {
+
+    --hover-bgover-color: rgba(170, 132, 83, 1);
+}
+
+.hover__button-size--sm {
+    padding: 12px 32px;
+}
+
+.hover__button-size--md {
+    padding: 16px 32px;
+}
+
+.hover__button-size--full {
+    width: 100%;
+    padding: 16px 32px;
+}
+
+
+/* .hover__button {
+    width: var(--btn-hover-width);
+    height: auto;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+    color: var(--btn-text-color, #fff);
+    background-color: var(--btn-bg-color, #333);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1;
+}
+
+.hover__button::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: var(--hover-bg-color, #555);
+    transition: width 300ms linear, right 300ms linear, left 300ms linear;
+    z-index: -1;
+}
+
+.hover__button:hover::before {
+    width: 100%;
+    left: 0;
+    right: unset;
+}
+
+.hover__button-variant--simple:hover {
+    background-color: var(--hover-bg-color);
+    color: var(--btn-text-color, rgba(255, 255, 255));
+    color: var(--btn-hover-text-color, rgba(255, 255, 255));
+}
+
+.hover__button-variant--simple {
+
+    background-color: var(--bg-color, #555);
+    color: var(--btn-text-color, rgba(255, 255, 255));
+}
+
+.hover__button-variant--simple::before {
+    content: none;
+}
+
+.hover__button--sm {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.hover__button--md {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.hover__button--lg {
+    padding: 14px 28px;
+    font-size: 16px;
+}
+
+.hover__button--xl {
+    padding: 18px 36px;
+    font-size: 18px;
+}
+
+.hover__button--disabled {
+    display: none;
+    opacity: 0;
+} */

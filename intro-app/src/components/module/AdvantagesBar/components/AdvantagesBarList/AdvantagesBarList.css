@@ -1,0 +1,8 @@
+.advantages-bar__list {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 32px 0px;
+}

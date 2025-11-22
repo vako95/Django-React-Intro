@@ -1,0 +1,218 @@
+.calendar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.calendar.calendar--medium {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+}
+
+
+
+.calendar--fullScreen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.calendar--fullScreen .calendar__entrance,
+.calendar--fullScreen .calendar__leave,
+.calendar__picker {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 9999;
+    position: relative;
+}
+
+.calendar--fullScreen {
+    width: 100%;
+    height: 100%;
+}
+
+.calendar__leave {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.calendar__picker {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 10px;
+
+}
+
+.calendar__entrance {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    backdrop-filter: blur(14px);
+    border: 2px solid rgba(170, 132, 83);
+}
+
+.calendar__title {
+    font-family: "Font Awesome 5 Brands";
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(231, 231, 231, 1);
+}
+
+
+.calendar__leave {
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    backdrop-filter: blur(14px);
+    padding: 20px;
+    color: white;
+    padding: 20px;
+    border: 2px solid rgba(170, 132, 83, 1);
+}
+
+.calendar__item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 24px;
+}
+
+.calendar__close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 24px;
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 100%;
+    background-color: transparent;
+    color: rgba(170, 132, 83);
+    margin: 16px;
+    z-index: 99999;
+}
+
+.calendar__close-icon {
+    font-size: 24px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: color 150ms linear;
+}
+
+.calendar__close-icon:hover {
+    color: rgba(216, 19, 19);
+}
+
+
+
+.calendar__close-button:active {
+
+    color: rgba(170, 132, 83);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.calendar__leave-wrapper .MuiPickersDay-root {
+    color: #aa8453;
+    border-radius: 0px;
+}
+
+.calendar__leave-wrapper .MuiPickersCalendarHeader-label {
+    color: #aa8453;
+}
+
+.calendar__leave-wrapper .Mui-selected {
+    background-color: #aa8453;
+    color: #000;
+}
+
+.calendar__leave-wrapper .MuiDayCalendar-weekDayLabel {
+    color: #5c5c5c !important;
+}
+
+.calendar__leave-wrapper .Mui-disabled {
+    color: #5c5c5c !important;
+}
+
+.calendar__leave-wrapper .MuiPickersDay-root:hover {
+    color: #000;
+    border: 2px solid #aa8453;
+    background-color: #aa8453;
+}
+
+.calendar__leave-wrapper .MuiPickersDay-root.Mui-selected {
+    background-color: #aa8453 !important;
+}
+
+.calendar__leave-wrapper .MuiPickersArrowSwitcher-button {
+    color: #aa8453;
+}
+
+.calendar__leave-wrapper .MuiPickersArrowSwitcher-button:hover {
+    background-color: #aa845310;
+    color: #000;
+}
+
+.calendar__leave-wrapper .MuiPickersCalendarHeader-switchViewButton {
+    color: #aa8453;
+}
+
+.calendar__leave-wrapper .MuiYearCalendar-root .MuiYearCalendar-button {
+    color: #aa8453;
+}

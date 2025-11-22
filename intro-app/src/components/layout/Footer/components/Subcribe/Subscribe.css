@@ -1,0 +1,46 @@
+.footer__subscribe {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.footer__subscribe-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.footer__subscribe-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    margin-bottom: 24px;
+}
+
+.footer__subscribe-desc {
+    font-family: "Barlow", sans-serif;
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(173, 173, 173);
+    line-height: 26px;
+}
+
+.footer__subscribe-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}

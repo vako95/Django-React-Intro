@@ -1,0 +1,815 @@
+.room-details {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* position: relative; */
+}
+
+.rooms-details__columns {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.rooms-details__column {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: rgba(255, 255, 255);
+    padding: 80px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.231);
+}
+
+.rooms-details__columns--left {
+    width: calc(65% - 16px);
+}
+
+.rooms-details__columns--right {
+    width: 35%;
+}
+
+
+.rooms-details__column-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.rooms-details__column-showcase {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.rooms-details__column-showcase-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.rooms-details__column-showcase-heading-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 48px;
+    font-weight: inherit;
+    color: rgba(170, 132, 83, 1);
+}
+
+.rooms-details__column-showcase-subtitle {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.rooms-details__column-showcase-subtitle-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+
+}
+
+.rooms-details__column-showcase-subtitle-item {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: inherit;
+    color: inherit;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rooms-details__column-showcase-overview {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 48px;
+}
+
+.rooms-details__column-showcase-overview-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 0px;
+}
+
+.rooms-details__column-showcase-overview-item {
+    font-family: inherit;
+    color: inherit;
+    width: auto;
+    height: auto;
+    font-size: inherit;
+    font-weight: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rooms-details__column-showcase-overview-item:nth-child(n + 6) {
+    margin-top: 16px;
+}
+
+.rooms-details__column-showcase-overview-item-icon {
+    display: flex;
+    font-size: 24px;
+    color: rgba(170, 132, 83, 1);
+    margin-right: 8px;
+}
+
+.rooms-details__column-showcase-overview-item-title {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.rooms-details__column-showcase-overview-item-count {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin-right: 4px;
+}
+
+.rooms-details__column-showcase-slider {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 48px;
+}
+
+.rooms-details__column-showcase-slider-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.rooms-details__column-showcase-slider-frame {
+    width: 100%;
+    height: 384px;
+
+}
+
+.slider-creative__swiper-frame-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.rooms-details__column-about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.rooms-details__column-about-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 48px;
+}
+
+.rooms-details__column-about-heading-title {
+    font-family: inherit;
+    font-size: 32px;
+    font-weight: inherit;
+    color: rgba(170, 132, 83, 1);
+}
+
+
+
+.rooms-details__column-about-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    border-radius: 16px;
+    border: 1px solid rgba(170, 132, 84);
+    padding: 42px 32px;
+    margin-bottom: 48px;
+}
+
+.rooms-details__column-about-item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rooms-details__column-about-item-label {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    margin-bottom: 8px;
+}
+
+.rooms-details__column-about-item-value {
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.rooms-details__column-about-body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 48px;
+}
+
+.rooms-details__column-about-body-text {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    line-height: 28px;
+}
+
+.rooms-details__column-features {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.rooms-details__column-features-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.rooms-details__column-features-heading-title {
+    font-family: inherit;
+    font-size: 32px;
+    font-weight: inherit;
+    color: rgba(170, 132, 83, 1);
+}
+
+.rooms-details__column-features-list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.rooms-details__column-features-item {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rooms-details__column-features-item-icon {
+    display: flex;
+    font-size: 32px;
+    border: 1px solid rgba(170, 132, 84);
+    color: rgba(170, 132, 84);
+    border-radius: 50%;
+    transition: background-color 250ms linear, color 250ms linear;
+    padding: 16px;
+    margin-right: 8px;
+}
+
+.rooms-details__column-features-item-icon:hover {
+    background-color: rgba(170, 132, 84);
+    color: inherit;
+}
+
+.rooms-details__column-features-item-title {
+    font-family: inherit;
+    color: inherit;
+    font-size: 20px;
+    font-weight: 400
+}
+
+
+
+
+
+
+
+/* Booking */
+.rooms-details__booking {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid rgba(170, 132, 83, 1);
+}
+
+.rooms-details__booking-frame {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px 42px;
+    margin-bottom: 32px;
+}
+
+.rooms-details__booking-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.rooms-details__booking-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 16px;
+
+}
+
+.rooms-details__booking-label {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    margin-bottom: 8px;
+}
+
+.rooms-details__booking-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* margin-bottom: 16px; */
+}
+
+.rooms-details__booking-wrapper:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+
+
+.rooms-details__booking-field {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid rgba(170, 132, 83, 1);
+    cursor: pointer;
+}
+
+.rooms-details__booking-field:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 16px;
+}
+
+.rooms-details__booking-calendar {
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: calc(100% + 42px);
+    z-index: 2;
+}
+
+.rooms-details__booking-dropdown {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.68);
+    border: 1px solid rgba(170, 132, 83, 1);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+}
+
+.rooms-details__booking-dropdown-action {
+    width: 100%;
+}
+
+.rooms-details__booking-dropdown-action .quantity__content {
+    justify-content: space-between;
+}
+
+.room__details-form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px 42px;
+}
+
+.room__details-form-order {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+
+.rooms-details__booking-field-group {
+    /* position: relative; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    /* margin-bottom: 16px; */
+}
+
+/* .rooms-details__booking-field .rooms-details__booking-field-group {
+    border-right: 1px solid white;
+    color: red;
+} */
+
+.rooms-details__booking-icon {
+    display: flex;
+    margin-right: 16px;
+}
+
+.rooms-details__booking-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.rooms-details__booking-heading-title {
+    font-family: inherit;
+    font-size: 32px;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.rooms-details__booking-heading-subtitle {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.rooms-details__booking-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.room__details-form-action {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(170, 132, 83, 1);
+}
+
+/* .rooms-details__booking-order-table {
+    width: 90%;
+    height: 2px;
+    background-color: red;
+
+} */
+
+/* Booking Order */
+/* .rooms-details__booking-order {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.rooms-details__booking-order-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px 42px;
+}
+
+.rooms-details__booking-order-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 36px 0px;
+}
+
+.rooms-details__booking-order-heading-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 28px;
+    color: rgba(170, 132, 83, 1);
+}
+
+.rooms-details__booking-order-heading-price {
+    font-family: inherit;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.rooms-details__booking-order-base {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px dashed red;
+    border-bottom: 1px dashed red;
+    padding: 16px 0px;
+    margin-bottom: 32px;
+}
+
+.rooms-details__booking-order-base-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rooms-details__booking-order-base-heading-title {
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: inherit;
+    color: rgb(102, 102, 102);
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+.rooms-details__booking-order-base-heading-icon {
+    display: flex;
+    font-family: inherit;
+}
+
+.rooms-details__booking-order-base-price {
+    font-size: 16px;
+    color: rgba(102, 102, 102);
+}
+
+.rooms-details__booking-order-total {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rooms-details__booking-order-total-title {
+    font-family: inherit;
+    font-size: 18px;
+    color: rgba(102, 102, 102);
+}
+
+.rooms-details__booking-order-total-price {
+    font-family: inherit;
+    font-size: 18px;
+    color: rgba(102, 102, 102);
+} */
+
+
+
+
+/* Gallery LightBox */
+.room-details__gallery {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px 0px;
+    margin-bottom: 16px;
+}
+
+.room-details__gallery-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 32px 0px;
+}
+
+.room-details__gallery-heading-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 32px;
+    font-weight: inherit;
+    color: rgba(170, 132, 83, 1);
+}
+
+.room-details__gallery-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start
+}
+
+.room-details__gallery-card {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.room-details__gallery-card-wrapper {
+    width: 100%;
+    height: 256px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.room-details__gallery-card-wrapper-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transform: scale(1);
+    transition: filter 250ms linear, transform 250ms linear;
+}
+
+.room-details__gallery-card-wrapper-img:hover {
+    transform: scale(1.1);
+    filter: grayscale(1);
+}
+
+.room-details__gallery-card-preview {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px 0px;
+    border-bottom: 1px dotted rgba(170, 132, 83, 1);
+    border-top: none;
+
+}
+
+.room-details__gallery-card-preview-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    white-space: normal;
+}
+
+.room-details__slider {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0px;
+}
+
+.room-details__slider-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 32px 0px;
+}
+
+.room-details__slider-heading-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 32px;
+    font-weight: inherit;
+    color: rgba(170, 132, 83, 1);
+}
+
+.room-details__slider-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.room-details__slider .swiper {
+    background-color: transparent;
+}
+
+.room-details__slider-container {
+    width: 100%;
+    height: 100%;
+}
+
+
+.room-details__slider-slide-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.room-details__slider-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
